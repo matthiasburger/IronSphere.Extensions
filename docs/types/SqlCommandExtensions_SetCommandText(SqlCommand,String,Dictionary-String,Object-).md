@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/SqlCommandExtensions)
+
 # SetCommandText
 
 > Assembly: IronSphere.Extensions

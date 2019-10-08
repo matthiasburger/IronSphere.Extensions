@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # UpholsterLeft
 
 > Assembly: IronSphere.Extensions

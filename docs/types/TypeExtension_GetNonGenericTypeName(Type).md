@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/TypeExtension)
+
 # GetNonGenericTypeName
 
 > Assembly: IronSphere.Extensions

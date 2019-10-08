@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringCastingExtension)
+
 # ToDouble
 
 > Assembly: IronSphere.Extensions

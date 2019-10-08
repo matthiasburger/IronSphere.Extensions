@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # ContainsAny
 
 > Assembly: IronSphere.Extensions

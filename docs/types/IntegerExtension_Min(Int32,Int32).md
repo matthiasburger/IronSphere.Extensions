@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/IntegerExtension)
+
 # Min
 
 > Assembly: IronSphere.Extensions

@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/IntegerExtension)
+
 # IsLowerThan
 
 > Assembly: IronSphere.Extensions

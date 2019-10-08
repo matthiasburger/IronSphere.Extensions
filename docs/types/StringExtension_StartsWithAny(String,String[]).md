@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # StartsWithAny
 
 > Assembly: IronSphere.Extensions

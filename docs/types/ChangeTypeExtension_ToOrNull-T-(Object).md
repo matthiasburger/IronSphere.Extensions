@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/ChangeTypeExtension)
+
 # ToOrNull
 
 > Assembly: IronSphere.Extensions

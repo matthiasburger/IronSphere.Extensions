@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/ByteExtension)
+
 # Max
 
 > Assembly: IronSphere.Extensions

@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/EnumerableExtension)
+
 # IsNullOrEmpty
 
 > Assembly: IronSphere.Extensions

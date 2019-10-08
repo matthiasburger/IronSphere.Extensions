@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringCastingExtension)
+
 # ToByte
 
 > Assembly: IronSphere.Extensions

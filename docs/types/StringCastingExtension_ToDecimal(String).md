@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringCastingExtension)
+
 # ToDecimal
 
 > Assembly: IronSphere.Extensions

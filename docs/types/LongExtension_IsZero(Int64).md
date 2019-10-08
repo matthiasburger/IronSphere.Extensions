@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/LongExtension)
+
 # IsZero
 
 > Assembly: IronSphere.Extensions

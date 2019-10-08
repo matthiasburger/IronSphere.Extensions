@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/BinaryReaderExtension)
+
 # ReadAllBytes
 
 > Assembly: IronSphere.Extensions

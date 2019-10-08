@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/ListExtension)
+
 # RemoveWhere
 
 > Assembly: IronSphere.Extensions

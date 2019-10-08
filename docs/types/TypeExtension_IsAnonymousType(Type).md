@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/TypeExtension)
+
 # IsAnonymousType
 
 > Assembly: IronSphere.Extensions

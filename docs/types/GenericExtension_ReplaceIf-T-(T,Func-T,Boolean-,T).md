@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/GenericExtension)
+
 # ReplaceIf
 
 > Assembly: IronSphere.Extensions

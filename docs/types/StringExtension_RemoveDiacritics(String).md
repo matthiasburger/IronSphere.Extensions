@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # RemoveDiacritics
 
 > Assembly: IronSphere.Extensions

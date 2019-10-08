@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # GetBytes
 
 > Assembly: IronSphere.Extensions

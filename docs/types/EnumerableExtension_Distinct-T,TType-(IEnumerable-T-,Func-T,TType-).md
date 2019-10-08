@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/EnumerableExtension)
+
 # Distinct
 
 > Assembly: IronSphere.Extensions

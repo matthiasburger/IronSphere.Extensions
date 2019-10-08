@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/IntegerExtension)
+
 # IsPositive
 
 > Assembly: IronSphere.Extensions

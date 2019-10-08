@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/DateTimeSpan)
+
 # set_SpanType
 
 > Assembly: IronSphere.Extensions

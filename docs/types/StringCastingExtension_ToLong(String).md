@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringCastingExtension)
+
 # ToLong
 
 > Assembly: IronSphere.Extensions

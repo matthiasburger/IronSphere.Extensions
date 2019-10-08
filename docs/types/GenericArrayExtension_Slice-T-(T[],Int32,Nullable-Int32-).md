@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/GenericArrayExtension)
+
 # Slice
 
 > Assembly: IronSphere.Extensions

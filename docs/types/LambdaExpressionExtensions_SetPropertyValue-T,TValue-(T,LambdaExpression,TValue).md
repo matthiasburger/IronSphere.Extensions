@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/LambdaExpressionExtensions)
+
 # SetPropertyValue
 
 > Assembly: IronSphere.Extensions

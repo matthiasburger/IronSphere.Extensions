@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/DateTimeSpan)
+
 # get_End
 
 > Assembly: IronSphere.Extensions

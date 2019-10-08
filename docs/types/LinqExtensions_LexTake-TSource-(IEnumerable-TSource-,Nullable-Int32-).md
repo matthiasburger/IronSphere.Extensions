@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/LinqExtensions)
+
 # LexTake
 
 > Assembly: IronSphere.Extensions

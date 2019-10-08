@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/DictionaryExtension)
+
 # GetOrCreate
 
 > Assembly: IronSphere.Extensions

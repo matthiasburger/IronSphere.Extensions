@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/TypeExtension)
+
 # GetXmlMemberName
 
 > Assembly: IronSphere.Extensions

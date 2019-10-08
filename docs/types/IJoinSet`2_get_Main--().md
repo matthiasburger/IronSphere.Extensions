@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/IJoinSet-TMain,TSub-)
+
 # get_Main
 
 > Assembly: IronSphere.Extensions

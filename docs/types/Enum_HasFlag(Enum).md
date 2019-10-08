@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/WeekOfYearStandard)
+
 # HasFlag
 
 > Assembly: IronSphere.Extensions

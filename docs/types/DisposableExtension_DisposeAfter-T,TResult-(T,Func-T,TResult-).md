@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/DisposableExtension)
+
 # DisposeAfter
 
 > Assembly: IronSphere.Extensions

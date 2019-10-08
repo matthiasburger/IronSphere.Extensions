@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/CollectionExtension)
+
 # Add
 
 > Assembly: IronSphere.Extensions

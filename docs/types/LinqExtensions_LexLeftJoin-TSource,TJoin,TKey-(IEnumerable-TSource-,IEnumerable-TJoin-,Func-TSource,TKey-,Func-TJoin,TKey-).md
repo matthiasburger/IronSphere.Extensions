@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/LinqExtensions)
+
 # LexLeftJoin
 
 > Assembly: IronSphere.Extensions

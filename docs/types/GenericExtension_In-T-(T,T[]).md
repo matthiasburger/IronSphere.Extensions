@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/GenericExtension)
+
 # In
 
 > Assembly: IronSphere.Extensions

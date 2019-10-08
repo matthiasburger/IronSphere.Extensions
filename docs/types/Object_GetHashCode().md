@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/TypeExtension)
+
 # GetHashCode
 
 > Assembly: IronSphere.Extensions

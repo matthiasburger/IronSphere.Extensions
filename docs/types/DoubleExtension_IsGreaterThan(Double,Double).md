@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/DoubleExtension)
+
 # IsGreaterThan
 
 > Assembly: IronSphere.Extensions

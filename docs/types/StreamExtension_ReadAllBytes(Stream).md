@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StreamExtension)
+
 # ReadAllBytes
 
 > Assembly: IronSphere.Extensions

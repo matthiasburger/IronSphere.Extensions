@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/ByteExtension)
+
 # IsZero
 
 > Assembly: IronSphere.Extensions

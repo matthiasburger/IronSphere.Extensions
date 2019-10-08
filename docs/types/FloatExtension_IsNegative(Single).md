@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/FloatExtension)
+
 # IsNegative
 
 > Assembly: IronSphere.Extensions

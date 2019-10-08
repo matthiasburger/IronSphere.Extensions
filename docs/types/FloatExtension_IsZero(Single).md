@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/FloatExtension)
+
 # IsZero
 
 > Assembly: IronSphere.Extensions

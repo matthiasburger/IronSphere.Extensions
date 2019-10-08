@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/TypeExtension)
+
 # GetType
 
 > Assembly: IronSphere.Extensions

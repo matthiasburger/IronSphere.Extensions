@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # Split
 
 > Assembly: IronSphere.Extensions

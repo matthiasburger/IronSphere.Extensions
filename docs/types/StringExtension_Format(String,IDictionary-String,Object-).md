@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # Format
 
 > Assembly: IronSphere.Extensions

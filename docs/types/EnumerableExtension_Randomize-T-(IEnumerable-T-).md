@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/EnumerableExtension)
+
 # Randomize
 
 > Assembly: IronSphere.Extensions

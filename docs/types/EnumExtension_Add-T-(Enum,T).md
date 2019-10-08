@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/EnumExtension)
+
 # Add
 
 > Assembly: IronSphere.Extensions

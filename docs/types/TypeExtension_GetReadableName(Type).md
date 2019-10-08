@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/TypeExtension)
+
 # GetReadableName
 
 > Assembly: IronSphere.Extensions

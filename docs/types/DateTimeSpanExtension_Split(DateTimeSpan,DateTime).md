@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/DateTimeSpanExtension)
+
 # Split
 
 > Assembly: IronSphere.Extensions

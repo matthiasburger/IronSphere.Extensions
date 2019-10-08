@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/EnumerableExtension)
+
 # IsSingle
 
 > Assembly: IronSphere.Extensions

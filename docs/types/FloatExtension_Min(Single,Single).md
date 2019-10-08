@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/FloatExtension)
+
 # Min
 
 > Assembly: IronSphere.Extensions

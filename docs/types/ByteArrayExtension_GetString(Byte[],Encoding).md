@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/ByteArrayExtension)
+
 # GetString
 
 > Assembly: IronSphere.Extensions

@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/DoubleExtension)
+
 # Min
 
 > Assembly: IronSphere.Extensions

@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringBuilderExtension)
+
 # AppendIf
 
 > Assembly: IronSphere.Extensions

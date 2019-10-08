@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringCastingExtension)
+
 # ToDateTime
 
 > Assembly: IronSphere.Extensions

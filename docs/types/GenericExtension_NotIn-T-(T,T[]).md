@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/GenericExtension)
+
 # NotIn
 
 > Assembly: IronSphere.Extensions

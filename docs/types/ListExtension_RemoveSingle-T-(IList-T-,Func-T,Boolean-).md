@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/ListExtension)
+
 # RemoveSingle
 
 > Assembly: IronSphere.Extensions

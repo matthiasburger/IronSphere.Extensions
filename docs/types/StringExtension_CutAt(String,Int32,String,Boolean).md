@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # CutAt
 
 > Assembly: IronSphere.Extensions

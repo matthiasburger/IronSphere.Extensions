@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/EnumExtension)
+
 # Remove
 
 > Assembly: IronSphere.Extensions

@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/WeekOfYearStandard)
+
 # Equals
 
 > Assembly: IronSphere.Extensions

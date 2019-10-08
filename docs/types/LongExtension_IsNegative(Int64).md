@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/LongExtension)
+
 # IsNegative
 
 > Assembly: IronSphere.Extensions

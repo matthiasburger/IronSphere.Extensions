@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/TypeExtension)
+
 # ToString
 
 > Assembly: IronSphere.Extensions

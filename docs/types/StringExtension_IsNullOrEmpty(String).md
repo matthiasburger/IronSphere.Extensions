@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/StringExtension)
+
 # IsNullOrEmpty
 
 > Assembly: IronSphere.Extensions

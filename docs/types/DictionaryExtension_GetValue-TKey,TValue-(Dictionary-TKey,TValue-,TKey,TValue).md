@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/DictionaryExtension)
+
 # GetValue
 
 > Assembly: IronSphere.Extensions

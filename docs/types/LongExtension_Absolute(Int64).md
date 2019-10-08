@@ -1,5 +1,7 @@
 ﻿
 
+[back](/IronSphere.Extensions/LongExtension)
+
 # Absolute
 
 > Assembly: IronSphere.Extensions
