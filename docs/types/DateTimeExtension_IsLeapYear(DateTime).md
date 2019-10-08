@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIsLeapYear(DateTime this)
+public static Boolean IsLeapYear(this DateTime this)
 ```

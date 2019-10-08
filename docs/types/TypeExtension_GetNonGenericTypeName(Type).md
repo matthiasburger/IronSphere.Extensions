@@ -9,5 +9,5 @@
 ```
 
 
-public static StringGetNonGenericTypeName(Type this)
+public static String GetNonGenericTypeName(this Type this)
 ```

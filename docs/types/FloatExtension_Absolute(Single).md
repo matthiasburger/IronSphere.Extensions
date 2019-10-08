@@ -9,5 +9,5 @@
 ```
 
 
-public static SingleAbsolute(Single this)
+public static Single Absolute(this Single this)
 ```

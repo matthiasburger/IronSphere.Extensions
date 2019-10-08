@@ -9,5 +9,5 @@
 ```
 
 
-public static DateTimeGetFirstOfMonth(DateTime this)
+public static DateTime GetFirstOfMonth(this DateTime this)
 ```

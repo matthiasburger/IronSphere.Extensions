@@ -22,4 +22,4 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [GetMonthsOfCulture(CultureInfo culture)](CultureInfoExtension_GetMonthsOfCulture(CultureInfo)) | Returns all months in the language of the cultures language. |
+| [GetMonthsOfCulture(this CultureInfo culture)](CultureInfoExtension_GetMonthsOfCulture(CultureInfo)) | Returns all months in the language of the cultures language. |

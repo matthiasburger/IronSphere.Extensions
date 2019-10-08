@@ -9,5 +9,5 @@
 ```
 
 
-public virtual sealed StringToString(IFormatProvider provider)
+public virtual sealed String ToString(IFormatProvider provider)
 ```

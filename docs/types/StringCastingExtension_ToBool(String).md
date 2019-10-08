@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Boolean>ToBool(String this)
+public static Nullable<Boolean> ToBool(this String this)
 ```

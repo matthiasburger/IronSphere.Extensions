@@ -9,5 +9,5 @@
 ```
 
 
-public static IEnumerable<TSource>LexSkip<TSource>(IEnumerable<TSource> source, Nullable<Int32> count);
+public static IEnumerable<TSource> LexSkip<TSource>(this IEnumerable<TSource> source, this Nullable<Int32> count);
 ```

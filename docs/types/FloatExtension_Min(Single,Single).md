@@ -9,5 +9,5 @@
 ```
 
 
-public static SingleMin(Single this, Single minimum)
+public static Single Min(this Single this, this Single minimum)
 ```

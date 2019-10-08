@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanBetween(Byte this, Byte lower, Byte higher)
+public static Boolean Between(this Byte this, this Byte lower, this Byte higher)
 ```

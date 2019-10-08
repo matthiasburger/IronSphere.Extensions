@@ -9,5 +9,5 @@
 ```
 
 
-public static StringGetShortReadableName(Type this)
+public static String GetShortReadableName(this Type this)
 ```

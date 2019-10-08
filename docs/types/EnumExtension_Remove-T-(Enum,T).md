@@ -9,5 +9,5 @@
 ```
 
 
-public static TRemove<T>(Enum this, T value);
+public static T Remove<T>(this Enum this, this T value);
 ```

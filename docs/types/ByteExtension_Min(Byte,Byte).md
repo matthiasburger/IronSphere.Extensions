@@ -9,5 +9,5 @@
 ```
 
 
-public static ByteMin(Byte this, Byte minimum)
+public static Byte Min(this Byte this, this Byte minimum)
 ```

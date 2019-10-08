@@ -9,5 +9,5 @@
 ```
 
 
-public virtual Int32GetHashCode()
+public virtual Int32 GetHashCode()
 ```

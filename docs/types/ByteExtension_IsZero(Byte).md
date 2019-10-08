@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIsZero(Byte this)
+public static Boolean IsZero(this Byte this)
 ```

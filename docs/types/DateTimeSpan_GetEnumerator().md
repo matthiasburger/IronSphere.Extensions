@@ -9,5 +9,5 @@
 ```
 
 
-public virtual sealed IEnumerator<DateTime>GetEnumerator()
+public virtual sealed IEnumerator<DateTime> GetEnumerator()
 ```

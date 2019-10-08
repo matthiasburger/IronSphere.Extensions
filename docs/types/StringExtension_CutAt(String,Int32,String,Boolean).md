@@ -9,5 +9,5 @@
 ```
 
 
-public static StringCutAt(String this, Int32 position, String endConcat, Boolean waitForWhitespace = false)
+public static String CutAt(this String this, this Int32 position, this String endConcat, this Boolean waitForWhitespace = false)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public Int32get_Step()
+public Int32 get_Step()
 ```

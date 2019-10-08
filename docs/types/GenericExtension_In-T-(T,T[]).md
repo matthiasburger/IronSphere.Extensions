@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIn<T>(T this, T[] listOfItems);
+public static Boolean In<T>(this T this, this T[] listOfItems);
 ```

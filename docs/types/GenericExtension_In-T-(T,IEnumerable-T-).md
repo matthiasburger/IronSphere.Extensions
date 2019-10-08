@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIn<T>(T this, IEnumerable<T> listOfItems);
+public static Boolean In<T>(this T this, this IEnumerable<T> listOfItems);
 ```

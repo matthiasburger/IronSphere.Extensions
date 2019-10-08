@@ -22,4 +22,4 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [ReadAllBytes(BinaryReader reader)](BinaryReaderExtension_ReadAllBytes(BinaryReader)) | Reads all bytes and writes them into an array |
+| [ReadAllBytes(this BinaryReader reader)](BinaryReaderExtension_ReadAllBytes(BinaryReader)) | Reads all bytes and writes them into an array |

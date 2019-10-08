@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanEndsWithAny(String this, String[] parameter)
+public static Boolean EndsWithAny(this String this, this String[] parameter)
 ```

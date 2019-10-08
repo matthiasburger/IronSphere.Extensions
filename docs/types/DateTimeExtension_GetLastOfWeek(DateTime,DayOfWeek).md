@@ -9,5 +9,5 @@
 ```
 
 
-public static DateTimeGetLastOfWeek(DateTime this, DayOfWeek startOfWeek = 1)
+public static DateTime GetLastOfWeek(this DateTime this, this DayOfWeek startOfWeek = 1)
 ```

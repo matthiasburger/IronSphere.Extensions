@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIsNullOrWhiteSpace(String this)
+public static Boolean IsNullOrWhiteSpace(this String this)
 ```

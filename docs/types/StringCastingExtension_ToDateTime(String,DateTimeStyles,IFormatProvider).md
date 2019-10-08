@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<DateTime>ToDateTime(String this, DateTimeStyles dateTimeStyles, IFormatProvider formatProvider)
+public static Nullable<DateTime> ToDateTime(this String this, this DateTimeStyles dateTimeStyles, this IFormatProvider formatProvider)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public void Deconstruct(out DateTime start, out DateTime end)
+public void  Deconstruct(out DateTime start, out DateTime end)
 ```

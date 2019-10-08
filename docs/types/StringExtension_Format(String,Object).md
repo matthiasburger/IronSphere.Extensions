@@ -9,5 +9,5 @@
 ```
 
 
-public static StringFormat(String this, Object anonymousObject)
+public static String Format(this String this, this Object anonymousObject)
 ```

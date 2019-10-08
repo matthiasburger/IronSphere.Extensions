@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIsNegative(Double this)
+public static Boolean IsNegative(this Double this)
 ```

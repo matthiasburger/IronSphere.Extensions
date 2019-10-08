@@ -9,5 +9,5 @@
 ```
 
 
-public static IEnumerable<ValueTuple<Int32,String>>GetMonthsOfCulture(CultureInfo culture)
+public static IEnumerable<ValueTuple<Int32,String>> GetMonthsOfCulture(this CultureInfo culture)
 ```

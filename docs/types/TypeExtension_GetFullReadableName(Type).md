@@ -9,5 +9,5 @@
 ```
 
 
-public static StringGetFullReadableName(Type this)
+public static String GetFullReadableName(this Type this)
 ```

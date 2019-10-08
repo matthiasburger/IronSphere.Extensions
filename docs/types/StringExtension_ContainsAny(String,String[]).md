@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanContainsAny(String this, String[] parameter)
+public static Boolean ContainsAny(this String this, this String[] parameter)
 ```

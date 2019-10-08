@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Int16>ToShort(String this)
+public static Nullable<Int16> ToShort(this String this)
 ```

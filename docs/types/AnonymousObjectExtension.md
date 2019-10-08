@@ -22,4 +22,4 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [ToDictionary&lt;T&gt;(Object source)](AnonymousObjectExtension_ToDictionary-T-(Object)) | Creates a dictionary from an anonymous type where the properties names are the keys and their values are the values |
+| [ToDictionary&lt;T&gt;(this Object source)](AnonymousObjectExtension_ToDictionary-T-(Object)) | Creates a dictionary from an anonymous type where the properties names are the keys and their values are the values |

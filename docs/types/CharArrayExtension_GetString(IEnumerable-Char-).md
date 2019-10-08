@@ -9,5 +9,5 @@
 ```
 
 
-public static StringGetString(IEnumerable<Char> this)
+public static String GetString(this IEnumerable<Char> this)
 ```

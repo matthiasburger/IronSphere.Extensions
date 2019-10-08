@@ -9,5 +9,5 @@
 ```
 
 
-public virtual BooleanEquals(Object obj)
+public virtual Boolean Equals(Object obj)
 ```

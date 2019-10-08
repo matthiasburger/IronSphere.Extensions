@@ -9,5 +9,5 @@
 ```
 
 
-public static IEnumerable<TSource>LexTakeLast<TSource>(IEnumerable<TSource> source, Int32 count);
+public static IEnumerable<TSource> LexTakeLast<TSource>(this IEnumerable<TSource> source, this Int32 count);
 ```

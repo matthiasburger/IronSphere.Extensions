@@ -9,5 +9,5 @@
 ```
 
 
-public static Int64Min(Int64 this, Int64 minimum)
+public static Int64 Min(this Int64 this, this Int64 minimum)
 ```

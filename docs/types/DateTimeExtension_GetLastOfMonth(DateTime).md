@@ -9,5 +9,5 @@
 ```
 
 
-public static DateTimeGetLastOfMonth(DateTime this)
+public static DateTime GetLastOfMonth(this DateTime this)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static TValueGetValue<TValue>(NameValueCollection this, String key, TValue fallback = default);
+public static TValue GetValue<TValue>(this NameValueCollection this, this String key, this TValue fallback = default);
 ```

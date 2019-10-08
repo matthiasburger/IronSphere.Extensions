@@ -9,5 +9,5 @@
 ```
 
 
-public BooleanHasFlag(Enum flag)
+public Boolean HasFlag(Enum flag)
 ```

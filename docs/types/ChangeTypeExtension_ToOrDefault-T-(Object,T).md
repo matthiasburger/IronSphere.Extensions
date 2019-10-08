@@ -9,5 +9,5 @@
 ```
 
 
-public static TToOrDefault<T>(Object this, T default = default);
+public static T ToOrDefault<T>(this Object this, this T default = default);
 ```

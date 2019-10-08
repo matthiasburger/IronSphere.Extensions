@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Single>ToFloat(String this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static Nullable<Single> ToFloat(this String this, this NumberStyles numberStyles, this IFormatProvider formatProvider)
 ```

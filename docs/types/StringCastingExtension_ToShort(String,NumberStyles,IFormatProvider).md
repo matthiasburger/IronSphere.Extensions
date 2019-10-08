@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Int16>ToShort(String this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static Nullable<Int16> ToShort(this String this, this NumberStyles numberStyles, this IFormatProvider formatProvider)
 ```

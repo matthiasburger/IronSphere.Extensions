@@ -9,5 +9,5 @@
 ```
 
 
-public static Byte[]ReadAllBytes(BinaryReader reader)
+public static Byte[] ReadAllBytes(this BinaryReader reader)
 ```

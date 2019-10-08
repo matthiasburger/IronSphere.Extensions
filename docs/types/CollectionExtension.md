@@ -22,6 +22,6 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [Add&lt;T&gt;(ICollection&lt;T&gt; this, IEnumerable&lt;T&gt; elementsToAdd)](CollectionExtension_Add-T-(ICollection-T-,IEnumerable-T-)) | adds all elements in a parametrized list into an existing collection |
-| [AddMissing&lt;T&gt;(ICollection&lt;T&gt; this, IEnumerable&lt;T&gt; elementsToAdd)](CollectionExtension_AddMissing-T-(ICollection-T-,IEnumerable-T-)) | adds all elements in a parametrized list into an existing collection if the collection already contains an element it skips it |
-| [AddMissing&lt;T,TSelectorType&gt;(ICollection&lt;T&gt; this, IEnumerable&lt;T&gt; elementsToAdd, Func&lt;T,TSelectorType&gt; selector)](CollectionExtension_AddMissing-T,TSelectorType-(ICollection-T-,IEnumerable-T-,Func-T,TSelectorType-)) | adds all elements in a parametrized list into an existing collection if the collection already contains an element it skips it |
+| [Add&lt;T&gt;(this ICollection&lt;T&gt; this, this IEnumerable&lt;T&gt; elementsToAdd)](CollectionExtension_Add-T-(ICollection-T-,IEnumerable-T-)) | adds all elements in a parametrized list into an existing collection |
+| [AddMissing&lt;T&gt;(this ICollection&lt;T&gt; this, this IEnumerable&lt;T&gt; elementsToAdd)](CollectionExtension_AddMissing-T-(ICollection-T-,IEnumerable-T-)) | adds all elements in a parametrized list into an existing collection if the collection already contains an element it skips it |
+| [AddMissing&lt;T,TSelectorType&gt;(this ICollection&lt;T&gt; this, this IEnumerable&lt;T&gt; elementsToAdd, this Func&lt;T,TSelectorType&gt; selector)](CollectionExtension_AddMissing-T,TSelectorType-(ICollection-T-,IEnumerable-T-,Func-T,TSelectorType-)) | adds all elements in a parametrized list into an existing collection if the collection already contains an element it skips it |

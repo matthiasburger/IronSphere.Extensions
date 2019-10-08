@@ -9,5 +9,5 @@
 ```
 
 
-public DateTimeSpanTypeget_SpanType()
+public DateTimeSpanType get_SpanType()
 ```

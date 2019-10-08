@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIsZero(Single this)
+public static Boolean IsZero(this Single this)
 ```

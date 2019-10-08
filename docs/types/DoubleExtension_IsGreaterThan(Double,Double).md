@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIsGreaterThan(Double this, Double other)
+public static Boolean IsGreaterThan(this Double this, this Double other)
 ```

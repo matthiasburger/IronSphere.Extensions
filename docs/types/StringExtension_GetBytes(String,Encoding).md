@@ -9,5 +9,5 @@
 ```
 
 
-public static Byte[]GetBytes(String this, Encoding encoding = null)
+public static Byte[] GetBytes(this String this, this Encoding encoding = null)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Decimal>ToDecimal(String this)
+public static Nullable<Decimal> ToDecimal(this String this)
 ```

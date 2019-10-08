@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIsAnonymousType(Type type)
+public static Boolean IsAnonymousType(this Type type)
 ```

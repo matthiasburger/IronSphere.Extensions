@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Double>ToDouble(String this)
+public static Nullable<Double> ToDouble(this String this)
 ```

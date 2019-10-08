@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Double>ToDouble(String this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static Nullable<Double> ToDouble(this String this, this NumberStyles numberStyles, this IFormatProvider formatProvider)
 ```

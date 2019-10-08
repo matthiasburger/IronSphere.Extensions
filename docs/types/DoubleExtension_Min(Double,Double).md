@@ -9,5 +9,5 @@
 ```
 
 
-public static DoubleMin(Double this, Double minimum)
+public static Double Min(this Double this, this Double minimum)
 ```

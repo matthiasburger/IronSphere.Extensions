@@ -9,5 +9,5 @@
 ```
 
 
-public virtual sealed Int32CompareTo(Object target)
+public virtual sealed Int32 CompareTo(Object target)
 ```

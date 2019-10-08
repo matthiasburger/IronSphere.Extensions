@@ -9,5 +9,5 @@
 ```
 
 
-public static Int32GetWeekOfYear(DateTime dateTime, CultureInfo cultureInfo = null, WeekOfYearStandard weekOfYearStandard = 1)
+public static Int32 GetWeekOfYear(this DateTime dateTime, this CultureInfo cultureInfo = null, this WeekOfYearStandard weekOfYearStandard = 1)
 ```

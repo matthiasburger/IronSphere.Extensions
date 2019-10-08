@@ -9,5 +9,5 @@
 ```
 
 
-public static StringRemoveDiacritics(String this)
+public static String RemoveDiacritics(this String this)
 ```

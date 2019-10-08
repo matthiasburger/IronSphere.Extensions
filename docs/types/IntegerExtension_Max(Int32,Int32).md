@@ -9,5 +9,5 @@
 ```
 
 
-public static Int32Max(Int32 this, Int32 maximum)
+public static Int32 Max(this Int32 this, this Int32 maximum)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static ByteMax(Byte this, Byte maximum)
+public static Byte Max(this Byte this, this Byte maximum)
 ```

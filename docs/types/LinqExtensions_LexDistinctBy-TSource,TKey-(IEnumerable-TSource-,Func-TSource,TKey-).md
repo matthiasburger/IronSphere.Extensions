@@ -9,5 +9,5 @@
 ```
 
 
-public static IEnumerable<TSource>LexDistinctBy<TSource, TKey>(IEnumerable<TSource> source, Func<TSource,TKey> groupingSelector);
+public static IEnumerable<TSource> LexDistinctBy<TSource, TKey>(this IEnumerable<TSource> source, this Func<TSource,TKey> groupingSelector);
 ```

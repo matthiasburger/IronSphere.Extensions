@@ -22,5 +22,5 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [SetCommandText(SqlCommand this, String command, Object parameters)](SqlCommandExtensions_SetCommandText(SqlCommand,String,Object)) | Sets the SqlCommands command-text and adds parameters |
-| [SetCommandText(SqlCommand this, String command, Dictionary&lt;String,Object&gt; parameters)](SqlCommandExtensions_SetCommandText(SqlCommand,String,Dictionary-String,Object-)) | Sets the SqlCommands command-text and adds parameters |
+| [SetCommandText(this SqlCommand this, this String command, this Object parameters)](SqlCommandExtensions_SetCommandText(SqlCommand,String,Object)) | Sets the SqlCommands command-text and adds parameters |
+| [SetCommandText(this SqlCommand this, this String command, this Dictionary&lt;String,Object&gt; parameters)](SqlCommandExtensions_SetCommandText(SqlCommand,String,Dictionary-String,Object-)) | Sets the SqlCommands command-text and adds parameters |

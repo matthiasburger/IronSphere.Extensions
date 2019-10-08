@@ -9,5 +9,5 @@
 ```
 
 
-public static IEnumerable<T>Randomize<T>(IEnumerable<T> this);
+public static IEnumerable<T> Randomize<T>(this IEnumerable<T> this);
 ```

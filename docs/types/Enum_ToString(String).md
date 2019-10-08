@@ -9,5 +9,5 @@
 ```
 
 
-public StringToString(String format)
+public String ToString(String format)
 ```

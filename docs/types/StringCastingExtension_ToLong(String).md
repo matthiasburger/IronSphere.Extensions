@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Int64>ToLong(String this)
+public static Nullable<Int64> ToLong(this String this)
 ```

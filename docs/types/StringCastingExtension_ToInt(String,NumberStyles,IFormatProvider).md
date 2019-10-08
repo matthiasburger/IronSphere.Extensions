@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Int32>ToInt(String this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static Nullable<Int32> ToInt(this String this, this NumberStyles numberStyles, this IFormatProvider formatProvider)
 ```

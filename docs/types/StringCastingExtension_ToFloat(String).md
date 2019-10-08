@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Single>ToFloat(String this)
+public static Nullable<Single> ToFloat(this String this)
 ```

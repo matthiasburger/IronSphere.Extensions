@@ -9,5 +9,5 @@
 ```
 
 
-public static StringGetXmlMemberName(Type this)
+public static String GetXmlMemberName(this Type this)
 ```

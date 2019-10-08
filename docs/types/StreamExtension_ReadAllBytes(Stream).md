@@ -9,5 +9,5 @@
 ```
 
 
-public static Byte[]ReadAllBytes(Stream stream)
+public static Byte[] ReadAllBytes(this Stream stream)
 ```

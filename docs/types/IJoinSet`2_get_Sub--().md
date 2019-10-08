@@ -9,5 +9,5 @@
 ```
 
 
-IEnumerable<TSub>get_Sub<>();
+IEnumerable<TSub> get_Sub<>();
 ```

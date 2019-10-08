@@ -9,5 +9,5 @@
 ```
 
 
-public static Int32Absolute(Int32 this)
+public static Int32 Absolute(this Int32 this)
 ```

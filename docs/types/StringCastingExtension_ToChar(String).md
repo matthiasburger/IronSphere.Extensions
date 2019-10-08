@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Char>ToChar(String this)
+public static Nullable<Char> ToChar(this String this)
 ```

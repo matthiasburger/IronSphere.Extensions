@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanBetween(DateTime this, DateTime lower, DateTime higher)
+public static Boolean Between(this DateTime this, this DateTime lower, this DateTime higher)
 ```

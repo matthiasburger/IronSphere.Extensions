@@ -9,5 +9,5 @@
 ```
 
 
-public static Int32GetAge(DateTime this)
+public static Int32 GetAge(this DateTime this)
 ```

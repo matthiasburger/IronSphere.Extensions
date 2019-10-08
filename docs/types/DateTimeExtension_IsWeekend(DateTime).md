@@ -9,5 +9,5 @@
 ```
 
 
-public static BooleanIsWeekend(DateTime this)
+public static Boolean IsWeekend(this DateTime this)
 ```

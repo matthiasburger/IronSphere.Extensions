@@ -9,5 +9,5 @@
 ```
 
 
-public virtual sealed TypeCodeGetTypeCode()
+public virtual sealed TypeCode GetTypeCode()
 ```

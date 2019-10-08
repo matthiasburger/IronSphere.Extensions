@@ -9,5 +9,5 @@
 ```
 
 
-public TypeGetType()
+public Type GetType()
 ```

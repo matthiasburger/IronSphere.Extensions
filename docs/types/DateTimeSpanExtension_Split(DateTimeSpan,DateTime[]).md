@@ -9,5 +9,5 @@
 ```
 
 
-public static IEnumerable<DateTimeSpan>Split(DateTimeSpan this, DateTime[] dateToSplit)
+public static IEnumerable<DateTimeSpan> Split(this DateTimeSpan this, this DateTime[] dateToSplit)
 ```

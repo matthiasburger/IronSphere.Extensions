@@ -9,5 +9,5 @@
 ```
 
 
-public void set_SpanType(DateTimeSpanType value)
+public void  set_SpanType(DateTimeSpanType value)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static TTo<T>(Object this);
+public static T To<T>(this Object this);
 ```

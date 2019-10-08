@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Int32>ToIntOrNull(String this)
+public static Nullable<Int32> ToIntOrNull(this String this)
 ```

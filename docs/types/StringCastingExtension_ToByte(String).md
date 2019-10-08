@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Byte>ToByte(String this)
+public static Nullable<Byte> ToByte(this String this)
 ```

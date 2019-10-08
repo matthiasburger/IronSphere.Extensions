@@ -9,5 +9,5 @@
 ```
 
 
-TMainget_Main<>();
+TMain get_Main<>();
 ```

@@ -22,4 +22,4 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [DisposeAfter&lt;T,TResult&gt;(T instance, Func&lt;T,TResult&gt; actionToInvoke)](DisposableExtension_DisposeAfter-T,TResult-(T,Func-T,TResult-)) | wrapper for disposing disposes after execution |
+| [DisposeAfter&lt;T,TResult&gt;(this T instance, this Func&lt;T,TResult&gt; actionToInvoke)](DisposableExtension_DisposeAfter-T,TResult-(T,Func-T,TResult-)) | wrapper for disposing disposes after execution |

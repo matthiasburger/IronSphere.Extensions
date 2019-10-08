@@ -9,5 +9,5 @@
 ```
 
 
-public static Int64Absolute(Int64 this)
+public static Int64 Absolute(this Int64 this)
 ```
