@@ -10,3 +10,4 @@ public static ICollection<T> Add<T>(this ICollection<T> this, IEnumerable<T> ele
 
 adds all elements in a parametrized list into an existing collection
 
+ 

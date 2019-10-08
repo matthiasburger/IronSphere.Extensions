@@ -10,3 +10,4 @@ public static IEnumerable<IJoinSet<TJoin,TSource>> LexRightJoin<TSource, TJoin, 
 
 Performs a right join over two enumerable sequences
 
+ 

@@ -10,3 +10,4 @@ public static Boolean IsNullOrWhiteSpace(this String this)
 
 Indicates whether a specified string is null, empty, or consists only of white-space characters.
 
+ 

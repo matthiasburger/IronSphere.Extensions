@@ -10,3 +10,4 @@ public static Boolean IsPositive(this Int16 this)
 
 Checks whether the actual value is greater than zero.
 
+ 

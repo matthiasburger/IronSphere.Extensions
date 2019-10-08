@@ -10,3 +10,4 @@ public Boolean HasFlag(Enum flag)
 
 
 
+ 

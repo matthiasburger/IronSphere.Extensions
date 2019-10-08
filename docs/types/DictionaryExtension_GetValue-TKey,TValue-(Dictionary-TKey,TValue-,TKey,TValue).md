@@ -10,3 +10,4 @@ public static TValue GetValue<TKey, TValue>(this Dictionary<TKey,TValue> this, T
 
 Searches for a key in a dictionary and returns its value if it exists.
 
+ 

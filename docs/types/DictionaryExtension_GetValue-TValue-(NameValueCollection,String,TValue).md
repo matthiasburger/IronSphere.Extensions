@@ -10,3 +10,4 @@ public static TValue GetValue<TValue>(this NameValueCollection this, String key,
 
 Searches for a key in a name-value-collection and returns its value if it exists.
 
+ 

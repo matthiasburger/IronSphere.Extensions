@@ -10,5 +10,6 @@ public static DbCommand SetCommandText(this SqlCommand this, String command, Dic
 
 Sets the SqlCommands command-text and adds parameters
 
-```csharp<code><![CDATA[ Dictionary<string, object> paramsDictionary = new Dictionary<string, object>(){ { "user", "admin" } }; SqlCommand command = new SqlCommand(); command.SetCommandText("select * from user where userId = @user", paramsDictionary); ]]></code>
-```
+```csharp
+<code><![CDATA[ Dictionary<string, object> paramsDictionary = new Dictionary<string, object>(){ { "user", "admin" } }; SqlCommand command = new SqlCommand(); command.SetCommandText("select * from user where userId = @user", paramsDictionary); ]]></code>
+``` 

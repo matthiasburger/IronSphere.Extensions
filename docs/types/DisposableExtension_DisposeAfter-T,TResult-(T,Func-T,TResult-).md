@@ -11,3 +11,4 @@ public static TResult DisposeAfter<T, TResult>(this T instance, Func<T,TResult> 
 
 wrapper for disposing disposes after execution
 
+ 

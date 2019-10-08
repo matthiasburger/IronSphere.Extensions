@@ -10,3 +10,4 @@ public static Boolean IsAnonymousType(this Type type)
 
 determines if a type is anonymous
 
+ 

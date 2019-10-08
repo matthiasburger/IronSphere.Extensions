@@ -10,3 +10,4 @@ public static DateTime GetLastOfWeek(this DateTime this, DayOfWeek startOfWeek =
 
 Calculates the last day of a week.
 
+ 

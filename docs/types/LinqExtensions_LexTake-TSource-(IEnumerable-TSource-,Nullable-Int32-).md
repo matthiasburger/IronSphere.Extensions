@@ -10,3 +10,4 @@ public static IEnumerable<TSource> LexTake<TSource>(this IEnumerable<TSource> so
 
 Pendent to Linq IEnumerable{TSource}.Take(int) but returns all when count is null
 
+ 

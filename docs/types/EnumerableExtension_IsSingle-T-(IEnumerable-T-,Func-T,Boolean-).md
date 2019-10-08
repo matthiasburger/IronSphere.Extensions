@@ -11,6 +11,5 @@ public static Boolean IsSingle<T>(this IEnumerable<T> this, Func<T,Boolean> pred
 Determines if an enumeration contains exactly one element
 
 ```csharp
-            bool isSingleUser = Context.Users.IsSingle(w => w.Name == "test");
-            
-```
+bool isSingleUser = Context.Users.IsSingle(w => w.Name == "test");
+``` 

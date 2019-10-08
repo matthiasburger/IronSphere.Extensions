@@ -10,3 +10,4 @@ public static DateTime GetFirstOfWeek(this DateTime this, DayOfWeek startOfWeek 
 
 Calculates the first day of a week.
 
+ 

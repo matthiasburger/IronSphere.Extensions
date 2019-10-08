@@ -10,3 +10,4 @@ public static Byte Max(this Byte this, Byte maximum)
 
 Compares two values and returns the lower one
 
+ 

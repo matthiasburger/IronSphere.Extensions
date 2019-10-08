@@ -10,3 +10,4 @@ public static Int32 GetWeekOfYear(this DateTime dateTime, CultureInfo cultureInf
 
 Gets the calendar-week of a date dependent to a culture with ISO 8601
 
+ 
