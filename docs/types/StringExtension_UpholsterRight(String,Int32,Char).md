@@ -9,5 +9,5 @@
 ```
 
 
-public static String UpholsterRight(this String this, this Int32 count, this Char character = ' ')
+public static String UpholsterRight(this String this, Int32 count, Char character = ' ')
 ```

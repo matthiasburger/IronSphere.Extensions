@@ -9,5 +9,5 @@
 ```
 
 
-public static DateTimeSpan[] Split(this DateTimeSpan this, this DateTime date)
+public static DateTimeSpan[] Split(this DateTimeSpan this, DateTime date)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static StringBuilder AppendIf(this StringBuilder stringBuilder, this Boolean condition, this String textToAppend)
+public static StringBuilder AppendIf(this StringBuilder stringBuilder, Boolean condition, String textToAppend)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static T Add<T>(this Enum this, this T value);
+public static T Add<T>(this Enum this, T value);
 ```

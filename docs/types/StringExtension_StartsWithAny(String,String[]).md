@@ -9,5 +9,5 @@
 ```
 
 
-public static Boolean StartsWithAny(this String this, this String[] parameter)
+public static Boolean StartsWithAny(this String this, String[] parameter)
 ```

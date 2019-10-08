@@ -9,5 +9,5 @@
 ```
 
 
-public static Nullable<Decimal> ToDecimal(this String this, this NumberStyles numberStyles, this IFormatProvider formatProvider)
+public static Nullable<Decimal> ToDecimal(this String this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```

@@ -22,6 +22,6 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [Range(this ValueTuple&lt;DateTime,DateTime&gt; dateTuple, this DateTimeSpanType spanType = 5, this Int32 step = 1)](DateTimeSpanExtension_Range(ValueTuple-DateTime,DateTime-,DateTimeSpanType,Int32)) | Creates a new DateTimeSpan-object from a tuple of dates |
-| [Split(this DateTimeSpan this, this DateTime date)](DateTimeSpanExtension_Split(DateTimeSpan,DateTime)) | Splits a &lt;see cref=&quot;T:IronSphere.Extensions.DateTimeSpan&quot; /&gt; at a &lt;see cref=&quot;T:System.DateTime&quot; /&gt; into 2 spans |
-| [Split(this DateTimeSpan this, this DateTime[] dateToSplit)](DateTimeSpanExtension_Split(DateTimeSpan,DateTime[])) | Splits a &lt;see cref=&quot;T:IronSphere.Extensions.DateTimeSpan&quot; /&gt; at a &lt;see cref=&quot;T:System.DateTime&quot; /&gt; into multiple spans |
+| [Range(this ValueTuple&lt;DateTime,DateTime&gt; dateTuple, DateTimeSpanType spanType = 5, Int32 step = 1)](DateTimeSpanExtension_Range(ValueTuple-DateTime,DateTime-,DateTimeSpanType,Int32)) | Creates a new DateTimeSpan-object from a tuple of dates |
+| [Split(this DateTimeSpan this, DateTime date)](DateTimeSpanExtension_Split(DateTimeSpan,DateTime)) | Splits a &lt;see cref=&quot;T:IronSphere.Extensions.DateTimeSpan&quot; /&gt; at a &lt;see cref=&quot;T:System.DateTime&quot; /&gt; into 2 spans |
+| [Split(this DateTimeSpan this, DateTime[] dateToSplit)](DateTimeSpanExtension_Split(DateTimeSpan,DateTime[])) | Splits a &lt;see cref=&quot;T:IronSphere.Extensions.DateTimeSpan&quot; /&gt; at a &lt;see cref=&quot;T:System.DateTime&quot; /&gt; into multiple spans |

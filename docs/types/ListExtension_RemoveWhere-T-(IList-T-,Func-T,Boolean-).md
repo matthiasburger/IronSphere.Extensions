@@ -9,6 +9,6 @@
 ```
 
 
-public static void  RemoveWhere<T>(this IList<T> this, this Func<T,Boolean> expression)
+public static void  RemoveWhere<T>(this IList<T> this, Func<T,Boolean> expression)
     where T: class;
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static Boolean Between(this Single this, this Single lower, this Single higher)
+public static Boolean Between(this Single this, Single lower, Single higher)
 ```

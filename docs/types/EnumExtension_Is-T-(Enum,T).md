@@ -9,5 +9,5 @@
 ```
 
 
-public static Boolean Is<T>(this Enum this, this T value);
+public static Boolean Is<T>(this Enum this, T value);
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static IEnumerable<String> Split(this String this, this Int32 position)
+public static IEnumerable<String> Split(this String this, Int32 position)
 ```

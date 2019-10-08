@@ -9,5 +9,5 @@
 ```
 
 
-public static String ValueIfNullOrEmpty(this String this, this String defaultValue)
+public static String ValueIfNullOrEmpty(this String this, String defaultValue)
 ```

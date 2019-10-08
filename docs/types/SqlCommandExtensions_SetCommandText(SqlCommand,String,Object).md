@@ -9,5 +9,5 @@
 ```
 
 
-public static DbCommand SetCommandText(this SqlCommand this, this String command, this Object parameters)
+public static DbCommand SetCommandText(this SqlCommand this, String command, Object parameters)
 ```

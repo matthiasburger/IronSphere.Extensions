@@ -9,5 +9,5 @@
 ```
 
 
-public static Double Max(this Double this, this Double maximum)
+public static Double Max(this Double this, Double maximum)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static Single Max(this Single this, this Single maximum)
+public static Single Max(this Single this, Single maximum)
 ```

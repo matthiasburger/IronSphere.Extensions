@@ -9,5 +9,5 @@
 ```
 
 
-public static void  SetPropertyValue<T, TValue>(this T target, this LambdaExpression memberLambda, this TValue value);
+public static void  SetPropertyValue<T, TValue>(this T target, LambdaExpression memberLambda, TValue value);
 ```

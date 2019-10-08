@@ -9,5 +9,5 @@
 ```
 
 
-public static Boolean NotIn<T>(this T this, this T[] listOfItems);
+public static Boolean NotIn<T>(this T this, T[] listOfItems);
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static T ReplaceIf<T>(this T this, this Func<T,Boolean> expression, this T output);
+public static T ReplaceIf<T>(this T this, Func<T,Boolean> expression, T output);
 ```

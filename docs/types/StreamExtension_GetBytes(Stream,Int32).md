@@ -9,5 +9,5 @@
 ```
 
 
-public static Byte[] GetBytes(this Stream this, this Int32 length = 16384)
+public static Byte[] GetBytes(this Stream this, Int32 length = 16384)
 ```

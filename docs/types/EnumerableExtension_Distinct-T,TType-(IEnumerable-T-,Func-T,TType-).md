@@ -9,5 +9,5 @@
 ```
 
 
-public static IEnumerable<T> Distinct<T, TType>(this IEnumerable<T> this, this Func<T,TType> expression);
+public static IEnumerable<T> Distinct<T, TType>(this IEnumerable<T> this, Func<T,TType> expression);
 ```

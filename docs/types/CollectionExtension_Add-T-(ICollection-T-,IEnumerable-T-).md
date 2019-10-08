@@ -9,5 +9,5 @@
 ```
 
 
-public static ICollection<T> Add<T>(this ICollection<T> this, this IEnumerable<T> elementsToAdd);
+public static ICollection<T> Add<T>(this ICollection<T> this, IEnumerable<T> elementsToAdd);
 ```

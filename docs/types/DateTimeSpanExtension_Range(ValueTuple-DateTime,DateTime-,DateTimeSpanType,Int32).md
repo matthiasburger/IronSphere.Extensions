@@ -9,5 +9,5 @@
 ```
 
 
-public static DateTimeSpan Range(this ValueTuple<DateTime,DateTime> dateTuple, this DateTimeSpanType spanType = 5, this Int32 step = 1)
+public static DateTimeSpan Range(this ValueTuple<DateTime,DateTime> dateTuple, DateTimeSpanType spanType = 5, Int32 step = 1)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static Boolean Between(this Int64 this, this Int64 lower, this Int64 higher)
+public static Boolean Between(this Int64 this, Int64 lower, Int64 higher)
 ```

@@ -9,5 +9,5 @@
 ```
 
 
-public static String ToString<T>(this T this, this Func<T,String> resultString);
+public static String ToString<T>(this T this, Func<T,String> resultString);
 ```

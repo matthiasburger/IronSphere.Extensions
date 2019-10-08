@@ -22,12 +22,12 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [Between(this Int64 this, this Int64 lower, this Int64 higher)](LongExtension_Between(Int64,Int64,Int64)) | Checks whether the actual value is between specified lower and higher. |
+| [Between(this Int64 this, Int64 lower, Int64 higher)](LongExtension_Between(Int64,Int64,Int64)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(this Int64 this)](LongExtension_IsPositive(Int64)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(this Int64 this)](LongExtension_IsNegative(Int64)) | Checks whether the actual value is smaller than zero. |
 | [IsZero(this Int64 this)](LongExtension_IsZero(Int64)) | Checks whether the actual value is equal to zero. |
-| [IsGreaterThan(this Int64 this, this Int64 other)](LongExtension_IsGreaterThan(Int64,Int64)) | Checks whether the actual value is greater than an other one. |
-| [IsLowerThan(this Int64 this, this Int64 other)](LongExtension_IsLowerThan(Int64,Int64)) | Checks whether the actual value is lower than an other one. |
-| [Min(this Int64 this, this Int64 minimum)](LongExtension_Min(Int64,Int64)) | Compares two values and returns the greater one |
-| [Max(this Int64 this, this Int64 maximum)](LongExtension_Max(Int64,Int64)) | Compares two values and returns the lower one |
+| [IsGreaterThan(this Int64 this, Int64 other)](LongExtension_IsGreaterThan(Int64,Int64)) | Checks whether the actual value is greater than an other one. |
+| [IsLowerThan(this Int64 this, Int64 other)](LongExtension_IsLowerThan(Int64,Int64)) | Checks whether the actual value is lower than an other one. |
+| [Min(this Int64 this, Int64 minimum)](LongExtension_Min(Int64,Int64)) | Compares two values and returns the greater one |
+| [Max(this Int64 this, Int64 maximum)](LongExtension_Max(Int64,Int64)) | Compares two values and returns the lower one |
 | [Absolute(this Int64 this)](LongExtension_Absolute(Int64)) | Returns the absolute value of a 64-bit signed integer. |

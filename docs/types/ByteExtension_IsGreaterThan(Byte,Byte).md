@@ -9,5 +9,5 @@
 ```
 
 
-public static Boolean IsGreaterThan(this Byte this, this Byte other)
+public static Boolean IsGreaterThan(this Byte this, Byte other)
 ```

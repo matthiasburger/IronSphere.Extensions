@@ -23,5 +23,5 @@ Attributes:
 | Static Method | Description |
 | --- | --- |
 | [To&lt;T&gt;(this Object this)](ChangeTypeExtension_To-T-(Object)) | converts any object to type of T |
-| [ToOrDefault&lt;T&gt;(this Object this, this T default = default)](ChangeTypeExtension_ToOrDefault-T-(Object,T)) | converts any object to type of T |
+| [ToOrDefault&lt;T&gt;(this Object this, T default = default)](ChangeTypeExtension_ToOrDefault-T-(Object,T)) | converts any object to type of T |
 | [ToOrNull&lt;T&gt;(this Object this)](ChangeTypeExtension_ToOrNull-T-(Object)) | converts any object to type of T |
