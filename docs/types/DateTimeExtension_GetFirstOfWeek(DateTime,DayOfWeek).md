@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static DateTime GetFirstOfWeek(this DateTime this, DayOfWeek startOfWeek = 1)
+public static DateTime GetFirstOfWeek(this DateTime this, DayOfWeek startOfWeek = Monday)
 ```
 
 Calculates the first day of a week.
