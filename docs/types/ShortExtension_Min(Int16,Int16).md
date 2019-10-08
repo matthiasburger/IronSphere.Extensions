@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Int16 Min(this Int16 this, Int16 minimum)
+public static short Min(this short this, short minimum)
 ```
 
 Compares two values and returns the greater one

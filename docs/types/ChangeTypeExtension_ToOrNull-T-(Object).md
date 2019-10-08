@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Nullable<T> ToOrNull<T>(this Object this)
+public static T? ToOrNull<T>(this object this)
     where T: struct;
 ```
 

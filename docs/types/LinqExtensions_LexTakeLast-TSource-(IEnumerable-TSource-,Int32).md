@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static IEnumerable<TSource> LexTakeLast<TSource>(this IEnumerable<TSource> source, Int32 count);
+public static IEnumerable<TSource> LexTakeLast<TSource>(this IEnumerable<TSource> source, int count);
 ```
 
 

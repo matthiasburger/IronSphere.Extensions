@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static String GetFullReadableName(this Type this)
+public static string GetFullReadableName(this Type this)
 ```
 
 Gets the types full readable name

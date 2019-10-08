@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public Int32 get_Step()
+public int get_Step()
 ```
 
 

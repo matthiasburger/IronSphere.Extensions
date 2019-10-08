@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static String ToString<T>(this T this, Func<T,String> resultString);
+public static string ToString<T>(this T this, Func<T, string> resultString);
 ```
 
 String representation of any object

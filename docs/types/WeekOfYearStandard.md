@@ -26,12 +26,12 @@ Implements:
 | Method | Description |
 | --- | --- |
 | [GetValue()](Link) |  |
-| [Equals(Object obj)](Link) |  |
+| [Equals(object obj)](Link) |  |
 | [GetHashCode()](Link) |  |
 | [ToString()](Link) |  |
-| [ToString(String format, IFormatProvider provider)](Link) |  |
-| [CompareTo(Object target)](Link) |  |
-| [ToString(String format)](Link) |  |
+| [ToString(string format, IFormatProvider provider)](Link) |  |
+| [CompareTo(object target)](Link) |  |
+| [ToString(string format)](Link) |  |
 | [ToString(IFormatProvider provider)](Link) |  |
 | [HasFlag(Enum flag)](Link) |  |
 | [GetTypeCode()](Link) |  |

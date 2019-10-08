@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static StringBuilder AppendIf(this StringBuilder stringBuilder, Boolean condition, String textToAppend)
+public static StringBuilder AppendIf(this StringBuilder stringBuilder, bool condition, string textToAppend)
 ```
 
 

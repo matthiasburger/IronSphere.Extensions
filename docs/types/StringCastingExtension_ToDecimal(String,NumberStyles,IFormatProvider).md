@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Nullable<Decimal> ToDecimal(this String this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static decimal? ToDecimal(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```
 
 

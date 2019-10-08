@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 
 [assembly:InternalsVisibleTo("IronSphere.Extensions.AspNetCore")]
 namespace IronSphere.Extensions.Reflection
@@ -264,7 +265,7 @@ namespace IronSphere.Extensions.Reflection
         /// <param name="this">the actual type</param>
         /// <returns></returns>
         public static string GetShortReadableName(this Type @this) => _getShortReadableName(@this);
-
+        
         private static string _getShortReadableName(Type type)
         {
             if (type.IsAnonymousType())

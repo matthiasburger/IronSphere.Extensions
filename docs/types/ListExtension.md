@@ -22,5 +22,5 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [RemoveSingle&lt;T&gt;(this IList&lt;T&gt; this, Func&lt;T,Boolean&gt; expression)](ListExtension_RemoveSingle-T-(IList-T-,Func-T,Boolean-)) | Removes a single element in a list where a condition matches |
-| [RemoveWhere&lt;T&gt;(this IList&lt;T&gt; this, Func&lt;T,Boolean&gt; expression)](ListExtension_RemoveWhere-T-(IList-T-,Func-T,Boolean-)) | Removes all elements in a list where a condition matches |
+| [RemoveSingle&lt;T&gt;(this IList&lt;T&gt; this, Func&lt;T, bool&gt; expression)](ListExtension_RemoveSingle-T-(IList-T-,Func-T,Boolean-)) | Removes a single element in a list where a condition matches |
+| [RemoveWhere&lt;T&gt;(this IList&lt;T&gt; this, Func&lt;T, bool&gt; expression)](ListExtension_RemoveWhere-T-(IList-T-,Func-T,Boolean-)) | Removes all elements in a list where a condition matches |

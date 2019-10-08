@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Nullable<Single> ToFloat(this String this)
+public static float? ToFloat(this string this)
 ```
 
 

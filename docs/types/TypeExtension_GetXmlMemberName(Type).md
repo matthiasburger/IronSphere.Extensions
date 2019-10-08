@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static String GetXmlMemberName(this Type this)
+public static string GetXmlMemberName(this Type this)
 ```
 
 Gets the xml-documentation member name for a type

@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public String ToString(String format)
+public string ToString(string format)
 ```
 
 

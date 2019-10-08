@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Boolean IsSingle<T>(this IEnumerable<T> this);
+public static bool IsSingle<T>(this IEnumerable<T> this);
 ```
 
 Determines if an enumeration contains exactly one element

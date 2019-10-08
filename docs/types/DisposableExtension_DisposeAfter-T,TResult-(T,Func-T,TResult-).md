@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static TResult DisposeAfter<T, TResult>(this T instance, Func<T,TResult> actionToInvoke)
+public static TResult DisposeAfter<T, TResult>(this T instance, Func<T, TResult> actionToInvoke)
     where T: IDisposable;
 ```
 

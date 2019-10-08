@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static String Format(this String this, Object anonymousObject)
+public static string Format(this string this, object anonymousObject)
 ```
 
 formats a string with values in an anonymous object

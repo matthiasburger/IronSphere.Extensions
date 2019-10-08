@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static String GetString(this Byte[] bytes, Encoding encoding = null)
+public static string GetString(this byte[] bytes, Encoding encoding = null)
 ```
 
 Decodes all bytes in a specified array into a string.

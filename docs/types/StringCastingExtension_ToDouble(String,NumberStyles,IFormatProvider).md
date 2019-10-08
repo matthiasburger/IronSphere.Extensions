@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Nullable<Double> ToDouble(this String this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static double? ToDouble(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```
 
 

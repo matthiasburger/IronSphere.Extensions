@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Nullable<Int16> ToShort(this String this)
+public static short? ToShort(this string this)
 ```
 
 

@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Nullable<DateTime> ToDateTime(this String this)
+public static DateTime? ToDateTime(this string this)
 ```
 
 

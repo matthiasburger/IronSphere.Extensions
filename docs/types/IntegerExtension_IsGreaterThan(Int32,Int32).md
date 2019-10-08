@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Boolean IsGreaterThan(this Int32 this, Int32 other)
+public static bool IsGreaterThan(this int this, int other)
 ```
 
 Checks whether the actual value is greater than an other one.

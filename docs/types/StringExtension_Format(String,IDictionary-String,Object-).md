@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static String Format(this String this, IDictionary<String,Object> values)
+public static string Format(this string this, IDictionary<string, object> values)
 ```
 
 formats a string with values in a dictionary

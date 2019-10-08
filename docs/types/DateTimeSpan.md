@@ -35,13 +35,13 @@ Implements:
 | [get_SpanType()](Link) |  |
 | [set_SpanType(DateTimeSpanType value)](Link) |  |
 | [get_Step()](Link) |  |
-| [set_Step(Int32 value)](Link) |  |
-| [GetEnumerator(DateTimeSpanType spanType, Int32 step)](Link) | Returns an enumerator to iterate over the sequence of &lt;see cref=&quot;T:System.DateTime&quot; /&gt; |
+| [set_Step(int value)](Link) |  |
+| [GetEnumerator(DateTimeSpanType spanType, int step)](Link) | Returns an enumerator to iterate over the sequence of &lt;see cref=&quot;T:System.DateTime&quot; /&gt; |
 | [GetEnumerator()](Link) |  |
 | [System.Collections.IEnumerable.GetEnumerator()](Link) |  |
 | [Deconstruct(out DateTime start, out DateTime end)](Link) |  |
 | [ToString()](Link) |  |
-| [Equals(Object obj)](Link) |  |
+| [Equals(object obj)](Link) |  |
 | [GetHashCode()](Link) |  |
 | [GetType()](Link) |  |
 | [Finalize()](Link) |  |

@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Single Min(this Single this, Single minimum)
+public static float Min(this float this, float minimum)
 ```
 
 Compares two values and returns the greater one

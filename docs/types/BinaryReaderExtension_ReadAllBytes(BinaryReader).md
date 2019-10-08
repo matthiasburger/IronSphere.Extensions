@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Byte[] ReadAllBytes(this BinaryReader reader)
+public static byte[] ReadAllBytes(this BinaryReader reader)
 ```
 
 Reads all bytes and writes them into an array

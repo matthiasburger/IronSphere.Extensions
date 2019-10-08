@@ -22,11 +22,11 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [Between(this Int16 this, Int16 lower, Int16 higher)](ShortExtension_Between(Int16,Int16,Int16)) | Checks whether the actual value is between specified lower and higher. |
-| [IsPositive(this Int16 this)](ShortExtension_IsPositive(Int16)) | Checks whether the actual value is greater than zero. |
-| [IsNegative(this Int16 this)](ShortExtension_IsNegative(Int16)) | Checks whether the actual value is smaller than zero. |
-| [IsZero(this Int16 this)](ShortExtension_IsZero(Int16)) | Checks whether the actual value is equal to zero. |
-| [IsGreaterThan(this Int16 this, Int16 other)](ShortExtension_IsGreaterThan(Int16,Int16)) | Checks whether the actual value is greater than an other one. |
-| [IsLowerThan(this Int16 this, Int16 other)](ShortExtension_IsLowerThan(Int16,Int16)) | Checks whether the actual value is lower than an other one. |
-| [Min(this Int16 this, Int16 minimum)](ShortExtension_Min(Int16,Int16)) | Compares two values and returns the greater one |
-| [Max(this Int16 this, Int16 maximum)](ShortExtension_Max(Int16,Int16)) | Compares two values and returns the lower one |
+| [Between(this short this, short lower, short higher)](ShortExtension_Between(Int16,Int16,Int16)) | Checks whether the actual value is between specified lower and higher. |
+| [IsPositive(this short this)](ShortExtension_IsPositive(Int16)) | Checks whether the actual value is greater than zero. |
+| [IsNegative(this short this)](ShortExtension_IsNegative(Int16)) | Checks whether the actual value is smaller than zero. |
+| [IsZero(this short this)](ShortExtension_IsZero(Int16)) | Checks whether the actual value is equal to zero. |
+| [IsGreaterThan(this short this, short other)](ShortExtension_IsGreaterThan(Int16,Int16)) | Checks whether the actual value is greater than an other one. |
+| [IsLowerThan(this short this, short other)](ShortExtension_IsLowerThan(Int16,Int16)) | Checks whether the actual value is lower than an other one. |
+| [Min(this short this, short minimum)](ShortExtension_Min(Int16,Int16)) | Compares two values and returns the greater one |
+| [Max(this short this, short maximum)](ShortExtension_Max(Int16,Int16)) | Compares two values and returns the lower one |

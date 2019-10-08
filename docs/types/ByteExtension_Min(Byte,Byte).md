@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Byte Min(this Byte this, Byte minimum)
+public static byte Min(this byte this, byte minimum)
 ```
 
 Compares two values and returns the greater one

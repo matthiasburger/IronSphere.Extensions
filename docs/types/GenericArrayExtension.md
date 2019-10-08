@@ -22,4 +22,4 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [Slice&lt;T&gt;(this T[] items, Int32 startIndex = 0, Nullable&lt;Int32&gt; endIndex = default)](GenericArrayExtension_Slice-T-(T[],Int32,Nullable-Int32-)) |  |
+| [Slice&lt;T&gt;(this T[] items, int startIndex = 0, int? endIndex = default)](GenericArrayExtension_Slice-T-(T[],Int32,Nullable-Int32-)) |  |

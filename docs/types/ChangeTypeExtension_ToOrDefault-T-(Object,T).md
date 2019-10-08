@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static T ToOrDefault<T>(this Object this, T default = default);
+public static T ToOrDefault<T>(this object this, T default = default);
 ```
 
 converts any object to type of T

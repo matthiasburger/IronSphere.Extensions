@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Int32 GetAge(this DateTime this)
+public static int GetAge(this DateTime this)
 ```
 
 Calculates the age (years) from a date.

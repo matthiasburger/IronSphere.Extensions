@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static IEnumerable<TSource> LexSkip<TSource>(this IEnumerable<TSource> source, Nullable<Int32> count);
+public static IEnumerable<TSource> LexSkip<TSource>(this IEnumerable<TSource> source, int? count);
 ```
 
 Pendent to Linq IEnumerable{TSource}.Skip(int) but skips all when count is null

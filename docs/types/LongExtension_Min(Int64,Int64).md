@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Int64 Min(this Int64 this, Int64 minimum)
+public static long Min(this long this, long minimum)
 ```
 
 Compares two values and returns the greater one

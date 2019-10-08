@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Nullable<Int32> ToIntOrNull(this String this)
+public static int? ToIntOrNull(this string this)
 ```
 
 Parses a string to its int representation

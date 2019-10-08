@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public virtual sealed String ToString(IFormatProvider provider)
+public virtual sealed string ToString(IFormatProvider provider)
 ```
 
 

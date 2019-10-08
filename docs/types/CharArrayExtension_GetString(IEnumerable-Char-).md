@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static String GetString(this IEnumerable<Char> this)
+public static string GetString(this IEnumerable<char> this)
 ```
 
 Concatenates a sequence of chars to its string representation

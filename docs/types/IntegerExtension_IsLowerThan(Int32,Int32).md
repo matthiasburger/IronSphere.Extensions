@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Boolean IsLowerThan(this Int32 this, Int32 other)
+public static bool IsLowerThan(this int this, int other)
 ```
 
 Checks whether the actual value is lower than an other one.

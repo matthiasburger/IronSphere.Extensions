@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static String RemoveDiacritics(this String this)
+public static string RemoveDiacritics(this string this)
 ```
 
 Removes all diacritics in a string

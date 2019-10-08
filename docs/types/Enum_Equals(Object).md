@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public virtual Boolean Equals(Object obj)
+public virtual bool Equals(object obj)
 ```
 
 

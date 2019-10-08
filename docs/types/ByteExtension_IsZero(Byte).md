@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static Boolean IsZero(this Byte this)
+public static bool IsZero(this byte this)
 ```
 
 Checks whether the actual value is equal to zero.
