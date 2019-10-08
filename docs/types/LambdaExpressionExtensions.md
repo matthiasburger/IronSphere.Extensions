@@ -22,5 +22,5 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [SetPropertyValue&lt;T,TValue&gt;(T target, LambdaExpression memberLambda, TValue value)](LambdaExpressionExtensions.SetPropertyValue-T,TValue-(T,LambdaExpression,TValue)) | Sets an objects property to a value by using &lt;see cref=&quot;T:System.Linq.Expressions.LambdaExpression&quot; /&gt; |
-| [_set&lt;TEntity,TValue&gt;(LambdaExpression propertyGetExpression, TValue valueExpression)](LambdaExpressionExtensions._set-TEntity,TValue-(LambdaExpression,TValue)) |  |
+| [SetPropertyValue&lt;T,TValue&gt;(T target, LambdaExpression memberLambda, TValue value)](LambdaExpressionExtensions_SetPropertyValue-T,TValue-(T,LambdaExpression,TValue)) | Sets an objects property to a value by using &lt;see cref=&quot;T:System.Linq.Expressions.LambdaExpression&quot; /&gt; |
+| [_set&lt;TEntity,TValue&gt;(LambdaExpression propertyGetExpression, TValue valueExpression)](LambdaExpressionExtensions__set-TEntity,TValue-(LambdaExpression,TValue)) |  |

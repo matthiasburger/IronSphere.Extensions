@@ -22,4 +22,4 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [GetString(IEnumerable&lt;Char&gt; this)](CharArrayExtension.GetString(IEnumerable-Char-)) | Concatenates a sequence of chars to its string representation |
+| [GetString(IEnumerable&lt;Char&gt; this)](CharArrayExtension_GetString(IEnumerable-Char-)) | Concatenates a sequence of chars to its string representation |

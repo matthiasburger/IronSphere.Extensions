@@ -22,20 +22,20 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [ToBool(String this)](StringCastingExtension.ToBool(String)) |  |
-| [ToByte(String this)](StringCastingExtension.ToByte(String)) |  |
-| [ToChar(String this)](StringCastingExtension.ToChar(String)) |  |
-| [ToDateTime(String this)](StringCastingExtension.ToDateTime(String)) |  |
-| [ToDateTime(String this, DateTimeStyles dateTimeStyles, IFormatProvider formatProvider)](StringCastingExtension.ToDateTime(String,DateTimeStyles,IFormatProvider)) |  |
-| [ToDecimal(String this)](StringCastingExtension.ToDecimal(String)) |  |
-| [ToDecimal(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension.ToDecimal(String,NumberStyles,IFormatProvider)) |  |
-| [ToDouble(String this)](StringCastingExtension.ToDouble(String)) |  |
-| [ToDouble(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension.ToDouble(String,NumberStyles,IFormatProvider)) |  |
-| [ToFloat(String this)](StringCastingExtension.ToFloat(String)) |  |
-| [ToFloat(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension.ToFloat(String,NumberStyles,IFormatProvider)) |  |
-| [ToInt(String this)](StringCastingExtension.ToInt(String)) |  |
-| [ToInt(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension.ToInt(String,NumberStyles,IFormatProvider)) |  |
-| [ToLong(String this)](StringCastingExtension.ToLong(String)) |  |
-| [ToLong(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension.ToLong(String,NumberStyles,IFormatProvider)) |  |
-| [ToShort(String this)](StringCastingExtension.ToShort(String)) |  |
-| [ToShort(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension.ToShort(String,NumberStyles,IFormatProvider)) |  |
+| [ToBool(String this)](StringCastingExtension_ToBool(String)) |  |
+| [ToByte(String this)](StringCastingExtension_ToByte(String)) |  |
+| [ToChar(String this)](StringCastingExtension_ToChar(String)) |  |
+| [ToDateTime(String this)](StringCastingExtension_ToDateTime(String)) |  |
+| [ToDateTime(String this, DateTimeStyles dateTimeStyles, IFormatProvider formatProvider)](StringCastingExtension_ToDateTime(String,DateTimeStyles,IFormatProvider)) |  |
+| [ToDecimal(String this)](StringCastingExtension_ToDecimal(String)) |  |
+| [ToDecimal(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension_ToDecimal(String,NumberStyles,IFormatProvider)) |  |
+| [ToDouble(String this)](StringCastingExtension_ToDouble(String)) |  |
+| [ToDouble(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension_ToDouble(String,NumberStyles,IFormatProvider)) |  |
+| [ToFloat(String this)](StringCastingExtension_ToFloat(String)) |  |
+| [ToFloat(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension_ToFloat(String,NumberStyles,IFormatProvider)) |  |
+| [ToInt(String this)](StringCastingExtension_ToInt(String)) |  |
+| [ToInt(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension_ToInt(String,NumberStyles,IFormatProvider)) |  |
+| [ToLong(String this)](StringCastingExtension_ToLong(String)) |  |
+| [ToLong(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension_ToLong(String,NumberStyles,IFormatProvider)) |  |
+| [ToShort(String this)](StringCastingExtension_ToShort(String)) |  |
+| [ToShort(String this, NumberStyles numberStyles, IFormatProvider formatProvider)](StringCastingExtension_ToShort(String,NumberStyles,IFormatProvider)) |  |

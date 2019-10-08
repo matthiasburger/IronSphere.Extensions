@@ -22,4 +22,4 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [AppendIf(StringBuilder stringBuilder, Boolean condition, String textToAppend)](StringBuilderExtension.AppendIf(StringBuilder,Boolean,String)) |  |
+| [AppendIf(StringBuilder stringBuilder, Boolean condition, String textToAppend)](StringBuilderExtension_AppendIf(StringBuilder,Boolean,String)) |  |

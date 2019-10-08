@@ -22,4 +22,4 @@ Attributes:
 
 | Static Method | Description |
 | --- | --- |
-| [GetString(Byte[] bytes, Encoding encoding = null)](ByteArrayExtension.GetString(Byte[],Encoding)) | Decodes all bytes in a specified array into a string. |
+| [GetString(Byte[] bytes, Encoding encoding = null)](ByteArrayExtension_GetString(Byte[],Encoding)) | Decodes all bytes in a specified array into a string. |
