@@ -1,4 +1,6 @@
-﻿# DisposableExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# DisposableExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

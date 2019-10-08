@@ -1,4 +1,6 @@
-﻿# EnumExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# EnumExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

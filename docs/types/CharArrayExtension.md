@@ -1,4 +1,6 @@
-﻿# CharArrayExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# CharArrayExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

@@ -1,4 +1,6 @@
-﻿# GenericArrayExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# GenericArrayExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

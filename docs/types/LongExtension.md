@@ -1,4 +1,6 @@
-﻿# LongExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# LongExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

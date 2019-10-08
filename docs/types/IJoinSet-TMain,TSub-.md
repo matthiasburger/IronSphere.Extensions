@@ -1,4 +1,6 @@
-﻿# IJoinSet&lt;out TMain,out TSub&gt;
+﻿[back](/IronSphere.Extensions/types)
+
+# IJoinSet&lt;out TMain,out TSub&gt;
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

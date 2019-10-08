@@ -1,4 +1,6 @@
-﻿# GenericExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# GenericExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

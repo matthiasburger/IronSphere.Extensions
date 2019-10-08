@@ -1,4 +1,6 @@
-﻿# IntegerExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# IntegerExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

@@ -1,4 +1,6 @@
-﻿# StreamExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# StreamExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

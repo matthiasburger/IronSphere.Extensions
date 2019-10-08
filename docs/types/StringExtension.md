@@ -1,4 +1,6 @@
-﻿# StringExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# StringExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

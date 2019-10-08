@@ -1,4 +1,6 @@
-﻿# DictionaryExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# DictionaryExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

@@ -1,4 +1,6 @@
-﻿# DoubleExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# DoubleExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

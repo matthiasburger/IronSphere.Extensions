@@ -1,4 +1,6 @@
-﻿# TypeExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# TypeExtension
 
 > Namespace: IronSphere.Extensions.Reflection in  IronSphere.Extensions.dll
 

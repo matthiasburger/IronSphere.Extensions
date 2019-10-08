@@ -1,4 +1,6 @@
-﻿# LinqExtensions
+﻿[back](/IronSphere.Extensions/types)
+
+# LinqExtensions
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

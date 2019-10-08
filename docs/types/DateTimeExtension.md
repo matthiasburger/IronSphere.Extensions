@@ -1,4 +1,6 @@
-﻿# DateTimeExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# DateTimeExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

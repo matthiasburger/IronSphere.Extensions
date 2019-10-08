@@ -1,4 +1,6 @@
-﻿# StringCastingExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# StringCastingExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

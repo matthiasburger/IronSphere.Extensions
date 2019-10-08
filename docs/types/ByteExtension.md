@@ -1,4 +1,6 @@
-﻿# ByteExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# ByteExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

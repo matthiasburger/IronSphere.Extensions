@@ -1,4 +1,6 @@
-﻿# FloatExtension
+﻿[back](/IronSphere.Extensions/types)
+
+# FloatExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
