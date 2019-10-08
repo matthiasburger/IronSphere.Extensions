@@ -1,7 +1,4 @@
-﻿
-
-
-# TypeExtension
+﻿# TypeExtension
 
 > Namespace: IronSphere.Extensions.Reflection in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class TypeExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetReadableName(Type this)](TypeExtension.GetReadableName(Type)) | Gets the types readable name |
 | [GetFullReadableName(Type this)](TypeExtension.GetFullReadableName(Type)) | Gets the types full readable name |
 | [_getFullReadableName(Type type)](TypeExtension._getFullReadableName(Type)) |  |

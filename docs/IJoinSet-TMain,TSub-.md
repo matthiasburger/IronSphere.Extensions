@@ -1,7 +1,4 @@
-﻿
-
-
-# IJoinSet&lt;out TMain,out TSub&gt;
+﻿# IJoinSet&lt;out TMain,out TSub&gt;
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -15,9 +12,8 @@ public interface IJoinSet<TMain,TSub>
 
 
 
-
-    | Method | Description |
-    | --- | --- |
+| Method | Description |
+| --- | --- |
 | [get_Main&lt;&gt;()](Link) |  |
 | [get_Sub&lt;&gt;()](Link) |  |
 

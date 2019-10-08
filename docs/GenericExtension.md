@@ -1,7 +1,4 @@
-﻿
-
-
-# GenericExtension
+﻿# GenericExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class GenericExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [In&lt;T&gt;(T this, IEnumerable&lt;T&gt; listOfItems)](GenericExtension.In-T-(T,IEnumerable-T-)) | Determines if an object is contained in a list |
 | [In&lt;T&gt;(T this, T[] listOfItems)](GenericExtension.In-T-(T,T[])) |  |
 | [NotIn&lt;T&gt;(T this, T[] listOfItems)](GenericExtension.NotIn-T-(T,T[])) |  |

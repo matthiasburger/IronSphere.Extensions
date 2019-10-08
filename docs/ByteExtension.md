@@ -1,7 +1,4 @@
-﻿
-
-
-# ByteExtension
+﻿# ByteExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class ByteExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(Byte this, Byte lower, Byte higher)](ByteExtension.Between(Byte,Byte,Byte)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(Byte this)](ByteExtension.IsPositive(Byte)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(Byte this)](ByteExtension.IsNegative(Byte)) | Checks whether the actual value is smaller than zero. |

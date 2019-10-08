@@ -1,7 +1,4 @@
-﻿
-
-
-# StringCastingExtension
+﻿# StringCastingExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class StringCastingExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [ToBool(String this)](StringCastingExtension.ToBool(String)) |  |
 | [ToByte(String this)](StringCastingExtension.ToByte(String)) |  |
 | [ToChar(String this)](StringCastingExtension.ToChar(String)) |  |

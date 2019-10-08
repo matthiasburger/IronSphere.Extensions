@@ -1,7 +1,4 @@
-﻿
-
-
-# CultureInfoExtension
+﻿# CultureInfoExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,18 +7,17 @@
 ```csharp
 public static class CultureInfoExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetMonthsOfCulture(CultureInfo culture)](CultureInfoExtension.GetMonthsOfCulture(CultureInfo)) | Returns all months in the language of the cultures language. |

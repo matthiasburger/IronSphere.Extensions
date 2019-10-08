@@ -1,7 +1,4 @@
-﻿
-
-
-# IntegerExtension
+﻿# IntegerExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class IntegerExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(Int32 this, Int32 lower, Int32 higher)](IntegerExtension.Between(Int32,Int32,Int32)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(Int32 this)](IntegerExtension.IsPositive(Int32)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(Int32 this)](IntegerExtension.IsNegative(Int32)) | Checks whether the actual value is smaller than zero. |

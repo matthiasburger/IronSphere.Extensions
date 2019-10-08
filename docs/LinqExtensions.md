@@ -1,7 +1,4 @@
-﻿
-
-
-# LinqExtensions
+﻿# LinqExtensions
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class LinqExtensions : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [LexTake&lt;TSource&gt;(IEnumerable&lt;TSource&gt; source, Nullable&lt;Int32&gt; count)](LinqExtensions.LexTake-TSource-(IEnumerable-TSource-,Nullable-Int32-)) | Pendent to Linq IEnumerable{TSource}.Take(int) but returns all when count is null |
 | [LexSkipLast&lt;TSource&gt;(IEnumerable&lt;TSource&gt; source, Int32 count)](LinqExtensions.LexSkipLast-TSource-(IEnumerable-TSource-,Int32)) |  |
 | [LexTakeLast&lt;TSource&gt;(IEnumerable&lt;TSource&gt; source, Int32 count)](LinqExtensions.LexTakeLast-TSource-(IEnumerable-TSource-,Int32)) |  |

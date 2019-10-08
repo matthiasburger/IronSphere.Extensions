@@ -1,7 +1,4 @@
-﻿
-
-
-# DoubleExtension
+﻿# DoubleExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class DoubleExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(Double this, Double lower, Double higher)](DoubleExtension.Between(Double,Double,Double)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(Double this)](DoubleExtension.IsPositive(Double)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(Double this)](DoubleExtension.IsNegative(Double)) | Checks whether the actual value is smaller than zero. |

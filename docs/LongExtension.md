@@ -1,7 +1,4 @@
-﻿
-
-
-# LongExtension
+﻿# LongExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class LongExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(Int64 this, Int64 lower, Int64 higher)](LongExtension.Between(Int64,Int64,Int64)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(Int64 this)](LongExtension.IsPositive(Int64)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(Int64 this)](LongExtension.IsNegative(Int64)) | Checks whether the actual value is smaller than zero. |

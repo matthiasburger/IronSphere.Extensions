@@ -1,7 +1,4 @@
-﻿
-
-
-# StringExtension
+﻿# StringExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class StringExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetBytes(String this, Encoding encoding = null)](StringExtension.GetBytes(String,Encoding)) | Encodes all the characters in the specified string into a sequence of bytes |
 | [IsNullOrEmpty(String this)](StringExtension.IsNullOrEmpty(String)) | Indicates whether the specified string is null or an empty string (&quot;&quot;). |
 | [IsNullOrWhiteSpace(String this)](StringExtension.IsNullOrWhiteSpace(String)) | Indicates whether a specified string is null, empty, or consists only of white-space characters. |

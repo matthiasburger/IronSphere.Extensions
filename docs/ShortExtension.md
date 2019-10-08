@@ -1,7 +1,4 @@
-﻿
-
-
-# ShortExtension
+﻿# ShortExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class ShortExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(Int16 this, Int16 lower, Int16 higher)](ShortExtension.Between(Int16,Int16,Int16)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(Int16 this)](ShortExtension.IsPositive(Int16)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(Int16 this)](ShortExtension.IsNegative(Int16)) | Checks whether the actual value is smaller than zero. |

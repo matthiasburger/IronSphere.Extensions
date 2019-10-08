@@ -1,7 +1,4 @@
-﻿
-
-
-# WeekOfYearStandard
+﻿# WeekOfYearStandard
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,11 +7,10 @@
 ```csharp
 public enum WeekOfYearStandard : Enum, IComparable, IFormattable, IConvertible
 ```
+Inheritance: Object &#129050; ValueType &#129050; Enum
 
-    Inheritance Object &#129050; ValueType &#129050; Enum
 
-    
-    Implements:
+Implements:
         
 * System.IComparable
         
@@ -25,8 +21,8 @@ public enum WeekOfYearStandard : Enum, IComparable, IFormattable, IConvertible
 
 
 
-    | Method | Description |
-    | --- | --- |
+| Method | Description |
+| --- | --- |
 | [GetValue()](Link) |  |
 | [Equals(Object obj)](Link) |  |
 | [GetHashCode()](Link) |  |

@@ -1,7 +1,4 @@
-﻿
-
-
-# DateTimeExtension
+﻿# DateTimeExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,23 +7,22 @@
 ```csharp
 public static class DateTimeExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
-    | Static Constructor | Description |
-    | --- | --- |
+| Static Constructor | Description |
+| --- | --- |
 | [DateTimeExtension()](Link) |  |
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetFirstOfWeek(DateTime this, DayOfWeek startOfWeek = 1)](DateTimeExtension.GetFirstOfWeek(DateTime,DayOfWeek)) | Calculates the first day of a week. |
 | [GetLastOfWeek(DateTime this, DayOfWeek startOfWeek = 1)](DateTimeExtension.GetLastOfWeek(DateTime,DayOfWeek)) | Calculates the last day of a week. |
 | [GetFirstOfMonth(DateTime this)](DateTimeExtension.GetFirstOfMonth(DateTime)) | Calculates the first day of a month. |

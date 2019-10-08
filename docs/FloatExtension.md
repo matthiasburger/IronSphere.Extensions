@@ -1,7 +1,4 @@
-﻿
-
-
-# FloatExtension
+﻿# FloatExtension
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 
@@ -10,20 +7,19 @@
 ```csharp
 public static class FloatExtension : Object
 ```
+Inheritance: Object
 
-    Inheritance Object
 
 
-    
-    Attributes:
+Attributes:
         
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(Single this, Single lower, Single higher)](FloatExtension.Between(Single,Single,Single)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(Single this)](FloatExtension.IsPositive(Single)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(Single this)](FloatExtension.IsNegative(Single)) | Checks whether the actual value is smaller than zero. |
