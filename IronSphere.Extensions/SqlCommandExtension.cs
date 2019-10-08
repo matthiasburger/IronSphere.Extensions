@@ -20,12 +20,10 @@ namespace IronSphere.Extensions
         /// <param name="command">The command to set</param>
         /// <param name="parameters">The parameters to add as an anonymous object.</param>
         /// <example>
-        /// <code>
         ///<![CDATA[
         /// SqlCommand command = new SqlCommand();
         /// command.SetCommandText("select * from user where userId = @user", new{user="admin"});
         /// ]]>
-        /// </code>
         /// </example>
         /// <returns>The modified DbCommand</returns>
         public static DbCommand SetCommandText([NotNull]this SqlCommand @this, [NotNull]string command,
@@ -55,7 +53,6 @@ namespace IronSphere.Extensions
         /// <param name="command">The command to set</param>
         /// <param name="parameters">The parameters to add as an anonymous object.</param>
         /// <example>
-        /// <code>
         ///<![CDATA[
         /// Dictionary<string, object> paramsDictionary = new Dictionary<string, object>(){
         ///     { "user", "admin" }
@@ -64,7 +61,6 @@ namespace IronSphere.Extensions
         /// SqlCommand command = new SqlCommand();
         /// command.SetCommandText("select * from user where userId = @user", paramsDictionary);
         /// ]]>
-        /// </code>
         /// </example>
         /// <returns>The modified DbCommand</returns>
         public static DbCommand SetCommandText([NotNull]this SqlCommand @this, [NotNull]string command,
