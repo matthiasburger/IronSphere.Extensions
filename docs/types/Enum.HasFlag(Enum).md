@@ -1,0 +1,11 @@
+﻿
+
+# HasFlag
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

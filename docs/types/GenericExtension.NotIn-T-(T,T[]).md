@@ -1,0 +1,11 @@
+﻿
+
+# NotIn
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

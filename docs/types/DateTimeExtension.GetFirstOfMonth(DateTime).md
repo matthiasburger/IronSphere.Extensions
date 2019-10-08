@@ -1,0 +1,11 @@
+﻿
+
+# GetFirstOfMonth
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

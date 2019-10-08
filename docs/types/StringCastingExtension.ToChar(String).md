@@ -1,0 +1,11 @@
+﻿
+
+# ToChar
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

@@ -1,0 +1,11 @@
+﻿
+
+# GetFullReadableName
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

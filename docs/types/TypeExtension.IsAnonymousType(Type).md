@@ -1,0 +1,11 @@
+﻿
+
+# IsAnonymousType
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

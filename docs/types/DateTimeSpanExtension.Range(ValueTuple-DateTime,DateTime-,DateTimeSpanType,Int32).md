@@ -1,0 +1,11 @@
+﻿
+
+# Range
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

@@ -1,0 +1,11 @@
+﻿
+
+# GetShortReadableName
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

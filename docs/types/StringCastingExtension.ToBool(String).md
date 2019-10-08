@@ -1,0 +1,11 @@
+﻿
+
+# ToBool
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

@@ -1,0 +1,11 @@
+﻿
+
+# Equals
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

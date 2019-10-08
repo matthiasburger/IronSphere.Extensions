@@ -1,0 +1,11 @@
+﻿
+
+# LexTake
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

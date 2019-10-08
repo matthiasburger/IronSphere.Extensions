@@ -1,0 +1,11 @@
+﻿
+
+# ToLong
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

@@ -1,0 +1,11 @@
+﻿
+
+# IsZero
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

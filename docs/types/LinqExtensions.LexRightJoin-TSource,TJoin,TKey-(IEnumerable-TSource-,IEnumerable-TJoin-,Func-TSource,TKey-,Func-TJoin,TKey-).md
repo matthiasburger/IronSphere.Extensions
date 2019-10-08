@@ -1,0 +1,11 @@
+﻿
+
+# LexRightJoin
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

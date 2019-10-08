@@ -1,0 +1,11 @@
+﻿
+
+# IsNegative
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

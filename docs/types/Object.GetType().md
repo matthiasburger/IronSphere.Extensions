@@ -1,0 +1,11 @@
+﻿
+
+# GetType
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

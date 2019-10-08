@@ -1,0 +1,11 @@
+﻿
+
+# Has
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

@@ -1,0 +1,11 @@
+﻿
+
+# EndsWithAny
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

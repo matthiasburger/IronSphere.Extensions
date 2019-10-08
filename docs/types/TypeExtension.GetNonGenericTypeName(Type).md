@@ -1,0 +1,11 @@
+﻿
+
+# GetNonGenericTypeName
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

@@ -1,0 +1,11 @@
+﻿
+
+# ReadAllBytes
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

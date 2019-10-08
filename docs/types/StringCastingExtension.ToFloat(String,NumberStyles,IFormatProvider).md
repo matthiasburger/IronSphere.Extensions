@@ -1,0 +1,11 @@
+﻿
+
+# ToFloat
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

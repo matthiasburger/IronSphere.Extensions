@@ -1,0 +1,11 @@
+﻿
+
+# GetXmlMemberName
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

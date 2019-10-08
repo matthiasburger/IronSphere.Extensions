@@ -1,0 +1,11 @@
+﻿
+
+# GetTypeCode
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

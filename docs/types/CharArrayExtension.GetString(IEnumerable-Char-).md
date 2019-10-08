@@ -1,0 +1,11 @@
+﻿
+
+# GetString
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

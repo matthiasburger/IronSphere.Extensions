@@ -1,0 +1,11 @@
+﻿
+
+# GetEnumerator
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

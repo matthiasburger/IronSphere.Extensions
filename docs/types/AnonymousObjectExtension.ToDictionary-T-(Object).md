@@ -1,0 +1,11 @@
+﻿
+
+# ToDictionary
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```

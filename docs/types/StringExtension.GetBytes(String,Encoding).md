@@ -1,0 +1,11 @@
+﻿
+
+# GetBytes
+
+> Assembly: IronSphere.Extensions
+
+
+
+```
+
+```
