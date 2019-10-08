@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanContainsAny(String this, String[] parameter)
 ```

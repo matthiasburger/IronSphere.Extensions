@@ -8,4 +8,6 @@
 
 ```
 
+
+IEnumerable<TSub>get_Sub<>();
 ```

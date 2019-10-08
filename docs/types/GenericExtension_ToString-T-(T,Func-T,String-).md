@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringToString<T>(T this, Func<T,String> resultString);
 ```

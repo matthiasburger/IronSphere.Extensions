@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringGetNonGenericTypeName(Type this)
 ```

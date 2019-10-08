@@ -8,4 +8,6 @@
 
 ```
 
+
+public static DoubleMin(Double this, Double minimum)
 ```

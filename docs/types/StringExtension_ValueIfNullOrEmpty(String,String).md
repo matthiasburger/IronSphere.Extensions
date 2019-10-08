@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringValueIfNullOrEmpty(String this, String defaultValue)
 ```

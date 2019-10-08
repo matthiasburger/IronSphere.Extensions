@@ -8,4 +8,6 @@
 
 ```
 
+
+public static Nullable<Boolean>ToBool(String this)
 ```

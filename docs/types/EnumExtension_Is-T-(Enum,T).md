@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIs<T>(Enum this, T value);
 ```

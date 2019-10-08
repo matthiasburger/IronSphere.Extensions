@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsGreaterThan(Byte this, Byte other)
 ```

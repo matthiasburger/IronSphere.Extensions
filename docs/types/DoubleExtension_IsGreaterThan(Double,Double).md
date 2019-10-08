@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsGreaterThan(Double this, Double other)
 ```

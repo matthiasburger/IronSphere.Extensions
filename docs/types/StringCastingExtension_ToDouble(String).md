@@ -8,4 +8,6 @@
 
 ```
 
+
+public static Nullable<Double>ToDouble(String this)
 ```

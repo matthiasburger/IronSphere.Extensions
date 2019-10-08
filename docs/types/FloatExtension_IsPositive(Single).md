@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsPositive(Single this)
 ```

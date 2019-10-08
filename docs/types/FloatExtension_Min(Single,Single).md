@@ -8,4 +8,6 @@
 
 ```
 
+
+public static SingleMin(Single this, Single minimum)
 ```

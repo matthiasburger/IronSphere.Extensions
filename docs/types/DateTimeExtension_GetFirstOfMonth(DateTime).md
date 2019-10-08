@@ -8,4 +8,6 @@
 
 ```
 
+
+public static DateTimeGetFirstOfMonth(DateTime this)
 ```

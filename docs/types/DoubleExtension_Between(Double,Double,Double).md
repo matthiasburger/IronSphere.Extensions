@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanBetween(Double this, Double lower, Double higher)
 ```

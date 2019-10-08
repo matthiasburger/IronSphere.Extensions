@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringRemoveDiacritics(String this)
 ```

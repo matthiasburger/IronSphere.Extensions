@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringGetFullReadableName(Type this)
 ```

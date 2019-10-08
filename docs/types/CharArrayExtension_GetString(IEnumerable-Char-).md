@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringGetString(IEnumerable<Char> this)
 ```

@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanNotIn<T>(T this, T[] listOfItems);
 ```

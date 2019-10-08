@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringValueIfNullOrWhiteSpace(String this, String defaultValue)
 ```

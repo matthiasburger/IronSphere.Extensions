@@ -8,4 +8,6 @@
 
 ```
 
+
+public StringToString(String format)
 ```

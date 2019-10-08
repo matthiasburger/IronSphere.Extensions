@@ -8,4 +8,6 @@
 
 ```
 
+
+public static Nullable<Single>ToFloat(String this)
 ```

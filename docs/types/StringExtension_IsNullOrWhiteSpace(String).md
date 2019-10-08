@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsNullOrWhiteSpace(String this)
 ```

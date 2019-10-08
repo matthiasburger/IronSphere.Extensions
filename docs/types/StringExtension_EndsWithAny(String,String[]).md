@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanEndsWithAny(String this, String[] parameter)
 ```

@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsNullOrEmpty(String this)
 ```

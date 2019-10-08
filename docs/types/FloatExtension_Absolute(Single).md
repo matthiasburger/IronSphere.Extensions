@@ -8,4 +8,6 @@
 
 ```
 
+
+public static SingleAbsolute(Single this)
 ```

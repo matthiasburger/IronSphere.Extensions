@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanHas<T>(Enum this, T value);
 ```

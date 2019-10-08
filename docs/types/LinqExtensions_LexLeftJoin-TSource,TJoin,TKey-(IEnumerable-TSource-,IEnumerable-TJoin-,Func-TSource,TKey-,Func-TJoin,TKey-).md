@@ -8,4 +8,6 @@
 
 ```
 
+
+public static IEnumerable<IJoinSet<TSource,TJoin>>LexLeftJoin<TSource, TJoin, TKey>(IEnumerable<TSource> source, IEnumerable<TJoin> inner, Func<TSource,TKey> outerKeySelector, Func<TJoin,TKey> innerKeySelector);
 ```

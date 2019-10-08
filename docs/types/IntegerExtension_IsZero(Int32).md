@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsZero(Int32 this)
 ```

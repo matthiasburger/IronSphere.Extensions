@@ -8,4 +8,6 @@
 
 ```
 public static bool IsSingle<T>(this IEnumerable<T> @this)
+
+public static BooleanIsSingle<T>(IEnumerable<T> this);
 ```

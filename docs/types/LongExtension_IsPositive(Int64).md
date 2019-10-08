@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsPositive(Int64 this)
 ```

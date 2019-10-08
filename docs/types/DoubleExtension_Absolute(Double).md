@@ -8,4 +8,6 @@
 
 ```
 
+
+public static DoubleAbsolute(Double this)
 ```

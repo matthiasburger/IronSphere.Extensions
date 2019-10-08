@@ -8,4 +8,6 @@
 
 ```
 
+
+public static Nullable<Int32>ToInt(String this)
 ```

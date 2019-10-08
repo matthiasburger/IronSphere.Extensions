@@ -8,4 +8,6 @@
 
 ```
 
+
+public static Nullable<Char>ToChar(String this)
 ```

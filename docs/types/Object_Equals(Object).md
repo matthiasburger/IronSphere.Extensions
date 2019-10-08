@@ -8,4 +8,6 @@
 
 ```
 
+
+public virtual BooleanEquals(Object obj)
 ```

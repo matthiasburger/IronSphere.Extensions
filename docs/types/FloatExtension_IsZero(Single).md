@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsZero(Single this)
 ```

@@ -8,4 +8,6 @@
 
 ```
 
+
+public DateTimeSpanTypeget_SpanType()
 ```

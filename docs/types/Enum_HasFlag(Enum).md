@@ -8,4 +8,6 @@
 
 ```
 
+
+public BooleanHasFlag(Enum flag)
 ```

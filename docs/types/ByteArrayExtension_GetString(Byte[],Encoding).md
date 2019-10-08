@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringGetString(Byte[] bytes, Encoding encoding = null)
 ```

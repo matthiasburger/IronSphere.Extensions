@@ -8,4 +8,6 @@
 
 ```
 
+
+public static IEnumerable<DateTimeSpan>Split(DateTimeSpan this, DateTime[] dateToSplit)
 ```

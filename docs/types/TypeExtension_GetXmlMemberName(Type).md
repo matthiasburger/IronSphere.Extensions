@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringGetXmlMemberName(Type this)
 ```

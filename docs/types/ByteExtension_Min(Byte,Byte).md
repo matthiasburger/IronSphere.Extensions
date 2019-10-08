@@ -8,4 +8,6 @@
 
 ```
 
+
+public static ByteMin(Byte this, Byte minimum)
 ```

@@ -8,4 +8,6 @@
 
 ```
 
+
+public static StringFormat(String this, Object anonymousObject)
 ```

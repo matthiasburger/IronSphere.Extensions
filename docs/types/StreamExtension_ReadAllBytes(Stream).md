@@ -8,4 +8,6 @@
 
 ```
 
+
+public static Byte[]ReadAllBytes(Stream stream)
 ```

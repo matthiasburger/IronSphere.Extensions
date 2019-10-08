@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanBetween(DateTime this, DateTime lower, DateTime higher)
 ```

@@ -8,4 +8,6 @@
 
 ```
 
+
+public static SingleMax(Single this, Single maximum)
 ```

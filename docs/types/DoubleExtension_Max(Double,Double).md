@@ -8,4 +8,6 @@
 
 ```
 
+
+public static DoubleMax(Double this, Double maximum)
 ```

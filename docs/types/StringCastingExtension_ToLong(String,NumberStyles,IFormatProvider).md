@@ -8,4 +8,6 @@
 
 ```
 
+
+public static Nullable<Int64>ToLong(String this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```

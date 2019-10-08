@@ -8,4 +8,6 @@
 
 ```
 
+
+public virtual sealed StringToString(String format, IFormatProvider provider)
 ```

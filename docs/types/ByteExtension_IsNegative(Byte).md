@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanIsNegative(Byte this)
 ```

@@ -8,4 +8,6 @@
 
 ```
 
+
+public static DateTimeGetLastOfWeek(DateTime this, DayOfWeek startOfWeek = 1)
 ```

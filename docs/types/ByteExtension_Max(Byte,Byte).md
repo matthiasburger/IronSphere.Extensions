@@ -8,4 +8,6 @@
 
 ```
 
+
+public static ByteMax(Byte this, Byte maximum)
 ```

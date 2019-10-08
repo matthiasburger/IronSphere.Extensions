@@ -8,4 +8,6 @@
 
 ```
 
+
+public static IEnumerable<T>Randomize<T>(IEnumerable<T> this);
 ```

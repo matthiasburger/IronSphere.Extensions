@@ -8,4 +8,6 @@
 
 ```
 
+
+public static BooleanStartsWithAny(String this, String[] parameter)
 ```
