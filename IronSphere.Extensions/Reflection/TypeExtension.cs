@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 
+[assembly:InternalsVisibleTo("IronSphere.Extensions.AspNetCore")]
 namespace IronSphere.Extensions.Reflection
 {
     /// <summary>
@@ -388,6 +389,15 @@ namespace IronSphere.Extensions.Reflection
             bool hasCompilerGeneratedAttribute = type.GetCustomAttributes(typeof(CompilerGeneratedAttribute), false).Any();
             bool? nameContainsAnonymousType = type.FullName?.Contains("AnonymousType");
             return hasCompilerGeneratedAttribute && (nameContainsAnonymousType ?? false);
+        }
+
+        internal static bool IsGenericTypeParameter(this Type @this)
+        {
+            return @this.IsGenericParameter && @this.DeclaringMethod is null;
+        }
+        internal static bool IsGenericMethodParameter(this Type @this)
+        {
+            return @this.IsGenericParameter && @this.DeclaringMethod != null;
         }
     }
 }

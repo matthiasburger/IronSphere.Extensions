@@ -1,4 +1,4 @@
-﻿#if !NET461
+﻿#if !NET45
     #define Supported
 #endif
 
@@ -26,7 +26,7 @@ namespace IronSphere.Extensions.AspNetCore.Reflection
             Type parameterType = @this.ParameterType;
 
             if (parameterType.IsGenericParameter)
-                return $"{(parameterType.IsGenericMethodParameter ? "``" : "`")}{parameterType.GenericParameterPosition}";
+                return $"{(parameterType.IsGenericMethodParameter() ? "``" : "`")}{parameterType.GenericParameterPosition}";
 
             if (!parameterType.IsGenericType)
                 return parameterType.FullName;
@@ -47,9 +47,9 @@ namespace IronSphere.Extensions.AspNetCore.Reflection
             }
             else
             {
-                if (type.IsGenericMethodParameter)
+                if (type.IsGenericMethodParameter())
                     stringBuilder.Append($"``{type.GenericParameterPosition}");
-                else if (type.IsGenericTypeParameter)
+                else if (type.IsGenericTypeParameter())
                     stringBuilder.Append($"`{type.GenericParameterPosition}");
                 else
                     stringBuilder.Append(type.FullName);

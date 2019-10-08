@@ -6,6 +6,14 @@ using Xunit;
 
 namespace IronSphere.Extensions.Test
 {
+    public class Documentation
+    {
+        public static void Main(string[] args)
+        {
+
+        }
+    }
+
     public class ExtensionTest
     {
         [Fact]

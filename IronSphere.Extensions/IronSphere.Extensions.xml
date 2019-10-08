@@ -1,0 +1,1479 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IronSphere.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:IronSphere.Extensions.AnonymousObjectExtension">
+            <summary>
+            This class provides extension methods for an <see cref="T:System.Object"/> of anonymous type
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.AnonymousObjectExtension.ToDictionary``1(System.Object)">
+            <summary>
+            Creates a dictionary from an anonymous type where the properties names are the keys and their values are the values
+            </summary>
+            <typeparam name="T">The dictionaries type of values</typeparam>
+            <param name="source">the anonymous type to create a dictionary from</param>
+            <returns>A dictionary representing the anonymous-type object</returns>
+            <example>
+            <![CDATA[
+            // use it like:
+            var source = new { a = 3, c = 7 };
+            IDictionary<string, int> generatedDictionary = source.ToDictionary<int>();
+            ]]>
+            </example>
+            <exception cref="T:System.ArgumentNullException">the source object is null</exception>
+        </member>
+        <member name="T:IronSphere.Extensions.BinaryReaderExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.IO.BinaryReader"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.BinaryReaderExtension.ReadAllBytes(System.IO.BinaryReader)">
+            <summary>
+            Reads all bytes and writes them into an array
+            </summary>
+            <param name="reader">the actual binary-reader object</param>
+            <returns>the result of bytes</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.ByteArrayExtension">
+            <summary>
+            This class provides extension methods for an <see cref="T:System.Array"/> of <see cref="T:System.Byte"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteArrayExtension.GetString(System.Byte[],System.Text.Encoding)">
+            <summary>
+            Decodes all bytes in a specified array into a string.
+            </summary>
+            <param name="bytes">Byte-array to decode.</param>
+            <param name="encoding">Encoding to use for decoding. If none is entered, the default one is <see cref="P:System.Text.Encoding.UTF8"/>.</param>
+            <returns>The decoded string.</returns>
+            <example>
+            <![CDATA[
+            const string originalStringValue = "my original value with ä ö and ü";
+            byte[] originalUtf8Bytes = originalStringValue.GetBytes();
+            string itsString = originalUtf8Bytes.GetString();
+            ]]>
+            </example>
+        </member>
+        <member name="T:IronSphere.Extensions.ByteExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Byte"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.Between(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Checks whether the actual value is between specified lower and higher.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="lower">the lower value</param>
+            <param name="higher">the higher value</param>
+            <returns>A value indicating whether the actual value is between two values.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.IsPositive(System.Byte)">
+            <summary>
+            Checks whether the actual value is greater than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is positive.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.IsNegative(System.Byte)">
+            <summary>
+            Checks whether the actual value is smaller than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is negative.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.IsZero(System.Byte)">
+            <summary>
+            Checks whether the actual value is equal to zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is equal to zero.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.IsGreaterThan(System.Byte,System.Byte)">
+            <summary>
+            Checks whether the actual value is greater than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is greater than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.IsLowerThan(System.Byte,System.Byte)">
+            <summary>
+            Checks whether the actual value is lower than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is lower than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.Min(System.Byte,System.Byte)">
+            <summary>
+            Compares two values and returns the greater one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="minimum">the minimum value</param>
+            <returns>The actual value if its greater than the specified comparison-value. Otherwise it returns the minimum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.Max(System.Byte,System.Byte)">
+            <summary>
+            Compares two values and returns the lower one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="maximum">the maximum value</param>
+            <returns>The actual value if its lower than the specified comparison-value. Otherwise it returns the maximum-value.</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.ChangeTypeExtension">
+            <summary>
+            This class provides extension-methods for changing types
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.ChangeTypeExtension.To``1(System.Object)">
+            <summary>
+            converts any object to type of T
+            </summary>
+            <typeparam name="T">the target type</typeparam>
+            <param name="this">the actual value</param>
+            <returns>the converted object</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ChangeTypeExtension.ToOrDefault``1(System.Object,``0)">
+            <summary>
+            converts any object to type of T
+            </summary>
+            <typeparam name="T">the target type</typeparam>
+            <param name="this">the actual value</param>
+            <param name="default">the default-value if conversion threw an exception</param>
+            <returns>the converted object</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ChangeTypeExtension.ToOrNull``1(System.Object)">
+            <summary>
+            converts any object to type of T
+            </summary>
+            <typeparam name="T">the target type</typeparam>
+            <param name="this">the actual value</param>
+            <returns>the converted object or null if conversion threw an exception</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.CharArrayExtension">
+            <summary>
+            This class provides extension methods for an <see cref="T:System.Array"/> of <see cref="T:System.Char"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.CharArrayExtension.GetString(System.Collections.Generic.IEnumerable{System.Char})">
+            <summary>
+            Concatenates a sequence of chars to its string representation
+            </summary>
+            <param name="this">the actual sequence of chars</param>
+            <returns>the string representation</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.CollectionExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Collections.Generic.ICollection`1"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.CollectionExtension.Add``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            adds all elements in a parametrized list into an existing collection
+            </summary>
+            <typeparam name="T">underlying type of collection</typeparam>
+            <param name="this">the actual collection to add elements to</param>
+            <param name="elementsToAdd">the elements to add</param>
+            <returns>the updated collection</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.CollectionExtension.AddMissing``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            adds all elements in a parametrized list into an existing collection
+            if the collection already contains an element it skips it
+            </summary>
+            <typeparam name="T">underlying type of collection</typeparam>
+            <param name="this">the actual collection to add elements to</param>
+            <param name="elementsToAdd">the elements to add</param>
+            <returns>the updated collection</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.CollectionExtension.AddMissing``2(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            adds all elements in a parametrized list into an existing collection
+            if the collection already contains an element it skips it
+            </summary>
+            <typeparam name="T">underlying type of collection</typeparam>
+            <typeparam name="TSelectorType"></typeparam>
+            <param name="this">the actual collection to add elements to</param>
+            <param name="elementsToAdd">the elements to add</param>
+            <param name="selector">elements that should be skipped if duplicated</param>
+            <returns>the updated collection</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.CultureInfoExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Globalization.CultureInfo"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.CultureInfoExtension.GetMonthsOfCulture(System.Globalization.CultureInfo)">
+            <summary>
+            Returns all months in the language of the cultures language.
+            </summary>
+            <param name="culture">actual culture</param>
+            <returns>all months in the language of the cultures language</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.DateTimeExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.DateTime"/>
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeExtension.Weekend">
+            <summary>
+            A static array of days contained by a weekend
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.GetFirstOfWeek(System.DateTime,System.DayOfWeek)">
+            <summary>
+            Calculates the first day of a week.
+            </summary>
+            <param name="this">The actual date-time</param>
+            <param name="startOfWeek">The first day of the week, default is monday.</param>
+            <returns>The first weekday of the week for the actual date-time.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.GetLastOfWeek(System.DateTime,System.DayOfWeek)">
+            <summary>
+            Calculates the last day of a week.
+            </summary>
+            <param name="this">The actual date-time.</param>
+            <param name="startOfWeek">The first day of the week, default is monday.</param>
+            <returns>The last weekday of the week for the actual date-time.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.GetFirstOfMonth(System.DateTime)">
+            <summary>
+            Calculates the first day of a month.
+            </summary>
+            <param name="this">The actual date-time.</param>
+            <returns>The first day of the month for the actual date-time.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.GetLastOfMonth(System.DateTime)">
+            <summary>
+            Calculates the last day of a month.
+            </summary>
+            <param name="this">The actual date-time.</param>
+            <returns>The last day of the month for the actual date-time.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.IsLeapYear(System.DateTime)">
+            <summary>
+            Determines whether the year of the given date is a leap year
+            </summary>
+            <param name="this">The actual date-time.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.Between(System.DateTime,System.DateTime,System.DateTime)">
+            <summary>
+            Determines, if a convertible object is between two objects of the same type
+            </summary>
+            <param name="this">The actual object.</param>
+            <param name="lower">The lower limit.</param>
+            <param name="higher">The higher limit.</param>
+            <returns>True, if the actual object is higher than the lower limit and lower than the higher limit.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.GetAge(System.DateTime)">
+            <summary>
+            Calculates the age (years) from a date.
+            </summary>
+            <param name="this">the actual date</param>
+            <returns>The age of the date</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.GetWeekOfYear(System.DateTime,System.Globalization.CultureInfo,IronSphere.Extensions.WeekOfYearStandard)">
+            <summary>
+            Gets the calendar-week of a date dependent to a culture with ISO 8601
+            </summary>
+            <param name="dateTime">the actual datetime</param>
+            <param name="cultureInfo">the culture to use</param>
+            <param name="weekOfYearStandard">the standard to use</param>
+            <returns>the week of year for the specified datetime</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeExtension.IsWeekend(System.DateTime)">
+            <summary>
+            determines whether a date is in weekend
+            </summary>
+            <param name="this">the actual date to check</param>
+            <returns>if the date is in weekend</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.DateTimeSpan">
+            <inheritdoc />
+            <summary>
+            This class describes a range between two date-times
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpan.#ctor(System.DateTime,System.DateTime)">
+            <summary>
+            Creates a new object from type <see cref="T:IronSphere.Extensions.DateTimeSpan"/>
+            </summary>
+            <param name="start">start date of a datetime-span</param>
+            <param name="end">end date of a datetime-span</param>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpan.#ctor(System.DateTime,IronSphere.Extensions.DateTimeSpanType,System.Int32)">
+            <summary>
+            Creates a new object from type <see cref="T:IronSphere.Extensions.DateTimeSpan"/>
+            </summary>
+            <param name="start">start date of a datetime-span</param>
+            <param name="spanType">the span-type for iterating</param>
+            <param name="step">the frequency to iterate</param>
+        </member>
+        <member name="P:IronSphere.Extensions.DateTimeSpan.Start">
+            <summary>
+            Gets the start-date for a DateTimeSpan
+            </summary>
+        </member>
+        <member name="P:IronSphere.Extensions.DateTimeSpan.End">
+            <summary>
+            Gets the end-date for a DateTimeSpan
+            </summary>
+        </member>
+        <member name="P:IronSphere.Extensions.DateTimeSpan.SpanType">
+            <summary>
+            Gets or sets the span-type of type <see cref="T:IronSphere.Extensions.DateTimeSpanType"/>
+            </summary>
+        </member>
+        <member name="P:IronSphere.Extensions.DateTimeSpan.Step">
+            <summary>
+            Gets or sets the frequency for iterating
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpan.GetEnumerator(IronSphere.Extensions.DateTimeSpanType,System.Int32)">
+            <summary>
+            Returns an enumerator to iterate over the sequence of <see cref="T:System.DateTime"/>
+            </summary>
+            <param name="spanType">The span-type for iterating</param>
+            <param name="step">The frequency for iterating</param>
+            <returns>The enumerator to iterate over</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpan.GetEnumerator">
+            <inheritdoc />
+            <summary>
+            Returns an enumerator to iterate over the sequence of <see cref="T:System.DateTime" />
+            </summary>
+            <returns>The enumerator to iterate over</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpan.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc />
+            <summary>
+            Returns an enumerator to iterate over the sequence of <see cref="T:System.DateTime" />
+            </summary>
+            <returns>The enumerator to iterate over</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpan.Deconstruct(System.DateTime@,System.DateTime@)">
+            <summary>
+            Deconstructs a DateTimeSpan to a value-tuple
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+        </member>
+        <member name="T:IronSphere.Extensions.DateTimeSpanExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:IronSphere.Extensions.DateTimeSpan"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpanExtension.Range(System.ValueTuple{System.DateTime,System.DateTime},IronSphere.Extensions.DateTimeSpanType,System.Int32)">
+            <summary>
+            Creates a new DateTimeSpan-object from a tuple of dates
+            </summary>
+            <param name="dateTuple">the actual dates for the range</param>
+            <param name="spanType">the interval type for enumeration</param>
+            <param name="step">the frequency for enumeration</param>
+            <returns>the SpanType</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpanExtension.Split(IronSphere.Extensions.DateTimeSpan,System.DateTime)">
+            <summary>
+            Splits a <see cref="T:IronSphere.Extensions.DateTimeSpan"/> at a <see cref="T:System.DateTime"/> into 2 spans
+            </summary>
+            <param name="this">the actual span</param>
+            <param name="date">the date where to split</param>
+            <returns>the split <see cref="T:IronSphere.Extensions.DateTimeSpan"/> objects</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DateTimeSpanExtension.Split(IronSphere.Extensions.DateTimeSpan,System.DateTime[])">
+            <summary>
+            Splits a <see cref="T:IronSphere.Extensions.DateTimeSpan"/> at a <see cref="T:System.DateTime"/> into multiple spans
+            </summary>
+            <param name="this">the actual span</param>
+            <param name="dateToSplit">the dates where to split</param>
+            <returns>the split <see cref="T:IronSphere.Extensions.DateTimeSpan"/> objects</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.DateTimeSpanType">
+            <summary>
+            This enum provides all possible types for iterating in a <see cref="T:IronSphere.Extensions.DateTimeSpan"/>
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeSpanType.Ticks">
+            <summary>
+            ticks
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeSpanType.Milliseconds">
+            <summary>
+            milliseconds
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeSpanType.Seconds">
+            <summary>
+            seconds
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeSpanType.Minutes">
+            <summary>
+            minutes
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeSpanType.Hours">
+            <summary>
+            hours
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeSpanType.Days">
+            <summary>
+            days
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeSpanType.Months">
+            <summary>
+            months
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.DateTimeSpanType.Years">
+            <summary>
+            years
+            </summary>
+        </member>
+        <member name="T:IronSphere.Extensions.DictionaryExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Collections.Generic.Dictionary`2"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.DictionaryExtension.GetValue``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            Searches for a key in a dictionary and returns its value if it exists.
+            </summary>
+            <typeparam name="TKey">the dictionaries key-type</typeparam>
+            <typeparam name="TValue">the dictionaries value-type</typeparam>
+            <param name="this">the actual dictionary</param>
+            <param name="key">the key to search for</param>
+            <param name="fallback">the fallback-value, if the key doesn't exist</param>
+            <returns>The found value or the fallback if the key doesn't exist.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DictionaryExtension.GetValue``1(System.Collections.Specialized.NameValueCollection,System.String,``0)">
+            <summary>
+            Searches for a key in a name-value-collection and returns its value if it exists.
+            </summary>
+            <typeparam name="TValue">the collections value-type</typeparam>
+            <param name="this">the actual dictionary</param>
+            <param name="key">the key to search for</param>
+            <param name="fallback">the fallback-value, if the key doesn't exist</param>
+            <returns>The found value or the fallback if the key doesn't exist.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DictionaryExtension.GetValue``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}},``0,``1)">
+            <summary>
+            Searches for a key in a generic key-value-sequence and returns its value if it exists.
+            </summary>
+            <typeparam name="TValue">the collections value-type</typeparam>
+            <typeparam name="TKey">the collections key-type</typeparam>
+            <param name="this">the actual dictionary</param>
+            <param name="key">the key to search for</param>
+            <param name="fallback">the fallback-value, if the key doesn't exist</param>
+            <returns>The found value or the fallback if the key doesn't exist.</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.DisposableExtension">
+            <summary>
+            This class provides extension-methods for <see cref="T:System.IDisposable"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.DisposableExtension.DisposeAfter``2(``0,System.Func{``0,``1})">
+            <summary>
+            wrapper for disposing
+            disposes after execution
+            </summary>
+            <typeparam name="T">type of instance of a disposable object</typeparam>
+            <typeparam name="TResult">type of result</typeparam>
+            <param name="instance">the disposable object to use in action</param>
+            <param name="actionToInvoke">the action to invoke that returns the value</param>
+            <returns></returns>
+        </member>
+        <member name="T:IronSphere.Extensions.DoubleExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Double"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.Between(System.Double,System.Double,System.Double)">
+            <summary>
+            Checks whether the actual value is between specified lower and higher.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="lower">the lower value</param>
+            <param name="higher">the higher value</param>
+            <returns>A value indicating whether the actual value is between two values.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.IsPositive(System.Double)">
+            <summary>
+            Checks whether the actual value is greater than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is positive.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.IsNegative(System.Double)">
+            <summary>
+            Checks whether the actual value is smaller than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is negative.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.IsZero(System.Double)">
+            <summary>
+            Checks whether the actual value is equal to zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is equal to zero.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.IsGreaterThan(System.Double,System.Double)">
+            <summary>
+            Checks whether the actual value is greater than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is greater than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.IsLowerThan(System.Double,System.Double)">
+            <summary>
+            Checks whether the actual value is lower than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is lower than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.Min(System.Double,System.Double)">
+            <summary>
+            Compares two values and returns the greater one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="minimum">the minimum value</param>
+            <returns>The actual value if its greater than the specified comparison-value. Otherwise it returns the minimum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.Max(System.Double,System.Double)">
+            <summary>
+            Compares two values and returns the lower one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="maximum">the maximum value</param>
+            <returns>The actual value if its lower than the specified comparison-value. Otherwise it returns the maximum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DoubleExtension.Absolute(System.Double)">
+            <summary>Returns the absolute value of a double-precision floating-point number.</summary>
+            <param name="this">A number that is greater than or equal to <see cref="F:System.Double.MinValue"></see>, but less than or equal to <see cref="F:System.Double.MaxValue"></see>.</param>
+            <returns>A double-precision floating-point number, x, such that 0 ≤ x ≤<see cref="F:System.Double.MaxValue"></see>.</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.EnumerableExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Determines whether an <see cref="T:System.Collections.Generic.IEnumerable`1"/> is either null or doesn't contain any elements
+            </summary>
+            <param name="this">the actual IEnumerable</param>
+            <typeparam name="T">the type of elements the IEnumerable contains</typeparam>
+            <code>
+            <![CDATA[public static bool IsNullOrEmpty<T>(this IEnumerable<T> @this)]]>
+            </code>
+            <example>
+            <![CDATA[
+            bool isNullOrEmpty = GetAListOfItemsFromSomewhere().IsNullOrEmpty();
+            ]]>
+            </example>
+            <returns>
+            A value indicating whether the actual enumerable is either null or empty.
+            </returns>
+            <remarks>
+            If the enumerable is null the return value is true.
+            If the enumerable contains no items, the return value is true.
+            If the enumerable contains one or more items, the return value is false.
+            </remarks>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.IsSingle``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Determines if an enumeration contains exactly one element
+            </summary>
+            <typeparam name="T">The generic type of the enumerable</typeparam>
+            <param name="this">The actual enumerable.</param>
+            <code>
+            <![CDATA[public static bool IsSingle<T>(this IEnumerable<T> @this)]]>
+            </code>
+            <example>
+            <![CDATA[
+            bool isSingleUser = Context.Users.Where(w => w.Name == "test").IsSingle();
+            ]]>
+            </example>
+            <returns>A value indicating whether there's exactly one element in the actual enumerable.</returns>
+            <remarks>
+            If the enumerable is null the return value is false.
+            If the enumerable contains no or more than one item, the return value is false.
+            If there is exactly one item, the value of the item doesn't matter.
+            </remarks>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.IsSingle``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Determines if an enumeration contains exactly one element
+            </summary>
+            <typeparam name="T">
+            The generic type of the enumerable
+            </typeparam>
+            <param name="this">
+            The actual enumerable.
+            </param>
+            <param name="predicate">
+            The predicate to filter for and check if the filtered would be single.
+            </param>
+            <code>
+            <![CDATA[public static bool IsSingle<T>(this IEnumerable<T> @this, Func<T, bool> predicate)]]>
+            </code>
+            <example>
+            <![CDATA[
+            bool isSingleUser = Context.Users.IsSingle(w => w.Name == "test");
+            ]]>
+            </example>
+            <returns>
+            A value indicating whether there's exactly one element in the actual enumerable.
+            </returns>
+            <remarks>
+            If the enumerable is null the return value is false.
+            If the enumerable contains no or more than one item, the return value is false.
+            If there is exactly one item, the value of the item doesn't matter.
+            </remarks>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.Randomize``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Randomizes the items of a list
+            </summary>
+            <typeparam name="T">Thy generic list-type.</typeparam>
+            <param name="this">The actual list to randomize.</param>
+            <returns>A new list-instance with all items of the list but in a random order.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Iterates through a list of items and yields all elements but not duplicated.
+            </summary>
+            <typeparam name="T">The generic list-type.</typeparam>
+            <typeparam name="TType">The targets generic list type.</typeparam>
+            <param name="this">The actual list,</param>
+            <param name="expression">The expression to distinct all items.</param>
+            <returns>A new list of items as distinct by the expression.</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.EnumExtension">
+            <summary>
+            This class provides extension-methods for <see cref="T:System.Enum"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumExtension.Has``1(System.Enum,``0)">
+            <summary>
+            Determines whether a flagged enum contains a specific value
+            </summary>
+            <typeparam name="T">the type of value</typeparam>
+            <param name="this">the actual enum</param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumExtension.Is``1(System.Enum,``0)">
+            <summary>
+            Determines whether a flagged enum is a specific value
+            </summary>
+            <typeparam name="T">the type of value</typeparam>
+            <param name="this">the actual enum</param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumExtension.Add``1(System.Enum,``0)">
+            <summary>
+            Adds a specific value to a flagged enum
+            </summary>
+            <typeparam name="T">the type of value</typeparam>
+            <param name="this">the actual enum</param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumExtension.Remove``1(System.Enum,``0)">
+            <summary>
+            Removes a specific value from a flagged enum
+            </summary>
+            <typeparam name="T">the type of value</typeparam>
+            <param name="this">the actual enum</param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IronSphere.Extensions.FloatExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Single"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.Between(System.Single,System.Single,System.Single)">
+            <summary>
+            Checks whether the actual value is between specified lower and higher.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="lower">the lower value</param>
+            <param name="higher">the higher value</param>
+            <returns>A value indicating whether the actual value is between two values.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.IsPositive(System.Single)">
+            <summary>
+            Checks whether the actual value is greater than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is positive.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.IsNegative(System.Single)">
+            <summary>
+            Checks whether the actual value is smaller than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is negative.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.IsZero(System.Single)">
+            <summary>
+            Checks whether the actual value is equal to zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is equal to zero.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.IsGreaterThan(System.Single,System.Single)">
+            <summary>
+            Checks whether the actual value is greater than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is greater than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.IsLowerThan(System.Single,System.Single)">
+            <summary>
+            Checks whether the actual value is lower than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is lower than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.Min(System.Single,System.Single)">
+            <summary>
+            Compares two values and returns the greater one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="minimum">the minimum value</param>
+            <returns>The actual value if its greater than the specified comparison-value. Otherwise it returns the minimum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.Max(System.Single,System.Single)">
+            <summary>
+            Compares two values and returns the lower one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="maximum">the maximum value</param>
+            <returns>The actual value if its lower than the specified comparison-value. Otherwise it returns the maximum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.FloatExtension.Absolute(System.Single)">
+            <summary>Returns the absolute value of a single-precision floating-point number.</summary>
+            <param name="this">A number that is greater than or equal to <see cref="F:System.Single.MinValue"></see>, but less than or equal to <see cref="F:System.Single.MaxValue"></see>.</param>
+            <returns>A single-precision floating-point number, x, such that 0 ≤ x ≤<see cref="F:System.Single.MaxValue"></see>.</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.GenericExtension">
+            <summary>
+            This class provides extension methods for a generic type T
+            </summary>
+            <example>
+            <![CDATA[
+            // use it like:
+            bool listContainsInt = 5.In(4,5,6);
+            string replacedText = "test".ReplaceIf(s=>s == "test", s=> s+" succeeded");
+            ]]>
+            </example>
+        </member>
+        <member name="M:IronSphere.Extensions.GenericExtension.In``1(``0,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Determines if an object is contained in a list
+            </summary>
+            <typeparam name="T">The type of object to search for.</typeparam>
+            <param name="this">The actual item to search in the list.</param>
+            <param name="listOfItems">The list of items to search in.</param>
+            <returns>True if the item is found in the list; otherwise false.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.GenericExtension.In``1(``0,``0[])">
+            <summary>
+            Determines if an object is contained in a list
+            </summary>
+            <typeparam name="T">The type of object to search for.</typeparam>
+            <param name="this">The actual item to search in the list.</param>
+            <param name="listOfItems">The list of items to search in.</param>
+            <returns>True if the item is found in the list; otherwise false.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.GenericExtension.NotIn``1(``0,``0[])">
+            <summary>
+            Determines if an object is not contained in a list
+            </summary>
+            <typeparam name="T">The type of object to search for.</typeparam>
+            <param name="this">The actual item to search in the list.</param>
+            <param name="listOfItems">The list of items to search in.</param>
+            <returns>True if the item is not found in the list; otherwise false.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.GenericExtension.ReplaceIf``1(``0,System.Func{``0,System.Boolean},``0)">
+            <summary>
+            Replaces an object with another value of the same type, if the expression returns true
+            </summary>
+            <typeparam name="T">The type of the actual object</typeparam>
+            <param name="this">The actual type.</param>
+            <param name="expression">The expression to invoke, to determine whether replacing or not.</param>
+            <param name="output">The value to replace with, if the expression returns true.</param>
+            <returns>The new value if replaced, otherwise the old.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.GenericExtension.ReplaceIf``1(``0,System.Func{``0,System.Boolean},System.Func{``0,``0})">
+            <summary>
+            Replaces an object with another value of the same type, if the expression returns true
+            </summary>
+            <typeparam name="T">The type of the actual object</typeparam>
+            <param name="this">The actual type.</param>
+            <param name="expression">The expression to invoke, to determine whether replacing or not.</param>
+            <param name="output">An expression that returns a value of the same type, to replace with, if the expression returns true.</param>
+            <returns>The new value if replaced, otherwise the old.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.GenericExtension.ToString``1(``0,System.Func{``0,System.String})">
+            <summary>
+            String representation of any object
+            </summary>
+            <example>
+            <![CDATA[
+            new Test{ p = 1, q = 2 }.ToString(s => $"{s.p + s.q}") == "3";
+            ]]>
+            </example>
+            <typeparam name="T">The actual type of object.</typeparam>
+            <param name="this">The actual object.</param>
+            <param name="resultString">A function that returns a string in dependency to the actual object.</param>
+            <returns>the representation-string.</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.IJoinSet`2">
+            <summary>
+            This interface is used by LexJoin-methods
+            </summary>
+            <typeparam name="TMain"></typeparam>
+            <typeparam name="TSub"></typeparam>
+        </member>
+        <member name="P:IronSphere.Extensions.IJoinSet`2.Main">
+            <summary>
+            Gets the main-object of join
+            </summary>
+        </member>
+        <member name="P:IronSphere.Extensions.IJoinSet`2.Sub">
+            <summary>
+            Gets a sub-elements-collection from main
+            </summary>
+        </member>
+        <member name="T:IronSphere.Extensions.IntegerExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Int32"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.Between(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Checks whether the actual value is between specified lower and higher.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="lower">the lower value</param>
+            <param name="higher">the higher value</param>
+            <returns>A value indicating whether the actual value is between two values.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.IsPositive(System.Int32)">
+            <summary>
+            Checks whether the actual value is greater than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is positive.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.IsNegative(System.Int32)">
+            <summary>
+            Checks whether the actual value is smaller than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is negative.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.IsZero(System.Int32)">
+            <summary>
+            Checks whether the actual value is equal to zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is equal to zero.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.IsGreaterThan(System.Int32,System.Int32)">
+            <summary>
+            Checks whether the actual value is greater than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is greater than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.IsLowerThan(System.Int32,System.Int32)">
+            <summary>
+            Checks whether the actual value is lower than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is lower than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.Min(System.Int32,System.Int32)">
+            <summary>
+            Compares two values and returns the greater one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="minimum">the minimum value</param>
+            <returns>The actual value if its greater than the specified comparison-value. Otherwise it returns the minimum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.Max(System.Int32,System.Int32)">
+            <summary>
+            Compares two values and returns the lower one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="maximum">the maximum value</param>
+            <returns>The actual value if its lower than the specified comparison-value. Otherwise it returns the maximum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.IntegerExtension.Absolute(System.Int32)">
+            <summary>Returns the absolute value of a 32-bit signed integer.</summary>
+            <param name="this">A number that is greater than <see cref="F:System.Int32.MinValue"></see>, but less than or equal to <see cref="F:System.Int32.MaxValue"></see>.</param>
+            <returns>A 32-bit signed integer, x, such that 0 ≤ x ≤<see cref="F:System.Int32.MaxValue"></see>.</returns>
+            <exception cref="T:System.OverflowException"><paramref name="this">value</paramref> equals <see cref="F:System.Int32.MinValue"></see>.</exception>
+        </member>
+        <member name="T:IronSphere.Extensions.LambdaExpressionExtensions">
+            <summary>
+            This class provides extension-methods for working with <see cref="T:System.Linq.Expressions.LambdaExpression"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.LambdaExpressionExtensions.SetPropertyValue``2(``0,System.Linq.Expressions.LambdaExpression,``1)">
+            <summary>
+            Sets an objects property to a value by using <see cref="T:System.Linq.Expressions.LambdaExpression"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="target"></param>
+            <param name="memberLambda"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:IronSphere.Extensions.LinqExtensions">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Linq.IQueryable`1"/> and <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.LinqExtensions.LexTake``1(System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Int32})">
+            <summary>
+            Pendent to Linq IEnumerable{TSource}.Take(int) but returns all when count is null
+            </summary>
+            <typeparam name="TSource">the enumerable element-type</typeparam>
+            <param name="source">the actual enumerable source</param>
+            <param name="count">the number of elements to take (or null if take all)</param>
+            <returns>A specified number of contiguous elements elements from the start of a sequence.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LinqExtensions.LexSkip``1(System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Int32})">
+            <summary>
+            Pendent to Linq IEnumerable{TSource}.Skip(int) but skips all when count is null
+            </summary>
+            <typeparam name="TSource">the enumerable element-type</typeparam>
+            <param name="source">the actual enumerable source</param>
+            <param name="count">the number of elements to skip (or null if skip all)</param>
+            <returns>A specified number of contiguous elements elements from the start of a sequence.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LinqExtensions.LexLeftJoin``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``2},System.Func{``1,``2})">
+            <summary>
+            Performs a left join over two enumerable sequences
+            </summary>
+            <typeparam name="TSource">the source sequences element-type</typeparam>
+            <typeparam name="TJoin">the sequences element type to join</typeparam>
+            <typeparam name="TKey">the type of values that get compared on join</typeparam>
+            <param name="source">the source sequence</param>
+            <param name="inner">the sequence to join</param>
+            <param name="outerKeySelector">the sources key-property</param>
+            <param name="innerKeySelector">the joined tables key-property</param>
+            <returns>An IJoinSet after the left join.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LinqExtensions.LexRightJoin``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``2},System.Func{``1,``2})">
+            <summary>
+            Performs a right join over two enumerable sequences
+            </summary>
+            <typeparam name="TSource">the source sequences element-type</typeparam>
+            <typeparam name="TJoin">the sequences element type to join</typeparam>
+            <typeparam name="TKey">the type of values that get compared on join</typeparam>
+            <param name="source">the source sequence</param>
+            <param name="inner">the sequence to join</param>
+            <param name="outerKeySelector">the sources key-property</param>
+            <param name="innerKeySelector">the joined tables key-property</param>
+            <returns>An IJoinSet after the right join.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LinqExtensions.LexDistinctBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Returns distinct elements from a sequence by using a selected property to compare values.
+            </summary>
+            <typeparam name="TSource">The type of the elements of source.</typeparam>
+            <typeparam name="TKey">The type of property to remove duplicated elements.</typeparam>
+            <param name="source">The sequence to remove duplicate elements from.</param>
+            <param name="groupingSelector">The property on which duplicated elements shall be removed.</param>
+            <returns>An IEnumerable{TSource} that contains distinct elements from the source sequence.</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.LinqExtensions.JoinSet`2">
+            <inheritdoc />
+            <summary>
+            A private implementation of IJoinSet used for left/right joins
+            </summary>
+            <typeparam name="TMain"></typeparam>
+            <typeparam name="TSub"></typeparam>
+        </member>
+        <member name="T:IronSphere.Extensions.ListExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Collections.Generic.IList`1"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.ListExtension.RemoveSingle``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Removes a single element in a list where a condition matches
+            </summary>
+            <typeparam name="T">The type of the elements of the source sequence.</typeparam>
+            <param name="this">The source sequence.</param>
+            <param name="expression">The expression to search for.</param>
+            <exception cref="T:System.InvalidOperationException">if the sequence contains more than one element where the expression matches.</exception>
+        </member>
+        <member name="M:IronSphere.Extensions.ListExtension.RemoveWhere``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Removes all elements in a list where a condition matches
+            </summary>
+            <typeparam name="T">The type of the elements of the source sequence.</typeparam>
+            <param name="this">The source sequence.</param>
+            <param name="expression">The expression to search for.</param>
+        </member>
+        <member name="T:IronSphere.Extensions.LongExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Int64"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.Between(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Checks whether the actual value is between specified lower and higher.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="lower">the lower value</param>
+            <param name="higher">the higher value</param>
+            <returns>A value indicating whether the actual value is between two values.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.IsPositive(System.Int64)">
+            <summary>
+            Checks whether the actual value is greater than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is positive.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.IsNegative(System.Int64)">
+            <summary>
+            Checks whether the actual value is smaller than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is negative.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.IsZero(System.Int64)">
+            <summary>
+            Checks whether the actual value is equal to zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is equal to zero.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.IsGreaterThan(System.Int64,System.Int64)">
+            <summary>
+            Checks whether the actual value is greater than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is greater than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.IsLowerThan(System.Int64,System.Int64)">
+            <summary>
+            Checks whether the actual value is lower than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is lower than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.Min(System.Int64,System.Int64)">
+            <summary>
+            Compares two values and returns the greater one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="minimum">the minimum value</param>
+            <returns>The actual value if its greater than the specified comparison-value. Otherwise it returns the minimum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.Max(System.Int64,System.Int64)">
+            <summary>
+            Compares two values and returns the lower one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="maximum">the maximum value</param>
+            <returns>The actual value if its lower than the specified comparison-value. Otherwise it returns the maximum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.LongExtension.Absolute(System.Int64)">
+            <summary>Returns the absolute value of a 64-bit signed integer.</summary>
+            <param name="this">A number that is greater than <see cref="F:System.Int64.MinValue"></see>, but less than or equal to <see cref="F:System.Int64.MaxValue"></see>.</param>
+            <returns>A 64-bit signed integer, x, such that 0 ≤ x ≤<see cref="F:System.Int64.MaxValue"></see>.</returns>
+            <exception cref="T:System.OverflowException"><paramref name="this">value</paramref> equals <see cref="F:System.Int64.MinValue"></see>.</exception>
+        </member>
+        <member name="T:IronSphere.Extensions.Random">
+            <summary>
+            This class provides random-methods
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.Random.NextInt(System.Int32,System.Int32)">
+            <summary>
+            returns a random integer between two integers
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IronSphere.Extensions.Reflection.TypeExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Type"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.Reflection.TypeExtension.GetReadableName(System.Type)">
+            <summary>
+            Gets the types readable name 
+            </summary>
+            <example>
+            <![CDATA[
+                Dictionary<Int32,String>
+                // or
+                Dictionary<TKey,TValue>
+            ]]>
+            </example>
+            <param name="this">the actual type</param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.Reflection.TypeExtension.GetFullReadableName(System.Type)">
+            <summary>
+            Gets the types full readable name
+            </summary>
+            <example>
+            <![CDATA[
+                System.Collections.Generic.Dictionary<System.Int32,System.String>
+                // or
+                System.Collections.Generic.Dictionary<TKey,TValue>
+            ]]>
+            </example>
+            <param name="this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.Reflection.TypeExtension.GetXmlMemberName(System.Type)">
+            <summary>
+            Gets the xml-documentation member name for a type
+            </summary>
+            <param name="this">the actual type</param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.Reflection.TypeExtension.GetShortReadableName(System.Type)">
+            <summary>
+            Gets the short readable name of a type, it doesn't add outer classes for nested types
+            </summary>
+            <param name="this">the actual type</param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.Reflection.TypeExtension.GetNonGenericTypeName(System.Type)">
+            <summary>
+            Gets the non-generic name for a type
+            </summary>
+            <example>
+            <![CDATA[
+                string x = typeof(Dictionary<int, string>).GetNonGenericTypeName();
+                bool isTrue = x == "System.Collections.Generic.Dictionary";
+            ]]>
+            </example>
+            <param name="this">the actual type</param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.Reflection.TypeExtension.IsAnonymousType(System.Type)">
+            <summary>
+            determines if a type is anonymous
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IronSphere.Extensions.ShortExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Int16"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.ShortExtension.Between(System.Int16,System.Int16,System.Int16)">
+            <summary>
+            Checks whether the actual value is between specified lower and higher.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="lower">the lower value</param>
+            <param name="higher">the higher value</param>
+            <returns>A value indicating whether the actual value is between two values.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ShortExtension.IsPositive(System.Int16)">
+            <summary>
+            Checks whether the actual value is greater than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is positive.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ShortExtension.IsNegative(System.Int16)">
+            <summary>
+            Checks whether the actual value is smaller than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is negative.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ShortExtension.IsZero(System.Int16)">
+            <summary>
+            Checks whether the actual value is equal to zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is equal to zero.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ShortExtension.IsGreaterThan(System.Int16,System.Int16)">
+            <summary>
+            Checks whether the actual value is greater than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is greater than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ShortExtension.IsLowerThan(System.Int16,System.Int16)">
+            <summary>
+            Checks whether the actual value is lower than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is lower than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ShortExtension.Min(System.Int16,System.Int16)">
+            <summary>
+            Compares two values and returns the greater one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="minimum">the minimum value</param>
+            <returns>The actual value if its greater than the specified comparison-value. Otherwise it returns the minimum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ShortExtension.Max(System.Int16,System.Int16)">
+            <summary>
+            Compares two values and returns the lower one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="maximum">the maximum value</param>
+            <returns>The actual value if its lower than the specified comparison-value. Otherwise it returns the maximum-value.</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.SqlCommandExtensions">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Data.SqlClient.SqlCommand"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandText(System.Data.SqlClient.SqlCommand,System.String,System.Object)">
+             <summary>
+             Sets the SqlCommands command-text and adds parameters
+             </summary>
+             <param name="this">The actual SqlCommand</param>
+             <param name="command">The command to set</param>
+             <param name="parameters">The parameters to add as an anonymous object.</param>
+             <example>
+             <code>
+            <![CDATA[
+             SqlCommand command = new SqlCommand();
+             command.SetCommandText("select * from user where userId = @user", new{user="admin"});
+             ]]>
+             </code>
+             </example>
+             <returns>The modified DbCommand</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandText(System.Data.SqlClient.SqlCommand,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+             <summary>
+             Sets the SqlCommands command-text and adds parameters
+             </summary>
+             <param name="this">The actual SqlCommand</param>
+             <param name="command">The command to set</param>
+             <param name="parameters">The parameters to add as an anonymous object.</param>
+             <example>
+             <code>
+            <![CDATA[
+             Dictionary<string, object> paramsDictionary = new Dictionary<string, object>(){
+                 { "user", "admin" }
+             };
+             
+             SqlCommand command = new SqlCommand();
+             command.SetCommandText("select * from user where userId = @user", paramsDictionary);
+             ]]>
+             </code>
+             </example>
+             <returns>The modified DbCommand</returns>
+        </member>
+        <member name="T:IronSphere.Extensions.StreamExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.IO.Stream"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.StreamExtension.GetBytes(System.IO.Stream,System.Int32)">
+            <summary>
+            transforms a stream into the byte-array.
+            </summary>
+            <param name="this">The actual stream.</param>
+            <param name="length">the length of bytes</param>
+            <returns>The actual stream as a byte-array.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StreamExtension.ReadAllBytes(System.IO.Stream)">
+            <summary>
+            Copies all bytes from a <see cref="T:System.IO.Stream"/> into a byte-array
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IronSphere.Extensions.StringExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.GetBytes(System.String,System.Text.Encoding)">
+            <summary>
+            Encodes all the characters in the specified string into a sequence of bytes
+            </summary>
+            <param name="this">the actual string to encode</param>
+            <param name="encoding">the encoding to use</param>
+            <returns>A byte array containing the results of encoding the specified set of characters.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.IsNullOrEmpty(System.String)">
+            <summary>
+            Indicates whether the specified string is null or an empty string ("").
+            </summary>
+            <param name="this">The actual string to test.</param>
+            <returns>true if the value parameter is null or an empty string (""); otherwise, false.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            Indicates whether a specified string is null, empty, or consists only of white-space characters.
+            </summary>
+            <param name="this">The string to test.</param>
+            <returns>true if the value parameter is null or Empty, or if value consists exclusively of white-space characters.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.Join``1(System.String,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Concatenates the elements of a specified array or the members of a collection, using the specified separator between each element or member.
+            </summary>
+            <typeparam name="T">The type of the members of values.</typeparam>
+            <param name="this">The string to use as a separator. separator is included in the returned string only if value has more than one element.</param>
+            <param name="elements">An array that contains the elements to concatenate.</param>
+            <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.StartsWithAny(System.String,System.String[])">
+            <summary>
+            Indicates whether a specified string starts with any parametrized string
+            </summary>
+            <param name="this">The actual string</param>
+            <param name="parameter">All strings to test with</param>
+            <returns>true if the actual string starts with any of the parametrized strings, otherwise false.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.EndsWithAny(System.String,System.String[])">
+            <summary>
+            Indicates whether a specified string ends with any parametrized string
+            </summary>
+            <param name="this">The actual string</param>
+            <param name="parameter">All strings to test with</param>
+            <returns>true if the actual string ends with any of the parametrized strings, otherwise false.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.ContainsAny(System.String,System.String[])">
+            <summary>
+            Indicates whether a specified string starts with any parametrized string
+            </summary>
+            <param name="this">The actual string</param>
+            <param name="parameter">All strings to test with</param>
+            <returns>true if the actual string starts with any of the parametrized strings, otherwise false.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.Split(System.String,System.Int32)">
+            <summary>
+            Splits a string after a specified position
+            </summary>
+            <param name="this">the actual string to split</param>
+            <param name="position">the position to split the string at</param>
+            <returns>a list if strings</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.CutAt(System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Cuts a string at a specified position. The string can be at the end concatenated with a suffix. By specifying waitForWhitespace the string will be cut after the next whitespace after position.
+            </summary>
+            <param name="this">The actual string.</param>
+            <param name="position">The position to get the string at.</param>
+            <param name="endConcat">The suffix to append</param>
+            <param name="waitForWhitespace">specifies hard or soft cut.</param>
+            <returns>Returns the cut string, concatenated with the suffix.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.ToIntOrNull(System.String)">
+            <summary>
+            Parses a string to its int representation
+            </summary>
+            <param name="this">the actual string to parse</param>
+            <returns>The parsed value or null if parsing failed.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.RemoveDiacritics(System.String)">
+            <summary>
+            Removes all diacritics in a string
+            </summary>
+            <param name="this">The actual string to remove diacritics from</param>
+            <returns>A string without any diacritics.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.UpholsterLeft(System.String,System.Int32,System.Char)">
+            <summary>
+            upholsters a string on the left with a specific character
+            </summary>
+            <param name="this"></param>
+            <param name="count"></param>
+            <param name="character"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.UpholsterRight(System.String,System.Int32,System.Char)">
+            <summary>
+            upholsters a string on the right with a specific character
+            </summary>
+            <param name="this"></param>
+            <param name="count"></param>
+            <param name="character"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.Upholster(System.String,System.Int32,System.Char)">
+            <summary>
+            upholsters a string on the left and right with a specific character
+            </summary>
+            <param name="this"></param>
+            <param name="count"></param>
+            <param name="character"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.Format(System.String,System.Object)">
+            <summary>
+            formats a string with values in an anonymous object
+            </summary>
+            <param name="this"></param>
+            <param name="anonymousObject"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.Format(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            formats a string with values in a dictionary
+            </summary>
+            <param name="this"></param>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:IronSphere.Extensions.WeekOfYearStandard">
+            <summary>
+            This enum provides standards for week of year calculation.
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.WeekOfYearStandard.DotNet">
+            <summary>
+            DotNet-Standard
+            </summary>
+        </member>
+        <member name="F:IronSphere.Extensions.WeekOfYearStandard.Iso8601">
+            <summary>
+            Iso-Standard
+            </summary>
+        </member>
+    </members>
+</doc>

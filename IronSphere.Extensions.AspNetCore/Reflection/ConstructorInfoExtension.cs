@@ -1,4 +1,4 @@
-﻿#if !NET461
+﻿#if !NET45
 #define Supported
 #endif
 
