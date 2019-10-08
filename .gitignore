@@ -1,0 +1,11 @@
+# nuget packages
+packages
+
+# visual studio files
+*.user
+.vs
+*.suo
+
+# output directories
+bin
+obj

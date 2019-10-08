@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+    <Version>3.1.0</Version>
+    <Authors>Matthias Burger</Authors>
+    <Company>Matthias Burger</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>This package provides useful extension-methods for C# .NET Standard.</Description>
+    <PackageTags>Extension, Extensions, Extensionmethods</PackageTags>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+  
+</Project>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>IronSphere.Extensions.Net</PackageId>
+        <Title>Multitargeting extension-methods for C#</Title>
+        <TargetFrameworks>net461;netcoreapp2.2</TargetFrameworks>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\IronSphere.Extensions\IronSphere.Extensions.csproj" />
+    </ItemGroup>
+</Project>
