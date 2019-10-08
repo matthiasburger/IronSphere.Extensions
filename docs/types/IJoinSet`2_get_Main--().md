@@ -4,10 +4,9 @@
 
 > Assembly: IronSphere.Extensions
 
-
-
-```
-
-
+```csharp
 TMain get_Main<>();
 ```
+
+
+

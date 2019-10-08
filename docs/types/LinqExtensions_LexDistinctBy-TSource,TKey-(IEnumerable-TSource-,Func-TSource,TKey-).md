@@ -4,10 +4,9 @@
 
 > Assembly: IronSphere.Extensions
 
-
-
-```
-
-
+```csharp
 public static IEnumerable<TSource> LexDistinctBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource,TKey> groupingSelector);
 ```
+
+Returns distinct elements from a sequence by using a selected property to compare values.
+

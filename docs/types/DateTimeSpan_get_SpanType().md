@@ -4,10 +4,9 @@
 
 > Assembly: IronSphere.Extensions
 
-
-
-```
-
-
+```csharp
 public DateTimeSpanType get_SpanType()
 ```
+
+
+

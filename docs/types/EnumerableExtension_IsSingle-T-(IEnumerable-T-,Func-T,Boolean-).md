@@ -4,10 +4,13 @@
 
 > Assembly: IronSphere.Extensions
 
-
-
-```
-public static bool IsSingle<T>(this IEnumerable<T> @this, Func<T, bool> predicate)
-
+```csharp
 public static Boolean IsSingle<T>(this IEnumerable<T> this, Func<T,Boolean> predicate);
+```
+
+Determines if an enumeration contains exactly one element
+
+```csharp
+            bool isSingleUser = Context.Users.IsSingle(w => w.Name == "test");
+            
 ```
