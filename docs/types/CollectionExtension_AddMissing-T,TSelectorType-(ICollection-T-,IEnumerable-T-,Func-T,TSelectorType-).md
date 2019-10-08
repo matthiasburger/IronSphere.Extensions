@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/CollectionExtension)
+[back](/IronSphere.Extensions/types/CollectionExtension)
 
 # AddMissing
 

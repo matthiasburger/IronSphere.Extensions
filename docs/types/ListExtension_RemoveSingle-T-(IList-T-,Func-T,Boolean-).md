@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/ListExtension)
+[back](/IronSphere.Extensions/types/ListExtension)
 
 # RemoveSingle
 

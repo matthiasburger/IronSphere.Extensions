@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/LongExtension)
+[back](/IronSphere.Extensions/types/LongExtension)
 
 # IsNegative
 

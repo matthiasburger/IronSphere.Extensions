@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/DisposableExtension)
+[back](/IronSphere.Extensions/types/DisposableExtension)
 
 # DisposeAfter
 

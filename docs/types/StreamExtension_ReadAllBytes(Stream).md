@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/StreamExtension)
+[back](/IronSphere.Extensions/types/StreamExtension)
 
 # ReadAllBytes
 

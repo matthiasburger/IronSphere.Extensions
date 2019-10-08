@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/ShortExtension)
+[back](/IronSphere.Extensions/types/ShortExtension)
 
 # IsZero
 

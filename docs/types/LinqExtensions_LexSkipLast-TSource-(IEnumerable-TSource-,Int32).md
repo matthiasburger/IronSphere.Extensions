@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/LinqExtensions)
+[back](/IronSphere.Extensions/types/LinqExtensions)
 
 # LexSkipLast
 

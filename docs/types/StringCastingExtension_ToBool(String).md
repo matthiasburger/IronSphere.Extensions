@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/StringCastingExtension)
+[back](/IronSphere.Extensions/types/StringCastingExtension)
 
 # ToBool
 

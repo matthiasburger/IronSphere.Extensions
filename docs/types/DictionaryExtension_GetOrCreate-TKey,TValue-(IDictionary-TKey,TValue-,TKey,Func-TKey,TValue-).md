@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/DictionaryExtension)
+[back](/IronSphere.Extensions/types/DictionaryExtension)
 
 # GetOrCreate
 

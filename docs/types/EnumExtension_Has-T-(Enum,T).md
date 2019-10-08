@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/EnumExtension)
+[back](/IronSphere.Extensions/types/EnumExtension)
 
 # Has
 

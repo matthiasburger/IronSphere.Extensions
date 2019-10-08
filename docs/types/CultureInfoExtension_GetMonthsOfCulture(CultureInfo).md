@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/CultureInfoExtension)
+[back](/IronSphere.Extensions/types/CultureInfoExtension)
 
 # GetMonthsOfCulture
 

@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/BinaryReaderExtension)
+[back](/IronSphere.Extensions/types/BinaryReaderExtension)
 
 # ReadAllBytes
 

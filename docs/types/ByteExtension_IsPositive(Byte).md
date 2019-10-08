@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/ByteExtension)
+[back](/IronSphere.Extensions/types/ByteExtension)
 
 # IsPositive
 

@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/DateTimeSpan)
+[back](/IronSphere.Extensions/types/DateTimeSpan)
 
 # get_End
 

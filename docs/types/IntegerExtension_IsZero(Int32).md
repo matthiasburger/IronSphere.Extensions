@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/IntegerExtension)
+[back](/IronSphere.Extensions/types/IntegerExtension)
 
 # IsZero
 

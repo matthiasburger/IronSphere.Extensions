@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/DateTimeExtension)
+[back](/IronSphere.Extensions/types/DateTimeExtension)
 
 # GetLastOfWeek
 

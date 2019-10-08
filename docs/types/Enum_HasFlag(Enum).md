@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/WeekOfYearStandard)
+[back](/IronSphere.Extensions/types/WeekOfYearStandard)
 
 # HasFlag
 

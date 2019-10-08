@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/FloatExtension)
+[back](/IronSphere.Extensions/types/FloatExtension)
 
 # Absolute
 
