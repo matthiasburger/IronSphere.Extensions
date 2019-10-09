@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# GetAge
+# DateTimeExtension.GetAge Method
 
 > Assembly: IronSphere.Extensions
 

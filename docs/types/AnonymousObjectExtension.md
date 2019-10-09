@@ -1,6 +1,6 @@
 ﻿[back](/IronSphere.Extensions/types)
 
-# AnonymousObjectExtension
+# AnonymousObjectExtension Class
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

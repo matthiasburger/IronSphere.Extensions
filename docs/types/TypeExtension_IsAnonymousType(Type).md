@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/TypeExtension)
 
-# IsAnonymousType
+# TypeExtension.IsAnonymousType Method
 
 > Assembly: IronSphere.Extensions
 

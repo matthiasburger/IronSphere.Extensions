@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpanType)
 
-# HasFlag
+# DateTimeSpanType.HasFlag Method
 
 > Assembly: IronSphere.Extensions
 

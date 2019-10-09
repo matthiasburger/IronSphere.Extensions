@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# ContainsAny
+# StringExtension.ContainsAny Method
 
 > Assembly: IronSphere.Extensions
 

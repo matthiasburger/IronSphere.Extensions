@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CharArrayExtension)
 
-# Equals
+# CharArrayExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

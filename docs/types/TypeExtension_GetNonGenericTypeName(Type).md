@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/TypeExtension)
 
-# GetNonGenericTypeName
+# TypeExtension.GetNonGenericTypeName Method
 
 > Assembly: IronSphere.Extensions
 

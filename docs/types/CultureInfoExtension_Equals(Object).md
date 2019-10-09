@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CultureInfoExtension)
 
-# Equals
+# CultureInfoExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DoubleExtension)
 
-# ToString
+# DoubleExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ShortExtension)
 
-# IsPositive
+# ShortExtension.IsPositive Method
 
 > Assembly: IronSphere.Extensions
 

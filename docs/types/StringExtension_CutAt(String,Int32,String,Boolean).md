@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# CutAt
+# StringExtension.CutAt Method
 
 > Assembly: IronSphere.Extensions
 

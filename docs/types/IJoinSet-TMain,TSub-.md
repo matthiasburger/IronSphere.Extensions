@@ -1,6 +1,6 @@
 ﻿[back](/IronSphere.Extensions/types)
 
-# IJoinSet&lt;out TMain,out TSub&gt;
+# IJoinSet&lt;out TMain,out TSub&gt; Class
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

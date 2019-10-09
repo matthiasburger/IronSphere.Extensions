@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ShortExtension)
 
-# IsLowerThan
+# ShortExtension.IsLowerThan Method
 
 > Assembly: IronSphere.Extensions
 

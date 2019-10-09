@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# Equals
+# LongExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

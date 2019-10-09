@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/AnonymousObjectExtension)
 
-# ToDictionary
+# AnonymousObjectExtension.ToDictionary Method
 
 > Assembly: IronSphere.Extensions
 

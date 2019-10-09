@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# Between
+# LongExtension.Between Method
 
 > Assembly: IronSphere.Extensions
 

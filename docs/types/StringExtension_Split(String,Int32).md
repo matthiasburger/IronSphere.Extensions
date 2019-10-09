@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# Split
+# StringExtension.Split Method
 
 > Assembly: IronSphere.Extensions
 

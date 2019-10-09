@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericExtension)
 
-# ToString
+# GenericExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

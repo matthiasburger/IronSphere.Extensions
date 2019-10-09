@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# GetHashCode
+# FloatExtension.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 

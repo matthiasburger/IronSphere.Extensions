@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/BinaryReaderExtension)
 
-# GetHashCode
+# BinaryReaderExtension.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 

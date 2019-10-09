@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# Max
+# FloatExtension.Max Method
 
 > Assembly: IronSphere.Extensions
 

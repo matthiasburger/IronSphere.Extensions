@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StreamExtension)
 
-# ToString
+# StreamExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

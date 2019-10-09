@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpanType)
 
-# Equals
+# DateTimeSpanType.Equals Method
 
 > Assembly: IronSphere.Extensions
 

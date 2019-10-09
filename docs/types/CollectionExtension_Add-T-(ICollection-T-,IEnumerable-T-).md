@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CollectionExtension)
 
-# Add
+# CollectionExtension.Add Method
 
 > Assembly: IronSphere.Extensions
 

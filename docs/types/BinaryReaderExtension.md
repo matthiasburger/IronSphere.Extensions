@@ -1,6 +1,6 @@
 ﻿[back](/IronSphere.Extensions/types)
 
-# BinaryReaderExtension
+# BinaryReaderExtension Class
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

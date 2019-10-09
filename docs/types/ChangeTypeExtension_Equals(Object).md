@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ChangeTypeExtension)
 
-# Equals
+# ChangeTypeExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

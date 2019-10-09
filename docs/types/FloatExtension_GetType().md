@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# GetType
+# FloatExtension.GetType Method
 
 > Assembly: IronSphere.Extensions
 

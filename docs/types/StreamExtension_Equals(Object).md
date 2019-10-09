@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StreamExtension)
 
-# Equals
+# StreamExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

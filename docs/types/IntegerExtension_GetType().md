@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# GetType
+# IntegerExtension.GetType Method
 
 > Assembly: IronSphere.Extensions
 

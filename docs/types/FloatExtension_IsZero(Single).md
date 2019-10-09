@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# IsZero
+# FloatExtension.IsZero Method
 
 > Assembly: IronSphere.Extensions
 

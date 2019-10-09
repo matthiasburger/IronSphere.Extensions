@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/BinaryReaderExtension)
 
-# GetType
+# BinaryReaderExtension.GetType Method
 
 > Assembly: IronSphere.Extensions
 

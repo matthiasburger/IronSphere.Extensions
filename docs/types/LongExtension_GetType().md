@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# GetType
+# LongExtension.GetType Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DoubleExtension)
 
-# Max
+# DoubleExtension.Max Method
 
 > Assembly: IronSphere.Extensions
 

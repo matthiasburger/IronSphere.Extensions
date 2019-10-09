@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteExtension)
 
-# IsGreaterThan
+# ByteExtension.IsGreaterThan Method
 
 > Assembly: IronSphere.Extensions
 

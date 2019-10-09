@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CultureInfoExtension)
 
-# GetHashCode
+# CultureInfoExtension.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 

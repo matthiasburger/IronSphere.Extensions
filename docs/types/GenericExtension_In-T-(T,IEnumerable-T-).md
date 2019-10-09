@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericExtension)
 
-# In
+# GenericExtension.In Method
 
 > Assembly: IronSphere.Extensions
 

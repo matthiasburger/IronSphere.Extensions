@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericArrayExtension)
 
-# Equals
+# GenericArrayExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

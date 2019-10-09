@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LexSkip
+# LinqExtensions.LexSkip Method
 
 > Assembly: IronSphere.Extensions
 

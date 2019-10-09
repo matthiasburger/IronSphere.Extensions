@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# ToString
+# LinqExtensions.ToString Method
 
 > Assembly: IronSphere.Extensions
 

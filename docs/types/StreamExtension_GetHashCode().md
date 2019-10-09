@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StreamExtension)
 
-# GetHashCode
+# StreamExtension.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 

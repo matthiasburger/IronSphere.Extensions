@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DoubleExtension)
 
-# Min
+# DoubleExtension.Min Method
 
 > Assembly: IronSphere.Extensions
 

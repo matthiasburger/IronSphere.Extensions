@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumerableExtension)
 
-# IsNullOrEmpty
+# EnumerableExtension.IsNullOrEmpty Method
 
 > Assembly: IronSphere.Extensions
 

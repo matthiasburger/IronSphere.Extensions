@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# ToIntOrNull
+# StringExtension.ToIntOrNull Method
 
 > Assembly: IronSphere.Extensions
 

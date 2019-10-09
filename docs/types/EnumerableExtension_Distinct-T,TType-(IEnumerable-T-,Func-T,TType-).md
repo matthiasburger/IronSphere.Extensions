@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumerableExtension)
 
-# Distinct
+# EnumerableExtension.Distinct Method
 
 > Assembly: IronSphere.Extensions
 

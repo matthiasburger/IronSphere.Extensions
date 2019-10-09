@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DisposableExtension)
 
-# ToString
+# DisposableExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

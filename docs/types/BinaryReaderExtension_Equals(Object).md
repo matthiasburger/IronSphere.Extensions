@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/BinaryReaderExtension)
 
-# Equals
+# BinaryReaderExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

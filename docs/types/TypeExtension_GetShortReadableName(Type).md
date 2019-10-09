@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/TypeExtension)
 
-# GetShortReadableName
+# TypeExtension.GetShortReadableName Method
 
 > Assembly: IronSphere.Extensions
 

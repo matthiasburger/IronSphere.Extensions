@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# Upholster
+# StringExtension.Upholster Method
 
 > Assembly: IronSphere.Extensions
 

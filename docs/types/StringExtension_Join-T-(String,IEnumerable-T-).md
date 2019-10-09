@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# Join
+# StringExtension.Join Method
 
 > Assembly: IronSphere.Extensions
 

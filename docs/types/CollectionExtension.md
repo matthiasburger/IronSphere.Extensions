@@ -1,6 +1,6 @@
 ﻿[back](/IronSphere.Extensions/types)
 
-# CollectionExtension
+# CollectionExtension Class
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

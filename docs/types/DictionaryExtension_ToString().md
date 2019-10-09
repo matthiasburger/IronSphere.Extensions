@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DictionaryExtension)
 
-# ToString
+# DictionaryExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

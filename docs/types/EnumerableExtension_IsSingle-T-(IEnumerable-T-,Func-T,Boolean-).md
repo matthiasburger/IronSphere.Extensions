@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumerableExtension)
 
-# IsSingle
+# EnumerableExtension.IsSingle Method
 
 > Assembly: IronSphere.Extensions
 

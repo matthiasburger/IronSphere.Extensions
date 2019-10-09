@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/AnonymousObjectExtension)
 
-# GetHashCode
+# AnonymousObjectExtension.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 

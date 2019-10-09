@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# IsLeapYear
+# DateTimeExtension.IsLeapYear Method
 
 > Assembly: IronSphere.Extensions
 

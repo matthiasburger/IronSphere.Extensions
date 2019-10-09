@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# EndsWithAny
+# StringExtension.EndsWithAny Method
 
 > Assembly: IronSphere.Extensions
 

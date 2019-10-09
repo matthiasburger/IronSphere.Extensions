@@ -1,6 +1,6 @@
 ﻿[back](/IronSphere.Extensions/types)
 
-# CultureInfoExtension
+# CultureInfoExtension Class
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

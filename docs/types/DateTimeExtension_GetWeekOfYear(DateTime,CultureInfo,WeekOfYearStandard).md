@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# GetWeekOfYear
+# DateTimeExtension.GetWeekOfYear Method
 
 > Assembly: IronSphere.Extensions
 

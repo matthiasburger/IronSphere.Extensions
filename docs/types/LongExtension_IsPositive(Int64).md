@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# IsPositive
+# LongExtension.IsPositive Method
 
 > Assembly: IronSphere.Extensions
 

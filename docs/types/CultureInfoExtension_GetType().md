@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CultureInfoExtension)
 
-# GetType
+# CultureInfoExtension.GetType Method
 
 > Assembly: IronSphere.Extensions
 

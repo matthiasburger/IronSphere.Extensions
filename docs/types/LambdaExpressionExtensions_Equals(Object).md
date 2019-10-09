@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LambdaExpressionExtensions)
 
-# Equals
+# LambdaExpressionExtensions.Equals Method
 
 > Assembly: IronSphere.Extensions
 

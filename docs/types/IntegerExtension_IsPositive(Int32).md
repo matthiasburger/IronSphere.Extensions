@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# IsPositive
+# IntegerExtension.IsPositive Method
 
 > Assembly: IronSphere.Extensions
 

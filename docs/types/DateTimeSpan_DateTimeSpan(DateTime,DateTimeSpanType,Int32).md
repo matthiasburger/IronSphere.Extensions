@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpan)
 
-# .ctor
+# DateTimeSpan..ctor Method
 
 > Assembly: IronSphere.Extensions
 

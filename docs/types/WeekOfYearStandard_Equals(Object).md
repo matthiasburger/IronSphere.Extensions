@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/WeekOfYearStandard)
 
-# Equals
+# WeekOfYearStandard.Equals Method
 
 > Assembly: IronSphere.Extensions
 

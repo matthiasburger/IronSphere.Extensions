@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# IsLowerThan
+# LongExtension.IsLowerThan Method
 
 > Assembly: IronSphere.Extensions
 

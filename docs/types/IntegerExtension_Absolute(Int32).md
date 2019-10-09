@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# Absolute
+# IntegerExtension.Absolute Method
 
 > Assembly: IronSphere.Extensions
 

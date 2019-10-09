@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/WeekOfYearStandard)
 
-# GetHashCode
+# WeekOfYearStandard.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 

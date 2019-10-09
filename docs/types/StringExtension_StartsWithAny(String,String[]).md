@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StartsWithAny
+# StringExtension.StartsWithAny Method
 
 > Assembly: IronSphere.Extensions
 

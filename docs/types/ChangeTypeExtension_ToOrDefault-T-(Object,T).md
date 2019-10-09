@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ChangeTypeExtension)
 
-# ToOrDefault
+# ChangeTypeExtension.ToOrDefault Method
 
 > Assembly: IronSphere.Extensions
 

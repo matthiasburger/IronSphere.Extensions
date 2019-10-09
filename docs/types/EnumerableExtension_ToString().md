@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumerableExtension)
 
-# ToString
+# EnumerableExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

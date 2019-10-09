@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# ToChar
+# StringCastingExtension.ToChar Method
 
 > Assembly: IronSphere.Extensions
 

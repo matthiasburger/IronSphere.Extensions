@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ListExtension)
 
-# RemoveWhere
+# ListExtension.RemoveWhere Method
 
 > Assembly: IronSphere.Extensions
 

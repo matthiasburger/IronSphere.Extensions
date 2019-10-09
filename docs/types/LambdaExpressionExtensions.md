@@ -1,6 +1,6 @@
 ﻿[back](/IronSphere.Extensions/types)
 
-# LambdaExpressionExtensions
+# LambdaExpressionExtensions Class
 
 > Namespace: IronSphere.Extensions in  IronSphere.Extensions.dll
 

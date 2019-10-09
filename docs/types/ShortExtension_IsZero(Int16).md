@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ShortExtension)
 
-# IsZero
+# ShortExtension.IsZero Method
 
 > Assembly: IronSphere.Extensions
 

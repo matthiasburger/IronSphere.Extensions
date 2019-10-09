@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# Equals
+# IntegerExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

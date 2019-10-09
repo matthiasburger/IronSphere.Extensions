@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# Equals
+# DateTimeExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

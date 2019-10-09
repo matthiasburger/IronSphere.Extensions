@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpan)
 
-# get_End
+# DateTimeSpan.get_End Method
 
 > Assembly: IronSphere.Extensions
 

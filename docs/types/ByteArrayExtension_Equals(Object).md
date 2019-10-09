@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteArrayExtension)
 
-# Equals
+# ByteArrayExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

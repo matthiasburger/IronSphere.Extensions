@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ShortExtension)
 
-# Equals
+# ShortExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

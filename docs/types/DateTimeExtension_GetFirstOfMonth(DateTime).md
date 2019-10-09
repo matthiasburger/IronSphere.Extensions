@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# GetFirstOfMonth
+# DateTimeExtension.GetFirstOfMonth Method
 
 > Assembly: IronSphere.Extensions
 

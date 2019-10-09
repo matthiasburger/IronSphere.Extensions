@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpanExtension)
 
-# GetHashCode
+# DateTimeSpanExtension.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 

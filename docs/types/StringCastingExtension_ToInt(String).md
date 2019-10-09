@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# ToInt
+# StringCastingExtension.ToInt Method
 
 > Assembly: IronSphere.Extensions
 

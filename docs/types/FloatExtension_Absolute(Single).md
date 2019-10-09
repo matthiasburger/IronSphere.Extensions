@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# Absolute
+# FloatExtension.Absolute Method
 
 > Assembly: IronSphere.Extensions
 

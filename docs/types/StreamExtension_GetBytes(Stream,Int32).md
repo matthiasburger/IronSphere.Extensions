@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StreamExtension)
 
-# GetBytes
+# StreamExtension.GetBytes Method
 
 > Assembly: IronSphere.Extensions
 

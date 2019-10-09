@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CollectionExtension)
 
-# AddMissing
+# CollectionExtension.AddMissing Method
 
 > Assembly: IronSphere.Extensions
 

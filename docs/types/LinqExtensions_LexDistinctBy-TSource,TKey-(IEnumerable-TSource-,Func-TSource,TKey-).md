@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LexDistinctBy
+# LinqExtensions.LexDistinctBy Method
 
 > Assembly: IronSphere.Extensions
 

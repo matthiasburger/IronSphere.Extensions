@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# ToByte
+# StringCastingExtension.ToByte Method
 
 > Assembly: IronSphere.Extensions
 

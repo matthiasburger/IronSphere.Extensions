@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericArrayExtension)
 
-# Slice
+# GenericArrayExtension.Slice Method
 
 > Assembly: IronSphere.Extensions
 

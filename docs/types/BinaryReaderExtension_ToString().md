@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/BinaryReaderExtension)
 
-# ToString
+# BinaryReaderExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

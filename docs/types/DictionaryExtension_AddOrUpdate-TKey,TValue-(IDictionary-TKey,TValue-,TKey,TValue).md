@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DictionaryExtension)
 
-# AddOrUpdate
+# DictionaryExtension.AddOrUpdate Method
 
 > Assembly: IronSphere.Extensions
 

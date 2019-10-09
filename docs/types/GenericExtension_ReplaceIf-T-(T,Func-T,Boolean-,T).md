@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericExtension)
 
-# ReplaceIf
+# GenericExtension.ReplaceIf Method
 
 > Assembly: IronSphere.Extensions
 

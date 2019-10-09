@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/SqlCommandExtensions)
 
-# ToString
+# SqlCommandExtensions.ToString Method
 
 > Assembly: IronSphere.Extensions
 

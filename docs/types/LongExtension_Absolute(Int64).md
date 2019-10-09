@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# Absolute
+# LongExtension.Absolute Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LambdaExpressionExtensions)
 
-# GetType
+# LambdaExpressionExtensions.GetType Method
 
 > Assembly: IronSphere.Extensions
 

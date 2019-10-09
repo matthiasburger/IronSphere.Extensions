@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IJoinSet-TMain,TSub-)
 
-# get_Main
+# IJoinSet&lt;out TMain,out TSub&gt;.get_Main Method
 
 > Assembly: IronSphere.Extensions
 

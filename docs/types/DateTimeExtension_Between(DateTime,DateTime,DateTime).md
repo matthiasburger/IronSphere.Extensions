@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# Between
+# DateTimeExtension.Between Method
 
 > Assembly: IronSphere.Extensions
 

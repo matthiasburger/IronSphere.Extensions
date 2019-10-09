@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CollectionExtension)
 
-# GetHashCode
+# CollectionExtension.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 

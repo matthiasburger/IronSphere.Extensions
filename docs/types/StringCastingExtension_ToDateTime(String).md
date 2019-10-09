@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# ToDateTime
+# StringCastingExtension.ToDateTime Method
 
 > Assembly: IronSphere.Extensions
 

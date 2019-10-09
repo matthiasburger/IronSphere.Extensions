@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ListExtension)
 
-# RemoveSingle
+# ListExtension.RemoveSingle Method
 
 > Assembly: IronSphere.Extensions
 

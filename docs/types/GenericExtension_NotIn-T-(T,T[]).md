@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericExtension)
 
-# NotIn
+# GenericExtension.NotIn Method
 
 > Assembly: IronSphere.Extensions
 

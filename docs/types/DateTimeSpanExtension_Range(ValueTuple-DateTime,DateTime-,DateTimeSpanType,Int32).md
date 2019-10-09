@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpanExtension)
 
-# Range
+# DateTimeSpanExtension.Range Method
 
 > Assembly: IronSphere.Extensions
 

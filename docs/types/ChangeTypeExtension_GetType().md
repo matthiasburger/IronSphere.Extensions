@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ChangeTypeExtension)
 
-# GetType
+# ChangeTypeExtension.GetType Method
 
 > Assembly: IronSphere.Extensions
 

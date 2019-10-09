@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteExtension)
 
-# Min
+# ByteExtension.Min Method
 
 > Assembly: IronSphere.Extensions
 

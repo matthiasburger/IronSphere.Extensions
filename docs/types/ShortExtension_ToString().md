@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ShortExtension)
 
-# ToString
+# ShortExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

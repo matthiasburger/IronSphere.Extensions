@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteArrayExtension)
 
-# ToString
+# ByteArrayExtension.ToString Method
 
 > Assembly: IronSphere.Extensions
 

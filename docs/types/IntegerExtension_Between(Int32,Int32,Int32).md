@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# Between
+# IntegerExtension.Between Method
 
 > Assembly: IronSphere.Extensions
 

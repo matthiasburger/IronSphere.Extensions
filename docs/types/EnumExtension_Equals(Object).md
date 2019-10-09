@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumExtension)
 
-# Equals
+# EnumExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

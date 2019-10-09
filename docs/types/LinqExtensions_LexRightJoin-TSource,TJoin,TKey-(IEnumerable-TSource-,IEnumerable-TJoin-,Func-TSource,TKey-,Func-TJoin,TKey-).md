@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LexRightJoin
+# LinqExtensions.LexRightJoin Method
 
 > Assembly: IronSphere.Extensions
 

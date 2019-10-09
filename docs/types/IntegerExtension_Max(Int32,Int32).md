@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# Max
+# IntegerExtension.Max Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# GetLastOfWeek
+# DateTimeExtension.GetLastOfWeek Method
 
 > Assembly: IronSphere.Extensions
 

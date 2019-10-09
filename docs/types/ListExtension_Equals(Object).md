@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ListExtension)
 
-# Equals
+# ListExtension.Equals Method
 
 > Assembly: IronSphere.Extensions
 

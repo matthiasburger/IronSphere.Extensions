@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumExtension)
 
-# GetType
+# EnumExtension.GetType Method
 
 > Assembly: IronSphere.Extensions
 

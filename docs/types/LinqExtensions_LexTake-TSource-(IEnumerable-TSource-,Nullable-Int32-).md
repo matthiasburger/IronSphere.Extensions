@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LexTake
+# LinqExtensions.LexTake Method
 
 > Assembly: IronSphere.Extensions
 

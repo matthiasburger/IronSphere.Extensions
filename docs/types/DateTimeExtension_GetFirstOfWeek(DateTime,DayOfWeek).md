@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# GetFirstOfWeek
+# DateTimeExtension.GetFirstOfWeek Method
 
 > Assembly: IronSphere.Extensions
 

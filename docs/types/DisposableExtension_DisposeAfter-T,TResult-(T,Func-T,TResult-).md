@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DisposableExtension)
 
-# DisposeAfter
+# DisposableExtension.DisposeAfter Method
 
 > Assembly: IronSphere.Extensions
 

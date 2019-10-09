@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/SqlCommandExtensions)
 
-# GetType
+# SqlCommandExtensions.GetType Method
 
 > Assembly: IronSphere.Extensions
 

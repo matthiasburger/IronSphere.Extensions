@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# IsWeekend
+# DateTimeExtension.IsWeekend Method
 
 > Assembly: IronSphere.Extensions
 

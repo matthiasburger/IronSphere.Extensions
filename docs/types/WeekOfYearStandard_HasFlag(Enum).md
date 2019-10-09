@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/WeekOfYearStandard)
 
-# HasFlag
+# WeekOfYearStandard.HasFlag Method
 
 > Assembly: IronSphere.Extensions
 

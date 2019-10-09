@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteArrayExtension)
 
-# GetHashCode
+# ByteArrayExtension.GetHashCode Method
 
 > Assembly: IronSphere.Extensions
 
