@@ -20,7 +20,7 @@ Attributes:
 
 | Static Constructor | Description |
 | --- | --- |
-| [DateTimeExtension()](Link) |  |
+| [DateTimeExtension()](DateTimeExtension_.cctor()) |  |
 
 
 | Static Method | Description |

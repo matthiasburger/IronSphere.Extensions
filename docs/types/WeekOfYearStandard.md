@@ -25,32 +25,32 @@ Implements:
 
 | Method | Description |
 | --- | --- |
-| [GetValue()](Link) |  |
-| [Equals(object obj)](Link) |  |
-| [GetHashCode()](Link) |  |
-| [ToString()](Link) |  |
-| [ToString(string format, IFormatProvider provider)](Link) |  |
-| [CompareTo(object target)](Link) |  |
-| [ToString(string format)](Link) |  |
-| [ToString(IFormatProvider provider)](Link) |  |
-| [HasFlag(Enum flag)](Link) |  |
-| [GetTypeCode()](Link) |  |
-| [System.IConvertible.ToBoolean(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToChar(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToSByte(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToByte(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToInt16(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToUInt16(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToInt32(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToUInt32(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToInt64(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToUInt64(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToSingle(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToDouble(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToDecimal(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToDateTime(IFormatProvider provider)](Link) |  |
-| [System.IConvertible.ToType(Type type, IFormatProvider provider)](Link) |  |
-| [GetType()](Link) |  |
-| [Finalize()](Link) |  |
-| [MemberwiseClone()](Link) |  |
+| [GetValue()](Enum_GetValue()) |  |
+| [Equals(object obj)](Enum_Equals(Object)) |  |
+| [GetHashCode()](Enum_GetHashCode()) |  |
+| [ToString()](Enum_ToString()) |  |
+| [ToString(string format, IFormatProvider provider)](Enum_ToString(String,IFormatProvider)) |  |
+| [CompareTo(object target)](Enum_CompareTo(Object)) |  |
+| [ToString(string format)](Enum_ToString(String)) |  |
+| [ToString(IFormatProvider provider)](Enum_ToString(IFormatProvider)) |  |
+| [HasFlag(Enum flag)](Enum_HasFlag(Enum)) |  |
+| [GetTypeCode()](Enum_GetTypeCode()) |  |
+| [System.IConvertible.ToBoolean(IFormatProvider provider)](Enum_System.IConvertible.ToBoolean(IFormatProvider)) |  |
+| [System.IConvertible.ToChar(IFormatProvider provider)](Enum_System.IConvertible.ToChar(IFormatProvider)) |  |
+| [System.IConvertible.ToSByte(IFormatProvider provider)](Enum_System.IConvertible.ToSByte(IFormatProvider)) |  |
+| [System.IConvertible.ToByte(IFormatProvider provider)](Enum_System.IConvertible.ToByte(IFormatProvider)) |  |
+| [System.IConvertible.ToInt16(IFormatProvider provider)](Enum_System.IConvertible.ToInt16(IFormatProvider)) |  |
+| [System.IConvertible.ToUInt16(IFormatProvider provider)](Enum_System.IConvertible.ToUInt16(IFormatProvider)) |  |
+| [System.IConvertible.ToInt32(IFormatProvider provider)](Enum_System.IConvertible.ToInt32(IFormatProvider)) |  |
+| [System.IConvertible.ToUInt32(IFormatProvider provider)](Enum_System.IConvertible.ToUInt32(IFormatProvider)) |  |
+| [System.IConvertible.ToInt64(IFormatProvider provider)](Enum_System.IConvertible.ToInt64(IFormatProvider)) |  |
+| [System.IConvertible.ToUInt64(IFormatProvider provider)](Enum_System.IConvertible.ToUInt64(IFormatProvider)) |  |
+| [System.IConvertible.ToSingle(IFormatProvider provider)](Enum_System.IConvertible.ToSingle(IFormatProvider)) |  |
+| [System.IConvertible.ToDouble(IFormatProvider provider)](Enum_System.IConvertible.ToDouble(IFormatProvider)) |  |
+| [System.IConvertible.ToDecimal(IFormatProvider provider)](Enum_System.IConvertible.ToDecimal(IFormatProvider)) |  |
+| [System.IConvertible.ToDateTime(IFormatProvider provider)](Enum_System.IConvertible.ToDateTime(IFormatProvider)) |  |
+| [System.IConvertible.ToType(Type type, IFormatProvider provider)](Enum_System.IConvertible.ToType(Type,IFormatProvider)) |  |
+| [GetType()](Object_GetType()) |  |
+| [Finalize()](Object_Finalize()) |  |
+| [MemberwiseClone()](Object_MemberwiseClone()) |  |
 

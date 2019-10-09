@@ -19,7 +19,8 @@ namespace IronSphere.Extensions.Test
         [Fact]
         public void TestNewTo()
         {
-           
+            string x = 1.To<string>();
+            Assert.Equal("1", x);
         }
     }
     
