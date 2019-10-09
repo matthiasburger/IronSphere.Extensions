@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public .ctor(DateTime start, DateTime end)
+public DateTimeSpan(DateTime start, DateTime end)
 ```
 
 
