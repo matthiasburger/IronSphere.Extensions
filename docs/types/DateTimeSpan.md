@@ -21,12 +21,12 @@ Implements:
 
 | Constructor | Description |
 | --- | --- |       
-| [DateTimeSpan(DateTime start, DateTime end)](DateTimeSpan_.ctor(DateTime,DateTime)) | Creates a new object from type &lt;see cref=&quot;T:IronSphere.Extensions.DateTimeSpan&quot; /&gt; |
-| [DateTimeSpan(DateTime start, DateTimeSpanType spanType, Int32 step)](DateTimeSpan_.ctor(DateTime,DateTimeSpanType,Int32)) | Creates a new object from type &lt;see cref=&quot;T:IronSphere.Extensions.DateTimeSpan&quot; /&gt; |
+| [DateTimeSpan(DateTime start, DateTime end)](DateTimeSpan_DateTimeSpan(DateTime,DateTime)) | Creates a new object from type &lt;see cref=&quot;T:IronSphere.Extensions.DateTimeSpan&quot; /&gt; |
+| [DateTimeSpan(DateTime start, DateTimeSpanType spanType, Int32 step)](DateTimeSpan_DateTimeSpan(DateTime,DateTimeSpanType,Int32)) | Creates a new object from type &lt;see cref=&quot;T:IronSphere.Extensions.DateTimeSpan&quot; /&gt; |
 
 | Static Constructor | Description |
 | --- | --- |
-| [DateTimeSpan()](DateTimeSpan_.cctor()) |  |
+| [DateTimeSpan()](DateTimeSpan_DateTimeSpan()) |  |
 
 | Method | Description |
 | --- | --- |
