@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Type&quot;
 ```csharp
 public static class TypeExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetReadableName(this Type this)](TypeExtension_GetReadableName(Type)) | Gets the types readable name |
 | [GetFullReadableName(this Type this)](TypeExtension_GetFullReadableName(Type)) | Gets the types full readable name |
 | [_getFullReadableName(this Type type)](TypeExtension__getFullReadableName(Type)) |  |

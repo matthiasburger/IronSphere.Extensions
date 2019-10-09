@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/FloatExtension
+[back](/IronSphere.Extensions/types/FloatExtension)
 
 # Max
 

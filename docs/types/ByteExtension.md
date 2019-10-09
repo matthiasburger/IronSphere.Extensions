@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Byte&quot;
 ```csharp
 public static class ByteExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(this byte this, byte lower, byte higher)](ByteExtension_Between(Byte,Byte,Byte)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(this byte this)](ByteExtension_IsPositive(Byte)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(this byte this)](ByteExtension_IsNegative(Byte)) | Checks whether the actual value is smaller than zero. |

@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/DoubleExtension
+[back](/IronSphere.Extensions/types/DoubleExtension)
 
 # Absolute
 

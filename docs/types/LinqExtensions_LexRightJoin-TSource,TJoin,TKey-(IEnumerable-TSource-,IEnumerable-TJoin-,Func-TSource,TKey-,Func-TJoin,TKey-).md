@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/LinqExtensions
+[back](/IronSphere.Extensions/types/LinqExtensions)
 
 # LexRightJoin
 

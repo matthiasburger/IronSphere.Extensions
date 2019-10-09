@@ -9,19 +9,18 @@ This class provides extension-methods for &lt;see cref=&quot;T:System.Enum&quot;
 ```csharp
 public static class EnumExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Has&lt;T&gt;(this Enum this, T value)](EnumExtension_Has-T-(Enum,T)) | Determines whether a flagged enum contains a specific value |
 | [Is&lt;T&gt;(this Enum this, T value)](EnumExtension_Is-T-(Enum,T)) | Determines whether a flagged enum is a specific value |
 | [Add&lt;T&gt;(this Enum this, T value)](EnumExtension_Add-T-(Enum,T)) | Adds a specific value to a flagged enum |

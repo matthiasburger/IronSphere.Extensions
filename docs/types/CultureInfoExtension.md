@@ -9,17 +9,16 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Globalizat
 ```csharp
 public static class CultureInfoExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetMonthsOfCulture(this CultureInfo culture)](CultureInfoExtension_GetMonthsOfCulture(CultureInfo)) | Returns all months in the language of the cultures language. |

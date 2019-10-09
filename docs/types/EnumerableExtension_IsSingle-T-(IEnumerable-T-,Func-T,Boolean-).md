@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/EnumerableExtension
+[back](/IronSphere.Extensions/types/EnumerableExtension)
 
 # IsSingle
 

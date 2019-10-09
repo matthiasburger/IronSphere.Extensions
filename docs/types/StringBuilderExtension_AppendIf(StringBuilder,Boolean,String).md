@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/StringBuilderExtension
+[back](/IronSphere.Extensions/types/StringBuilderExtension)
 
 # AppendIf
 

@@ -9,17 +9,16 @@
 ```csharp
 public static class StringBuilderExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [AppendIf(this StringBuilder stringBuilder, bool condition, string textToAppend)](StringBuilderExtension_AppendIf(StringBuilder,Boolean,String)) |  |

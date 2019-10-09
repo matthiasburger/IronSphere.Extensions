@@ -9,22 +9,21 @@ This class provides extension methods for &lt;see cref=&quot;T:System.DateTime&q
 ```csharp
 public static class DateTimeExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
-
-    | Static Constructor | Description |
-    | --- | --- |
+| Static Constructor | Description |
+| --- | --- |
 | [DateTimeExtension()](DateTimeExtension_DateTimeExtension()) |  |
 
 
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetFirstOfWeek(this DateTime this, DayOfWeek startOfWeek = DayOfWeek.Monday)](DateTimeExtension_GetFirstOfWeek(DateTime,DayOfWeek)) | Calculates the first day of a week. |
 | [GetLastOfWeek(this DateTime this, DayOfWeek startOfWeek = DayOfWeek.Monday)](DateTimeExtension_GetLastOfWeek(DateTime,DayOfWeek)) | Calculates the last day of a week. |
 | [GetFirstOfMonth(this DateTime this)](DateTimeExtension_GetFirstOfMonth(DateTime)) | Calculates the first day of a month. |

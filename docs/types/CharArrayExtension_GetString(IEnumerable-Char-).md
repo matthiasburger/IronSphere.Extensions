@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/CharArrayExtension
+[back](/IronSphere.Extensions/types/CharArrayExtension)
 
 # GetString
 

@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/TypeExtension
+[back](/IronSphere.Extensions/types/TypeExtension)
 
 # GetShortReadableName
 

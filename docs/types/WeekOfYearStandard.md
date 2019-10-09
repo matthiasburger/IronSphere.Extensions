@@ -9,22 +9,19 @@ This enum provides standards for week of year calculation.
 ```csharp
 public enum WeekOfYearStandard : Enum, IComparable, IFormattable, IConvertible
 ```
-    Inheritance: Object &#129050; ValueType &#129050; Enum
+Inheritance: Object &#129050; ValueType &#129050; Enum
 
-    
-    Implements:
-        
+
+Implements:
+
 * System.IComparable
-        
 * System.IFormattable
-        
 * System.IConvertible
 
 
 
-
-    | Method | Description |
-    | --- | --- |
+| Method | Description |
+| --- | --- |
 | [GetValue()](Enum_GetValue()) |  |
 | [Equals(object obj)](Enum_Equals(Object)) |  |
 | [GetHashCode()](Enum_GetHashCode()) |  |

@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/LongExtension
+[back](/IronSphere.Extensions/types/LongExtension)
 
 # IsLowerThan
 

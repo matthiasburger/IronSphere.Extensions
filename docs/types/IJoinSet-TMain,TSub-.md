@@ -14,8 +14,8 @@ public interface IJoinSet<TMain,TSub>
 
 
 
-    | Method | Description |
-    | --- | --- |
+| Method | Description |
+| --- | --- |
 | [get_Main&lt;&gt;()](IJoinSet`2_get_Main--()) |  |
 | [get_Sub&lt;&gt;()](IJoinSet`2_get_Sub--()) |  |
 

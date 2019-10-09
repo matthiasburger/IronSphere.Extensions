@@ -9,19 +9,18 @@ This class provides extension methods for a generic type T
 ```csharp
 public static class GenericExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [In&lt;T&gt;(this T this, IEnumerable&lt;T&gt; listOfItems)](GenericExtension_In-T-(T,IEnumerable-T-)) | Determines if an object is contained in a list |
 | [In&lt;T&gt;(this T this, T[] listOfItems)](GenericExtension_In-T-(T,T[])) |  |
 | [NotIn&lt;T&gt;(this T this, T[] listOfItems)](GenericExtension_NotIn-T-(T,T[])) |  |

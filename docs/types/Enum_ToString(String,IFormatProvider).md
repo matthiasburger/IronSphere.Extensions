@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/WeekOfYearStandard
+[back](/IronSphere.Extensions/types/WeekOfYearStandard)
 
 # ToString
 

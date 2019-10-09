@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Int64&quot
 ```csharp
 public static class LongExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(this long this, long lower, long higher)](LongExtension_Between(Int64,Int64,Int64)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(this long this)](LongExtension_IsPositive(Int64)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(this long this)](LongExtension_IsNegative(Int64)) | Checks whether the actual value is smaller than zero. |

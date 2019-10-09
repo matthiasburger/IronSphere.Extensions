@@ -9,17 +9,16 @@ This class provides extension methods for an &lt;see cref=&quot;T:System.Array&q
 ```csharp
 public static class ByteArrayExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetString(this byte[] bytes, Encoding encoding = null)](ByteArrayExtension_GetString(Byte[],Encoding)) | Decodes all bytes in a specified array into a string. |

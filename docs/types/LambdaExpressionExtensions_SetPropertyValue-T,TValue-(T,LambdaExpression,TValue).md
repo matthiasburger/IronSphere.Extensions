@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/LambdaExpressionExtensions
+[back](/IronSphere.Extensions/types/LambdaExpressionExtensions)
 
 # SetPropertyValue
 

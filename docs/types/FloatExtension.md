@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Single&quo
 ```csharp
 public static class FloatExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(this float this, float lower, float higher)](FloatExtension_Between(Single,Single,Single)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(this float this)](FloatExtension_IsPositive(Single)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(this float this)](FloatExtension_IsNegative(Single)) | Checks whether the actual value is smaller than zero. |

@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/SqlCommandExtensions
+[back](/IronSphere.Extensions/types/SqlCommandExtensions)
 
 # SetCommandText
 

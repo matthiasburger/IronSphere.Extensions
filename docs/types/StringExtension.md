@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.String&quo
 ```csharp
 public static class StringExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetBytes(this string this, Encoding encoding = null)](StringExtension_GetBytes(String,Encoding)) | Encodes all the characters in the specified string into a sequence of bytes |
 | [IsNullOrEmpty(this string this)](StringExtension_IsNullOrEmpty(String)) | Indicates whether the specified string is null or an empty string (&quot;&quot;). |
 | [IsNullOrWhiteSpace(this string this)](StringExtension_IsNullOrWhiteSpace(String)) | Indicates whether a specified string is null, empty, or consists only of white-space characters. |

@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/GenericExtension
+[back](/IronSphere.Extensions/types/GenericExtension)
 
 # In
 

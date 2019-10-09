@@ -9,17 +9,16 @@ This class provides extension methods for &lt;see cref=&quot;T:System.IO.BinaryR
 ```csharp
 public static class BinaryReaderExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [ReadAllBytes(this BinaryReader reader)](BinaryReaderExtension_ReadAllBytes(BinaryReader)) | Reads all bytes and writes them into an array |

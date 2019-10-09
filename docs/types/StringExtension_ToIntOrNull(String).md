@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/StringExtension
+[back](/IronSphere.Extensions/types/StringExtension)
 
 # ToIntOrNull
 

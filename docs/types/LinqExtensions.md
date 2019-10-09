@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Linq.IQuer
 ```csharp
 public static class LinqExtensions : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [LexTake&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, int? count)](LinqExtensions_LexTake-TSource-(IEnumerable-TSource-,Nullable-Int32-)) | Pendent to Linq IEnumerable{TSource}.Take(int) but returns all when count is null |
 | [LexSkipLast&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, int count)](LinqExtensions_LexSkipLast-TSource-(IEnumerable-TSource-,Int32)) |  |
 | [LexTakeLast&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, int count)](LinqExtensions_LexTakeLast-TSource-(IEnumerable-TSource-,Int32)) |  |

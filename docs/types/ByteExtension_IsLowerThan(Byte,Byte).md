@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/ByteExtension
+[back](/IronSphere.Extensions/types/ByteExtension)
 
 # IsLowerThan
 

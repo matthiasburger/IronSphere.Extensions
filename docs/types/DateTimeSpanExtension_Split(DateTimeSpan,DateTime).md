@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/DateTimeSpanExtension
+[back](/IronSphere.Extensions/types/DateTimeSpanExtension)
 
 # Split
 

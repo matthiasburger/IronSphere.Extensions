@@ -9,27 +9,25 @@ This class describes a range between two date-times
 ```csharp
 public class DateTimeSpan : Object, IEnumerable<DateTime>, IEnumerable
 ```
-    Inheritance: Object
+Inheritance: Object
 
-    
-    Implements:
-        
-* System.Collections.Generic.IEnumerable&lt;System.DateTime&gt;
-        
+
+Implements:
+
+* System.Collections.Generic.IEnumerable<System.DateTime>
 * System.Collections.IEnumerable
 
-
-    | Constructor | Description |
-    | --- | --- |
+| Constructor | Description |
+| --- | --- |
 | [DateTimeSpan(DateTime start, DateTime end)](DateTimeSpan_DateTimeSpan(DateTime,DateTime)) |  |
 | [DateTimeSpan(DateTime start, DateTimeSpanType spanType, int step)](DateTimeSpan_DateTimeSpan(DateTime,DateTimeSpanType,Int32)) |  |
 
-    | Static Constructor | Description |
-    | --- | --- |
+| Static Constructor | Description |
+| --- | --- |
 | [DateTimeSpan()](DateTimeSpan_DateTimeSpan()) |  |
 
-    | Method | Description |
-    | --- | --- |
+| Method | Description |
+| --- | --- |
 | [get_Start()](DateTimeSpan_get_Start()) |  |
 | [get_End()](DateTimeSpan_get_End()) |  |
 | [get_SpanType()](DateTimeSpan_get_SpanType()) |  |

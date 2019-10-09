@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/DateTimeExtension
+[back](/IronSphere.Extensions/types/DateTimeExtension)
 
 # IsWeekend
 

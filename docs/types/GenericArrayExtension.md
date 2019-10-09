@@ -9,17 +9,16 @@
 ```csharp
 public static class GenericArrayExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Slice&lt;T&gt;(this T[] items, int startIndex = 0, int? endIndex = default)](GenericArrayExtension_Slice-T-(T[],Int32,Nullable-Int32-)) |  |

@@ -9,19 +9,18 @@
 ```csharp
 public static class StringCastingExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [ToBool(this string this)](StringCastingExtension_ToBool(String)) |  |
 | [ToByte(this string this)](StringCastingExtension_ToByte(String)) |  |
 | [ToChar(this string this)](StringCastingExtension_ToChar(String)) |  |

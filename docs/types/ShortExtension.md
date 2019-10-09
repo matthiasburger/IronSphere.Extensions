@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Int16&quot
 ```csharp
 public static class ShortExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(this short this, short lower, short higher)](ShortExtension_Between(Int16,Int16,Int16)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(this short this)](ShortExtension_IsPositive(Int16)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(this short this)](ShortExtension_IsNegative(Int16)) | Checks whether the actual value is smaller than zero. |

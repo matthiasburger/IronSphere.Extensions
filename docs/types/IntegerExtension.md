@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Int32&quot
 ```csharp
 public static class IntegerExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(this int this, int lower, int higher)](IntegerExtension_Between(Int32,Int32,Int32)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(this int this)](IntegerExtension_IsPositive(Int32)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(this int this)](IntegerExtension_IsNegative(Int32)) | Checks whether the actual value is smaller than zero. |

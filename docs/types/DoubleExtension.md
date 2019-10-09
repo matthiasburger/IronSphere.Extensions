@@ -9,19 +9,18 @@ This class provides extension methods for &lt;see cref=&quot;T:System.Double&quo
 ```csharp
 public static class DoubleExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [Between(this double this, double lower, double higher)](DoubleExtension_Between(Double,Double,Double)) | Checks whether the actual value is between specified lower and higher. |
 | [IsPositive(this double this)](DoubleExtension_IsPositive(Double)) | Checks whether the actual value is greater than zero. |
 | [IsNegative(this double this)](DoubleExtension_IsNegative(Double)) | Checks whether the actual value is smaller than zero. |

@@ -9,17 +9,16 @@ This class provides extension-methods for &lt;see cref=&quot;T:System.IDisposabl
 ```csharp
 public static class DisposableExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [DisposeAfter&lt;T,TResult&gt;(this T instance, Func&lt;T, TResult&gt; actionToInvoke)](DisposableExtension_DisposeAfter-T,TResult-(T,Func-T,TResult-)) | wrapper for disposing disposes after execution |

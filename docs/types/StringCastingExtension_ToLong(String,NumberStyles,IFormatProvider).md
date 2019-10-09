@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/StringCastingExtension
+[back](/IronSphere.Extensions/types/StringCastingExtension)
 
 # ToLong
 

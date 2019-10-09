@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/GenericArrayExtension
+[back](/IronSphere.Extensions/types/GenericArrayExtension)
 
 # Slice
 

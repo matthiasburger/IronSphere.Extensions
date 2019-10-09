@@ -9,17 +9,16 @@ This class provides extension methods for an &lt;see cref=&quot;T:System.Array&q
 ```csharp
 public static class CharArrayExtension : Object
 ```
-    Inheritance: Object
+Inheritance: Object
 
 
-    
-    Attributes:
-        
+
+Attributes:
+
 * System.Runtime.CompilerServices.ExtensionAttribute
 
 
 
-
-    | Static Method | Description |
-    | --- | --- |
+| Static Method | Description |
+| --- | --- |
 | [GetString(this IEnumerable&lt;char&gt; this)](CharArrayExtension_GetString(IEnumerable-Char-)) | Concatenates a sequence of chars to its string representation |
