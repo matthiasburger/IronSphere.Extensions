@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DisposableExtension)
 
-# DisposableExtension.Equals Method
+# DisposableExtension.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

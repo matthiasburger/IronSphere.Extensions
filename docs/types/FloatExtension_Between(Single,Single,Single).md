@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# FloatExtension.Between Method
+# FloatExtension.Between(this float this, float lower, float higher) Method
 
 > Assembly: IronSphere.Extensions
 

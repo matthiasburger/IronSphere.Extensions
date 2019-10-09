@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# StringCastingExtension.Equals Method
+# StringCastingExtension.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

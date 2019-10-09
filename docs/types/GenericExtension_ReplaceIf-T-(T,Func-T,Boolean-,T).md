@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericExtension)
 
-# GenericExtension.ReplaceIf Method
+# GenericExtension.ReplaceIf&lt;T&gt;(this T this, Func&lt;T, bool&gt; expression, T output) Method
 
 > Assembly: IronSphere.Extensions
 

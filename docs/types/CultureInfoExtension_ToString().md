@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CultureInfoExtension)
 
-# CultureInfoExtension.ToString Method
+# CultureInfoExtension.ToString() Method
 
 > Assembly: IronSphere.Extensions
 

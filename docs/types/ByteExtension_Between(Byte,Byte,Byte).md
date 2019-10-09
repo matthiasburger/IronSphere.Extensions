@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteExtension)
 
-# ByteExtension.Between Method
+# ByteExtension.Between(this byte this, byte lower, byte higher) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# IntegerExtension.ToString Method
+# IntegerExtension.ToString() Method
 
 > Assembly: IronSphere.Extensions
 

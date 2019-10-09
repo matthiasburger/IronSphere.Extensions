@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringBuilderExtension)
 
-# StringBuilderExtension.AppendIf Method
+# StringBuilderExtension.AppendIf(this StringBuilder stringBuilder, bool condition, string textToAppend) Method
 
 > Assembly: IronSphere.Extensions
 

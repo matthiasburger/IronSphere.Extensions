@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# DateTimeExtension.GetFirstOfWeek Method
+# DateTimeExtension.GetFirstOfWeek(this DateTime this, DayOfWeek startOfWeek = DayOfWeek.Monday) Method
 
 > Assembly: IronSphere.Extensions
 

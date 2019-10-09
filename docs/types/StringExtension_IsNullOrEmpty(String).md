@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StringExtension.IsNullOrEmpty Method
+# StringExtension.IsNullOrEmpty(this string this) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# StringCastingExtension.ToBool Method
+# StringCastingExtension.ToBool(this string this) Method
 
 > Assembly: IronSphere.Extensions
 

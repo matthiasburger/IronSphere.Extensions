@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StreamExtension)
 
-# StreamExtension.GetType Method
+# StreamExtension.GetType() Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LinqExtensions.LexTakeLast Method
+# LinqExtensions.LexTakeLast&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, int count) Method
 
 > Assembly: IronSphere.Extensions
 

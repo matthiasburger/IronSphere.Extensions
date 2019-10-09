@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CollectionExtension)
 
-# CollectionExtension.ToString Method
+# CollectionExtension.ToString() Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LinqExtensions.LexSkip Method
+# LinqExtensions.LexSkip&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, int? count) Method
 
 > Assembly: IronSphere.Extensions
 

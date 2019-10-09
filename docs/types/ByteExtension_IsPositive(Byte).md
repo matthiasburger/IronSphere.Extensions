@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteExtension)
 
-# ByteExtension.IsPositive Method
+# ByteExtension.IsPositive(this byte this) Method
 
 > Assembly: IronSphere.Extensions
 

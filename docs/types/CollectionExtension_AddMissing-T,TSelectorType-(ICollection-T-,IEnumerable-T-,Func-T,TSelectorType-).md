@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CollectionExtension)
 
-# CollectionExtension.AddMissing Method
+# CollectionExtension.AddMissing&lt;T,TSelectorType&gt;(this ICollection&lt;T&gt; this, IEnumerable&lt;T&gt; elementsToAdd, Func&lt;T, TSelectorType&gt; selector) Method
 
 > Assembly: IronSphere.Extensions
 

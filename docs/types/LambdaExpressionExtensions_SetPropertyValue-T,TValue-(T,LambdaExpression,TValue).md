@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LambdaExpressionExtensions)
 
-# LambdaExpressionExtensions.SetPropertyValue Method
+# LambdaExpressionExtensions.SetPropertyValue&lt;T,TValue&gt;(this T target, LambdaExpression memberLambda, TValue value) Method
 
 > Assembly: IronSphere.Extensions
 

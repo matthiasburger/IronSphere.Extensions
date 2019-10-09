@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpan)
 
-# DateTimeSpan.Deconstruct Method
+# DateTimeSpan.Deconstruct(out DateTime start, out DateTime end) Method
 
 > Assembly: IronSphere.Extensions
 

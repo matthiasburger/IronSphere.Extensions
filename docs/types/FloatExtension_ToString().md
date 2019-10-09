@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# FloatExtension.ToString Method
+# FloatExtension.ToString() Method
 
 > Assembly: IronSphere.Extensions
 

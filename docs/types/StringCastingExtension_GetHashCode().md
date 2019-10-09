@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# StringCastingExtension.GetHashCode Method
+# StringCastingExtension.GetHashCode() Method
 
 > Assembly: IronSphere.Extensions
 

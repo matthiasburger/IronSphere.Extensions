@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# DateTimeExtension.GetLastOfMonth Method
+# DateTimeExtension.GetLastOfMonth(this DateTime this) Method
 
 > Assembly: IronSphere.Extensions
 

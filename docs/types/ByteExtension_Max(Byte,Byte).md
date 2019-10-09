@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteExtension)
 
-# ByteExtension.Max Method
+# ByteExtension.Max(this byte this, byte maximum) Method
 
 > Assembly: IronSphere.Extensions
 

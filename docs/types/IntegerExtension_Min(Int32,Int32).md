@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# IntegerExtension.Min Method
+# IntegerExtension.Min(this int this, int minimum) Method
 
 > Assembly: IronSphere.Extensions
 

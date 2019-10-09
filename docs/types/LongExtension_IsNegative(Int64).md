@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# LongExtension.IsNegative Method
+# LongExtension.IsNegative(this long this) Method
 
 > Assembly: IronSphere.Extensions
 

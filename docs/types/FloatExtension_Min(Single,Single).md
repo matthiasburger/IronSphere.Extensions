@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# FloatExtension.Min Method
+# FloatExtension.Min(this float this, float minimum) Method
 
 > Assembly: IronSphere.Extensions
 

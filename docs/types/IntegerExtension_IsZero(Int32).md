@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# IntegerExtension.IsZero Method
+# IntegerExtension.IsZero(this int this) Method
 
 > Assembly: IronSphere.Extensions
 

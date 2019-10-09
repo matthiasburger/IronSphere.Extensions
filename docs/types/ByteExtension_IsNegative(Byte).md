@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteExtension)
 
-# ByteExtension.IsNegative Method
+# ByteExtension.IsNegative(this byte this) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteExtension)
 
-# ByteExtension.IsZero Method
+# ByteExtension.IsZero(this byte this) Method
 
 > Assembly: IronSphere.Extensions
 

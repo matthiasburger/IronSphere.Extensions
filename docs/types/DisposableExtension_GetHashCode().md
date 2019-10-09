@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DisposableExtension)
 
-# DisposableExtension.GetHashCode Method
+# DisposableExtension.GetHashCode() Method
 
 > Assembly: IronSphere.Extensions
 

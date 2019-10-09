@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/WeekOfYearStandard)
 
-# WeekOfYearStandard.GetTypeCode Method
+# WeekOfYearStandard.GetTypeCode() Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StringExtension.Join Method
+# StringExtension.Join&lt;T&gt;(this string this, IEnumerable&lt;T&gt; elements) Method
 
 > Assembly: IronSphere.Extensions
 

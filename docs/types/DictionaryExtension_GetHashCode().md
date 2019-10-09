@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DictionaryExtension)
 
-# DictionaryExtension.GetHashCode Method
+# DictionaryExtension.GetHashCode() Method
 
 > Assembly: IronSphere.Extensions
 

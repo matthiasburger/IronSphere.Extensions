@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LinqExtensions.LexDistinctBy Method
+# LinqExtensions.LexDistinctBy&lt;TSource,TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TKey&gt; groupingSelector) Method
 
 > Assembly: IronSphere.Extensions
 

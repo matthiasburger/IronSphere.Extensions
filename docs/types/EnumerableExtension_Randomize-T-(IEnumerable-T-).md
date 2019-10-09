@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumerableExtension)
 
-# EnumerableExtension.Randomize Method
+# EnumerableExtension.Randomize&lt;T&gt;(this IEnumerable&lt;T&gt; this) Method
 
 > Assembly: IronSphere.Extensions
 

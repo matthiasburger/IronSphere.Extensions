@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# StringCastingExtension.ToShort Method
+# StringCastingExtension.ToShort(this string this) Method
 
 > Assembly: IronSphere.Extensions
 

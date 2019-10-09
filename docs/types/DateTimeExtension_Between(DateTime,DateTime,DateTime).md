@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# DateTimeExtension.Between Method
+# DateTimeExtension.Between(this DateTime this, DateTime lower, DateTime higher) Method
 
 > Assembly: IronSphere.Extensions
 

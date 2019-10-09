@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CharArrayExtension)
 
-# CharArrayExtension.GetType Method
+# CharArrayExtension.GetType() Method
 
 > Assembly: IronSphere.Extensions
 

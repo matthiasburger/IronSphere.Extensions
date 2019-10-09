@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumExtension)
 
-# EnumExtension.Add Method
+# EnumExtension.Add&lt;T&gt;(this Enum this, T value) Method
 
 > Assembly: IronSphere.Extensions
 

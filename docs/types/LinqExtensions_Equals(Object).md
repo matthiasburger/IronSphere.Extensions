@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LinqExtensions.Equals Method
+# LinqExtensions.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

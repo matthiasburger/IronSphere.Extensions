@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DictionaryExtension)
 
-# DictionaryExtension.GetType Method
+# DictionaryExtension.GetType() Method
 
 > Assembly: IronSphere.Extensions
 

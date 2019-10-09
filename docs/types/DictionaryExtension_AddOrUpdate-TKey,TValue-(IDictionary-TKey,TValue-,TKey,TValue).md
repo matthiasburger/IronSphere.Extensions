@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DictionaryExtension)
 
-# DictionaryExtension.AddOrUpdate Method
+# DictionaryExtension.AddOrUpdate&lt;TKey,TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, TKey key, TValue value) Method
 
 > Assembly: IronSphere.Extensions
 

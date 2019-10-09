@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StringExtension.Format Method
+# StringExtension.Format(this string this, IDictionary&lt;string, object&gt; values) Method
 
 > Assembly: IronSphere.Extensions
 

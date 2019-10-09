@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/CultureInfoExtension)
 
-# CultureInfoExtension.GetMonthsOfCulture Method
+# CultureInfoExtension.GetMonthsOfCulture(this CultureInfo culture) Method
 
 > Assembly: IronSphere.Extensions
 

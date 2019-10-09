@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StringExtension.GetBytes Method
+# StringExtension.GetBytes(this string this, Encoding encoding = null) Method
 
 > Assembly: IronSphere.Extensions
 

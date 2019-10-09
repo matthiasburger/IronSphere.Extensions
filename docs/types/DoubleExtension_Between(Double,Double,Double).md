@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DoubleExtension)
 
-# DoubleExtension.Between Method
+# DoubleExtension.Between(this double this, double lower, double higher) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# FloatExtension.IsPositive Method
+# FloatExtension.IsPositive(this float this) Method
 
 > Assembly: IronSphere.Extensions
 

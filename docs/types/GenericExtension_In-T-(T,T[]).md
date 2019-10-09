@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericExtension)
 
-# GenericExtension.In Method
+# GenericExtension.In&lt;T&gt;(this T this, T[] listOfItems) Method
 
 > Assembly: IronSphere.Extensions
 

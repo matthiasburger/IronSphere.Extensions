@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpan)
 
-# DateTimeSpan.set_Step Method
+# DateTimeSpan.set_Step(int value) Method
 
 > Assembly: IronSphere.Extensions
 

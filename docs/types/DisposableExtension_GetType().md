@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DisposableExtension)
 
-# DisposableExtension.GetType Method
+# DisposableExtension.GetType() Method
 
 > Assembly: IronSphere.Extensions
 

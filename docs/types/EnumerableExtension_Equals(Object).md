@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumerableExtension)
 
-# EnumerableExtension.Equals Method
+# EnumerableExtension.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

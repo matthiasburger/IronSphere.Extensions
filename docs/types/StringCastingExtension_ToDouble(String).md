@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# StringCastingExtension.ToDouble Method
+# StringCastingExtension.ToDouble(this string this) Method
 
 > Assembly: IronSphere.Extensions
 

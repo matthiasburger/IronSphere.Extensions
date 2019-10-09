@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# IntegerExtension.GetHashCode Method
+# IntegerExtension.GetHashCode() Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpanType)
 
-# DateTimeSpanType.ToString Method
+# DateTimeSpanType.ToString(string format) Method
 
 > Assembly: IronSphere.Extensions
 

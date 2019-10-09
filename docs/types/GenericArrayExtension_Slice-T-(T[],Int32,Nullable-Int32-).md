@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericArrayExtension)
 
-# GenericArrayExtension.Slice Method
+# GenericArrayExtension.Slice&lt;T&gt;(this T[] items, int startIndex = 0, int? endIndex = default) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StreamExtension)
 
-# StreamExtension.GetBytes Method
+# StreamExtension.GetBytes(this Stream this, int length = 16384) Method
 
 > Assembly: IronSphere.Extensions
 

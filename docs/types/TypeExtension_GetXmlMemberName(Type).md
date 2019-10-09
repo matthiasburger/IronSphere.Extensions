@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/TypeExtension)
 
-# TypeExtension.GetXmlMemberName Method
+# TypeExtension.GetXmlMemberName(this Type this) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DictionaryExtension)
 
-# DictionaryExtension.Equals Method
+# DictionaryExtension.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DictionaryExtension)
 
-# DictionaryExtension.GetValue Method
+# DictionaryExtension.GetValue&lt;TValue&gt;(this NameValueCollection this, string key, TValue fallback = default) Method
 
 > Assembly: IronSphere.Extensions
 

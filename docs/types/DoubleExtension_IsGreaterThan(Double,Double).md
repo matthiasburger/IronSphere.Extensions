@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DoubleExtension)
 
-# DoubleExtension.IsGreaterThan Method
+# DoubleExtension.IsGreaterThan(this double this, double other) Method
 
 > Assembly: IronSphere.Extensions
 

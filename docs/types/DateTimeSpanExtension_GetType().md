@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpanExtension)
 
-# DateTimeSpanExtension.GetType Method
+# DateTimeSpanExtension.GetType() Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DoubleExtension)
 
-# DoubleExtension.IsPositive Method
+# DoubleExtension.IsPositive(this double this) Method
 
 > Assembly: IronSphere.Extensions
 

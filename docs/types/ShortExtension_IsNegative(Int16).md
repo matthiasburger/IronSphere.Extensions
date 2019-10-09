@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ShortExtension)
 
-# ShortExtension.IsNegative Method
+# ShortExtension.IsNegative(this short this) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/AnonymousObjectExtension)
 
-# AnonymousObjectExtension.ToString Method
+# AnonymousObjectExtension.ToString() Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ListExtension)
 
-# ListExtension.RemoveSingle Method
+# ListExtension.RemoveSingle&lt;T&gt;(this IList&lt;T&gt; this, Func&lt;T, bool&gt; expression) Method
 
 > Assembly: IronSphere.Extensions
 

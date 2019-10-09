@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DoubleExtension)
 
-# DoubleExtension.IsZero Method
+# DoubleExtension.IsZero(this double this) Method
 
 > Assembly: IronSphere.Extensions
 

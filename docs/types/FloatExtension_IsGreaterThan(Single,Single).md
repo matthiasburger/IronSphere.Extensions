@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# FloatExtension.IsGreaterThan Method
+# FloatExtension.IsGreaterThan(this float this, float other) Method
 
 > Assembly: IronSphere.Extensions
 

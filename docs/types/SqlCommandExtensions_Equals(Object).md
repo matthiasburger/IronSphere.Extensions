@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/SqlCommandExtensions)
 
-# SqlCommandExtensions.Equals Method
+# SqlCommandExtensions.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

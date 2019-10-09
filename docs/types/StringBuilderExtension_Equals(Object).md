@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringBuilderExtension)
 
-# StringBuilderExtension.Equals Method
+# StringBuilderExtension.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

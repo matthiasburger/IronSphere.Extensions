@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StringExtension.RemoveDiacritics Method
+# StringExtension.RemoveDiacritics(this string this) Method
 
 > Assembly: IronSphere.Extensions
 

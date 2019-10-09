@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LinqExtensions)
 
-# LinqExtensions.LexRightJoin Method
+# LinqExtensions.LexRightJoin&lt;TSource,TJoin,TKey&gt;(this IEnumerable&lt;TSource&gt; source, IEnumerable&lt;TJoin&gt; inner, Func&lt;TSource, TKey&gt; outerKeySelector, Func&lt;TJoin, TKey&gt; innerKeySelector) Method
 
 > Assembly: IronSphere.Extensions
 

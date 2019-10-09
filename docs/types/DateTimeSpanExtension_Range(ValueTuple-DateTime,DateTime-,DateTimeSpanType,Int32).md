@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpanExtension)
 
-# DateTimeSpanExtension.Range Method
+# DateTimeSpanExtension.Range(this (DateTime, DateTime) dateTuple, DateTimeSpanType spanType = DateTimeSpanType.Days, int step = 1) Method
 
 > Assembly: IronSphere.Extensions
 

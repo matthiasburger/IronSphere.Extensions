@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/WeekOfYearStandard)
 
-# WeekOfYearStandard.ToString Method
+# WeekOfYearStandard.ToString(string format, IFormatProvider provider) Method
 
 > Assembly: IronSphere.Extensions
 

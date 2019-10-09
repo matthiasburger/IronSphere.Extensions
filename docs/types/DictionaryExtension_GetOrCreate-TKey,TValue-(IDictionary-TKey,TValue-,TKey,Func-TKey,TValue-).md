@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DictionaryExtension)
 
-# DictionaryExtension.GetOrCreate Method
+# DictionaryExtension.GetOrCreate&lt;TKey,TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, TKey key, Func&lt;TKey, TValue&gt; function) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DoubleExtension)
 
-# DoubleExtension.Absolute Method
+# DoubleExtension.Absolute(this double this) Method
 
 > Assembly: IronSphere.Extensions
 

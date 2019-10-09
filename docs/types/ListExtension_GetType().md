@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ListExtension)
 
-# ListExtension.GetType Method
+# ListExtension.GetType() Method
 
 > Assembly: IronSphere.Extensions
 

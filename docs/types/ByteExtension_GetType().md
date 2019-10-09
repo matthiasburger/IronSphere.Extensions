@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ByteExtension)
 
-# ByteExtension.GetType Method
+# ByteExtension.GetType() Method
 
 > Assembly: IronSphere.Extensions
 

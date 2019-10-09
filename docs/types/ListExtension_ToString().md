@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ListExtension)
 
-# ListExtension.ToString Method
+# ListExtension.ToString() Method
 
 > Assembly: IronSphere.Extensions
 

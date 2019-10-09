@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/FloatExtension)
 
-# FloatExtension.Equals Method
+# FloatExtension.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

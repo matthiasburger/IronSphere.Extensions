@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StringExtension.Split Method
+# StringExtension.Split(this string this, int position) Method
 
 > Assembly: IronSphere.Extensions
 

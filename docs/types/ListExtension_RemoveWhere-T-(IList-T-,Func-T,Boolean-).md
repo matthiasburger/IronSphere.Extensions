@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ListExtension)
 
-# ListExtension.RemoveWhere Method
+# ListExtension.RemoveWhere&lt;T&gt;(this IList&lt;T&gt; this, Func&lt;T, bool&gt; expression) Method
 
 > Assembly: IronSphere.Extensions
 

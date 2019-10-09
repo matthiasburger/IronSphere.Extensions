@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/IntegerExtension)
 
-# IntegerExtension.Between Method
+# IntegerExtension.Between(this int this, int lower, int higher) Method
 
 > Assembly: IronSphere.Extensions
 

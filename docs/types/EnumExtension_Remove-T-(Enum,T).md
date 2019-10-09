@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumExtension)
 
-# EnumExtension.Remove Method
+# EnumExtension.Remove&lt;T&gt;(this Enum this, T value) Method
 
 > Assembly: IronSphere.Extensions
 

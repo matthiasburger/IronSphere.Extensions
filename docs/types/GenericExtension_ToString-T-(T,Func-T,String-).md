@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericExtension)
 
-# GenericExtension.ToString Method
+# GenericExtension.ToString&lt;T&gt;(this T this, Func&lt;T, string&gt; resultString) Method
 
 > Assembly: IronSphere.Extensions
 

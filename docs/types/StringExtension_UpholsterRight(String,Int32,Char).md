@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StringExtension.UpholsterRight Method
+# StringExtension.UpholsterRight(this string this, int count, char character = &#39; &#39;) Method
 
 > Assembly: IronSphere.Extensions
 

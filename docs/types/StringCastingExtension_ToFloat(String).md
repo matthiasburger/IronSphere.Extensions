@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# StringCastingExtension.ToFloat Method
+# StringCastingExtension.ToFloat(this string this) Method
 
 > Assembly: IronSphere.Extensions
 

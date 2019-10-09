@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericExtension)
 
-# GenericExtension.GetHashCode Method
+# GenericExtension.GetHashCode() Method
 
 > Assembly: IronSphere.Extensions
 

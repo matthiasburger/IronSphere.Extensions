@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumExtension)
 
-# EnumExtension.ToString Method
+# EnumExtension.ToString() Method
 
 > Assembly: IronSphere.Extensions
 

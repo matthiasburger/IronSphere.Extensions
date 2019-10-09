@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ChangeTypeExtension)
 
-# ChangeTypeExtension.ToOrDefault Method
+# ChangeTypeExtension.ToOrDefault&lt;T&gt;(this object this, T default = default) Method
 
 > Assembly: IronSphere.Extensions
 

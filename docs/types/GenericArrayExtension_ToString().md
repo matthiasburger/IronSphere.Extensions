@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/GenericArrayExtension)
 
-# GenericArrayExtension.ToString Method
+# GenericArrayExtension.ToString() Method
 
 > Assembly: IronSphere.Extensions
 

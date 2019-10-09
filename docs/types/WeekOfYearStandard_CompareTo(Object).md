@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/WeekOfYearStandard)
 
-# WeekOfYearStandard.CompareTo Method
+# WeekOfYearStandard.CompareTo(object target) Method
 
 > Assembly: IronSphere.Extensions
 

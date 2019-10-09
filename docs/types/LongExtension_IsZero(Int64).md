@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# LongExtension.IsZero Method
+# LongExtension.IsZero(this long this) Method
 
 > Assembly: IronSphere.Extensions
 

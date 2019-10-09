@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/ChangeTypeExtension)
 
-# ChangeTypeExtension.ToOrNull Method
+# ChangeTypeExtension.ToOrNull&lt;T&gt;(this object this) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/AnonymousObjectExtension)
 
-# AnonymousObjectExtension.Equals Method
+# AnonymousObjectExtension.Equals(object obj) Method
 
 > Assembly: IronSphere.Extensions
 

@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringCastingExtension)
 
-# StringCastingExtension.ToDecimal Method
+# StringCastingExtension.ToDecimal(this string this, NumberStyles numberStyles, IFormatProvider formatProvider) Method
 
 > Assembly: IronSphere.Extensions
 

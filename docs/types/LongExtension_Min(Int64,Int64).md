@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/LongExtension)
 
-# LongExtension.Min Method
+# LongExtension.Min(this long this, long minimum) Method
 
 > Assembly: IronSphere.Extensions
 

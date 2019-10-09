@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeExtension)
 
-# DateTimeExtension.GetWeekOfYear Method
+# DateTimeExtension.GetWeekOfYear(this DateTime dateTime, CultureInfo cultureInfo = null, WeekOfYearStandard weekOfYearStandard = WeekOfYearStandard.Iso8601) Method
 
 > Assembly: IronSphere.Extensions
 

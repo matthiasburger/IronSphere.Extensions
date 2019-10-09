@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpan)
 
-# DateTimeSpan.GetEnumerator Method
+# DateTimeSpan.GetEnumerator(DateTimeSpanType spanType, int step) Method
 
 > Assembly: IronSphere.Extensions
 

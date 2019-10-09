@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/BinaryReaderExtension)
 
-# BinaryReaderExtension.ReadAllBytes Method
+# BinaryReaderExtension.ReadAllBytes(this BinaryReader reader) Method
 
 > Assembly: IronSphere.Extensions
 

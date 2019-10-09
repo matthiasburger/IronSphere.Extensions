@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/EnumExtension)
 
-# EnumExtension.Has Method
+# EnumExtension.Has&lt;T&gt;(this Enum this, T value) Method
 
 > Assembly: IronSphere.Extensions
 

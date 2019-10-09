@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/SqlCommandExtensions)
 
-# SqlCommandExtensions.SetCommandText Method
+# SqlCommandExtensions.SetCommandText(this SqlCommand this, string command, Dictionary&lt;string, object&gt; parameters) Method
 
 > Assembly: IronSphere.Extensions
 

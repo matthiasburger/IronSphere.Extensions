@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/StringExtension)
 
-# StringExtension.CutAt Method
+# StringExtension.CutAt(this string this, int position, string endConcat, bool waitForWhitespace = false) Method
 
 > Assembly: IronSphere.Extensions
 

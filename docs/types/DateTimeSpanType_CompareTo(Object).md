@@ -2,7 +2,7 @@
 
 [back](/IronSphere.Extensions/types/DateTimeSpanType)
 
-# DateTimeSpanType.CompareTo Method
+# DateTimeSpanType.CompareTo(object target) Method
 
 > Assembly: IronSphere.Extensions
 
