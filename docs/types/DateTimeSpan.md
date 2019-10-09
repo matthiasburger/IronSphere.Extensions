@@ -38,10 +38,10 @@ Implements:
 | [GetEnumerator()](DateTimeSpan_GetEnumerator()) |  |
 | [System.Collections.IEnumerable.GetEnumerator()](DateTimeSpan_System.Collections.IEnumerable.GetEnumerator()) |  |
 | [Deconstruct(out DateTime start, out DateTime end)](DateTimeSpan_Deconstruct(DateTime,DateTime)) |  |
-| [ToString()](Object_ToString()) |  |
-| [Equals(object obj)](Object_Equals(Object)) |  |
-| [GetHashCode()](Object_GetHashCode()) |  |
-| [GetType()](Object_GetType()) |  |
-| [Finalize()](Object_Finalize()) |  |
-| [MemberwiseClone()](Object_MemberwiseClone()) |  |
+| [ToString()](DateTimeSpan_ToString()) |  |
+| [Equals(object obj)](DateTimeSpan_Equals(Object)) |  |
+| [GetHashCode()](DateTimeSpan_GetHashCode()) |  |
+| [GetType()](DateTimeSpan_GetType()) |  |
+| [Finalize()](DateTimeSpan_Finalize()) |  |
+| [MemberwiseClone()](DateTimeSpan_MemberwiseClone()) |  |
 
