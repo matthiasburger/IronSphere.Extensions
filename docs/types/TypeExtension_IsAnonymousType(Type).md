@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/TypeExtension)
+[back](/IronSphere.Extensions/types/TypeExtension
 
 # IsAnonymousType
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static bool IsAnonymousType(this Type type)
+bool IsAnonymousType(this Type type)
 ```
 
 determines if a type is anonymous

@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/DoubleExtension)
+[back](/IronSphere.Extensions/types/DoubleExtension
 
 # Between
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static bool Between(this double this, double lower, double higher)
+bool Between(this double this, double lower, double higher)
 ```
 
 Checks whether the actual value is between specified lower and higher.

@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/EnumExtension)
+[back](/IronSphere.Extensions/types/EnumExtension
 
 # Add
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static T Add<T>(this Enum this, T value);
+T Add<T>(this Enum this, T value);
 ```
 
 Adds a specific value to a flagged enum

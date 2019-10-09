@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/CollectionExtension)
+[back](/IronSphere.Extensions/types/CollectionExtension
 
 # Add
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static ICollection<T> Add<T>(this ICollection<T> this, IEnumerable<T> elementsToAdd);
+ICollection<T> Add<T>(this ICollection<T> this, IEnumerable<T> elementsToAdd);
 ```
 
 adds all elements in a parametrized list into an existing collection

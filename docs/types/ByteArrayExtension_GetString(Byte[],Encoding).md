@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/ByteArrayExtension)
+[back](/IronSphere.Extensions/types/ByteArrayExtension
 
 # GetString
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static string GetString(this byte[] bytes, Encoding encoding = null)
+string GetString(this byte[] bytes, Encoding encoding = null)
 ```
 
 Decodes all bytes in a specified array into a string.

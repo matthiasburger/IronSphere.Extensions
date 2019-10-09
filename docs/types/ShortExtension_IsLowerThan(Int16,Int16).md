@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/ShortExtension)
+[back](/IronSphere.Extensions/types/ShortExtension
 
 # IsLowerThan
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static bool IsLowerThan(this short this, short other)
+bool IsLowerThan(this short this, short other)
 ```
 
 Checks whether the actual value is lower than an other one.

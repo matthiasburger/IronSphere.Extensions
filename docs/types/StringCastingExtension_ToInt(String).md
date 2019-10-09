@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/StringCastingExtension)
+[back](/IronSphere.Extensions/types/StringCastingExtension
 
 # ToInt
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static int? ToInt(this string this)
+int? ToInt(this string this)
 ```
 
 

@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/WeekOfYearStandard)
+[back](/IronSphere.Extensions/types/WeekOfYearStandard
 
 # ToString
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public virtual sealed string ToString(string format, IFormatProvider provider)
+string ToString(string format, IFormatProvider provider)
 ```
 
 

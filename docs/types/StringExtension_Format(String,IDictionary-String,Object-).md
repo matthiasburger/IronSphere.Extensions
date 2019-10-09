@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/StringExtension)
+[back](/IronSphere.Extensions/types/StringExtension
 
 # Format
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static string Format(this string this, IDictionary<string, object> values)
+string Format(this string this, IDictionary<string, object> values)
 ```
 
 formats a string with values in a dictionary

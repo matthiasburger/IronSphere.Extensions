@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/ChangeTypeExtension)
+[back](/IronSphere.Extensions/types/ChangeTypeExtension
 
 # ToOrNull
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static T? ToOrNull<T>(this object this)
+T? ToOrNull<T>(this object this)
     where T: struct;
 ```
 

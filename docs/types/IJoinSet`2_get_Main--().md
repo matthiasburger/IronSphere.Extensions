@@ -1,6 +1,6 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/IJoinSet-TMain,TSub-)
+[back](/IronSphere.Extensions/types/IJoinSet-TMain,TSub-
 
 # get_Main
 

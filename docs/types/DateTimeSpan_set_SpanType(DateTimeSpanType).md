@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/DateTimeSpan)
+[back](/IronSphere.Extensions/types/DateTimeSpan
 
 # set_SpanType
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public void set_SpanType(DateTimeSpanType value)
+void set_SpanType(DateTimeSpanType value)
 ```
 
 

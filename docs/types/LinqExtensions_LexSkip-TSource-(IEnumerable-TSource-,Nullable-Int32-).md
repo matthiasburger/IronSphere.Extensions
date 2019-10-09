@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/LinqExtensions)
+[back](/IronSphere.Extensions/types/LinqExtensions
 
 # LexSkip
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static IEnumerable<TSource> LexSkip<TSource>(this IEnumerable<TSource> source, int? count);
+IEnumerable<TSource> LexSkip<TSource>(this IEnumerable<TSource> source, int? count);
 ```
 
 Pendent to Linq IEnumerable{TSource}.Skip(int) but skips all when count is null

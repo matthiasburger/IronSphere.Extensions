@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/TypeExtension)
+[back](/IronSphere.Extensions/types/TypeExtension
 
 # GetReadableName
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static string GetReadableName(this Type this)
+string GetReadableName(this Type this)
 ```
 
 Gets the types readable name

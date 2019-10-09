@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/EnumerableExtension)
+[back](/IronSphere.Extensions/types/EnumerableExtension
 
 # IsSingle
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static bool IsSingle<T>(this IEnumerable<T> this, Func<T, bool> predicate);
+bool IsSingle<T>(this IEnumerable<T> this, Func<T, bool> predicate);
 ```
 
 Determines if an enumeration contains exactly one element

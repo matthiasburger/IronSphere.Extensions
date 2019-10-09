@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/TypeExtension)
+[back](/IronSphere.Extensions/types/TypeExtension
 
 # GetType
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public Type GetType()
+Type GetType()
 ```
 
 

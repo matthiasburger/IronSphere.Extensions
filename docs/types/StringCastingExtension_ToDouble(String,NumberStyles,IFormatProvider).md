@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/StringCastingExtension)
+[back](/IronSphere.Extensions/types/StringCastingExtension
 
 # ToDouble
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static double? ToDouble(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
+double? ToDouble(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```
 
 

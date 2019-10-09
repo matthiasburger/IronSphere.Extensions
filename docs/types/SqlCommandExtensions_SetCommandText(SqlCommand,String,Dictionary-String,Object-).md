@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/SqlCommandExtensions)
+[back](/IronSphere.Extensions/types/SqlCommandExtensions
 
 # SetCommandText
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static DbCommand SetCommandText(this SqlCommand this, string command, Dictionary<string, object> parameters)
+DbCommand SetCommandText(this SqlCommand this, string command, Dictionary<string, object> parameters)
 ```
 
 Sets the SqlCommands command-text and adds parameters

@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/LinqExtensions)
+[back](/IronSphere.Extensions/types/LinqExtensions
 
 # LexTakeLast
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static IEnumerable<TSource> LexTakeLast<TSource>(this IEnumerable<TSource> source, int count);
+IEnumerable<TSource> LexTakeLast<TSource>(this IEnumerable<TSource> source, int count);
 ```
 
 

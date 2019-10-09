@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/ListExtension)
+[back](/IronSphere.Extensions/types/ListExtension
 
 # RemoveSingle
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static void RemoveSingle<T>(this IList<T> this, Func<T, bool> expression)
+void RemoveSingle<T>(this IList<T> this, Func<T, bool> expression)
     where T: class;
 ```
 

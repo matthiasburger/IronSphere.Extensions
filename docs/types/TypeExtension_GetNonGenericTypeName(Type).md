@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/TypeExtension)
+[back](/IronSphere.Extensions/types/TypeExtension
 
 # GetNonGenericTypeName
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static string GetNonGenericTypeName(this Type this)
+string GetNonGenericTypeName(this Type this)
 ```
 
 Gets the non-generic name for a type

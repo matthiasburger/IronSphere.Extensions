@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/StringCastingExtension)
+[back](/IronSphere.Extensions/types/StringCastingExtension
 
 # ToDateTime
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static DateTime? ToDateTime(this string this)
+DateTime? ToDateTime(this string this)
 ```
 
 

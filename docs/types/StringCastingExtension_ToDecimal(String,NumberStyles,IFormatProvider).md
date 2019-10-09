@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/StringCastingExtension)
+[back](/IronSphere.Extensions/types/StringCastingExtension
 
 # ToDecimal
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static decimal? ToDecimal(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
+decimal? ToDecimal(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```
 
 

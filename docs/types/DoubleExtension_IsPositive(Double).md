@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/DoubleExtension)
+[back](/IronSphere.Extensions/types/DoubleExtension
 
 # IsPositive
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static bool IsPositive(this double this)
+bool IsPositive(this double this)
 ```
 
 Checks whether the actual value is greater than zero.

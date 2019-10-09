@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/DateTimeSpan)
+[back](/IronSphere.Extensions/types/DateTimeSpan
 
 # Deconstruct
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public void Deconstruct(out DateTime start, out DateTime end)
+void Deconstruct(out DateTime start, out DateTime end)
 ```
 
 

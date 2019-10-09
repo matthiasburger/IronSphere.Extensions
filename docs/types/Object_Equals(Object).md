@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/TypeExtension)
+[back](/IronSphere.Extensions/types/TypeExtension
 
 # Equals
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public virtual bool Equals(object obj)
+bool Equals(object obj)
 ```
 
 

@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/GenericExtension)
+[back](/IronSphere.Extensions/types/GenericExtension
 
 # ToString
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static string ToString<T>(this T this, Func<T, string> resultString);
+string ToString<T>(this T this, Func<T, string> resultString);
 ```
 
 String representation of any object

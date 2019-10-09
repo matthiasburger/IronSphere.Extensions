@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/ShortExtension)
+[back](/IronSphere.Extensions/types/ShortExtension
 
 # Min
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static short Min(this short this, short minimum)
+short Min(this short this, short minimum)
 ```
 
 Compares two values and returns the greater one

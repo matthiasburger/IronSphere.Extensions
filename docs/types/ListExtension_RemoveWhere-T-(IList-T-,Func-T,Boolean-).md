@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/ListExtension)
+[back](/IronSphere.Extensions/types/ListExtension
 
 # RemoveWhere
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static void RemoveWhere<T>(this IList<T> this, Func<T, bool> expression)
+void RemoveWhere<T>(this IList<T> this, Func<T, bool> expression)
     where T: class;
 ```
 

@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/ByteExtension)
+[back](/IronSphere.Extensions/types/ByteExtension
 
 # Min
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static byte Min(this byte this, byte minimum)
+byte Min(this byte this, byte minimum)
 ```
 
 Compares two values and returns the greater one

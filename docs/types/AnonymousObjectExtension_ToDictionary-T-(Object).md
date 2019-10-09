@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/AnonymousObjectExtension)
+[back](/IronSphere.Extensions/types/AnonymousObjectExtension
 
 # ToDictionary
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static IDictionary<string, T> ToDictionary<T>(this object source);
+IDictionary<string, T> ToDictionary<T>(this object source);
 ```
 
 Creates a dictionary from an anonymous type where the properties names are the keys and their values are the values

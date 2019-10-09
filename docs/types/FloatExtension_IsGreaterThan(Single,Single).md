@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/FloatExtension)
+[back](/IronSphere.Extensions/types/FloatExtension
 
 # IsGreaterThan
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static bool IsGreaterThan(this float this, float other)
+bool IsGreaterThan(this float this, float other)
 ```
 
 Checks whether the actual value is greater than an other one.

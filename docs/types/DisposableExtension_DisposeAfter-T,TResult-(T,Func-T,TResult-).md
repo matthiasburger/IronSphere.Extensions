@@ -1,13 +1,13 @@
 ﻿
 
-[back](/IronSphere.Extensions/types/DisposableExtension)
+[back](/IronSphere.Extensions/types/DisposableExtension
 
 # DisposeAfter
 
 > Assembly: IronSphere.Extensions
 
 ```csharp
-public static TResult DisposeAfter<T, TResult>(this T instance, Func<T, TResult> actionToInvoke)
+TResult DisposeAfter<T, TResult>(this T instance, Func<T, TResult> actionToInvoke)
     where T: IDisposable;
 ```
 
