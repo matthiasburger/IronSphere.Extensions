@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool In<T>(this T this, T[] listOfItems);
+public static bool In<T>(this T this, T[] listOfItems);
 ```
 
 

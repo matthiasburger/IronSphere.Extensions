@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-DateTime? ToDateTime(this string this, DateTimeStyles dateTimeStyles, IFormatProvider formatProvider)
+public static DateTime? ToDateTime(this string this, DateTimeStyles dateTimeStyles, IFormatProvider formatProvider)
 ```
 
 

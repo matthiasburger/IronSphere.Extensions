@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool IsNegative(this int this)
+public static bool IsNegative(this int this)
 ```
 
 Checks whether the actual value is smaller than zero.

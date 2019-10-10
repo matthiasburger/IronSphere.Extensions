@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-long? ToLong(this string this)
+public static long? ToLong(this string this)
 ```
 
 

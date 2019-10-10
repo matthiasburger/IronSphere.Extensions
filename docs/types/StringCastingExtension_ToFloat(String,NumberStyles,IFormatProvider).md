@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-float? ToFloat(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static float? ToFloat(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```
 
 

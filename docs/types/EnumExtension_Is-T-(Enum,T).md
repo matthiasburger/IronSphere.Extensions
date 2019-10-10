@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool Is<T>(this Enum this, T value);
+public static bool Is<T>(this Enum this, T value);
 ```
 
 Determines whether a flagged enum is a specific value

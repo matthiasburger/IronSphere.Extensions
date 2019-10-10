@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-DateTime get_End()
+public DateTime get_End()
 ```
 
 

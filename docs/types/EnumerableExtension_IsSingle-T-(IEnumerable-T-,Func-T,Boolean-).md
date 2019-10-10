@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool IsSingle<T>(this IEnumerable<T> this, Func<T, bool> predicate);
+public static bool IsSingle<T>(this IEnumerable<T> this, Func<T, bool> predicate);
 ```
 
 Determines if an enumeration contains exactly one element

@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-DateTime GetLastOfMonth(this DateTime this)
+public static DateTime GetLastOfMonth(this DateTime this)
 ```
 
 Calculates the last day of a month.

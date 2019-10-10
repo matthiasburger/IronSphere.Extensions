@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-char? ToChar(this string this)
+public static char? ToChar(this string this)
 ```
 
 

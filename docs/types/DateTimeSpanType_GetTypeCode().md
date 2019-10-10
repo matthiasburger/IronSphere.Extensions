@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-TypeCode GetTypeCode()
+public virtual sealed TypeCode GetTypeCode()
 ```
 
 

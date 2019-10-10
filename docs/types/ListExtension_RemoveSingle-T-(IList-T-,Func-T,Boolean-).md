@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-void RemoveSingle<T>(this IList<T> this, Func<T, bool> expression)
+public static void RemoveSingle<T>(this IList<T> this, Func<T, bool> expression)
     where T: class;
 ```
 

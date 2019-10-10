@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool HasFlag(Enum flag)
+public bool HasFlag(Enum flag)
 ```
 
 

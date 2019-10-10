@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-IEnumerator<DateTime> GetEnumerator()
+public virtual sealed IEnumerator<DateTime> GetEnumerator()
 ```
 
 

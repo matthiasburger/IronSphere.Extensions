@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-int? ToInt(this string this)
+public static int? ToInt(this string this)
 ```
 
 

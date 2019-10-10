@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-T To<T>(this object this);
+public static T To<T>(this object this);
 ```
 
 converts any object to type of T

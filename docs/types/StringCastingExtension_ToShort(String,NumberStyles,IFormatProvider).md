@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-short? ToShort(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static short? ToShort(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```
 
 

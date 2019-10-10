@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-byte[] GetBytes(this Stream this, int length = 16384)
+public static byte[] GetBytes(this Stream this, int length = 16384)
 ```
 
 transforms a stream into the byte-array.

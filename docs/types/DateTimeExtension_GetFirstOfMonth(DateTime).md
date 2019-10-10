@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-DateTime GetFirstOfMonth(this DateTime this)
+public static DateTime GetFirstOfMonth(this DateTime this)
 ```
 
 Calculates the first day of a month.

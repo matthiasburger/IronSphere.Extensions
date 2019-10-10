@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool Between(this double this, double lower, double higher)
+public static bool Between(this double this, double lower, double higher)
 ```
 
 Checks whether the actual value is between specified lower and higher.

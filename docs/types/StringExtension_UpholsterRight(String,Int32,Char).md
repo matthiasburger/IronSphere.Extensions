@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-string UpholsterRight(this string this, int count, char character = ' ')
+public static string UpholsterRight(this string this, int count, char character = ' ')
 ```
 
 upholsters a string on the right with a specific character

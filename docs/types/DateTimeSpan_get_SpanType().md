@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-DateTimeSpanType get_SpanType()
+public DateTimeSpanType get_SpanType()
 ```
 
 

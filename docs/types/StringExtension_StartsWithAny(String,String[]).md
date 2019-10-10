@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool StartsWithAny(this string this, string[] parameter)
+public static bool StartsWithAny(this string this, string[] parameter)
 ```
 
 Indicates whether a specified string starts with any parametrized string

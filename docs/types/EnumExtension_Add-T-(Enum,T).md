@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-T Add<T>(this Enum this, T value);
+public static T Add<T>(this Enum this, T value);
 ```
 
 Adds a specific value to a flagged enum

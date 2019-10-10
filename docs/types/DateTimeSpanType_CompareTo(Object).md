@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-int CompareTo(object target)
+public virtual sealed int CompareTo(object target)
 ```
 
 

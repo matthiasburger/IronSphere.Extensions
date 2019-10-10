@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-string GetNonGenericTypeName(this Type this)
+public static string GetNonGenericTypeName(this Type this)
 ```
 
 Gets the non-generic name for a type

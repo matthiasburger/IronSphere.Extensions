@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-void set_Step(int value)
+public void set_Step(int value)
 ```
 
 

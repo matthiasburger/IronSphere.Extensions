@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-long? ToLong(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
+public static long? ToLong(this string this, NumberStyles numberStyles, IFormatProvider formatProvider)
 ```
 
 

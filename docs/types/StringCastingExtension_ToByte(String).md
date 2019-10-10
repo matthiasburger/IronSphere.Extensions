@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-byte? ToByte(this string this)
+public static byte? ToByte(this string this)
 ```
 
 

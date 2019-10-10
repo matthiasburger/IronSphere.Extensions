@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-int GetHashCode()
+public virtual int GetHashCode()
 ```
 
 

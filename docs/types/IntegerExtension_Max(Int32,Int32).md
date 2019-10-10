@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-int Max(this int this, int maximum)
+public static int Max(this int this, int maximum)
 ```
 
 Compares two values and returns the lower one

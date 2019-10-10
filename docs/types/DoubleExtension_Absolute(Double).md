@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-double Absolute(this double this)
+public static double Absolute(this double this)
 ```
 
 Returns the absolute value of a double-precision floating-point number.

@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-string ValueIfNullOrWhiteSpace(this string this, string defaultValue)
+public static string ValueIfNullOrWhiteSpace(this string this, string defaultValue)
 ```
 
 

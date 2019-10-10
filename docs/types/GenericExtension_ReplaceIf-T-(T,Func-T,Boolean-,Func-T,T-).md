@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-T ReplaceIf<T>(this T this, Func<T, bool> expression, Func<T, T> output);
+public static T ReplaceIf<T>(this T this, Func<T, bool> expression, Func<T, T> output);
 ```
 
 Replaces an object with another value of the same type, if the expression returns true

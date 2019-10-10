@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-float Absolute(this float this)
+public static float Absolute(this float this)
 ```
 
 Returns the absolute value of a single-precision floating-point number.

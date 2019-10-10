@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-double? ToDouble(this string this)
+public static double? ToDouble(this string this)
 ```
 
 

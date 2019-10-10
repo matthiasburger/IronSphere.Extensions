@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-DbCommand SetCommandText(this SqlCommand this, string command, object parameters)
+public static DbCommand SetCommandText(this SqlCommand this, string command, object parameters)
 ```
 
 Sets the SqlCommands command-text and adds parameters

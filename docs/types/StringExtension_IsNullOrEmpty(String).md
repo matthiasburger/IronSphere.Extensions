@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool IsNullOrEmpty(this string this)
+public static bool IsNullOrEmpty(this string this)
 ```
 
 Indicates whether the specified string is null or an empty string (&quot;&quot;).

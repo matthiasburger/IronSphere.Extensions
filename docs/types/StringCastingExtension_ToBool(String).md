@@ -7,7 +7,7 @@
 > Assembly: IronSphere.Extensions
 
 ```csharp
-bool? ToBool(this string this)
+public static bool? ToBool(this string this)
 ```
 
 
