@@ -48,5 +48,13 @@ namespace IronSphere.Extensions
             foreach (T element in @this.Where(expression))
                 @this.Remove(element);
         }
+
+        public static void AddIf<T>(this IList<T> @this, Func<T, bool> expression, T element)
+        {
+            if(!expression(element))
+                return;
+
+            @this.Add(element);
+        }
     }
 }

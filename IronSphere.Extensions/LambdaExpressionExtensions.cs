@@ -21,6 +21,20 @@ namespace IronSphere.Extensions
             _set<T, TValue>(memberLambda, value)?.Compile()(target);
         }
 
+        /// <summary>
+        /// Sets an objects property to a value by using an <see cref="Expression"/>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TValue"></typeparam>
+        /// <param name="target"></param>
+        /// <param name="expression"></param>
+        /// <param name="value"></param>
+        public static void SetPropertyValue<T, TValue>(this T target, Expression<Func<T, TValue>> expression, TValue value)
+        {
+            LambdaExpression lambdaExpression = Expression.Lambda(expression);
+            _set<T, TValue>(lambdaExpression, value)?.Compile()(target);
+        }
+
         private static Expression<Action<TEntity>> _set<TEntity, TValue>(LambdaExpression propertyGetExpression, TValue valueExpression)
         {
             if ((object)valueExpression == DBNull.Value)

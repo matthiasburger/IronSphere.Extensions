@@ -140,5 +140,23 @@ namespace IronSphere.Extensions
         /// <param name="this">the actual date to check</param>
         /// <returns>if the date is in weekend</returns>
         public static bool IsWeekend(this DateTime @this) => Weekend.Any(x => x == @this.DayOfWeek);
+
+        public static DateTime SetTime(this DateTime @this, TimeSpan timeSpan)
+            => @this.Date + timeSpan;
+
+        public static DateTime SetTime(this DateTime @this, (int hours, int minutes, int seconds) time)
+            => @this.Date + new TimeSpan(time.hours, time.minutes, time.seconds);
+
+        public static DateTime SetTime(this DateTime @this, (int hours, int minutes) time)
+            => @this.Date + new TimeSpan(time.hours, time.minutes, 0);
+
+        public static bool Between(this DateTime @this, DateTimeSpan span)
+            => @this.CompareTo(span.Start) >= 0 && @this.CompareTo(span.End) <= 0;
+
+        public static DateTimeSpan SpanTo(this DateTime @this, DateTime end) 
+            => new DateTimeSpan(@this, end);
+
+        public static DateTimeSpan SpanTo(this DateTime @this, int amount, DateTimeSpanType spanType) 
+            => new DateTimeSpan(@this, spanType, amount);
     }
 }

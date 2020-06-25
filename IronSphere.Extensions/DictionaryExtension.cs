@@ -44,7 +44,12 @@ namespace IronSphere.Extensions
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
 
-            return @this.AllKeys.Contains(key) ? (TValue)Convert.ChangeType(@this[key], typeof(TValue)) : fallback;
+            Type typeToConvert = typeof(TValue);
+            Type underlyingType;
+            if ((underlyingType = Nullable.GetUnderlyingType(typeToConvert)) != null)
+                typeToConvert = underlyingType;
+
+            return @this.AllKeys.Contains(key) ? (TValue)Convert.ChangeType(@this[key], typeToConvert) : fallback;
         }
 
         /// <summary>

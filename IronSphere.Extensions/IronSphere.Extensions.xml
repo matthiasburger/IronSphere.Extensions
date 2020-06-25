@@ -951,6 +951,16 @@
             <param name="memberLambda"></param>
             <param name="value"></param>
         </member>
+        <member name="M:IronSphere.Extensions.LambdaExpressionExtensions.SetPropertyValue``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},``1)">
+            <summary>
+            Sets an objects property to a value by using an <see cref="T:System.Linq.Expressions.Expression"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="target"></param>
+            <param name="expression"></param>
+            <param name="value"></param>
+        </member>
         <member name="T:IronSphere.Extensions.LinqExtensions">
             <summary>
             This class provides extension methods for <see cref="T:System.Linq.IQueryable`1"/> and <see cref="T:System.Collections.Generic.IEnumerable`1"/>
@@ -1286,7 +1296,7 @@
              </summary>
              <param name="this">The actual SqlCommand</param>
              <param name="command">The command to set</param>
-             <param name="parameters">The parameters to add as an anonymous object.</param>
+             <param name="parameters">The parameters to add as a dictionary.</param>
              <example>
             <![CDATA[
              Dictionary<string, object> paramsDictionary = new Dictionary<string, object>(){
@@ -1295,6 +1305,40 @@
              
              SqlCommand command = new SqlCommand();
              command.SetCommandText("select * from user where userId = @user", paramsDictionary);
+             ]]>
+             </example>
+             <returns>The modified DbCommand</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandWithParameters(System.Data.SqlClient.SqlCommand,System.String,System.Object)">
+             <summary>
+             Sets the SqlCommands command-text and adds parameters
+             </summary>
+             <param name="this">The actual SqlCommand</param>
+             <param name="command">The command to set</param>
+             <param name="parameters">The parameters to add as an anonymous object.</param>
+             <example>
+            <![CDATA[
+             SqlCommand command = new SqlCommand();
+             command.SetCommandWithParameters("select * from user where userId = @user", new{user="admin"});
+             ]]>
+             </example>
+             <returns>The modified DbCommand</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandWithParameters(System.Data.SqlClient.SqlCommand,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+             <summary>
+             Sets the SqlCommands command-text and adds parameters
+             </summary>
+             <param name="this">The actual SqlCommand</param>
+             <param name="command">The command to set</param>
+             <param name="parameters">The parameters to add as a dictionary.</param>
+             <example>
+            <![CDATA[
+             Dictionary<string, object> paramsDictionary = new Dictionary<string, object>(){
+                 { "user", "admin" }
+             };
+             
+             SqlCommand command = new SqlCommand();
+             command.SetCommandWithParameters("select * from user where userId = @user", paramsDictionary);
              ]]>
              </example>
              <returns>The modified DbCommand</returns>

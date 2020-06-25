@@ -66,6 +66,12 @@ namespace IronSphere.Extensions
         /// </summary>
         public int Step { get; set; } = 1;
 
+        public decimal GetDuration(Func<TimeSpan, double> selector)
+        {
+            decimal difference = (decimal)selector(End - Start);
+            return difference;
+        }
+
         /// <summary>
         /// Returns an enumerator to iterate over the sequence of <see cref="DateTime"/>
         /// </summary>
@@ -104,5 +110,7 @@ namespace IronSphere.Extensions
             start = Start;
             end = End;
         }
+
+        public override string ToString() => $"{Start:dd.MM.yyyy HH:mm} - {End:dd.MM.yyyy HH:mm}";
     }
 }

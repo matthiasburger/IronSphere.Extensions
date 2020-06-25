@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using JetBrains.Annotations;
 
@@ -25,6 +26,25 @@ namespace IronSphere.Extensions
             Array.Copy(items, startIndex, result, 0, length);
             
             return result;
+        }
+
+        public static IEnumerable<T[]> Subdivide<T>(this T[] @this, int splitAt)
+        {
+            T[] arrayOfElements = new T[splitAt.Max(@this.Length)];
+
+            for (int index = 0; index < @this.Length; index++)
+            {
+                if (index != 0 && index % splitAt == 0)
+                {
+                    yield return arrayOfElements;
+                    arrayOfElements = new T[splitAt.Max(@this.Length - index)];
+                }
+
+                arrayOfElements[index % splitAt] = @this[index];
+            }
+
+            if (arrayOfElements.Length > 0)
+                yield return arrayOfElements;
         }
     }
 }

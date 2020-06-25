@@ -9,6 +9,24 @@ namespace IronSphere.Extensions
     /// </summary>
     public static class DateTimeSpanExtension
     {
+        public static IEnumerable<(int CalendarWeek, int Year)> GetCalendarWeeks(this DateTimeSpan @this)
+        {
+            IEnumerable<DateTimeSpan> ranges = @this.Split(@this.Where(x => x.DayOfWeek == DayOfWeek.Monday).ToArray())
+                .Where(w => w.Start != w.End);
+            foreach ((DateTime start, DateTime _) in ranges.ToList())
+            {
+                DateTime lastWeekDay = start.GetLastOfWeek();
+                int yearOfWeek = start.Year;
+                if (start.Year != lastWeekDay.Year)
+                {
+                    if (new DateTime(lastWeekDay.Year, 1, 1).DayOfWeek <= DayOfWeek.Thursday)
+                        yearOfWeek = lastWeekDay.Year;
+                }
+                
+                yield return (start.GetWeekOfYear(), yearOfWeek);
+            }
+        }
+
         /// <summary>
         /// Creates a new DateTimeSpan-object from a tuple of dates
         /// </summary>
@@ -40,7 +58,7 @@ namespace IronSphere.Extensions
             if (@this.Start > date || @this.End < date)
                 return new[] { @this };
 
-            dateTimeSpans[0] = new DateTimeSpan(@this.Start, date.AddMilliseconds(-1));
+            dateTimeSpans[0] = new DateTimeSpan(@this.Start, date);
             dateTimeSpans[1] = new DateTimeSpan(date, @this.End);
 
             return dateTimeSpans;
@@ -70,13 +88,13 @@ namespace IronSphere.Extensions
                         continue;
                     }
 
-                    newStack.Push(new DateTimeSpan(span.Start, splitDate.AddMilliseconds(-1)));
+                    newStack.Push(new DateTimeSpan(span.Start, splitDate));
                     newStack.Push(new DateTimeSpan(splitDate, span.End));
                 }
 
                 dateTimeSpans = newStack;
             }
             return dateTimeSpans.OrderBy(x => x.Start);
-        }
+        }          
     }
 }
