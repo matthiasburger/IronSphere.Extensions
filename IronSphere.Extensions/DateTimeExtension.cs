@@ -70,7 +70,7 @@ namespace IronSphere.Extensions
         /// <param name="higher">The higher limit.</param>
         /// <returns>True, if the actual object is higher than the lower limit and lower than the higher limit.</returns>
         public static bool Between(this DateTime @this, DateTime lower, DateTime higher) =>
-            @this.CompareTo(lower) > 0 && @this.CompareTo(higher) < 0;
+            @this.CompareTo(lower) >= 0 && @this.CompareTo(higher) <= 0;
 
         /// <summary>
         /// Calculates the age (years) from a date.
