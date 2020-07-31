@@ -44,6 +44,8 @@ namespace IronSphere.Extensions
         {
             Start = start;
             End = NextDateTimeFuncDictionary[spanType](start, step);
+            SpanType = spanType;
+            Step = step;
         }
 
         /// <summary>
@@ -66,6 +68,11 @@ namespace IronSphere.Extensions
         /// </summary>
         public int Step { get; set; } = 1;
 
+        /// <summary>
+        /// calculates the duration on timespan-unity
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns>decimal value of time between start and end</returns>
         public decimal GetDuration(Func<TimeSpan, double> selector)
         {
             decimal difference = (decimal)selector(End - Start);

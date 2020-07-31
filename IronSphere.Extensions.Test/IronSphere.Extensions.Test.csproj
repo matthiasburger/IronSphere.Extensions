@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B85DA28F-FE28-4616-8D45-FBAB2FE749BB}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>IronSphere.Extensions.Test</RootNamespace>
     <AssemblyName>IronSphere.Extensions.Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -38,12 +38,9 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>IronSphere.Extensions.Test.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IronSphere.Extensions, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronSphere.Extensions.3.2.0\lib\net461\IronSphere.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="JetBrains.Annotations, Version=2019.1.3.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\packages\JetBrains.Annotations.2019.1.3\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
@@ -87,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IronSphere.Extensions\IronSphere.Extensions.csproj">
+      <Project>{29a4bbaf-3c13-4cf9-b697-edb8d2df866c}</Project>
+      <Name>IronSphere.Extensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

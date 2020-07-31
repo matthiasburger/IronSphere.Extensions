@@ -49,12 +49,33 @@ namespace IronSphere.Extensions
                 @this.Remove(element);
         }
 
+        [Obsolete("07/20: Is removed in v4 - use AddItemIf<T>()")]
         public static void AddIf<T>(this IList<T> @this, Func<T, bool> expression, T element)
         {
-            if(!expression(element))
+            if (!expression(element))
                 return;
 
             @this.Add(element);
+        }
+
+        public static IList<T> AddItemIf<T>(this IList<T> @this, T element, Func<T, bool> expression)
+        {
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+
+            if (expression(element))
+                @this.Add(element);
+
+            return @this;
+        }
+
+        public static IList<T> AddItem<T>(this IList<T> @this, T @new)
+        {
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+
+            @this.Add(@new);
+            return @this;
         }
     }
 }

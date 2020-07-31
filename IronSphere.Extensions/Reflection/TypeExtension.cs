@@ -1,12 +1,9 @@
-﻿// ReSharper disable MemberCanBePrivate.Global
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
-using System.Text.RegularExpressions;
 
 [assembly:InternalsVisibleTo("IronSphere.Extensions.AspNetCore")]
 namespace IronSphere.Extensions.Reflection

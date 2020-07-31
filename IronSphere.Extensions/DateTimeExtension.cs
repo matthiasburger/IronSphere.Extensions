@@ -158,5 +158,20 @@ namespace IronSphere.Extensions
 
         public static DateTimeSpan SpanTo(this DateTime @this, int amount, DateTimeSpanType spanType) 
             => new DateTimeSpan(@this, spanType, amount);
+
+        public static DateTime EndOfDay(this DateTime @this) => @this.AddDays(1).AddTicks(-1);
+
+        public static bool IsEarlierThan(this DateTime @this, TimeSpan delta) 
+            => @this.Add(delta) < DateTime.Now;
+
+        public static DateTime Next(this DateTime dt, DayOfWeek weekday)
+        {
+            return dt.AddDays((weekday - dt.DayOfWeek + 7) % 7).Date;
+        }
+
+        public static DateTime Previous(this DateTime dt, DayOfWeek weekday)
+        {
+            return dt.AddDays(-1 * ((dt.DayOfWeek - weekday) % 7)).Date;
+        }
     }
 }

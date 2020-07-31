@@ -2,29 +2,25 @@
 
   <PropertyGroup>
     <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
-    <Version>3.4.0</Version>
+    <Version>1.0.0-beta1</Version>
     <Authors>Matthias Burger</Authors>
     <Company>Matthias Burger</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>This package provides useful extension-methods for C# .NET Standard.</Description>
-    <PackageTags>Extension, Extensions, Extensionmethods</PackageTags>
+    <PackageTags>Extension, Extensions, Extensionmethods, Web</PackageTags>
     <PackageLicenseUrl></PackageLicenseUrl>
     <LangVersion>7.3</LangVersion>
     <PackageProjectUrl>https://matthiasburger.github.io/IronSphere.Extensions</PackageProjectUrl>
     <RepositoryUrl>https://github.com/matthiasburger/IronSphere.Extensions</RepositoryUrl>
-    <FileVersion>3.4.0.0</FileVersion>
+    <FileVersion>1.0.0.0</FileVersion>
     <NeutralLanguage></NeutralLanguage>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
-    <DocumentationFile>C:\Users\m.burger\source\repos\IronSphere.Extensions\IronSphere.Extensions\IronSphere.Extensions.xml</DocumentationFile>
-  </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="IronSphere.Extensions" Version="3.4.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.3" />
   </ItemGroup>
-  
+
 </Project>

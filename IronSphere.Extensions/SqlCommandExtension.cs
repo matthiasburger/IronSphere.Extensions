@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Reflection;
@@ -27,7 +26,7 @@ namespace IronSphere.Extensions
         /// ]]>
         /// </example>
         /// <returns>The modified DbCommand</returns>
-        [Obsolete("Only the method-name changes, use SetCommandWithParameters instead")]
+        [Obsolete("Is getting removed in v4! Only the method-name changes, use SetCommandWithParameters instead.")]
         public static DbCommand SetCommandText([NotNull]this SqlCommand @this, [NotNull]string command,
             [CanBeNull]object parameters)
         {
@@ -65,7 +64,7 @@ namespace IronSphere.Extensions
         /// ]]>
         /// </example>
         /// <returns>The modified DbCommand</returns>
-        [Obsolete("Only the method-name changes, use SetCommandWithParameters instead")]
+        [Obsolete("Is getting removed in v4! Only the method-name changes, use SetCommandWithParameters instead")]
         public static DbCommand SetCommandText([NotNull]this SqlCommand @this, [NotNull]string command,
             [CanBeNull]Dictionary<string, object> parameters)
         {

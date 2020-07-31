@@ -3,6 +3,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+
+using IronSphere.Extensions.Exceptions;
+using IronSphere.Extensions.PredicateEnumerable;
 
 using JetBrains.Annotations;
 
@@ -146,5 +150,98 @@ namespace IronSphere.Extensions
                 if (seenKeys.Add(expression(element)))
                     yield return element;
         }
+
+        /// <summary>
+        /// ITD with v4
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        public static T GetSingleItem<T>(this IEnumerable<T> @this, Expression<Func<T, bool>> filter) where T : class
+        {
+            if (@this == null)
+                throw new ArgumentNullException(nameof(@this));
+
+            string ErrorMessage(string s) => $"{s} ({filter.GetReadableExpressionBody()})".TrimEnd();
+
+            return _getSingleItemOrNull(@this, filter.Compile(), ErrorMessage)
+                ?? throw new MissingItemException(ErrorMessage("No item in sequence was found."));
+        }
+
+        /// <summary>
+        /// ITD with v4
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        public static T GetSingleItemOrNull<T>(this IEnumerable<T> @this, Expression<Func<T, bool>> filter) where T : class
+        {
+            if (@this == null)
+                throw new ArgumentNullException(nameof(@this));
+
+            string ErrorMessage(string s) => $"{s} ({filter.GetReadableExpressionBody()})".TrimEnd();
+
+            return _getSingleItemOrNull(@this, filter.Compile(), ErrorMessage);
+        }
+
+        private static T _getSingleItemOrNull<T>(IEnumerable<T> @this, Func<T, bool> filter, Func<string, string> errorMessage) where T : class
+        {
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+
+            using (IEnumerator<T> enumerator = @this.GetEnumerator())
+            {
+                int count = 0;
+                T item = null;
+
+                while (enumerator.MoveNext())
+                {
+                    if (!filter(enumerator.Current))
+                        continue;
+
+                    item = enumerator.Current;
+                    count++;
+
+                    if (++count > 1)
+                        throw new EquivocalItemException(errorMessage("Items in sequence are equivocal."));
+                }
+
+                return item;
+            }
+        }
+
+        internal static IEnumerable<T> AddSingleItem<T>(this IEnumerable<T> @this, T element)
+        {
+            foreach (T item in @this)
+                yield return item;
+            yield return element;
+        }
+
+        internal static IEnumerable<T> RemoveSingleItem<T>(this IEnumerable<T> @this, T element)
+        {
+            return @this.Where(item => !ReferenceEquals(item, element) && !EqualityComparer<T>.Default.Equals(item, element));
+        }
+
+        /// <summary>
+        /// ITD with v4
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <param name="element"></param>
+        /// <returns></returns>
+        public static IPredicateEnumerable<T> AddItem<T>(this IEnumerable<T> @this, T element) 
+            => new AddEnumerable<T>(@this, element);
+
+        /// <summary>
+        /// ITD with v4
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <param name="element"></param>
+        /// <returns></returns>
+        public static IPredicateEnumerable<T> RemoveItem<T>(this IEnumerable<T> @this, T element) 
+            => new RemoveOneItemEnumerable<T>(@this, element);
     }
 }
