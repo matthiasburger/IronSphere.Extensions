@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Reflection;
+
+using IronSphere.Extensions.Reflection;
 
 using JetBrains.Annotations;
 
@@ -31,13 +33,16 @@ namespace IronSphere.Extensions
                 throw new ArgumentNullException(nameof(source));
 
             Dictionary<string, T> dictionary = new Dictionary<string, T>();
-            foreach (PropertyDescriptor property in TypeDescriptor.GetProperties(source))
+            foreach (PropertyInfo property in source.GetType().GetProperties())
             {
                 object value = property.GetValue(source);
                 if (value is T value1)
                     dictionary.Add(property.Name, value1);
+
+                else throw new InvalidCastException($"type of {value}[{value?.GetType().GetShortReadableName()}] is not {typeof(T).GetShortReadableName()}");
             }
             return dictionary;
         }
+
     }
 }
