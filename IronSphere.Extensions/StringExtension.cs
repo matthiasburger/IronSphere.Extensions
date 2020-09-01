@@ -76,6 +76,23 @@ namespace IronSphere.Extensions
         }
 
         /// <summary>
+        /// Concatenates the elements of a specified array or the members of a collection, using the specified separator between each element or member.
+        /// </summary>
+        /// <typeparam name="T">The type of the members of values.</typeparam>
+        /// <param name="this">The string to use as a separator. separator is included in the returned string only if value has more than one element.</param>
+        /// <param name="elements">An array that contains the elements to concatenate.</param>
+        /// <param name="toString"></param>
+        /// <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
+        [MustUseReturnValue]
+        public static string Join<T>([CanBeNull]this string @this, [NotNull]IEnumerable<T> elements, Func<T, string> toString)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
+            return string.Join(@this ?? string.Empty, elements.Select(toString));
+        }
+
+        /// <summary>
         /// Indicates whether a specified string starts with any parametrized string
         /// </summary>
         /// <param name="this">The actual string</param>

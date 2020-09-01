@@ -143,5 +143,37 @@ namespace IronSphere.Extensions
 
             return _getFirstDateOfWeekByWeekNumber().ToString(format);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            return obj is CalendarWeek toCompare && Week == toCompare.Week && Year == toCompare.Year;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(CalendarWeek other)
+        {
+            return Week == other.Week && Year == other.Year;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (Week * 397) ^ Year;
+            }
+        }
     }
 }

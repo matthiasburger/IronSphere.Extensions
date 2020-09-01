@@ -72,6 +72,31 @@ namespace IronSphere.Extensions
                 return enumerator.MoveNext() && !enumerator.MoveNext();
         }
 
+
+        public static bool IsSingle<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> selector)
+        {
+            if (@this == null) return false;
+
+            HashSet<TResult> foundResults = new HashSet<TResult>();
+
+            using (IEnumerator<T> enumerator = @this.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                {
+                    TResult currentValue = selector(enumerator.Current);
+                    if (foundResults.Contains(currentValue))
+                        continue;
+
+                    if (foundResults.Count != 0)
+                        return false;
+
+                    foundResults.Add(currentValue);
+                }
+
+                return foundResults.Count == 1;
+            }
+        }
+
         /// <summary>
         /// Determines if an enumeration contains exactly one element
         /// </summary>
@@ -231,7 +256,7 @@ namespace IronSphere.Extensions
         /// <param name="this"></param>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IPredicateEnumerable<T> AddItem<T>(this IEnumerable<T> @this, T element) 
+        public static IPredicateEnumerable<T> AddItem<T>(this IEnumerable<T> @this, T element)
             => new AddEnumerable<T>(@this, element);
 
         /// <summary>
@@ -241,7 +266,79 @@ namespace IronSphere.Extensions
         /// <param name="this"></param>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IPredicateEnumerable<T> RemoveItem<T>(this IEnumerable<T> @this, T element) 
+        public static IPredicateEnumerable<T> RemoveItem<T>(this IEnumerable<T> @this, T element)
             => new RemoveOneItemEnumerable<T>(@this, element);
+
+        /// <summary>
+        /// splits a sequence into multiple sequences, where none of the sequences has more than <see cref="count"/> elements
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        public static IEnumerable<List<T>> Split<T>(this IEnumerable<T> @this, int count)
+        {
+            List<T> currentCollection = new List<T>(count);
+            int index = 0;
+
+            foreach (T currentItem in @this)
+            {
+                currentCollection.Add(currentItem);
+
+                if (++index != count)
+                    continue;
+
+                yield return currentCollection;
+
+                index = 0;
+                currentCollection = new List<T>();
+            }
+
+            if (currentCollection.Any())
+                yield return currentCollection;
+        }
+
+        public static TRes MaxIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null) where TRes : struct, IComparable<TRes>
+        {
+            TRes? result = null;
+
+            using (IEnumerator<T> enumerator = source.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                {
+                    if (enumerator.Current == null) continue;
+
+                    TRes value = selector(enumerator.Current);
+                    if (result is null)
+                        result = value;
+                    else if (value.CompareTo(result.Value) > 0)
+                        result = value;
+                }
+            }
+
+            return result ?? fallback ?? throw new NullReferenceException("sequence is empty");
+        }
+
+        public static TRes MinIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null) where TRes : struct, IComparable<TRes>
+        {
+            TRes? result = null;
+
+            using (IEnumerator<T> enumerator = source.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                {
+                    if (enumerator.Current == null) continue;
+
+                    TRes value = selector(enumerator.Current);
+                    if (result is null)
+                        result = value;
+                    else if (value.CompareTo(result.Value) < 0)
+                        result = value;
+                }
+            }
+
+            return result ?? fallback ?? throw new NullReferenceException("sequence is empty");
+        }
+                                 
     }
 }

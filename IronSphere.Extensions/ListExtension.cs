@@ -77,5 +77,11 @@ namespace IronSphere.Extensions
             @this.Add(@new);
             return @this;
         }
+
+        public static void AddRange<T>(this IList<T> @this, IEnumerable<T> elementsToAdd)
+        {
+            foreach(T element in elementsToAdd)
+                @this.Add(element);
+        }
     }
 }

@@ -384,9 +384,13 @@ namespace IronSphere.Extensions.Reflection
         /// <returns></returns>
         public static bool IsAnonymousType(this Type type)
         {
-            bool hasCompilerGeneratedAttribute = type.GetCustomAttributes(typeof(CompilerGeneratedAttribute), false).Any();
-            bool? nameContainsAnonymousType = type.FullName?.Contains("AnonymousType");
-            return hasCompilerGeneratedAttribute && (nameContainsAnonymousType ?? false);
+            if (type == null)
+                throw new ArgumentNullException(nameof(type));
+
+            return Attribute.IsDefined(type, typeof(CompilerGeneratedAttribute), false)
+                   && type.IsGenericType && ( type.Name.Contains("AnonymousType") ||  type.Name.Contains("AnonType"))
+                   && (type.Name.StartsWith("<>") || type.Name.StartsWith("VB$"))
+                   && type.Attributes.HasFlag(TypeAttributes.NotPublic);
         }
 
         internal static bool IsGenericTypeParameter(this Type @this)

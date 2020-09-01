@@ -171,6 +171,12 @@
             the culture-info
             </summary>
         </member>
+        <member name="M:IronSphere.Extensions.CalendarWeek.GetFirstWeekDay">
+            <summary>
+            calculates the first weekday of actual calendar-week
+            </summary>
+            <returns>a <see cref="T:System.DateTime"/> representing the first day of the calendar-week</returns>
+        </member>
         <member name="M:IronSphere.Extensions.CalendarWeek.GetDateTimeSpan">
             <summary>
             calculates the datetime-span for the calendar-week
