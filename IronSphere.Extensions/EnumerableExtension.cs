@@ -298,7 +298,7 @@ namespace IronSphere.Extensions
                 yield return currentCollection;
         }
 
-        public static TRes MaxIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null) where TRes : struct, IComparable<TRes>
+        public static TRes? MaxIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null) where TRes : struct, IComparable<TRes>
         {
             TRes? result = null;
 
@@ -316,10 +316,10 @@ namespace IronSphere.Extensions
                 }
             }
 
-            return result ?? fallback ?? throw new NullReferenceException("sequence is empty");
+            return result ?? fallback;
         }
 
-        public static TRes MinIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null) where TRes : struct, IComparable<TRes>
+        public static TRes? MinIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null) where TRes : struct, IComparable<TRes>
         {
             TRes? result = null;
 
@@ -337,8 +337,34 @@ namespace IronSphere.Extensions
                 }
             }
 
-            return result ?? fallback ?? throw new NullReferenceException("sequence is empty");
+            return result ?? fallback;
         }
-                                 
+
+        public static IEnumerable<TResult> ForEach<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> action)
+        {
+            return @this.Select(action).ToList();
+        }
+              
+        public static IEnumerable<TResult> TryForEach<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> action)
+        {
+            IList<TResult> newSequence = new List<TResult>();
+
+            foreach (T item in @this)
+            {
+                TResult result;
+                try
+                {
+                    result = action(item);
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
+
+                newSequence.Add(result);
+            }
+
+            return newSequence;
+        }
     }
 }

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
-    <Version>20.8.0</Version>
+    <Version>20.9.0</Version>
     <Authors>Matthias Burger</Authors>
     <Company>Matthias Burger</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -12,10 +12,10 @@
     <LangVersion>7.3</LangVersion>
     <PackageProjectUrl>https://matthiasburger.github.io/IronSphere.Extensions</PackageProjectUrl>
     <RepositoryUrl>https://github.com/matthiasburger/IronSphere.Extensions</RepositoryUrl>
-    <FileVersion>20.8.0.0</FileVersion>
+    <FileVersion>20.9.0.0</FileVersion>
     <NeutralLanguage></NeutralLanguage>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>20.8.0.0</AssemblyVersion>
+    <AssemblyVersion>20.9.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
