@@ -119,5 +119,10 @@ namespace IronSphere.Extensions
 
             return resultString(@this);
         }
+
+        public static TResult Map<T, TResult>(this T t, Func<T, TResult> func)
+        {
+            return func(t);
+        }
     }
 }

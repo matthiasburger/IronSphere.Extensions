@@ -173,5 +173,34 @@ namespace IronSphere.Extensions
         {
             return dt.AddDays(-1 * ((dt.DayOfWeek - weekday) % 7)).Date;
         }
+
+        public static CalendarWeek GetCalendarWeek(this DateTime dateTime)
+        {
+            DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(dateTime);
+            if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
+                dateTime = dateTime.AddDays(3);
+            int calendarWeek = CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(dateTime, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+            int year = dateTime.Year;
+            if(dateTime.Month == 1 && calendarWeek > 25)
+                year--;
+		
+            return new CalendarWeek(calendarWeek, year);
+        }
+
+
+        public static bool IsInTheFuture(this DateTime @this)
+        {
+            return @this > DateTime.Now;
+        }
+
+        public static bool IsInThePast(this DateTime @this)
+        {
+            return @this < DateTime.Now;
+        }
+
+        public static bool IsToday(this DateTime @this)
+        {
+            return @this.Date == DateTime.Today;
+        }
     }
 }

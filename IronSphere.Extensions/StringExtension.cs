@@ -27,7 +27,7 @@ namespace IronSphere.Extensions
         /// <param name="encoding">the encoding to use</param>
         /// <returns>A byte array containing the results of encoding the specified set of characters.</returns>
         [MustUseReturnValue]
-        public static byte[] GetBytes([NotNull]this string @this, [CanBeNull]Encoding encoding = null)
+        public static byte[] GetBytes([NotNull] this string @this, [CanBeNull] Encoding encoding = null)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -41,7 +41,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual string to test.</param>
         /// <returns>true if the value parameter is null or an empty string (""); otherwise, false.</returns>
         [MustUseReturnValue]
-        public static bool IsNullOrEmpty([CanBeNull]this string @this) => string.IsNullOrEmpty(@this);
+        public static bool IsNullOrEmpty([CanBeNull] this string @this) => string.IsNullOrEmpty(@this);
 
         /// <summary>
         /// Indicates whether a specified string is null, empty, or consists only of white-space characters.
@@ -49,7 +49,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The string to test.</param>
         /// <returns>true if the value parameter is null or Empty, or if value consists exclusively of white-space characters.</returns>
         [MustUseReturnValue]
-        public static bool IsNullOrWhiteSpace([CanBeNull]this string @this) => string.IsNullOrWhiteSpace(@this);
+        public static bool IsNullOrWhiteSpace([CanBeNull] this string @this) => string.IsNullOrWhiteSpace(@this);
 
         [MustUseReturnValue, NotNull]
         public static string ValueIfNullOrEmpty([CanBeNull] this string @this, string defaultValue) =>
@@ -67,7 +67,7 @@ namespace IronSphere.Extensions
         /// <param name="elements">An array that contains the elements to concatenate.</param>
         /// <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
         [MustUseReturnValue]
-        public static string Join<T>([CanBeNull]this string @this, [NotNull]IEnumerable<T> elements)
+        public static string Join<T>([CanBeNull] this string @this, [NotNull] IEnumerable<T> elements)
         {
             if (elements is null)
                 throw new ArgumentNullException(nameof(elements));
@@ -84,7 +84,7 @@ namespace IronSphere.Extensions
         /// <param name="toString"></param>
         /// <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
         [MustUseReturnValue]
-        public static string Join<T>([CanBeNull]this string @this, [NotNull]IEnumerable<T> elements, Func<T, string> toString)
+        public static string Join<T>([CanBeNull] this string @this, [NotNull] IEnumerable<T> elements, Func<T, string> toString)
         {
             if (elements is null)
                 throw new ArgumentNullException(nameof(elements));
@@ -99,7 +99,7 @@ namespace IronSphere.Extensions
         /// <param name="parameter">All strings to test with</param>
         /// <returns>true if the actual string starts with any of the parametrized strings, otherwise false.</returns>
         [MustUseReturnValue]
-        public static bool StartsWithAny([NotNull]this string @this, [NotNull] params string[] parameter)
+        public static bool StartsWithAny([NotNull] this string @this, [NotNull] params string[] parameter)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -116,7 +116,7 @@ namespace IronSphere.Extensions
         /// <param name="parameter">All strings to test with</param>
         /// <returns>true if the actual string ends with any of the parametrized strings, otherwise false.</returns>
         [MustUseReturnValue]
-        public static bool EndsWithAny([NotNull]this string @this, [NotNull]params string[] parameter)
+        public static bool EndsWithAny([NotNull] this string @this, [NotNull] params string[] parameter)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -133,7 +133,7 @@ namespace IronSphere.Extensions
         /// <param name="parameter">All strings to test with</param>
         /// <returns>true if the actual string starts with any of the parametrized strings, otherwise false.</returns>
         [MustUseReturnValue]
-        public static bool ContainsAny([NotNull]this string @this, [NotNull]params string[] parameter)
+        public static bool ContainsAny([NotNull] this string @this, [NotNull] params string[] parameter)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -150,7 +150,7 @@ namespace IronSphere.Extensions
         /// <param name="position">the position to split the string at</param>
         /// <returns>a list if strings</returns>
         [NotNull, ItemNotNull, MustUseReturnValue]
-        public static IEnumerable<string> Split([NotNull]this string @this, int position)
+        public static IEnumerable<string> Split([NotNull] this string @this, int position)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -187,7 +187,7 @@ namespace IronSphere.Extensions
         /// <returns>Returns the cut string, concatenated with the suffix.</returns>
         [MustUseReturnValue]
         [SuppressMessage("ReSharper", "MethodTooLong")]
-        public static string CutAt([NotNull]this string @this, int position, [CanBeNull]string endConcat,
+        public static string CutAt([NotNull] this string @this, int position, [CanBeNull] string endConcat,
             bool waitForWhitespace = false)
         {
             if (@this is null)
@@ -227,7 +227,7 @@ namespace IronSphere.Extensions
         /// <param name="this">the actual string to parse</param>
         /// <returns>The parsed value or null if parsing failed.</returns>
         [MustUseReturnValue]
-        public static int? ToIntOrNull([CanBeNull]this string @this)
+        public static int? ToIntOrNull([CanBeNull] this string @this)
         {
             if (@this is null)
                 return null;
@@ -241,7 +241,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual string to remove diacritics from</param>
         /// <returns>A string without any diacritics.</returns>
         [MustUseReturnValue]
-        public static string RemoveDiacritics([CanBeNull]this string @this)
+        public static string RemoveDiacritics([CanBeNull] this string @this)
         {
             if (@this is null) return null;
             IEnumerable<char> chars =
@@ -260,7 +260,7 @@ namespace IronSphere.Extensions
         /// <param name="count"></param>
         /// <param name="character"></param>
         /// <returns></returns>
-        public static string UpholsterLeft([NotNull]this string @this, int count, char character = Space)
+        public static string UpholsterLeft([NotNull] this string @this, int count, char character = Space)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -277,7 +277,7 @@ namespace IronSphere.Extensions
         /// <param name="count"></param>
         /// <param name="character"></param>
         /// <returns></returns>
-        public static string UpholsterRight([NotNull]this string @this, int count, char character = Space)
+        public static string UpholsterRight([NotNull] this string @this, int count, char character = Space)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -294,7 +294,7 @@ namespace IronSphere.Extensions
         /// <param name="count"></param>
         /// <param name="character"></param>
         /// <returns></returns>
-        public static string Upholster([NotNull]this string @this, int count, char character = Space)
+        public static string Upholster([NotNull] this string @this, int count, char character = Space)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -313,7 +313,7 @@ namespace IronSphere.Extensions
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         [MustUseReturnValue]
-        public static string Format([NotNull]this string @this, [NotNull]object anonymousObject)
+        public static string Format([NotNull] this string @this, [NotNull] object anonymousObject)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -333,7 +333,7 @@ namespace IronSphere.Extensions
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         [MustUseReturnValue]
-        public static string Format([NotNull]this string @this, [NotNull]IDictionary<string, object> values)
+        public static string Format([NotNull] this string @this, [NotNull] IDictionary<string, object> values)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -343,7 +343,7 @@ namespace IronSphere.Extensions
             return _stringFormat(@this, values);
         }
 
-        private static string _stringFormat([NotNull]string @this, [NotNull]IDictionary<string, object> values)
+        private static string _stringFormat([NotNull] string @this, [NotNull] IDictionary<string, object> values)
         {
             MatchCollection matches = Regex.Matches(@this, @"\{(.+?)\}");
             List<string> words = (from Match match in matches select match.Groups[1].Value).ToList();
@@ -364,6 +364,62 @@ namespace IronSphere.Extensions
             }
 
             return current;
+        }
+
+        public static int NthIndexOf(this string @this, string value, int occurrence)
+        {
+            int count = 1;
+            int index = 0;
+
+            while (count <= occurrence && (index = @this.IndexOf(value, index + 1, StringComparison.Ordinal)) != -1)
+            {
+                if (count == occurrence)
+                    return index;
+
+                count++;
+            }
+
+            return -1;
+        }
+
+        public static bool Like(this string @this, string pattern)
+        {
+            if (@this == null || string.IsNullOrEmpty(pattern)) return false;
+
+            string regexPattern = $"^{Regex.Escape(pattern)}$";
+
+            regexPattern = regexPattern
+                .Replace(@"\[!", "[^")
+                .Replace(@"\[", "[")
+                .Replace(@"\]", "]")
+                .Replace(@"\?", ".")
+                .Replace(@"\*", ".*")
+                .Replace(@"\#", @"\d");
+
+            try
+            {
+                return Regex.IsMatch(@this, regexPattern);
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException($"Invalid pattern: {pattern}", ex);
+            }
+        }
+
+        public static string SubString(this string @this, string startText, string endText, StringComparison stringComparison = StringComparison.Ordinal)
+        {
+            if (string.IsNullOrEmpty(startText) || string.IsNullOrEmpty(endText))
+                throw new ArgumentException("Start Text and End Text cannot be empty.");
+
+            string temp = @this;
+
+            int start = temp.IndexOf(startText, stringComparison);
+            if (start < 0) return null;
+
+            int end = temp.IndexOf(endText, start, stringComparison);
+            if (end < 0) return null;
+            
+            return temp.Substring(start, end - start);
         }
     }
 }

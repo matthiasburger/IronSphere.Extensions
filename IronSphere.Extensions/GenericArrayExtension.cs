@@ -13,7 +13,7 @@ namespace IronSphere.Extensions
             if (startIndex < 0)
                 throw new ArgumentException("startIndex must be positive", nameof(startIndex));
             
-            if (endIndex.HasValue && startIndex > endIndex)
+            if (startIndex > endIndex)
                 throw new ArgumentException("endIndex must be null or lower than startIndex", nameof(startIndex));
 
             if (items == null)

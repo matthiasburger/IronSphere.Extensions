@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-[assembly:InternalsVisibleTo("IronSphere.Extensions.AspNetCore")]
 namespace IronSphere.Extensions.Reflection
 {
     /// <summary>
@@ -400,6 +399,16 @@ namespace IronSphere.Extensions.Reflection
         internal static bool IsGenericMethodParameter(this Type @this)
         {
             return @this.IsGenericParameter && @this.DeclaringMethod != null;
+        }
+
+        public static bool IsNullableType(this Type @this)
+        {
+            return @this.IsGenericType && @this.GetGenericTypeDefinition() == typeof(Nullable<>);
+        }
+        
+        public static Type GetNullableUnderlyingType(this Type @this)
+        {
+            return Nullable.GetUnderlyingType(@this);
         }
     }
 }

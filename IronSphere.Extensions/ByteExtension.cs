@@ -8,7 +8,7 @@ namespace IronSphere.Extensions
     public static class ByteExtension
     {
         /// <summary>
-        /// Checks whether the actual value is between specified lower and higher.
+        /// Checks whether the actual value is between specified lower and higher. The lower and higher values are not included.
         /// </summary>
         /// <param name="this">the actual value</param>
         /// <param name="lower">the lower value</param>
@@ -16,6 +16,16 @@ namespace IronSphere.Extensions
         /// <returns>A value indicating whether the actual value is between two values.</returns>
         public static bool Between(this byte @this, byte lower, byte higher) =>
             @this.CompareTo(lower) > 0 && @this.CompareTo(higher) < 0;
+        
+        /// <summary>
+        /// Checks whether the actual value is between specified lower and higher. The lower and higher values are included.
+        /// </summary>
+        /// <param name="this">the actual value</param>
+        /// <param name="lower">the lower value</param>
+        /// <param name="higher">the higher value</param>
+        /// <returns>A value indicating whether the actual value is between or equals two values.</returns>
+        public static bool BetweenOrEquals(this byte @this, byte lower, byte higher) =>
+            @this.CompareTo(lower) >= 0 && @this.CompareTo(higher) <= 0;
 
         /// <summary>
         /// Checks whether the actual value is greater than zero.

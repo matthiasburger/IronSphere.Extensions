@@ -9,6 +9,7 @@ namespace IronSphere.Extensions
     /// </summary>
     public static class DateTimeSpanExtension
     {
+        [Obsolete("Will be removed after v21.11, use GetCalendarWeekRange(this DateTimeSpan @this)")]
         public static IEnumerable<(int CalendarWeek, int Year)> GetCalendarWeeks(this DateTimeSpan @this)
         {
             IEnumerable<DateTimeSpan> ranges = @this.Split(@this.Where(x => x.DayOfWeek == DayOfWeek.Monday).ToArray())
@@ -24,6 +25,24 @@ namespace IronSphere.Extensions
                 }
                 
                 yield return (start.GetWeekOfYear(), yearOfWeek);
+            }
+        }
+
+        public static IEnumerable<CalendarWeek> GetCalendarWeekRange(this DateTimeSpan @this)
+        {
+            IEnumerable<DateTimeSpan> ranges = @this.Split(@this.Where(x => x.DayOfWeek == DayOfWeek.Monday).ToArray())
+                .Where(w => w.Start != w.End);
+            foreach ((DateTime start, DateTime _) in ranges.ToList())
+            {
+                DateTime lastWeekDay = start.GetLastOfWeek();
+                int yearOfWeek = start.Year;
+                if (start.Year != lastWeekDay.Year)
+                {
+                    if (new DateTime(lastWeekDay.Year, 1, 1).DayOfWeek <= DayOfWeek.Thursday)
+                        yearOfWeek = lastWeekDay.Year;
+                }
+                
+                yield return new CalendarWeek(start.GetWeekOfYear(), yearOfWeek);
             }
         }
 

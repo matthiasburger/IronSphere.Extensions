@@ -74,5 +74,27 @@ namespace IronSphere.Extensions
             foreach(T element in elementsToAdd)
                 @this.Add(element);
         }
+        
+        public static IEnumerable<List<T>> Split<T>(this IEnumerable<T> @this, int count)
+        {
+            List<T> currentCollection = new List<T>(count);
+            int index = 0;
+
+            foreach (T currentItem in @this)
+            {
+                currentCollection.Add(currentItem);
+
+                if (++index != count) 
+                    continue;
+
+                yield return currentCollection;
+
+                index = 0;
+                currentCollection = new List<T>();
+            }
+
+            if(currentCollection.Any())
+                yield return  currentCollection;
+        }
     }
 }

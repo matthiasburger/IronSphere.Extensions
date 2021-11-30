@@ -39,13 +39,13 @@ namespace IronSphere.Extensions
         /// </summary>
         /// <param name="start">start date of a datetime-span</param>
         /// <param name="spanType">the span-type for iterating</param>
-        /// <param name="step">the frequency to iterate</param>
-        public DateTimeSpan(DateTime start, DateTimeSpanType spanType, int step)
+        /// <param name="steps">the amount of frequency to iterate</param>
+        public DateTimeSpan(DateTime start, DateTimeSpanType spanType, int steps)
         {
             Start = start;
-            End = NextDateTimeFuncDictionary[spanType](start, step);
+            End = NextDateTimeFuncDictionary[spanType](start, steps);
             SpanType = spanType;
-            Step = step;
+            Step = 1;
         }
 
         /// <summary>

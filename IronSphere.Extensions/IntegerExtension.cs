@@ -1,6 +1,8 @@
 ﻿// ReSharper disable MemberCanBePrivate.Global
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace IronSphere.Extensions
 {
@@ -77,5 +79,7 @@ namespace IronSphere.Extensions
         /// <returns>A 32-bit signed integer, x, such that 0 ≤ x ≤<see cref="F:System.Int32.MaxValue"></see>.</returns>
         /// <exception cref="T:System.OverflowException"><paramref name="this">value</paramref> equals <see cref="F:System.Int32.MinValue"></see>.</exception>
         public static int Absolute(this int @this) => Math.Abs(@this);
+
+        public static IEnumerable<int> Range(this int @this, int count) => Enumerable.Range(@this, count);
     }
 }
