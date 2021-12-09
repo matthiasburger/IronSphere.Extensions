@@ -67,7 +67,7 @@ namespace IronSphere.Extensions
         /// <param name="elements">An array that contains the elements to concatenate.</param>
         /// <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
         [MustUseReturnValue]
-        public static string Join<T>(this string? @this, IEnumerable<T>? elements)
+        public static string Join<T>(this string? @this, IEnumerable<T> elements)
         {
             if (elements is null)
                 throw new ArgumentNullException(nameof(elements));
@@ -150,7 +150,7 @@ namespace IronSphere.Extensions
         /// <param name="position">the position to split the string at</param>
         /// <returns>a list if strings</returns>
         [MustUseReturnValue]
-        public static IEnumerable<string> Split(this string? @this, int position)
+        public static IEnumerable<string> Split(this string @this, int position)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -441,9 +441,12 @@ namespace IronSphere.Extensions
         /// </summary>
         /// <param name="this">the actual string</param>
         /// <returns>a capitalized version of the actual string</returns>
-        public static string? Capitalize(this string? @this)
+        public static string Capitalize(this string? @this)
         {
-            if (@this is null || string.IsNullOrWhiteSpace(@this))
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+            
+            if (string.IsNullOrWhiteSpace(@this))
                 return @this;
 
             return $"{char.ToUpper(@this[0])}{@this.Remove(0, 1)}";
@@ -497,17 +500,19 @@ namespace IronSphere.Extensions
         /// </summary>
         /// <param name="this">the actual string</param>
         /// <returns>a camelCasedVersion of the actual string</returns>
-        public static string? CamelCase(this string? @this)
+        public static string CamelCase(this string? @this)
         {
-            if (string.IsNullOrEmpty(@this))
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+            
+            if (string.IsNullOrWhiteSpace(@this))
                 return @this;
 
             string[] parts = @this.Split(c => c.In(' ', '-', '_'), char.IsUpper).ToArray();
             if (parts.Length == 1)
-                return parts[0];
+                return parts[0].ToLower();
 
             return $"{parts[0].ToLower()}{string.Concat(parts.Skip(1).Select(Capitalize))}";
-            
         }
 
         /// <summary>
@@ -516,9 +521,12 @@ namespace IronSphere.Extensions
         /// </summary>
         /// <param name="this">the actual string</param>
         /// <returns>a PascalCasedVersion of the actual string</returns>
-        public static string? PascalCase(this string? @this)
+        public static string PascalCase(this string? @this)
         {
-            if (@this is null || string.IsNullOrEmpty(@this))
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+            
+            if (string.IsNullOrEmpty(@this))
                 return @this;
 
             return string.Concat(@this.Split(' ', '-', '_').Select(Capitalize));
