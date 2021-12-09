@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace IronSphere.Extensions
+﻿namespace IronSphere.Extensions
 {
     /// <summary>
     /// This class provides extension methods for <see cref="bool"/>

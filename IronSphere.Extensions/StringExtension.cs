@@ -27,7 +27,7 @@ namespace IronSphere.Extensions
         /// <param name="encoding">the encoding to use</param>
         /// <returns>A byte array containing the results of encoding the specified set of characters.</returns>
         [MustUseReturnValue]
-        public static byte[] GetBytes([NotNull] this string @this, [CanBeNull] Encoding encoding = null)
+        public static byte[] GetBytes(this string? @this, Encoding? encoding = null)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -41,7 +41,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual string to test.</param>
         /// <returns>true if the value parameter is null or an empty string (""); otherwise, false.</returns>
         [MustUseReturnValue]
-        public static bool IsNullOrEmpty([CanBeNull] this string @this) => string.IsNullOrEmpty(@this);
+        public static bool IsNullOrEmpty(this string? @this) => string.IsNullOrEmpty(@this);
 
         /// <summary>
         /// Indicates whether a specified string is null, empty, or consists only of white-space characters.
@@ -49,15 +49,15 @@ namespace IronSphere.Extensions
         /// <param name="this">The string to test.</param>
         /// <returns>true if the value parameter is null or Empty, or if value consists exclusively of white-space characters.</returns>
         [MustUseReturnValue]
-        public static bool IsNullOrWhiteSpace([CanBeNull] this string @this) => string.IsNullOrWhiteSpace(@this);
+        public static bool IsNullOrWhiteSpace(this string? @this) => string.IsNullOrWhiteSpace(@this);
 
-        [MustUseReturnValue, NotNull]
-        public static string ValueIfNullOrEmpty([CanBeNull] this string @this, string defaultValue) =>
-            string.IsNullOrEmpty(@this) ? defaultValue : @this;
+        [MustUseReturnValue]
+        public static string ValueIfNullOrEmpty(this string? @this, string defaultValue) =>
+            @this is null || string.IsNullOrEmpty(@this) ? defaultValue : @this;
 
-        [MustUseReturnValue, NotNull]
-        public static string ValueIfNullOrWhiteSpace([CanBeNull] this string @this, string defaultValue) =>
-            string.IsNullOrWhiteSpace(@this) ? defaultValue : @this;
+        [MustUseReturnValue]
+        public static string ValueIfNullOrWhiteSpace(this string? @this, string defaultValue) =>
+            @this is null || string.IsNullOrWhiteSpace(@this) ? defaultValue : @this;
 
         /// <summary>
         /// Concatenates the elements of a specified array or the members of a collection, using the specified separator between each element or member.
@@ -67,7 +67,7 @@ namespace IronSphere.Extensions
         /// <param name="elements">An array that contains the elements to concatenate.</param>
         /// <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
         [MustUseReturnValue]
-        public static string Join<T>([CanBeNull] this string @this, [NotNull] IEnumerable<T> elements)
+        public static string Join<T>(this string? @this, IEnumerable<T>? elements)
         {
             if (elements is null)
                 throw new ArgumentNullException(nameof(elements));
@@ -84,7 +84,7 @@ namespace IronSphere.Extensions
         /// <param name="toString"></param>
         /// <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
         [MustUseReturnValue]
-        public static string Join<T>([CanBeNull] this string @this, [NotNull] IEnumerable<T> elements, Func<T, string> toString)
+        public static string Join<T>(this string? @this, IEnumerable<T>? elements, Func<T, string> toString)
         {
             if (elements is null)
                 throw new ArgumentNullException(nameof(elements));
@@ -99,7 +99,7 @@ namespace IronSphere.Extensions
         /// <param name="parameter">All strings to test with</param>
         /// <returns>true if the actual string starts with any of the parametrized strings, otherwise false.</returns>
         [MustUseReturnValue]
-        public static bool StartsWithAny([NotNull] this string @this, [NotNull] params string[] parameter)
+        public static bool StartsWithAny(this string? @this, params string[]? parameter)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -116,7 +116,7 @@ namespace IronSphere.Extensions
         /// <param name="parameter">All strings to test with</param>
         /// <returns>true if the actual string ends with any of the parametrized strings, otherwise false.</returns>
         [MustUseReturnValue]
-        public static bool EndsWithAny([NotNull] this string @this, [NotNull] params string[] parameter)
+        public static bool EndsWithAny(this string? @this, params string[]? parameter)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -133,7 +133,7 @@ namespace IronSphere.Extensions
         /// <param name="parameter">All strings to test with</param>
         /// <returns>true if the actual string starts with any of the parametrized strings, otherwise false.</returns>
         [MustUseReturnValue]
-        public static bool ContainsAny([NotNull] this string @this, [NotNull] params string[] parameter)
+        public static bool ContainsAny(this string? @this, params string[]? parameter)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -149,8 +149,8 @@ namespace IronSphere.Extensions
         /// <param name="this">the actual string to split</param>
         /// <param name="position">the position to split the string at</param>
         /// <returns>a list if strings</returns>
-        [NotNull, ItemNotNull, MustUseReturnValue]
-        public static IEnumerable<string> Split([NotNull] this string @this, int position)
+        [MustUseReturnValue]
+        public static IEnumerable<string> Split(this string? @this, int position)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -161,7 +161,7 @@ namespace IronSphere.Extensions
                 yield break;
             }
 
-            StringBuilder stringPart = new StringBuilder();
+            StringBuilder stringPart = new();
             for (int index = 0; index < @this.Length; index++)
             {
                 char character = @this[index];
@@ -187,7 +187,7 @@ namespace IronSphere.Extensions
         /// <returns>Returns the cut string, concatenated with the suffix.</returns>
         [MustUseReturnValue]
         [SuppressMessage("ReSharper", "MethodTooLong")]
-        public static string CutAt([NotNull] this string @this, int position, [CanBeNull] string endConcat,
+        public static string CutAt(this string @this, int position, string? endConcat,
             bool waitForWhitespace = false)
         {
             if (@this is null)
@@ -227,12 +227,12 @@ namespace IronSphere.Extensions
         /// <param name="this">the actual string to parse</param>
         /// <returns>The parsed value or null if parsing failed.</returns>
         [MustUseReturnValue]
-        public static int? ToIntOrNull([CanBeNull] this string @this)
+        public static int? ToIntOrNull(this string? @this)
         {
             if (@this is null)
                 return null;
 
-            return int.TryParse(@this, out int result) ? result : (int?)null;
+            return int.TryParse(@this, out int result) ? result : null;
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual string to remove diacritics from</param>
         /// <returns>A string without any diacritics.</returns>
         [MustUseReturnValue]
-        public static string RemoveDiacritics([CanBeNull] this string @this)
+        public static string? RemoveDiacritics(this string? @this)
         {
             if (@this is null) return null;
             IEnumerable<char> chars =
@@ -260,7 +260,7 @@ namespace IronSphere.Extensions
         /// <param name="count"></param>
         /// <param name="character"></param>
         /// <returns></returns>
-        public static string UpholsterLeft([NotNull] this string @this, int count, char character = Space)
+        public static string UpholsterLeft(this string @this, int count, char character = Space)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -277,7 +277,7 @@ namespace IronSphere.Extensions
         /// <param name="count"></param>
         /// <param name="character"></param>
         /// <returns></returns>
-        public static string UpholsterRight([NotNull] this string @this, int count, char character = Space)
+        public static string UpholsterRight(this string @this, int count, char character = Space)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -294,7 +294,7 @@ namespace IronSphere.Extensions
         /// <param name="count"></param>
         /// <param name="character"></param>
         /// <returns></returns>
-        public static string Upholster([NotNull] this string @this, int count, char character = Space)
+        public static string Upholster(this string @this, int count, char character = Space)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -313,7 +313,7 @@ namespace IronSphere.Extensions
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         [MustUseReturnValue]
-        public static string Format([NotNull] this string @this, [NotNull] object anonymousObject)
+        public static string Format(this string @this, object anonymousObject)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -333,7 +333,7 @@ namespace IronSphere.Extensions
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         [MustUseReturnValue]
-        public static string Format([NotNull] this string @this, [NotNull] IDictionary<string, object> values)
+        public static string Format(this string @this, IDictionary<string, object> values)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -343,7 +343,7 @@ namespace IronSphere.Extensions
             return _stringFormat(@this, values);
         }
 
-        private static string _stringFormat([NotNull] string @this, [NotNull] IDictionary<string, object> values)
+        private static string _stringFormat(string @this, IDictionary<string, object> values)
         {
             MatchCollection matches = Regex.Matches(@this, @"\{(.+?)\}");
             List<string> words = (from Match match in matches select match.Groups[1].Value).ToList();
@@ -382,9 +382,9 @@ namespace IronSphere.Extensions
             return -1;
         }
 
-        public static bool Like(this string @this, string pattern)
+        public static bool Like(this string? @this, string? pattern)
         {
-            if (@this == null || string.IsNullOrEmpty(pattern)) return false;
+            if (@this == null || pattern == null || string.IsNullOrEmpty(pattern)) return false;
 
             string regexPattern = $"^{Regex.Escape(pattern)}$";
 
@@ -405,21 +405,123 @@ namespace IronSphere.Extensions
                 throw new ArgumentException($"Invalid pattern: {pattern}", ex);
             }
         }
-
-        public static string SubString(this string @this, string startText, string endText, StringComparison stringComparison = StringComparison.Ordinal)
+        
+        public static string? Substring(this string @this, string startText, string endText, StringComparison stringComparison = StringComparison.Ordinal) 
         {
             if (string.IsNullOrEmpty(startText) || string.IsNullOrEmpty(endText))
                 throw new ArgumentException("Start Text and End Text cannot be empty.");
 
-            string temp = @this;
-
-            int start = temp.IndexOf(startText, stringComparison);
+            int start = @this.IndexOf(startText, stringComparison);
             if (start < 0) return null;
 
-            int end = temp.IndexOf(endText, start, stringComparison);
+            int end = @this.IndexOf(endText, start, stringComparison);
             if (end < 0) return null;
+
+            return @this.Substring(start, end - start);
+        }
+
+
+        [Obsolete("Renamed, will be removed after version 21.12.0.0. Use @this.Substring(startText, endText, stringComparison)")]
+        public static string? SubString(this string @this, string startText, string endText, StringComparison stringComparison = StringComparison.Ordinal)
+        {
+            if (string.IsNullOrEmpty(startText) || string.IsNullOrEmpty(endText))
+                throw new ArgumentException("Start Text and End Text cannot be empty.");
+
+            int start = @this.IndexOf(startText, stringComparison);
+            if (start < 0) return null;
+
+            int end = @this.IndexOf(endText, start, stringComparison);
+            if (end < 0) return null;
+
+            return @this.Substring(start, end - start);
+        }
+
+        /// <summary>
+        /// capitalizes a string
+        /// </summary>
+        /// <param name="this">the actual string</param>
+        /// <returns>a capitalized version of the actual string</returns>
+        public static string? Capitalize(this string? @this)
+        {
+            if (@this is null || string.IsNullOrWhiteSpace(@this))
+                return @this;
+
+            return $"{char.ToUpper(@this[0])}{@this.Remove(0, 1)}";
+        }
+
+        /// <summary>
+        /// splits a string at a specific point. you can decide whether it should include the char you split on, or not.
+        /// </summary>
+        /// <param name="this">the actual string</param>
+        /// <param name="onExclude">a func on where to split the string, and doesn't include the char you split on</param>
+        /// <param name="onInclude">a func on where to split the string, and includes the char you split on into the next string</param>
+        /// <returns>yields all string-parts where you split</returns>
+        public static IEnumerable<string> Split(this string? @this, Func<char, bool>? onExclude = null, Func<char, bool>? onInclude = null)
+        {
+            if (@this is null || string.IsNullOrWhiteSpace(@this))
+                yield break;
+
+            StringBuilder stringBuilder = new();
+            foreach (char c in @this)
+            {
+                if (onExclude is not null && onExclude(c))
+                {
+                    if (stringBuilder.Length > 0)
+                    {
+                        yield return stringBuilder.ToString();
+                        stringBuilder.Clear();
+                    }
+
+                    continue;
+                }
+
+                if (onInclude is not null && onInclude(c))
+                {
+                    if (stringBuilder.Length > 0)
+                    {
+                        yield return stringBuilder.ToString();
+                        stringBuilder.Clear();
+                    }
+                }
+
+                stringBuilder.Append(c);
+            }
+
+            if (stringBuilder.Length > 0)
+                yield return stringBuilder.ToString();
+        }
+
+        /// <summary>
+        /// camel-cases a string
+        /// splits the string at char.Upper, whitespace, dash or underscore
+        /// </summary>
+        /// <param name="this">the actual string</param>
+        /// <returns>a camelCasedVersion of the actual string</returns>
+        public static string? CamelCase(this string? @this)
+        {
+            if (string.IsNullOrEmpty(@this))
+                return @this;
+
+            string[] parts = @this.Split(c => c.In(' ', '-', '_'), char.IsUpper).ToArray();
+            if (parts.Length == 1)
+                return parts[0];
+
+            return $"{parts[0].ToLower()}{string.Concat(parts.Skip(1).Select(Capitalize))}";
             
-            return temp.Substring(start, end - start);
+        }
+
+        /// <summary>
+        /// pascal-cases a string
+        /// splits the string at whitespace, dash or underscore
+        /// </summary>
+        /// <param name="this">the actual string</param>
+        /// <returns>a PascalCasedVersion of the actual string</returns>
+        public static string? PascalCase(this string? @this)
+        {
+            if (@this is null || string.IsNullOrEmpty(@this))
+                return @this;
+
+            return string.Concat(@this.Split(' ', '-', '_').Select(Capitalize));
         }
     }
 }

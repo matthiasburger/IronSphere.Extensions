@@ -15,8 +15,11 @@ namespace IronSphere.Extensions.Reflection
         /// </summary>
         /// <param name="this">the actual constructor</param>
         /// <returns>A string representing the xml member-name</returns>
-        public static string GetXmlMemberName(this ConstructorInfo @this)
+        public static string? GetXmlMemberName(this ConstructorInfo @this)
         {
+            if (@this.DeclaringType is null)
+                return null;
+            
             StringBuilder builder = new StringBuilder(@this.DeclaringType.GetXmlMemberName())
                 .Append(@this.IsStatic ? ".#cctor" : ".#ctor");
 
@@ -24,7 +27,7 @@ namespace IronSphere.Extensions.Reflection
             if (!parameters.Any())
                 return builder.ToString();
 
-            IEnumerable<string> c = parameters.Select(x => x.GetParameterString());
+            IEnumerable<string?> c = parameters.Select(x => x.GetParameterString());
             
             return builder.Append($"({string.Join(",", c)})").ToString();
         }

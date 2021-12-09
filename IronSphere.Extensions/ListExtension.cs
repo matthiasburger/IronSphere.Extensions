@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -18,7 +16,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The source sequence.</param>
         /// <param name="expression">The expression to search for.</param>
         /// <exception cref="InvalidOperationException">if the sequence contains more than one element where the expression matches.</exception>
-        public static void RemoveSingle<T>([NotNull]this IList<T> @this, [NotNull]Func<T, bool> expression)
+        public static void RemoveSingle<T>(this IList<T> @this, Func<T, bool> expression)
             where T : class
         {
             if (@this is null)
@@ -26,8 +24,8 @@ namespace IronSphere.Extensions
             if (expression is null)
                 throw new ArgumentNullException(nameof(expression));
 
-            T elementToDelete;
-            if ((elementToDelete = @this.SingleOrDefault(expression)) != null)
+            T? elementToDelete = @this.SingleOrDefault(expression);
+            if (elementToDelete != null)
                 @this.Remove(elementToDelete);
         }
 
@@ -37,7 +35,7 @@ namespace IronSphere.Extensions
         /// <typeparam name="T">The type of the elements of the source sequence.</typeparam>
         /// <param name="this">The source sequence.</param>
         /// <param name="expression">The expression to search for.</param>
-        public static void RemoveWhere<T>([NotNull]this IList<T> @this, [NotNull]Func<T, bool> expression)
+        public static void RemoveWhere<T>(this IList<T> @this, Func<T, bool> expression)
             where T : class
         {
             if (@this is null)
@@ -77,7 +75,7 @@ namespace IronSphere.Extensions
         
         public static IEnumerable<List<T>> Split<T>(this IEnumerable<T> @this, int count)
         {
-            List<T> currentCollection = new List<T>(count);
+            List<T> currentCollection = new(count);
             int index = 0;
 
             foreach (T currentItem in @this)

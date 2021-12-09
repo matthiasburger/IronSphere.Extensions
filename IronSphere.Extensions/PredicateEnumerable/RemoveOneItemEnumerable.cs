@@ -8,7 +8,7 @@ namespace IronSphere.Extensions.PredicateEnumerable
     {
         private IEnumerable<T> _sequence;
         private readonly T _elementToRemove;                           
-        private Func<IEnumerable<T>, T, bool> _expression;
+        private Func<IEnumerable<T>, T, bool>? _expression;
 
         private bool _ifExecuted;
 

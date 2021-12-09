@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -15,7 +13,7 @@ namespace IronSphere.Extensions
         /// </summary>
         /// <param name="this">the actual sequence of chars</param>
         /// <returns>the string representation</returns>
-        public static string GetString([NotNull]this IEnumerable<char> @this)
+        public static string GetString(this IEnumerable<char>? @this)
         {
             if(@this is null)
                 throw new ArgumentNullException(nameof(@this));

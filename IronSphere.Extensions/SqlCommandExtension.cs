@@ -4,8 +4,6 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Reflection;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -26,8 +24,8 @@ namespace IronSphere.Extensions
         /// ]]>
         /// </example>
         /// <returns>The modified DbCommand</returns>
-        public static DbCommand SetCommandWithParameters([NotNull]this SqlCommand @this, [NotNull]string command,
-            [CanBeNull]object parameters)
+        public static DbCommand SetCommandWithParameters(this SqlCommand @this, string command,
+            object? parameters)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -63,8 +61,8 @@ namespace IronSphere.Extensions
         /// ]]>
         /// </example>
         /// <returns>The modified DbCommand</returns>
-        public static DbCommand SetCommandWithParameters([NotNull] this SqlCommand @this, [NotNull] string command,
-            [CanBeNull] Dictionary<string, object> parameters)
+        public static DbCommand SetCommandWithParameters(this SqlCommand @this, string command,
+            Dictionary<string, object>? parameters)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));

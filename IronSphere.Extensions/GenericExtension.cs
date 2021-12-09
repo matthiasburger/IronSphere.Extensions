@@ -4,8 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -27,7 +25,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual item to search in the list.</param>
         /// <param name="listOfItems">The list of items to search in.</param>
         /// <returns>True if the item is found in the list; otherwise false.</returns>
-        public static bool In<T>(this T @this, [NotNull]IEnumerable<T> listOfItems)
+        public static bool In<T>(this T @this, IEnumerable<T> listOfItems)
         {
             if (listOfItems is null)
                 throw new ArgumentNullException(nameof(listOfItems));
@@ -42,7 +40,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual item to search in the list.</param>
         /// <param name="listOfItems">The list of items to search in.</param>
         /// <returns>True if the item is found in the list; otherwise false.</returns>
-        public static bool In<T>(this T @this, [NotNull]params T[] listOfItems)
+        public static bool In<T>(this T @this, params T[] listOfItems)
         {
             if (listOfItems is null)
                 throw new ArgumentNullException(nameof(listOfItems));
@@ -57,7 +55,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual item to search in the list.</param>
         /// <param name="listOfItems">The list of items to search in.</param>
         /// <returns>True if the item is not found in the list; otherwise false.</returns>
-        public static bool NotIn<T>(this T @this, [NotNull]params T[] listOfItems)
+        public static bool NotIn<T>(this T @this, params T[] listOfItems)
         {
             if (listOfItems is null)
                 throw new ArgumentNullException(nameof(listOfItems));
@@ -73,7 +71,7 @@ namespace IronSphere.Extensions
         /// <param name="expression">The expression to invoke, to determine whether replacing or not.</param>
         /// <param name="output">The value to replace with, if the expression returns true.</param>
         /// <returns>The new value if replaced, otherwise the old.</returns>
-        public static T ReplaceIf<T>(this T @this, [NotNull]Func<T, bool> expression, T output)
+        public static T ReplaceIf<T>(this T @this, Func<T, bool> expression, T output)
         {
             if (expression is null)
                 throw new ArgumentNullException(nameof(expression));

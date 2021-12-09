@@ -1,4 +1,7 @@
-﻿using System;
+﻿#nullable disable
+#nullable disable warnings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -23,7 +26,7 @@ namespace IronSphere.Extensions
         /// <param name="value"></param>
         public static void SetPropertyValue<T, TValue>(this T target, LambdaExpression memberLambda, TValue value)
         {
-            _set<T, TValue>(memberLambda, value)?.Compile()(target);
+            _set<T, TValue>(memberLambda, value).Compile()(target);
         }
 
         /// <summary>
@@ -37,7 +40,7 @@ namespace IronSphere.Extensions
         public static void SetPropertyValue<T, TValue>(this T target, Expression<Func<T, TValue>> expression, TValue value)
         {
             LambdaExpression lambdaExpression = Expression.Lambda(expression);
-            _set<T, TValue>(lambdaExpression, value)?.Compile()(target);
+            _set<T, TValue>(lambdaExpression, value).Compile()(target);
         }
 
         private static Expression<Action<TEntity>> _set<TEntity, TValue>(LambdaExpression propertyGetExpression, TValue valueExpression)
@@ -71,10 +74,10 @@ namespace IronSphere.Extensions
             {
                 case MemberExpression m:
                     if (_isStaticMember(m.Member))
-                        return $"{m.Member.DeclaringType.GetShortReadableName()}.{m.Member.Name}";
+                        return $"{m.Member.DeclaringType?.GetShortReadableName()}.{m.Member.Name}";
                     string expressionBody = _getReadableExpressionBody(m.Expression);
                     return expressionBody != null ? $"{expressionBody}.{m.Member.Name}" : m.Member.Name;
-                case UnaryExpression u when u.Operand is MemberExpression m:
+                case UnaryExpression { Operand: MemberExpression m }:
                     return _getReadableExpressionBody(m);
                 case BinaryExpression b:
                     return $"({_getReadableExpressionBody(b.Left)} {_getReadableNodeType(b.NodeType, _getReadableExpressionBody(b.Right))})";
@@ -125,7 +128,7 @@ namespace IronSphere.Extensions
         private static string _getReadableMethodCallExpression(MethodCallExpression b)
         {
             string invoking = b.Method.IsStatic
-                ? b.Method.DeclaringType.GetShortReadableName()
+                ? b.Method.DeclaringType?.GetShortReadableName()
                 : _getReadableExpressionBody(b.Object);
 
             if (b.Method.IsExtensionMethod())
@@ -144,9 +147,7 @@ namespace IronSphere.Extensions
         private static bool _isStaticMember(MemberInfo memberInfo)
         {
             return memberInfo is PropertyInfo member && member.GetMethod.IsStatic
-                || memberInfo is FieldInfo field && field.IsStatic
-                || memberInfo is MethodBase method && method.IsStatic
-                || memberInfo is FieldInfo fieldInfo && fieldInfo.IsStatic;
+                   || memberInfo is FieldInfo { IsStatic: true } or MethodBase { IsStatic: true } or FieldInfo { IsStatic: true };
         }
 
         private static string _getValueOfConstantExpression(ConstantExpression constantExpression)

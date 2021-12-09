@@ -19,6 +19,6 @@ namespace IronSphere.Extensions.Exceptions
         ///</summary>
         ///<param name="message"></param>
         ///<param name="inner"></param>
-        public EquivocalItemException(string message, System.Exception inner) : base(message, inner) { }
+        public EquivocalItemException(string message, Exception inner) : base(message, inner) { }
     }
 }

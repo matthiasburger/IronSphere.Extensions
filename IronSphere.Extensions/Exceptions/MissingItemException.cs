@@ -19,6 +19,6 @@ namespace IronSphere.Extensions.Exceptions
         ///</summary>
         ///<param name="message"></param>
         ///<param name="inner"></param>
-        public MissingItemException(string message, System.Exception inner) : base(message, inner) { }
+        public MissingItemException(string message, Exception inner) : base(message, inner) { }
     }
 }

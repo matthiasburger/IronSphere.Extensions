@@ -8,7 +8,7 @@ namespace IronSphere.Extensions.PredicateEnumerable
     {
         private IEnumerable<T> _sequence;
         private readonly T _elementToAdd;                           
-        private Func<IEnumerable<T>, T, bool> _expression;
+        private Func<IEnumerable<T>, T, bool>? _expression;
 
         private bool _ifExecuted;
 

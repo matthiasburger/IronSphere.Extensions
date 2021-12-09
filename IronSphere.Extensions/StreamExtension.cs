@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -16,7 +14,7 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual stream.</param>
         /// <param name="length">the length of bytes</param>
         /// <returns>The actual stream as a byte-array.</returns>
-        public static byte[] GetBytes([NotNull]this Stream @this, int length = 16 * 1024)
+        public static byte[] GetBytes(this Stream @this, int length = 16 * 1024)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -25,13 +23,11 @@ namespace IronSphere.Extensions
 
             byte[] buffer = new byte[length];
 
-            using (MemoryStream memoryStream = new MemoryStream())
-            {
-                int read;
-                while ((read = @this.Read(buffer, 0, buffer.Length)) > 0)
-                    memoryStream.Write(buffer, 0, read);
-                return memoryStream.ToArray();
-            }
+            using MemoryStream memoryStream = new();
+            int read;
+            while ((read = @this.Read(buffer, 0, buffer.Length)) > 0)
+                memoryStream.Write(buffer, 0, read);
+            return memoryStream.ToArray();
         }
 
         /// <summary>
@@ -41,11 +37,9 @@ namespace IronSphere.Extensions
         /// <returns></returns>
         public static byte[] ReadAllBytes(this Stream stream)
         {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                stream.CopyTo(ms);
-                return ms.ToArray();
-            }
+            using MemoryStream ms = new();
+            stream.CopyTo(ms);
+            return ms.ToArray();
         }
     }
 }

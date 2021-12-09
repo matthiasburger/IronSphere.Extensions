@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -94,41 +92,37 @@ namespace IronSphere.Extensions
         /// <param name="cultureInfo">the culture to use</param>
         /// <param name="weekOfYearStandard">the standard to use</param>
         /// <returns>the week of year for the specified datetime</returns>
-        public static int GetWeekOfYear(this DateTime dateTime, [CanBeNull]CultureInfo cultureInfo = null, WeekOfYearStandard weekOfYearStandard = WeekOfYearStandard.Iso8601)
+        public static int GetWeekOfYear(this DateTime dateTime, CultureInfo? cultureInfo = null, WeekOfYearStandard weekOfYearStandard = WeekOfYearStandard.Iso8601)
         {
-            if (cultureInfo == null)
-                cultureInfo = CultureInfo.InvariantCulture;
+            cultureInfo ??= CultureInfo.InvariantCulture;
 
-            switch (weekOfYearStandard)
+            return weekOfYearStandard switch
             {
-                case WeekOfYearStandard.DotNet:
-                    return GetWeekOfYearNetStandard(dateTime, cultureInfo);
-                case WeekOfYearStandard.Iso8601:
-                    return GetWeekOfYearIso8601(dateTime, cultureInfo);
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(weekOfYearStandard), weekOfYearStandard, null);
-            }
+                WeekOfYearStandard.DotNet => GetWeekOfYearNetStandard(dateTime, cultureInfo),
+                WeekOfYearStandard.Iso8601 => GetWeekOfYearIso8601(dateTime, cultureInfo),
+                _ => throw new ArgumentOutOfRangeException(nameof(weekOfYearStandard), weekOfYearStandard, null)
+            };
         }
 
-        private static int GetWeekOfYearIso8601(DateTime dateTime, [NotNull]CultureInfo cultureInfo)
+        private static int GetWeekOfYearIso8601(DateTime dateTime, CultureInfo cultureInfo)
         {
             if (cultureInfo is null)
                 throw new ArgumentNullException(nameof(cultureInfo));
 
             DayOfWeek day = cultureInfo.Calendar.GetDayOfWeek(dateTime);
-            if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
+            if (day is >= DayOfWeek.Monday and <= DayOfWeek.Wednesday)
                 dateTime = dateTime.AddDays(3);
 
             return cultureInfo.Calendar.GetWeekOfYear(dateTime, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
         }
 
-        private static int GetWeekOfYearNetStandard(DateTime dateTime, [NotNull]CultureInfo cultureInfo)
+        private static int GetWeekOfYearNetStandard(DateTime dateTime, CultureInfo cultureInfo)
         {
             if (cultureInfo is null)
                 throw new ArgumentNullException(nameof(cultureInfo));
 
             DayOfWeek day = cultureInfo.Calendar.GetDayOfWeek(dateTime);
-            if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
+            if (day is >= DayOfWeek.Monday and <= DayOfWeek.Wednesday)
                 dateTime = dateTime.AddDays(3);
 
             return cultureInfo.Calendar.GetWeekOfYear(dateTime, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
@@ -154,10 +148,10 @@ namespace IronSphere.Extensions
             => @this.CompareTo(span.Start) >= 0 && @this.CompareTo(span.End) <= 0;
 
         public static DateTimeSpan SpanTo(this DateTime @this, DateTime end) 
-            => new DateTimeSpan(@this, end);
+            => new(@this, end);
 
         public static DateTimeSpan SpanTo(this DateTime @this, int amount, DateTimeSpanType spanType) 
-            => new DateTimeSpan(@this, spanType, amount);
+            => new(@this, spanType, amount);
 
         public static DateTime EndOfDay(this DateTime @this) => @this.AddDays(1).AddTicks(-1);
 
@@ -177,7 +171,7 @@ namespace IronSphere.Extensions
         public static CalendarWeek GetCalendarWeek(this DateTime dateTime)
         {
             DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(dateTime);
-            if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
+            if (day is >= DayOfWeek.Monday and <= DayOfWeek.Wednesday)
                 dateTime = dateTime.AddDays(3);
             int calendarWeek = CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(dateTime, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
             int year = dateTime.Year;

@@ -29,16 +29,11 @@ namespace IronSphere.Extensions.Test
 
         static void Main()
         {
-            IEnumerable<int> originalList = new List<int> { 1, 2, 3, 4 };
-            IEnumerable<int> result = originalList.AddItem(5)
-                .If((list, @new) => !list.Contains(@new));
+            string s = null; // "This is a tester for my cool extension method!!";
+            s.ThrowIfArgumentIsNull(nameof(s));
+            s = s.SubString("Tester", "Cool", StringComparison.InvariantCulture);
 
-            var res1 = result.ToList();
-            var res2 = result.ToList();
-
-
-            var x = new Program().GetUserInput();
-            Console.WriteLine(x);
+            Console.WriteLine(s);
         }
     }
 
@@ -146,6 +141,7 @@ namespace IronSphere.Extensions.Test
             List<MyClass> list = new List<MyClass>{
                 new MyClass{Id=3, Name="bla"},new MyClass{Id=2, Name="bla"},new MyClass{Id=1, Name="bla"}
             };
+
 
             string[] bla = new[] { "test", "bla" };
 

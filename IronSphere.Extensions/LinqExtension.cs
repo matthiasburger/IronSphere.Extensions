@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -18,7 +16,7 @@ namespace IronSphere.Extensions
         /// <param name="source">the actual enumerable source</param>
         /// <param name="count">the number of elements to take (or null if take all)</param>
         /// <returns>A specified number of contiguous elements elements from the start of a sequence.</returns>
-        public static IEnumerable<TSource> LexTake<TSource>([NotNull]this IEnumerable<TSource> source, int? count)
+        public static IEnumerable<TSource> LexTake<TSource>(this IEnumerable<TSource> source, int? count)
         {
             if (source == null)
                 throw new ArgumentNullException(nameof(source));
@@ -30,23 +28,21 @@ namespace IronSphere.Extensions
         {
             TSource[] buffer = new TSource[count];
 
-            using (IEnumerator<TSource> e = source.GetEnumerator())
+            using IEnumerator<TSource> e = source.GetEnumerator();
+            for (int i = 0; i < buffer.Length; i++)
             {
-                for (int i = 0; i < buffer.Length; i++)
-                {
-                    if (!e.MoveNext())
-                        yield break;
+                if (!e.MoveNext())
+                    yield break;
 
-                    buffer[i] = e.Current;
-                }
+                buffer[i] = e.Current;
+            }
 
-                int index = 0;
-                while (e.MoveNext())
-                {
-                    yield return buffer[index];
-                    buffer[index] = e.Current;
-                    index = (index + 1) % count;
-                }
+            int index = 0;
+            while (e.MoveNext())
+            {
+                yield return buffer[index];
+                buffer[index] = e.Current;
+                index = (index + 1) % count;
             }
         }
 
@@ -83,7 +79,7 @@ namespace IronSphere.Extensions
         /// <param name="source">the actual enumerable source</param>
         /// <param name="count">the number of elements to skip (or null if skip all)</param>
         /// <returns>A specified number of contiguous elements elements from the start of a sequence.</returns>
-        public static IEnumerable<TSource> LexSkip<TSource>([NotNull]this IEnumerable<TSource> source, int? count)
+        public static IEnumerable<TSource> LexSkip<TSource>(this IEnumerable<TSource> source, int? count)
         {
             if (source == null)
                 throw new ArgumentNullException(nameof(source));
@@ -103,10 +99,10 @@ namespace IronSphere.Extensions
         /// <param name="innerKeySelector">the joined tables key-property</param>
         /// <returns>An IJoinSet after the left join.</returns>
         public static IEnumerable<IJoinSet<TSource, TJoin>> LexLeftJoin<TSource, TJoin, TKey>(
-            [NotNull]this IEnumerable<TSource> source,
-            [NotNull]IEnumerable<TJoin> inner,
-            [NotNull]Func<TSource, TKey> outerKeySelector,
-            [NotNull]Func<TJoin, TKey> innerKeySelector)
+            this IEnumerable<TSource> source,
+            IEnumerable<TJoin> inner,
+            Func<TSource, TKey> outerKeySelector,
+            Func<TJoin, TKey> innerKeySelector)
         {
             if (source == null)
                 throw new ArgumentNullException(nameof(source));
@@ -119,7 +115,7 @@ namespace IronSphere.Extensions
 
             return source
                 .GroupJoin(inner, outerKeySelector, innerKeySelector, (main, sub) => new { Main = main, Sub = sub })
-                .SelectMany(left => left.Sub.DefaultIfEmpty(), (s, t) => new JoinSet<TSource, TJoin> { Main = s.Main, Sub = s.Sub });
+                .SelectMany(left => left.Sub.DefaultIfEmpty(), (s, _) => new JoinSet<TSource, TJoin> { Main = s.Main, Sub = s.Sub });
         }
 
         /// <summary>
@@ -134,10 +130,10 @@ namespace IronSphere.Extensions
         /// <param name="innerKeySelector">the joined tables key-property</param>
         /// <returns>An IJoinSet after the right join.</returns>
         public static IEnumerable<IJoinSet<TJoin, TSource>> LexRightJoin<TSource, TJoin, TKey>(
-            [NotNull]this IEnumerable<TSource> source,
-            [NotNull]IEnumerable<TJoin> inner,
-            [NotNull]Func<TSource, TKey> outerKeySelector,
-            [NotNull]Func<TJoin, TKey> innerKeySelector)
+            this IEnumerable<TSource> source,
+            IEnumerable<TJoin> inner,
+            Func<TSource, TKey> outerKeySelector,
+            Func<TJoin, TKey> innerKeySelector)
         {
             if (source == null)
                 throw new ArgumentNullException(nameof(source));
@@ -150,7 +146,7 @@ namespace IronSphere.Extensions
 
             return inner
                 .GroupJoin(source, innerKeySelector, outerKeySelector, (main, sub) => new { Main = main, Sub = sub })
-                .SelectMany(left => left.Sub.DefaultIfEmpty(), (s, t) => new JoinSet<TJoin, TSource> { Main = s.Main, Sub = s.Sub });
+                .SelectMany(left => left.Sub.DefaultIfEmpty(), (s, _) => new JoinSet<TJoin, TSource> { Main = s.Main, Sub = s.Sub });
         }
 
 
@@ -162,7 +158,7 @@ namespace IronSphere.Extensions
         /// <param name="source">The sequence to remove duplicate elements from.</param>
         /// <param name="groupingSelector">The property on which duplicated elements shall be removed.</param>
         /// <returns>An IEnumerable{TSource} that contains distinct elements from the source sequence.</returns>
-        public static IEnumerable<TSource> LexDistinctBy<TSource, TKey>([NotNull]this IEnumerable<TSource> source, [NotNull]Func<TSource, TKey> groupingSelector)
+        public static IEnumerable<TSource> LexDistinctBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> groupingSelector)
         {
             if (source == null)
                 throw new ArgumentNullException(nameof(source));
@@ -181,8 +177,8 @@ namespace IronSphere.Extensions
         /// <typeparam name="TSub"></typeparam>
         private class JoinSet<TMain, TSub> : IJoinSet<TMain, TSub>
         {
-            public TMain Main { get; set; }
-            public IEnumerable<TSub> Sub { get; set; }
+            public TMain Main { get; set; } = default!;
+            public IEnumerable<TSub> Sub { get; set; } = new List<TSub>();
         }
     }
 }

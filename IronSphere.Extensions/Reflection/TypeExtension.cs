@@ -38,9 +38,9 @@ namespace IronSphere.Extensions.Reflection
         /// </example>
         /// <param name="this"></param>
         /// <returns></returns>
-        public static string GetFullReadableName(this Type @this) => _getFullReadableName(@this);
+        public static string? GetFullReadableName(this Type @this) => _getFullReadableName(@this);
 
-        private static string _getFullReadableName(Type type)
+        private static string? _getFullReadableName(Type type)
         {
             if (type.IsGenericType)
                 return type.IsGenericTypeDefinition
@@ -54,9 +54,9 @@ namespace IronSphere.Extensions.Reflection
         {
             Stack<(Type type, Type[] genericArguments)> stack = GetDeclaringGenericStack(t);
 
-            StringBuilder memberName = new StringBuilder(t.Namespace is null ? string.Empty : $"{t.Namespace}.");
+            StringBuilder memberName = new(t.Namespace is null ? string.Empty : $"{t.Namespace}.");
 
-            HashSet<string> takenTypes = new HashSet<string>();
+            HashSet<string> takenTypes = new();
 
             while (stack.Any())
             {
@@ -120,9 +120,9 @@ namespace IronSphere.Extensions.Reflection
 
             Stack<(Type type, Type[] genericArguments)> stack = GetDeclaringGenericStack(declaringType);
 
-            StringBuilder memberName = new StringBuilder(t.Namespace is null ? string.Empty : $"{t.Namespace}.");
+            StringBuilder memberName = new(t.Namespace is null ? string.Empty : $"{t.Namespace}.");
 
-            HashSet<string> takenTypes = new HashSet<string>();
+            HashSet<string> takenTypes = new();
             int typeCount = 0;
 
             while (stack.Any())
@@ -131,13 +131,13 @@ namespace IronSphere.Extensions.Reflection
 
                 string typeName = type.Name.Split('`').First();
 
-                IList<string> genericsToAdd = new List<string>();
+                IList<string?> genericsToAdd = new List<string?>();
                 foreach (Type arg in genericArguments)
                 {
                     if (takenTypes.Contains(arg.Name))
                         continue;
 
-                    string argument = _getFullReadableName(dictionaryOfTypes[typeCount++]);
+                    string? argument = _getFullReadableName(dictionaryOfTypes[typeCount++]);
 
                     takenTypes.Add(arg.Name);
                     genericsToAdd.Add(argument);
@@ -168,7 +168,7 @@ namespace IronSphere.Extensions.Reflection
 
             IList<string> memberNames = new List<string>();
 
-            HashSet<string> takenTypes = new HashSet<string>();
+            HashSet<string> takenTypes = new();
 
             while (stack.Any())
             {
@@ -204,7 +204,7 @@ namespace IronSphere.Extensions.Reflection
             Stack<(Type type, Type[] genericArguments)> stack = GetDeclaringGenericStack(declaringType);
 
             IList<string> memberNames = new List<string>();
-            HashSet<string> takenTypes = new HashSet<string>();
+            HashSet<string> takenTypes = new();
             int typeCount = 0;
 
             while (stack.Any())
@@ -238,16 +238,16 @@ namespace IronSphere.Extensions.Reflection
         /// <returns></returns>
         public static string GetXmlMemberName(this Type @this)
         {
-            Type declaringType = @this;
+            Type? declaringType = @this;
 
-            Stack<string> stack = new Stack<string>();
+            Stack<string> stack = new();
             while (declaringType != null)
             {
                 stack.Push(declaringType.Name);
                 declaringType = declaringType.DeclaringType;
             }
 
-            StringBuilder memberName = new StringBuilder(@this.Namespace is null ? string.Empty : $"{@this.Namespace}.");
+            StringBuilder memberName = new(@this.Namespace is null ? string.Empty : $"{@this.Namespace}.");
 
             while (stack.Any())
                 memberName.Append($"{stack.Pop()}.");
@@ -260,9 +260,9 @@ namespace IronSphere.Extensions.Reflection
         /// </summary>
         /// <param name="this">the actual type</param>
         /// <returns></returns>
-        public static string GetShortReadableName(this Type @this) => _getShortReadableName(@this);
+        public static string? GetShortReadableName(this Type @this) => _getShortReadableName(@this);
         
-        private static string _getShortReadableName(Type type)
+        private static string? _getShortReadableName(Type type)
         {
             if (type.IsAnonymousType())
                 return "AnonymousType";
@@ -275,13 +275,13 @@ namespace IronSphere.Extensions.Reflection
             return type.Name;
         }
 
-        private static string _getGenericTypeDefinitionShortReadableName(Type t)
+        private static string? _getGenericTypeDefinitionShortReadableName(Type t)
         {
             Stack<(Type type, Type[] genericArguments)> stack = GetDeclaringGenericStack(t);
 
-            string memberName = null;
+            string? memberName = null;
 
-            HashSet<string> takenTypes = new HashSet<string>();
+            HashSet<string> takenTypes = new();
 
             while (stack.Any())
             {
@@ -307,7 +307,7 @@ namespace IronSphere.Extensions.Reflection
             return memberName;
         }
 
-        private static string _getGenericTypeShortReadableName(Type t)
+        private static string? _getGenericTypeShortReadableName(Type t)
         {
             Type declaringType = t.GetGenericTypeDefinition();
 
@@ -317,9 +317,9 @@ namespace IronSphere.Extensions.Reflection
 
             Stack<(Type type, Type[] genericArguments)> stack = GetDeclaringGenericStack(declaringType);
 
-            string memberName = null;
+            string? memberName = null;
 
-            HashSet<string> takenTypes = new HashSet<string>();
+            HashSet<string> takenTypes = new();
             int typeCount = 0;
 
             while (stack.Any())
@@ -328,13 +328,13 @@ namespace IronSphere.Extensions.Reflection
 
                 string typeName = type.Name.Split('`').First();
 
-                IList<string> genericsToAdd = new List<string>();
+                IList<string?> genericsToAdd = new List<string?>();
                 foreach (Type arg in genericArguments)
                 {
                     if (takenTypes.Contains(arg.Name))
                         continue;
 
-                    string argument = _getShortReadableName(dictionaryOfTypes[typeCount++]);
+                    string? argument = _getShortReadableName(dictionaryOfTypes[typeCount++]);
 
                     takenTypes.Add(arg.Name);
                     genericsToAdd.Add(argument);
@@ -348,9 +348,9 @@ namespace IronSphere.Extensions.Reflection
 
         private static Stack<(Type type, Type[] genericArguments)> GetDeclaringGenericStack(Type type)
         {
-            Type declaringType = type;
+            Type? declaringType = type;
 
-            Stack<(Type type, Type[] genericArguments)> stack = new Stack<(Type type, Type[] genericArguments)>();
+            Stack<(Type type, Type[] genericArguments)> stack = new();
             while (declaringType != null)
             {
                 stack.Push((declaringType, declaringType.GetGenericArguments()));
@@ -371,9 +371,9 @@ namespace IronSphere.Extensions.Reflection
         /// </example>
         /// <param name="this">the actual type</param>
         /// <returns></returns>
-        public static string GetNonGenericTypeName(this Type @this)
+        public static string? GetNonGenericTypeName(this Type @this)
         {
-            return (@this.FullName ?? @this.GetGenericTypeDefinition().FullName)?.Split('`').First();
+            return (@this.FullName ?? @this.GetGenericTypeDefinition().FullName)?.Split('`').FirstOrDefault();
         }
 
         /// <summary>
@@ -406,7 +406,7 @@ namespace IronSphere.Extensions.Reflection
             return @this.IsGenericType && @this.GetGenericTypeDefinition() == typeof(Nullable<>);
         }
         
-        public static Type GetNullableUnderlyingType(this Type @this)
+        public static Type? GetNullableUnderlyingType(this Type @this)
         {
             return Nullable.GetUnderlyingType(@this);
         }

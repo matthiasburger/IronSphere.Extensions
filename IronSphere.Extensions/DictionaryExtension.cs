@@ -21,8 +21,8 @@ namespace IronSphere.Extensions
         /// <param name="key">the key to search for</param>
         /// <param name="fallback">the fallback-value, if the key doesn't exist</param>
         /// <returns>The found value or the fallback if the key doesn't exist.</returns>
-        public static TValue GetValue<TKey, TValue>([NotNull]this Dictionary<TKey, TValue> @this, TKey key,
-            TValue fallback = default)
+        public static TValue? GetValue<TKey, TValue>(this Dictionary<TKey, TValue> @this, TKey key,
+            TValue? fallback = default)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -38,14 +38,14 @@ namespace IronSphere.Extensions
         /// <param name="key">the key to search for</param>
         /// <param name="fallback">the fallback-value, if the key doesn't exist</param>
         /// <returns>The found value or the fallback if the key doesn't exist.</returns>
-        public static TValue GetValue<TValue>([NotNull]this NameValueCollection @this, string key,
-            TValue fallback = default)
+        public static TValue? GetValue<TValue>(this NameValueCollection @this, string key,
+            TValue? fallback = default)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
 
             Type typeToConvert = typeof(TValue);
-            Type underlyingType;
+            Type? underlyingType;
             if ((underlyingType = Nullable.GetUnderlyingType(typeToConvert)) != null)
                 typeToConvert = underlyingType;
 
@@ -61,27 +61,24 @@ namespace IronSphere.Extensions
         /// <param name="key">the key to search for</param>
         /// <param name="fallback">the fallback-value, if the key doesn't exist</param>
         /// <returns>The found value or the fallback if the key doesn't exist.</returns>
-        public static TValue GetValue<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> @this, TKey key, TValue fallback = default)
+        public static TValue? GetValue<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> @this, TKey key, TValue? fallback = default)
         {
-            using (IEnumerator<KeyValuePair<TKey, TValue>> enumerator = @this.GetEnumerator())
-            {
-                while (enumerator.MoveNext())
-                    if (EqualityComparer<TKey>.Default.Equals(enumerator.Current.Key, key))
-                        return enumerator.Current.Value;
-            }
+            using IEnumerator<KeyValuePair<TKey, TValue>> enumerator = @this.GetEnumerator();
+            
+            while (enumerator.MoveNext())
+                if (EqualityComparer<TKey>.Default.Equals(enumerator.Current.Key, key))
+                    return enumerator.Current.Value;
 
             return fallback;
         }
 
-        [NotNull]
-        public static IDictionary<TKey, TValue> AddOrUpdate<TKey, TValue>([NotNull] this IDictionary<TKey, TValue> @this, [NotNull] TKey key, TValue value)
+        public static IDictionary<TKey, TValue> AddOrUpdate<TKey, TValue>(this IDictionary<TKey, TValue> @this, TKey key, TValue value)
         {
             @this[key] = value;
             return @this;
         }
 
-        [NotNull]
-        public static TValue GetOrCreate<TKey, TValue>([NotNull] this IDictionary<TKey, TValue> @this, [NotNull] TKey key, Func<TKey, TValue> function)
+        public static TValue GetOrCreate<TKey, TValue>(this IDictionary<TKey, TValue> @this, TKey key, Func<TKey, TValue> function)
         {
             if (!@this.ContainsKey(key))
                 @this[key] = function(key);

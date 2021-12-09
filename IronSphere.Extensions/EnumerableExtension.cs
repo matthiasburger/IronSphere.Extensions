@@ -8,8 +8,6 @@ using System.Linq.Expressions;
 using IronSphere.Extensions.Exceptions;
 using IronSphere.Extensions.PredicateEnumerable;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -17,6 +15,19 @@ namespace IronSphere.Extensions
     /// </summary>
     public static class EnumerableExtension
     {
+        private class IndexedItem<TItem> : IIndexedItem<TItem>
+        {
+            public IndexedItem(TItem item, int index)
+            {
+                Item = item;
+                Index = index;
+            }
+
+            public TItem Item { get; }
+
+            public int Index { get; }
+        }
+
         /// <summary>
         /// Determines whether an <see cref="IEnumerable{T}"/> is either null or doesn't contain any elements
         /// </summary>
@@ -38,11 +49,12 @@ namespace IronSphere.Extensions
         /// If the enumerable contains no items, the return value is true.
         /// If the enumerable contains one or more items, the return value is false.
         /// </remarks>
-        public static bool IsNullOrEmpty<T>([CanBeNull]this IEnumerable<T> @this)
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T>? @this)
         {
             if (@this == null) return true;
-            using (IEnumerator<T> enumerator = @this.GetEnumerator())
-                return !enumerator.MoveNext();
+            
+            using IEnumerator<T> enumerator = @this.GetEnumerator();
+            return !enumerator.MoveNext();
         }
 
         /// <summary>
@@ -64,37 +76,35 @@ namespace IronSphere.Extensions
         /// If the enumerable contains no or more than one item, the return value is false.
         /// If there is exactly one item, the value of the item doesn't matter.
         /// </remarks>
-        public static bool IsSingle<T>([CanBeNull]this IEnumerable<T> @this)
+        public static bool IsSingle<T>(this IEnumerable<T>? @this)
         {
             if (@this == null) return false;
 
-            using (IEnumerator<T> enumerator = @this.GetEnumerator())
-                return enumerator.MoveNext() && !enumerator.MoveNext();
+            using IEnumerator<T> enumerator = @this.GetEnumerator();
+            return enumerator.MoveNext() && !enumerator.MoveNext();
         }
 
 
-        public static bool IsSingle<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> selector)
+        public static bool IsSingle<T, TResult>(this IEnumerable<T>? @this, Func<T, TResult> selector)
         {
             if (@this == null) return false;
 
-            HashSet<TResult> foundResults = new HashSet<TResult>();
+            HashSet<TResult> foundResults = new();
 
-            using (IEnumerator<T> enumerator = @this.GetEnumerator())
+            using IEnumerator<T> enumerator = @this.GetEnumerator();
+            while (enumerator.MoveNext())
             {
-                while (enumerator.MoveNext())
-                {
-                    TResult currentValue = selector(enumerator.Current);
-                    if (foundResults.Contains(currentValue))
-                        continue;
+                TResult currentValue = selector(enumerator.Current);
+                if (foundResults.Contains(currentValue))
+                    continue;
 
-                    if (foundResults.Count != 0)
-                        return false;
+                if (foundResults.Count != 0)
+                    return false;
 
-                    foundResults.Add(currentValue);
-                }
-
-                return foundResults.Count == 1;
+                foundResults.Add(currentValue);
             }
+
+            return foundResults.Count == 1;
         }
 
         /// <summary>
@@ -125,7 +135,7 @@ namespace IronSphere.Extensions
         /// If the enumerable contains no or more than one item, the return value is false.
         /// If there is exactly one item, the value of the item doesn't matter.
         /// </remarks>
-        public static bool IsSingle<T>([CanBeNull]this IEnumerable<T> @this, Func<T, bool> predicate)
+        public static bool IsSingle<T>(this IEnumerable<T>? @this, Func<T, bool> predicate)
         {
             return @this != null && @this.Count(predicate) == 1;
         }
@@ -136,7 +146,7 @@ namespace IronSphere.Extensions
         /// <typeparam name="T">Thy generic list-type.</typeparam>
         /// <param name="this">The actual list to randomize.</param>
         /// <returns>A new list-instance with all items of the list but in a random order.</returns>
-        public static IEnumerable<T> Randomize<T>([NotNull]this IEnumerable<T> @this)
+        public static IEnumerable<T> Randomize<T>(this IEnumerable<T> @this)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -165,12 +175,12 @@ namespace IronSphere.Extensions
         /// <param name="this">The actual list,</param>
         /// <param name="expression">The expression to distinct all items.</param>
         /// <returns>A new list of items as distinct by the expression.</returns>
-        public static IEnumerable<T> Distinct<T, TType>([NotNull]this IEnumerable<T> @this, Func<T, TType> expression)
+        public static IEnumerable<T> Distinct<T, TType>(this IEnumerable<T> @this, Func<T, TType> expression)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
 
-            HashSet<TType> seenKeys = new HashSet<TType>();
+            HashSet<TType> seenKeys = new();
             foreach (T element in @this)
                 if (seenKeys.Add(expression(element)))
                     yield return element;
@@ -201,7 +211,7 @@ namespace IronSphere.Extensions
         /// <param name="this"></param>
         /// <param name="filter"></param>
         /// <returns></returns>
-        public static T GetSingleItemOrNull<T>(this IEnumerable<T> @this, Expression<Func<T, bool>> filter) where T : class
+        public static T? GetSingleItemOrNull<T>(this IEnumerable<T> @this, Expression<Func<T, bool>> filter)
         {
             if (@this == null)
                 throw new ArgumentNullException(nameof(@this));
@@ -211,30 +221,28 @@ namespace IronSphere.Extensions
             return _getSingleItemOrNull(@this, filter.Compile(), ErrorMessage);
         }
 
-        private static T _getSingleItemOrNull<T>(IEnumerable<T> @this, Func<T, bool> filter, Func<string, string> errorMessage) where T : class
+        private static T? _getSingleItemOrNull<T>(IEnumerable<T> @this, Func<T, bool> filter, Func<string, string> errorMessage)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
 
-            using (IEnumerator<T> enumerator = @this.GetEnumerator())
+            using IEnumerator<T> enumerator = @this.GetEnumerator();
+            int count = 0;
+            T? item = default;
+
+            while (enumerator.MoveNext())
             {
-                int count = 0;
-                T item = null;
+                if (!filter(enumerator.Current))
+                    continue;
 
-                while (enumerator.MoveNext())
-                {
-                    if (!filter(enumerator.Current))
-                        continue;
+                item = enumerator.Current;
+                count++;
 
-                    item = enumerator.Current;
-                    count++;
-
-                    if (++count > 1)
-                        throw new EquivocalItemException(errorMessage("Items in sequence are equivocal."));
-                }
-
-                return item;
+                if (++count > 1)
+                    throw new EquivocalItemException(errorMessage("Items in sequence are equivocal."));
             }
+
+            return item;
         }
 
         internal static IEnumerable<T> AddSingleItem<T>(this IEnumerable<T> @this, T element)
@@ -278,7 +286,7 @@ namespace IronSphere.Extensions
         /// <returns></returns>
         public static IEnumerable<List<T>> Split<T>(this IEnumerable<T> @this, int count)
         {
-            List<T> currentCollection = new List<T>(count);
+            List<T> currentCollection = new(count);
             int index = 0;
 
             foreach (T currentItem in @this)
@@ -366,5 +374,16 @@ namespace IronSphere.Extensions
 
             return newSequence;
         }
+
+        public static IEnumerable<IIndexedItem<TModel>> SelectWithIndex<TModel>(this IEnumerable<TModel> collection)
+        {
+            return collection.Select((item, x) => new IndexedItem<TModel>(item, x));
+        }
+    }
+
+    public interface IIndexedItem<out TItem>
+    {
+        TItem Item { get; }
+        int Index { get; }
     }
 }

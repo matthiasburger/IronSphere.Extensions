@@ -4,8 +4,6 @@ using System.Reflection;
 
 using IronSphere.Extensions.Reflection;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -27,12 +25,12 @@ namespace IronSphere.Extensions
         /// ]]>
         /// </example>
         /// <exception cref="ArgumentNullException">the source object is null</exception>
-        public static IDictionary<string, T> ToDictionary<T>([NotNull]this object source)
+        public static IDictionary<string, T> ToDictionary<T>(this object? source)
         {
             if (source is null)
                 throw new ArgumentNullException(nameof(source));
 
-            Dictionary<string, T> dictionary = new Dictionary<string, T>();
+            Dictionary<string, T> dictionary = new();
             foreach (PropertyInfo property in source.GetType().GetProperties())
             {
                 object value = property.GetValue(source);

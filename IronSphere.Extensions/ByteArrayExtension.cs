@@ -20,7 +20,7 @@ namespace IronSphere.Extensions
         /// string itsString = originalUtf8Bytes.GetString();
         /// ]]>
         /// </example>
-        public static string GetString(this byte[] bytes, Encoding encoding = null) =>
+        public static string GetString(this byte[] bytes, Encoding? encoding = null) =>
             (encoding ?? Encoding.UTF8).GetString(bytes);
     }
 }

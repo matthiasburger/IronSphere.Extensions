@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     public static class GenericArrayExtension
     {
-        [NotNull]
-        public static T[] Slice<T>([CanBeNull] this T[] items, int startIndex = 0, int? endIndex = null)
+        public static T[] Slice<T>(this T[]? items, int startIndex = 0, int? endIndex = null)
         {
             if (startIndex < 0)
                 throw new ArgumentException("startIndex must be positive", nameof(startIndex));
@@ -17,9 +14,9 @@ namespace IronSphere.Extensions
                 throw new ArgumentException("endIndex must be null or lower than startIndex", nameof(startIndex));
 
             if (items == null)
-                return new T[0];
+                return Array.Empty<T>();
 
-            endIndex = endIndex ?? items.Length;
+            endIndex ??= items.Length;
             int length = endIndex.Value - startIndex;
 
             T[] result = new T[length];

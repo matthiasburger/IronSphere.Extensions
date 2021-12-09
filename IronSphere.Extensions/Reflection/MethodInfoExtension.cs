@@ -19,10 +19,10 @@ namespace IronSphere.Extensions.Reflection
         /// <returns>A string representing the xml member-name</returns>
         public static string GetXmlMemberName(this MethodInfo @this)
         {
-            Type[] genericMethodArguments = @this.IsGenericMethod ? @this.GetGenericArguments() : new Type[0];
-            IEnumerable<string> c = @this.GetParameters().Select(x => x.GetParameterString());
+            Type[] genericMethodArguments = @this.IsGenericMethod ? @this.GetGenericArguments() : Type.EmptyTypes;
+            IEnumerable<string?> c = @this.GetParameters().Select(x => x.GetParameterString());
 
-            return new StringBuilder(@this.DeclaringType.GetXmlMemberName())
+            return new StringBuilder(@this.DeclaringType?.GetXmlMemberName())
                 .Append($".{@this.Name}")
                 .Append(@this.IsGenericMethod ? $"``{genericMethodArguments.Length}" : string.Empty)
                 .Append($"({string.Join(",", c)})").ToString();
@@ -41,16 +41,16 @@ namespace IronSphere.Extensions.Reflection
 
         public static bool IsIndexerPropertyMethod(this MethodInfo method)
         {
-            Type declaringType = method.DeclaringType;
+            Type? declaringType = method.DeclaringType;
             if (declaringType is null) return false;
-            PropertyInfo indexerProperty = GetIndexerProperty(method.DeclaringType);
+            PropertyInfo? indexerProperty = GetIndexerProperty(declaringType);
             if (indexerProperty is null) return false;
             return method == indexerProperty.GetMethod || method == indexerProperty.SetMethod;
         }
 
-        private static PropertyInfo GetIndexerProperty(this Type type)
+        private static PropertyInfo? GetIndexerProperty(this Type type)
         {
-            DefaultMemberAttribute defaultPropertyAttribute = type.GetCustomAttributes<DefaultMemberAttribute>()
+            DefaultMemberAttribute? defaultPropertyAttribute = type.GetCustomAttributes<DefaultMemberAttribute>()
                 .FirstOrDefault();
             if (defaultPropertyAttribute is null) return null;
             return type.GetProperty(defaultPropertyAttribute.MemberName, 

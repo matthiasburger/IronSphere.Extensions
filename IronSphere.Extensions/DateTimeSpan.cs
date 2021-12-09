@@ -11,7 +11,7 @@ namespace IronSphere.Extensions
     public class DateTimeSpan : IEnumerable<DateTime>
     {
         private static readonly Dictionary<DateTimeSpanType, Func<DateTime, int, DateTime>> NextDateTimeFuncDictionary =
-            new Dictionary<DateTimeSpanType, Func<DateTime, int, DateTime>>
+            new()
             {
                 {DateTimeSpanType.Ticks, (datetime, count) => datetime.AddTicks(count)},
                 {DateTimeSpanType.Milliseconds, (datetime, count) => datetime.AddMilliseconds(count)},

@@ -16,7 +16,7 @@ namespace IronSphere.Extensions.Reflection
         /// </summary>
         /// <param name="this">the actual parameter</param>
         /// <returns>A string representing the code of a parameter</returns>
-        public static string GetParameterString(this ParameterInfo @this)
+        public static string? GetParameterString(this ParameterInfo @this)
         {
             Type parameterType = @this.ParameterType;
 
@@ -32,7 +32,7 @@ namespace IronSphere.Extensions.Reflection
 
         private static string BuildGenericArgument(Type type)
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
 
             if (type.IsGenericType)
             {

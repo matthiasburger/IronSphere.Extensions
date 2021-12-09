@@ -16,15 +16,13 @@ namespace IronSphere.Extensions
         /// <returns></returns>
         internal static int NextInt(int min, int max)
         {
-            using (RNGCryptoServiceProvider cryptoServiceProvider = new RNGCryptoServiceProvider())
-            {
-                byte[] buffer = new byte[4];
+            using RNGCryptoServiceProvider cryptoServiceProvider = new();
+            byte[] buffer = new byte[4];
 
-                cryptoServiceProvider.GetBytes(buffer);
-                int result = BitConverter.ToInt32(buffer, 0);
+            cryptoServiceProvider.GetBytes(buffer);
+            int result = BitConverter.ToInt32(buffer, 0);
 
-                return new System.Random(result).Next(min, max);
-            }
+            return new System.Random(result).Next(min, max);
         }
     }
 }

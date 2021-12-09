@@ -91,12 +91,12 @@ namespace IronSphere.Extensions
         /// <returns>the split <see cref="DateTimeSpan"/> objects</returns>
         public static IEnumerable<DateTimeSpan> Split(this DateTimeSpan @this, params DateTime[] dateToSplit)
         {
-            Stack<DateTimeSpan> dateTimeSpans = new Stack<DateTimeSpan>();
+            Stack<DateTimeSpan> dateTimeSpans = new();
             dateTimeSpans.Push(@this);
 
             foreach (DateTime splitDate in dateToSplit)
             {
-                Stack<DateTimeSpan> newStack = new Stack<DateTimeSpan>();
+                Stack<DateTimeSpan> newStack = new();
 
                 while (dateTimeSpans.Count > 0)
                 {

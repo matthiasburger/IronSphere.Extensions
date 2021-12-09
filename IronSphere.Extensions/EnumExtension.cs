@@ -14,8 +14,11 @@ namespace IronSphere.Extensions
         /// <param name="this">the actual enum</param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static bool Has<T>(this Enum @this, T value)
+        public static bool Has<T>(this Enum @this, T? value)
         {
+            if (value is null)
+                return false;
+            
             try
             {
                 return ((int)(object)@this & (int)(object)value) == (int)(object)value;
@@ -33,8 +36,11 @@ namespace IronSphere.Extensions
         /// <param name="this">the actual enum</param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static bool Is<T>(this Enum @this, T value)
+        public static bool Is<T>(this Enum @this, T? value)
         {
+            if (value is null)
+                return false;
+            
             try
             {
                 return (int)(object)@this == (int)(object)value;
@@ -52,8 +58,11 @@ namespace IronSphere.Extensions
         /// <param name="this">the actual enum</param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static T Add<T>(this Enum @this, T value)
+        public static T? Add<T>(this Enum @this, T? value)
         {
+            if (value is null)
+                return default;
+            
             try
             {
                 return (T)(object)((int)(object)@this | (int)(object)value);
@@ -72,8 +81,11 @@ namespace IronSphere.Extensions
         /// <param name="this">the actual enum</param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static T Remove<T>(this Enum @this, T value)
+        public static T? Remove<T>(this Enum @this, T? value)
         {
+            if (value is null)
+                return default;
+            
             try
             {
                 return (T)(object)((int)(object)@this & ~(int)(object)value);

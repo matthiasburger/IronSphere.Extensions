@@ -50,22 +50,18 @@ namespace IronSphere.Extensions
             
         private DateTime _getFirstDateOfWeekByWeekNumber()
         {
-            switch (CultureInfo.DateTimeFormat.CalendarWeekRule)
+            return CultureInfo.DateTimeFormat.CalendarWeekRule switch
             {
-                case CalendarWeekRule.FirstFourDayWeek:
-                    return _getFirstDateOfWeekByWeekNumber_FirstFourDayWeek();
-                case CalendarWeekRule.FirstFullWeek:
-                    return _getFirstDateOfWeekByWeekNumber_FirstFullWeek();
-                case CalendarWeekRule.FirstDay:
-                    return _getFirstDateOfWeekByWeekNumber_FirstDay();
-                default:
-                    throw new ArgumentOutOfRangeException($"{CultureInfo.DateTimeFormat.CalendarWeekRule} is not implemented");
-            }
+                CalendarWeekRule.FirstFourDayWeek => _getFirstDateOfWeekByWeekNumber_FirstFourDayWeek(),
+                CalendarWeekRule.FirstFullWeek => _getFirstDateOfWeekByWeekNumber_FirstFullWeek(),
+                CalendarWeekRule.FirstDay => _getFirstDateOfWeekByWeekNumber_FirstDay(),
+                _ => throw new ArgumentOutOfRangeException($"{CultureInfo.DateTimeFormat.CalendarWeekRule} is not implemented")
+            };
         }
 
         private DateTime _getFirstDateOfWeekByWeekNumber_FirstFullWeek()
         {
-            DateTime date = new DateTime(Year, 1, 1);
+            DateTime date = new(Year, 1, 1);
 
             date = date.AddDays(CultureInfo.DateTimeFormat.FirstDayOfWeek - date.DayOfWeek);
 
@@ -78,7 +74,7 @@ namespace IronSphere.Extensions
         
         private DateTime _getFirstDateOfWeekByWeekNumber_FirstDay()
         {
-            DateTime jan1 = new DateTime(Year, 1, 1);
+            DateTime jan1 = new(Year, 1, 1);
             int daysOffset = (int)CultureInfo.DateTimeFormat.FirstDayOfWeek - (int)jan1.DayOfWeek;
             DateTime firstWeekDay = jan1.AddDays(daysOffset);
             int firstWeek = CultureInfo.Calendar.GetWeekOfYear(jan1, CultureInfo.DateTimeFormat.CalendarWeekRule, CultureInfo.DateTimeFormat.FirstDayOfWeek);
@@ -90,7 +86,7 @@ namespace IronSphere.Extensions
 
         private DateTime _getFirstDateOfWeekByWeekNumber_FirstFourDayWeek()
         {
-            DateTime jan1 = new DateTime(Year, 1, 1);
+            DateTime jan1 = new(Year, 1, 1);
 
             DateTime firstThursday = jan1.AddDays( DayOfWeek.Thursday - jan1.DayOfWeek);
             
