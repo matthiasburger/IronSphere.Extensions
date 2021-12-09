@@ -42,12 +42,12 @@
             This class provides extension methods for <see cref="T:System.Boolean"/>
             </summary>
         </member>
-        <member name="M:IronSphere.Extensions.BooleanExtension.GetInt(System.Boolean)">
+        <member name="M:IronSphere.Extensions.BooleanExtension.ToInt(System.Boolean)">
             <summary>
             converts a bool to its int-representation
             </summary>
             <param name="this">the actual boolean value</param>
-            <returns>1 if value is true, if not then false</returns>
+            <returns>1 if value is true, otherwise 0 (zero)</returns>
         </member>
         <member name="T:IronSphere.Extensions.ByteArrayExtension">
             <summary>
@@ -76,12 +76,21 @@
         </member>
         <member name="M:IronSphere.Extensions.ByteExtension.Between(System.Byte,System.Byte,System.Byte)">
             <summary>
-            Checks whether the actual value is between specified lower and higher.
+            Checks whether the actual value is between specified lower and higher. The lower and higher values are not included.
             </summary>
             <param name="this">the actual value</param>
             <param name="lower">the lower value</param>
             <param name="higher">the higher value</param>
             <returns>A value indicating whether the actual value is between two values.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.BetweenOrEquals(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Checks whether the actual value is between specified lower and higher. The lower and higher values are included.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="lower">the lower value</param>
+            <param name="higher">the higher value</param>
+            <returns>A value indicating whether the actual value is between or equals two values.</returns>
         </member>
         <member name="M:IronSphere.Extensions.ByteExtension.IsPositive(System.Byte)">
             <summary>
@@ -194,6 +203,26 @@
             returns a string-representation for the calendar-week
             </summary>
             <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.CalendarWeek.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.CalendarWeek.Equals(IronSphere.Extensions.CalendarWeek)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.CalendarWeek.GetHashCode">
+            <summary>
+            
+            </summary>
             <returns></returns>
         </member>
         <member name="T:IronSphere.Extensions.ChangeTypeExtension">
@@ -384,7 +413,7 @@
             </summary>
             <param name="start">start date of a datetime-span</param>
             <param name="spanType">the span-type for iterating</param>
-            <param name="step">the frequency to iterate</param>
+            <param name="steps">the amount of frequency to iterate</param>
         </member>
         <member name="P:IronSphere.Extensions.DateTimeSpan.Start">
             <summary>
@@ -516,6 +545,78 @@
             <summary>
             years
             </summary>
+        </member>
+        <member name="T:IronSphere.Extensions.DecimalExtension">
+            <summary>
+            This class provides extension methods for <see cref="T:System.Decimal"/>
+            </summary>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.Between(System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Checks whether the actual value is between specified lower and higher.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="lower">the lower value</param>
+            <param name="higher">the higher value</param>
+            <returns>A value indicating whether the actual value is between two values.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.IsPositive(System.Decimal)">
+            <summary>
+            Checks whether the actual value is greater than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is positive.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.IsNegative(System.Decimal)">
+            <summary>
+            Checks whether the actual value is smaller than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is negative.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.IsZero(System.Decimal)">
+            <summary>
+            Checks whether the actual value is equal to zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is equal to zero.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.IsGreaterThan(System.Decimal,System.Decimal)">
+            <summary>
+            Checks whether the actual value is greater than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is greater than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.IsLowerThan(System.Decimal,System.Decimal)">
+            <summary>
+            Checks whether the actual value is lower than an other one.
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="other">the other value</param>
+            <returns>A value indicating whether the actual value is lower than a second value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.Min(System.Decimal,System.Decimal)">
+            <summary>
+            Compares two values and returns the greater one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="minimum">the minimum value</param>
+            <returns>The actual value if its greater than the specified comparison-value. Otherwise it returns the minimum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.Max(System.Decimal,System.Decimal)">
+            <summary>
+            Compares two values and returns the lower one
+            </summary>
+            <param name="this">the actual value</param>
+            <param name="maximum">the maximum value</param>
+            <returns>The actual value if its lower than the specified comparison-value. Otherwise it returns the maximum-value.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.DecimalExtension.Absolute(System.Decimal)">
+            <summary>Returns the absolute value of a single-precision decimal number.</summary>
+            <param name="this">A number that is greater than or equal to <see cref="F:System.Single.MinValue"></see>, but less than or equal to <see cref="F:System.Single.MaxValue"></see>.</param>
+            <returns>A single-precision decimal number, x, such that 0 ≤ x ≤<see cref="F:System.Single.MaxValue"></see>.</returns>
         </member>
         <member name="T:IronSphere.Extensions.DictionaryExtension">
             <summary>
@@ -773,6 +874,15 @@
             <typeparam name="T"></typeparam>
             <param name="this"></param>
             <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.Split``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            splits a sequence into multiple sequences, where none of the sequences has more than <see cref="!:count"/> elements
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="this"></param>
+            <param name="count"></param>
             <returns></returns>
         </member>
         <member name="T:IronSphere.Extensions.EnumExtension">
@@ -1495,40 +1605,6 @@
             This class provides extension methods for <see cref="T:System.Data.SqlClient.SqlCommand"/>
             </summary>
         </member>
-        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandText(System.Data.SqlClient.SqlCommand,System.String,System.Object)">
-             <summary>
-             Sets the SqlCommands command-text and adds parameters
-             </summary>
-             <param name="this">The actual SqlCommand</param>
-             <param name="command">The command to set</param>
-             <param name="parameters">The parameters to add as an anonymous object.</param>
-             <example>
-            <![CDATA[
-             SqlCommand command = new SqlCommand();
-             command.SetCommandText("select * from user where userId = @user", new{user="admin"});
-             ]]>
-             </example>
-             <returns>The modified DbCommand</returns>
-        </member>
-        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandText(System.Data.SqlClient.SqlCommand,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
-             <summary>
-             Sets the SqlCommands command-text and adds parameters
-             </summary>
-             <param name="this">The actual SqlCommand</param>
-             <param name="command">The command to set</param>
-             <param name="parameters">The parameters to add as a dictionary.</param>
-             <example>
-            <![CDATA[
-             Dictionary<string, object> paramsDictionary = new Dictionary<string, object>(){
-                 { "user", "admin" }
-             };
-             
-             SqlCommand command = new SqlCommand();
-             command.SetCommandText("select * from user where userId = @user", paramsDictionary);
-             ]]>
-             </example>
-             <returns>The modified DbCommand</returns>
-        </member>
         <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandWithParameters(System.Data.SqlClient.SqlCommand,System.String,System.Object)">
              <summary>
              Sets the SqlCommands command-text and adds parameters
@@ -1617,6 +1693,16 @@
             <typeparam name="T">The type of the members of values.</typeparam>
             <param name="this">The string to use as a separator. separator is included in the returned string only if value has more than one element.</param>
             <param name="elements">An array that contains the elements to concatenate.</param>
+            <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.Join``1(System.String,System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String})">
+            <summary>
+            Concatenates the elements of a specified array or the members of a collection, using the specified separator between each element or member.
+            </summary>
+            <typeparam name="T">The type of the members of values.</typeparam>
+            <param name="this">The string to use as a separator. separator is included in the returned string only if value has more than one element.</param>
+            <param name="elements">An array that contains the elements to concatenate.</param>
+            <param name="toString"></param>
             <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns Empty.</returns>
         </member>
         <member name="M:IronSphere.Extensions.StringExtension.StartsWithAny(System.String,System.String[])">
@@ -1719,6 +1805,38 @@
             <param name="values"></param>
             <returns></returns>
             <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.Capitalize(System.String)">
+            <summary>
+            capitalizes a string
+            </summary>
+            <param name="this">the actual string</param>
+            <returns>a capitalized version of the actual string</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.Split(System.String,System.Func{System.Char,System.Boolean},System.Func{System.Char,System.Boolean})">
+            <summary>
+            splits a string at a specific point. you can decide whether it should include the char you split on, or not.
+            </summary>
+            <param name="this">the actual string</param>
+            <param name="onExclude">a func on where to split the string, and doesn't include the char you split on</param>
+            <param name="onInclude">a func on where to split the string, and includes the char you split on into the next string</param>
+            <returns>yields all string-parts where you split</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.CamelCase(System.String)">
+            <summary>
+            camel-cases a string
+            splits the string at char.Upper, whitespace, dash or underscore
+            </summary>
+            <param name="this">the actual string</param>
+            <returns>a camelCasedVersion of the actual string</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.StringExtension.PascalCase(System.String)">
+            <summary>
+            pascal-cases a string
+            splits the string at whitespace, dash or underscore
+            </summary>
+            <param name="this">the actual string</param>
+            <returns>a PascalCasedVersion of the actual string</returns>
         </member>
         <member name="T:IronSphere.Extensions.WeekOfYearStandard">
             <summary>
