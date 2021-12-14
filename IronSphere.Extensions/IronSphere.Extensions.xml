@@ -900,6 +900,15 @@
             <param name="filter"></param>
             <returns></returns>
         </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.GetSingleItemOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="this"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
         <member name="M:IronSphere.Extensions.EnumerableExtension.AddItem``1(System.Collections.Generic.IEnumerable{``0},``0)">
             <summary>
             ITD with v4
@@ -1247,16 +1256,6 @@
             <summary>
             This class provides extension-methods for working with <see cref="T:System.Linq.Expressions.LambdaExpression"/>
             </summary>
-        </member>
-        <member name="M:IronSphere.Extensions.LambdaExpressionExtensions.SetPropertyValue``2(``0,System.Linq.Expressions.LambdaExpression,``1)">
-            <summary>
-            Sets an objects property to a value by using <see cref="T:System.Linq.Expressions.LambdaExpression"/>
-            </summary>
-            <typeparam name="T"></typeparam>
-            <typeparam name="TValue"></typeparam>
-            <param name="target"></param>
-            <param name="memberLambda"></param>
-            <param name="value"></param>
         </member>
         <member name="M:IronSphere.Extensions.LambdaExpressionExtensions.SetPropertyValue``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},``1)">
             <summary>

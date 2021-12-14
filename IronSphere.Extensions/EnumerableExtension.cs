@@ -280,7 +280,25 @@ namespace IronSphere.Extensions
         /// <param name="this"></param>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Obsolete("Use GetSingleItemOrDefault<T> - it does the same, but a list of int doesn't return null as default")]
         public static T? GetSingleItemOrNull<T>(this IEnumerable<T> @this, Expression<Func<T, bool>> filter)
+        {
+            if (@this == null)
+                throw new ArgumentNullException(nameof(@this));
+
+            string ErrorMessage(string s) => $"{s} ({filter.GetReadableExpressionBody()})".TrimEnd();
+
+            return _getSingleItemOrNull(@this, filter.Compile(), ErrorMessage);
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        public static T? GetSingleItemOrDefault<T>(this IEnumerable<T> @this, Expression<Func<T, bool>> filter)
         {
             if (@this == null)
                 throw new ArgumentNullException(nameof(@this));
@@ -306,7 +324,6 @@ namespace IronSphere.Extensions
                     continue;
 
                 item = enumerator.Current;
-                count++;
 
                 if (++count > 1)
                     throw new EquivocalItemException(errorMessage("Items in sequence are equivocal."));
@@ -357,6 +374,9 @@ namespace IronSphere.Extensions
         /// <returns></returns>
         public static IEnumerable<List<T>> Split<T>(this IEnumerable<T> @this, int count)
         {
+            if (@this is null)
+                throw new ArgumentNullException();
+            
             List<T> currentCollection = new(count);
             int index = 0;
 
@@ -380,6 +400,9 @@ namespace IronSphere.Extensions
         public static TRes? MaxIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null)
             where TRes : struct, IComparable<TRes>
         {
+            if (source is null)
+                throw new ArgumentNullException();
+            
             TRes? result = null;
 
             using (IEnumerator<T> enumerator = source.GetEnumerator())
@@ -402,6 +425,9 @@ namespace IronSphere.Extensions
         public static TRes? MinIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null)
             where TRes : struct, IComparable<TRes>
         {
+            if (source is null)
+                throw new ArgumentNullException();
+            
             TRes? result = null;
 
             using (IEnumerator<T> enumerator = source.GetEnumerator())
@@ -421,9 +447,12 @@ namespace IronSphere.Extensions
             return result ?? fallback;
         }
 
-        public static IEnumerable<TResult> ForEach<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> action)
+        public static IEnumerable<TResult> ForEach<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> action, bool toList = true)
         {
-            return @this.Select(action).ToList();
+            IEnumerable<TResult> selected = @this.Select(action);
+            if (toList)
+                selected = selected.ToList();
+            return selected;
         }
 
         public static IEnumerable<TResult> TryForEach<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> action)

@@ -23,7 +23,7 @@ namespace IronSphere.Extensions
                 throw new ArgumentNullException(nameof(@this));
             if (expression is null)
                 throw new ArgumentNullException(nameof(expression));
-
+            
             T? elementToDelete = @this.SingleOrDefault(expression);
             if (elementToDelete != null)
                 @this.Remove(elementToDelete);
@@ -43,7 +43,8 @@ namespace IronSphere.Extensions
             if (expression is null)
                 throw new ArgumentNullException(nameof(expression));
 
-            foreach (T element in @this.Where(expression))
+            List<T> copy = @this.Where(expression).ToList();
+            foreach (T element in copy)
                 @this.Remove(element);
         }
 
@@ -71,28 +72,6 @@ namespace IronSphere.Extensions
         {
             foreach(T element in elementsToAdd)
                 @this.Add(element);
-        }
-        
-        public static IEnumerable<List<T>> Split<T>(this IEnumerable<T> @this, int count)
-        {
-            List<T> currentCollection = new(count);
-            int index = 0;
-
-            foreach (T currentItem in @this)
-            {
-                currentCollection.Add(currentItem);
-
-                if (++index != count) 
-                    continue;
-
-                yield return currentCollection;
-
-                index = 0;
-                currentCollection = new List<T>();
-            }
-
-            if(currentCollection.Any())
-                yield return  currentCollection;
         }
     }
 }

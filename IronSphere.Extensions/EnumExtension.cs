@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace IronSphere.Extensions
 {
@@ -18,7 +20,7 @@ namespace IronSphere.Extensions
         {
             if (value is null)
                 return false;
-            
+
             try
             {
                 return ((int)(object)@this & (int)(object)value) == (int)(object)value;
@@ -40,7 +42,7 @@ namespace IronSphere.Extensions
         {
             if (value is null)
                 return false;
-            
+
             try
             {
                 return (int)(object)@this == (int)(object)value;
@@ -62,7 +64,7 @@ namespace IronSphere.Extensions
         {
             if (value is null)
                 return default;
-            
+
             try
             {
                 return (T)(object)((int)(object)@this | (int)(object)value);
@@ -85,7 +87,7 @@ namespace IronSphere.Extensions
         {
             if (value is null)
                 return default;
-            
+
             try
             {
                 return (T)(object)((int)(object)@this & ~(int)(object)value);

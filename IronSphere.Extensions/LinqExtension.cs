@@ -26,6 +26,9 @@ namespace IronSphere.Extensions
 
         public static IEnumerable<TSource> LexSkipLast<TSource>(this IEnumerable<TSource> source, int count)
         {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
             TSource[] buffer = new TSource[count];
 
             using IEnumerator<TSource> e = source.GetEnumerator();
@@ -48,6 +51,9 @@ namespace IronSphere.Extensions
 
         public static IEnumerable<TSource> LexTakeLast<TSource>(this IEnumerable<TSource> source, int count)
         {
+            if (source is null)
+                throw new ArgumentNullException(nameof(source));
+            
             TSource[] buffer = new TSource[count];
 
             using (IEnumerator<TSource> e = source.GetEnumerator())
@@ -98,6 +104,7 @@ namespace IronSphere.Extensions
         /// <param name="outerKeySelector">the sources key-property</param>
         /// <param name="innerKeySelector">the joined tables key-property</param>
         /// <returns>An IJoinSet after the left join.</returns>
+        [Obsolete("This function may be removed in future - tests failed")]
         public static IEnumerable<IJoinSet<TSource, TJoin>> LexLeftJoin<TSource, TJoin, TKey>(
             this IEnumerable<TSource> source,
             IEnumerable<TJoin> inner,
@@ -129,6 +136,7 @@ namespace IronSphere.Extensions
         /// <param name="outerKeySelector">the sources key-property</param>
         /// <param name="innerKeySelector">the joined tables key-property</param>
         /// <returns>An IJoinSet after the right join.</returns>
+        [Obsolete("This function may be removed in future - tests failed")]
         public static IEnumerable<IJoinSet<TJoin, TSource>> LexRightJoin<TSource, TJoin, TKey>(
             this IEnumerable<TSource> source,
             IEnumerable<TJoin> inner,
@@ -148,8 +156,6 @@ namespace IronSphere.Extensions
                 .GroupJoin(source, innerKeySelector, outerKeySelector, (main, sub) => new { Main = main, Sub = sub })
                 .SelectMany(left => left.Sub.DefaultIfEmpty(), (s, _) => new JoinSet<TJoin, TSource> { Main = s.Main, Sub = s.Sub });
         }
-
-
         /// <summary>
         /// Returns distinct elements from a sequence by using a selected property to compare values.
         /// </summary>

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Data.SqlClient;
 using System.Reflection;
 
@@ -24,8 +23,8 @@ namespace IronSphere.Extensions
         /// ]]>
         /// </example>
         /// <returns>The modified DbCommand</returns>
-        public static DbCommand SetCommandWithParameters(this SqlCommand @this, string command,
-            object? parameters)
+        public static SqlCommand SetCommandWithParameters(this SqlCommand @this, string command,
+            object? parameters = null) 
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -61,7 +60,7 @@ namespace IronSphere.Extensions
         /// ]]>
         /// </example>
         /// <returns>The modified DbCommand</returns>
-        public static DbCommand SetCommandWithParameters(this SqlCommand @this, string command,
+        public static SqlCommand SetCommandWithParameters(this SqlCommand @this, string command,
             Dictionary<string, object>? parameters)
         {
             if (@this is null)
