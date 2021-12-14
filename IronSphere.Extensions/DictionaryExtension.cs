@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 
-using JetBrains.Annotations;
-
 namespace IronSphere.Extensions
 {
     /// <summary>
@@ -63,6 +61,9 @@ namespace IronSphere.Extensions
         /// <returns>The found value or the fallback if the key doesn't exist.</returns>
         public static TValue? GetValue<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> @this, TKey key, TValue? fallback = default)
         {
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+            
             using IEnumerator<KeyValuePair<TKey, TValue>> enumerator = @this.GetEnumerator();
             
             while (enumerator.MoveNext())

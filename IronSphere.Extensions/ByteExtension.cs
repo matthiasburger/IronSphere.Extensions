@@ -35,19 +35,34 @@ namespace IronSphere.Extensions
         public static bool IsPositive(this byte @this) => @this.CompareTo(0) > 0;
 
         /// <summary>
-        /// Checks whether the actual value is smaller than zero.
-        /// </summary>
-        /// <param name="this">the actual value</param>
-        /// <returns>A value indicating whether the actual value is negative.</returns>
-        public static bool IsNegative(this byte @this) => @this.CompareTo(0) < 0;
-
-        /// <summary>
         /// Checks whether the actual value is equal to zero.
         /// </summary>
         /// <param name="this">the actual value</param>
         /// <returns>A value indicating whether the actual value is equal to zero.</returns>
         public static bool IsZero(this byte @this) => @this.CompareTo(0) == 0;
 
+        /// <summary>
+        /// Checks whether the actual value is greater than zero.
+        /// </summary>
+        /// <param name="this">the actual value</param>
+        /// <returns>A value indicating whether the actual value is positive.</returns>
+        public static bool IsPositive(this sbyte @this) => @this.CompareTo(0) > 0;
+
+        /// <summary>
+        /// Checks whether the actual value is smaller than zero.
+        /// </summary>
+        /// <param name="this">the actual value</param>
+        /// <returns>A value indicating whether the actual value is negative.</returns>
+        public static bool IsNegative(this sbyte @this) => @this.CompareTo(0) < 0;
+
+        /// <summary>
+        /// Checks whether the actual value is equal to zero.
+        /// </summary>
+        /// <param name="this">the actual value</param>
+        /// <returns>A value indicating whether the actual value is equal to zero.</returns>
+        public static bool IsZero(this sbyte @this) => @this.CompareTo(0) == 0;
+
+        
         /// <summary>
         /// Checks whether the actual value is greater than an other one.
         /// </summary>

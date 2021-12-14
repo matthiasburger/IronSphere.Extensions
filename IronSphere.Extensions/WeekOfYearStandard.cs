@@ -13,6 +13,11 @@
         /// <summary>
         /// Iso-Standard
         /// </summary>
-        Iso8601
+        Iso8601,
+        
+        #if DEBUG
+        // for unit-testing purposes
+        NotImplemented
+        #endif
     }
 }

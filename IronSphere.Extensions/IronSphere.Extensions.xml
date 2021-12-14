@@ -99,14 +99,28 @@
             <param name="this">the actual value</param>
             <returns>A value indicating whether the actual value is positive.</returns>
         </member>
-        <member name="M:IronSphere.Extensions.ByteExtension.IsNegative(System.Byte)">
+        <member name="M:IronSphere.Extensions.ByteExtension.IsZero(System.Byte)">
+            <summary>
+            Checks whether the actual value is equal to zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is equal to zero.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.IsPositive(System.SByte)">
+            <summary>
+            Checks whether the actual value is greater than zero.
+            </summary>
+            <param name="this">the actual value</param>
+            <returns>A value indicating whether the actual value is positive.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.ByteExtension.IsNegative(System.SByte)">
             <summary>
             Checks whether the actual value is smaller than zero.
             </summary>
             <param name="this">the actual value</param>
             <returns>A value indicating whether the actual value is negative.</returns>
         </member>
-        <member name="M:IronSphere.Extensions.ByteExtension.IsZero(System.Byte)">
+        <member name="M:IronSphere.Extensions.ByteExtension.IsZero(System.SByte)">
             <summary>
             Checks whether the actual value is equal to zero.
             </summary>
@@ -413,7 +427,7 @@
             </summary>
             <param name="start">start date of a datetime-span</param>
             <param name="spanType">the span-type for iterating</param>
-            <param name="steps">the amount of frequency to iterate</param>
+            <param name="count">the amount of frequency to iterate</param>
         </member>
         <member name="P:IronSphere.Extensions.DateTimeSpan.Start">
             <summary>
@@ -792,6 +806,26 @@
             If there is exactly one item, the value of the item doesn't matter.
             </remarks>
         </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.AllValuesTheSameFor``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            method checks whether the selected properties of the list are the same
+            </summary>
+            <param name="this"></param>
+            <param name="selector"></param>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.IsSingle``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            method checks whether the selected properties of the list are all the same
+            </summary>
+            <param name="this"></param>
+            <param name="selector"></param>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <returns></returns>
+        </member>
         <member name="M:IronSphere.Extensions.EnumerableExtension.IsSingle``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
             <summary>
             Determines if an enumeration contains exactly one element
@@ -823,6 +857,14 @@
             </remarks>
         </member>
         <member name="M:IronSphere.Extensions.EnumerableExtension.Randomize``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Randomizes the items of a list
+            </summary>
+            <typeparam name="T">Thy generic list-type.</typeparam>
+            <param name="this">The actual list to randomize.</param>
+            <returns>A new list-instance with all items of the list but in a random order.</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.EnumerableExtension.Shuffle``1(System.Collections.Generic.IEnumerable{``0})">
             <summary>
             Randomizes the items of a list
             </summary>

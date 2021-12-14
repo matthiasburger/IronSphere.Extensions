@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-
 using IronSphere.Extensions.Exceptions;
 using IronSphere.Extensions.PredicateEnumerable;
 
@@ -52,7 +51,7 @@ namespace IronSphere.Extensions
         public static bool IsNullOrEmpty<T>(this IEnumerable<T>? @this)
         {
             if (@this == null) return true;
-            
+
             using IEnumerator<T> enumerator = @this.GetEnumerator();
             return !enumerator.MoveNext();
         }
@@ -84,7 +83,45 @@ namespace IronSphere.Extensions
             return enumerator.MoveNext() && !enumerator.MoveNext();
         }
 
+        /// <summary>
+        /// method checks whether the selected properties of the list are the same
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TResult"></typeparam>
+        /// <returns></returns>
+        public static bool AllValuesTheSameFor<T, TResult>(this IEnumerable<T>? @this, Func<T, TResult> selector)
+        {
+            if (@this == null) return false;
 
+            HashSet<TResult> foundResults = new();
+
+            using IEnumerator<T> enumerator = @this.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                TResult currentValue = selector(enumerator.Current);
+                if (foundResults.Contains(currentValue))
+                    continue;
+
+                if (foundResults.Count != 0)
+                    return false;
+
+                foundResults.Add(currentValue);
+            }
+
+            return foundResults.Count == 1;
+        }
+
+        /// <summary>
+        /// method checks whether the selected properties of the list are all the same
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TResult"></typeparam>
+        /// <returns></returns>
+        [Obsolete("Misleading name, use AllValuesTheSameFor<T, TResult> instead")]
         public static bool IsSingle<T, TResult>(this IEnumerable<T>? @this, Func<T, TResult> selector)
         {
             if (@this == null) return false;
@@ -146,6 +183,7 @@ namespace IronSphere.Extensions
         /// <typeparam name="T">Thy generic list-type.</typeparam>
         /// <param name="this">The actual list to randomize.</param>
         /// <returns>A new list-instance with all items of the list but in a random order.</returns>
+        [Obsolete("Use function Shuffle<T> instead")]
         public static IEnumerable<T> Randomize<T>(this IEnumerable<T> @this)
         {
             if (@this is null)
@@ -158,7 +196,38 @@ namespace IronSphere.Extensions
             foreach (T item in actualList)
             {
                 int position;
-                while (!(position = Random.NextInt(0, actualList.Count)).In(positions)) { }
+                while (!(position = Random.NextInt(0, actualList.Count)).In(positions))
+                {
+                }
+
+                positions.Remove(position);
+                instance[position] = item;
+            }
+
+            return instance;
+        }
+        
+        /// <summary>
+        /// Randomizes the items of a list
+        /// </summary>
+        /// <typeparam name="T">Thy generic list-type.</typeparam>
+        /// <param name="this">The actual list to randomize.</param>
+        /// <returns>A new list-instance with all items of the list but in a random order.</returns>
+        public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> @this)
+        {
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+
+            List<T> actualList = @this.ToList();
+            T[] instance = new T[actualList.Count];
+            List<int> positions = Enumerable.Range(0, actualList.Count).ToList();
+
+            foreach (T item in actualList)
+            {
+                int position;
+                while (!(position = Random.NextInt(0, actualList.Count)).In(positions))
+                {
+                }
 
                 positions.Remove(position);
                 instance[position] = item;
@@ -201,7 +270,7 @@ namespace IronSphere.Extensions
             string ErrorMessage(string s) => $"{s} ({filter.GetReadableExpressionBody()})".TrimEnd();
 
             return _getSingleItemOrNull(@this, filter.Compile(), ErrorMessage)
-                ?? throw new MissingItemException(ErrorMessage("No item in sequence was found."));
+                   ?? throw new MissingItemException(ErrorMessage("No item in sequence was found."));
         }
 
         /// <summary>
@@ -221,7 +290,8 @@ namespace IronSphere.Extensions
             return _getSingleItemOrNull(@this, filter.Compile(), ErrorMessage);
         }
 
-        private static T? _getSingleItemOrNull<T>(IEnumerable<T> @this, Func<T, bool> filter, Func<string, string> errorMessage)
+        private static T? _getSingleItemOrNull<T>(IEnumerable<T> @this, Func<T, bool> filter,
+            Func<string, string> errorMessage)
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
@@ -254,7 +324,8 @@ namespace IronSphere.Extensions
 
         internal static IEnumerable<T> RemoveSingleItem<T>(this IEnumerable<T> @this, T element)
         {
-            return @this.Where(item => !ReferenceEquals(item, element) && !EqualityComparer<T>.Default.Equals(item, element));
+            return @this.Where(item =>
+                !ReferenceEquals(item, element) && !EqualityComparer<T>.Default.Equals(item, element));
         }
 
         /// <summary>
@@ -306,7 +377,8 @@ namespace IronSphere.Extensions
                 yield return currentCollection;
         }
 
-        public static TRes? MaxIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null) where TRes : struct, IComparable<TRes>
+        public static TRes? MaxIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null)
+            where TRes : struct, IComparable<TRes>
         {
             TRes? result = null;
 
@@ -327,7 +399,8 @@ namespace IronSphere.Extensions
             return result ?? fallback;
         }
 
-        public static TRes? MinIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null) where TRes : struct, IComparable<TRes>
+        public static TRes? MinIfAny<T, TRes>(this IEnumerable<T> source, Func<T, TRes> selector, TRes? fallback = null)
+            where TRes : struct, IComparable<TRes>
         {
             TRes? result = null;
 
@@ -352,7 +425,7 @@ namespace IronSphere.Extensions
         {
             return @this.Select(action).ToList();
         }
-              
+
         public static IEnumerable<TResult> TryForEach<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> action)
         {
             IList<TResult> newSequence = new List<TResult>();
@@ -378,6 +451,32 @@ namespace IronSphere.Extensions
         public static IEnumerable<IIndexedItem<TModel>> SelectWithIndex<TModel>(this IEnumerable<TModel> collection)
         {
             return collection.Select((item, x) => new IndexedItem<TModel>(item, x));
+        }
+
+        public static bool Loops<T>(this IEnumerable<T> @this, Func<T, T> next) where T:struct
+        {
+            using IEnumerator<T> enumerator = @this.GetEnumerator();
+
+            enumerator.MoveNext();
+            T current = enumerator.Current;
+
+            bool hasNext = false;
+            
+            while (enumerator.MoveNext())
+            {
+                hasNext = true;
+
+                T shouldBe = next(current);
+                if (shouldBe.Equals(enumerator.Current))
+                {
+                    current = enumerator.Current;
+                    continue;
+                }
+
+                return false;
+            }
+
+            return hasNext;
         }
     }
 

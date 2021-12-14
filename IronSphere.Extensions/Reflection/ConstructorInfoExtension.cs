@@ -15,9 +15,9 @@ namespace IronSphere.Extensions.Reflection
         /// </summary>
         /// <param name="this">the actual constructor</param>
         /// <returns>A string representing the xml member-name</returns>
-        public static string? GetXmlMemberName(this ConstructorInfo @this)
+        public static string? GetXmlMemberName(this ConstructorInfo? @this)
         {
-            if (@this.DeclaringType is null)
+            if (@this?.DeclaringType is null)
                 return null;
             
             StringBuilder builder = new StringBuilder(@this.DeclaringType.GetXmlMemberName())

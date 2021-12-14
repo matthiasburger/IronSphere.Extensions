@@ -9,7 +9,7 @@ namespace IronSphere.Extensions.Reflection
     /// <summary>
     /// This class provides extension methods for <see cref="ParameterInfo"/>
     /// </summary>
-    internal static class ParameterInfoExtension
+    public static class ParameterInfoExtension
     {
         /// <summary>
         /// Builds a methods parameter-string

@@ -405,7 +405,7 @@ namespace IronSphere.Extensions.Reflection
         {
             return @this.IsGenericType && @this.GetGenericTypeDefinition() == typeof(Nullable<>);
         }
-        
+
         public static Type? GetNullableUnderlyingType(this Type @this)
         {
             return Nullable.GetUnderlyingType(@this);

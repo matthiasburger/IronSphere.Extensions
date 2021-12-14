@@ -15,7 +15,7 @@ namespace IronSphere.Extensions
         /// <summary>
         /// A static array of days contained by a weekend
         /// </summary>
-        public static readonly IReadOnlyList<DayOfWeek> Weekend = new []{ DayOfWeek.Saturday, DayOfWeek.Sunday };
+        public static readonly IReadOnlyList<DayOfWeek> Weekend = new[] { DayOfWeek.Saturday, DayOfWeek.Sunday };
 
         /// <summary>
         /// Calculates the first day of a week.
@@ -92,7 +92,8 @@ namespace IronSphere.Extensions
         /// <param name="cultureInfo">the culture to use</param>
         /// <param name="weekOfYearStandard">the standard to use</param>
         /// <returns>the week of year for the specified datetime</returns>
-        public static int GetWeekOfYear(this DateTime dateTime, CultureInfo? cultureInfo = null, WeekOfYearStandard weekOfYearStandard = WeekOfYearStandard.Iso8601)
+        public static int GetWeekOfYear(this DateTime dateTime, CultureInfo? cultureInfo = null,
+            WeekOfYearStandard weekOfYearStandard = WeekOfYearStandard.Iso8601)
         {
             cultureInfo ??= CultureInfo.InvariantCulture;
 
@@ -100,6 +101,7 @@ namespace IronSphere.Extensions
             {
                 WeekOfYearStandard.DotNet => GetWeekOfYearNetStandard(dateTime, cultureInfo),
                 WeekOfYearStandard.Iso8601 => GetWeekOfYearIso8601(dateTime, cultureInfo),
+
                 _ => throw new ArgumentOutOfRangeException(nameof(weekOfYearStandard), weekOfYearStandard, null)
             };
         }
@@ -147,37 +149,36 @@ namespace IronSphere.Extensions
         public static bool Between(this DateTime @this, DateTimeSpan span)
             => @this.CompareTo(span.Start) >= 0 && @this.CompareTo(span.End) <= 0;
 
-        public static DateTimeSpan SpanTo(this DateTime @this, DateTime end) 
+        public static DateTimeSpan SpanTo(this DateTime @this, DateTime end)
             => new(@this, end);
 
-        public static DateTimeSpan SpanTo(this DateTime @this, int amount, DateTimeSpanType spanType) 
+        public static DateTimeSpan SpanTo(this DateTime @this, int amount, DateTimeSpanType spanType)
             => new(@this, spanType, amount);
 
-        public static DateTime EndOfDay(this DateTime @this) => @this.AddDays(1).AddTicks(-1);
+        public static DateTime EndOfDay(this DateTime @this)
+            => @this.Date.AddDays(1).AddTicks(-1);
 
-        public static bool IsEarlierThan(this DateTime @this, TimeSpan delta) 
+        public static bool IsEarlierThan(this DateTime @this, TimeSpan delta)
             => @this.Add(delta) < DateTime.Now;
 
         public static DateTime Next(this DateTime dt, DayOfWeek weekday)
-        {
-            return dt.AddDays((weekday - dt.DayOfWeek + 7) % 7).Date;
-        }
+            => dt.AddDays((weekday - dt.DayOfWeek + 7) % 7).Date;
 
         public static DateTime Previous(this DateTime dt, DayOfWeek weekday)
-        {
-            return dt.AddDays(-1 * ((dt.DayOfWeek - weekday) % 7)).Date;
-        }
+            => dt.AddDays(-7).AddDays((weekday - dt.DayOfWeek + 7) % 7).Date;
 
         public static CalendarWeek GetCalendarWeek(this DateTime dateTime)
         {
             DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(dateTime);
             if (day is >= DayOfWeek.Monday and <= DayOfWeek.Wednesday)
                 dateTime = dateTime.AddDays(3);
-            int calendarWeek = CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(dateTime, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+            int calendarWeek =
+                CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(dateTime, CalendarWeekRule.FirstFourDayWeek,
+                    DayOfWeek.Monday);
             int year = dateTime.Year;
-            if(dateTime.Month == 1 && calendarWeek > 25)
+            if (dateTime.Month == 1 && calendarWeek > 25)
                 year--;
-		
+
             return new CalendarWeek(calendarWeek, year);
         }
 

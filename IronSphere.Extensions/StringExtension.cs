@@ -384,9 +384,10 @@ namespace IronSphere.Extensions
 
         public static bool Like(this string? @this, string? pattern)
         {
-            if (@this == null || pattern == null || string.IsNullOrEmpty(pattern)) return false;
+            if (@this is null || pattern is null || string.IsNullOrEmpty(pattern))
+                return false;
 
-            string regexPattern = $"^{Regex.Escape(pattern)}$";
+            string regexPattern = $"^{pattern}$";
 
             regexPattern = regexPattern
                 .Replace(@"\[!", "[^")

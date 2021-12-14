@@ -15,7 +15,7 @@ namespace IronSphere.Extensions
         /// </summary>
         /// <param name="culture">actual culture</param>
         /// <returns>all months in the language of the cultures language</returns>
-        public static IEnumerable<(int, string)> GetMonthsOfCulture(this CultureInfo culture)
+        public static IEnumerable<(int, string)> GetMonthsOfCulture(this CultureInfo? culture)
         {
             if (culture is null)
                 throw new ArgumentNullException(nameof(culture));
