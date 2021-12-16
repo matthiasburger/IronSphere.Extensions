@@ -8,7 +8,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-
 using JetBrains.Annotations;
 
 namespace IronSphere.Extensions
@@ -406,24 +405,30 @@ namespace IronSphere.Extensions
                 throw new ArgumentException($"Invalid pattern: {pattern}", ex);
             }
         }
-        
-        public static string? Substring(this string @this, string startText, string endText, StringComparison stringComparison = StringComparison.Ordinal) 
+
+        public static string? Substring(this string @this, string startText, string? endText,
+            StringComparison stringComparison = StringComparison.Ordinal)
         {
-            if (string.IsNullOrEmpty(startText) || string.IsNullOrEmpty(endText))
-                throw new ArgumentException("Start Text and End Text cannot be empty.");
+            if (string.IsNullOrEmpty(startText))
+                throw new ArgumentException("Start Text cannot be empty.");
 
             int start = @this.IndexOf(startText, stringComparison);
             if (start < 0) return null;
 
-            int end = @this.IndexOf(endText, start, stringComparison);
-            if (end < 0) return null;
+            int end = string.IsNullOrEmpty(endText) 
+                ? @this.Length 
+                : @this.IndexOf(endText!, start, stringComparison);
+            if (end < 0) 
+                return null;
 
             return @this.Substring(start, end - start);
         }
 
 
-        [Obsolete("Renamed, will be removed after version 21.12.0.0. Use @this.Substring(startText, endText, stringComparison)")]
-        public static string? SubString(this string @this, string startText, string endText, StringComparison stringComparison = StringComparison.Ordinal)
+        [Obsolete(
+            "Renamed, will be removed after version 21.12.0.0. Use @this.Substring(startText, endText, stringComparison)")]
+        public static string? SubString(this string @this, string startText, string endText,
+            StringComparison stringComparison = StringComparison.Ordinal)
         {
             if (string.IsNullOrEmpty(startText) || string.IsNullOrEmpty(endText))
                 throw new ArgumentException("Start Text and End Text cannot be empty.");
@@ -446,7 +451,7 @@ namespace IronSphere.Extensions
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
-            
+
             if (string.IsNullOrWhiteSpace(@this))
                 return @this;
 
@@ -460,7 +465,8 @@ namespace IronSphere.Extensions
         /// <param name="onExclude">a func on where to split the string, and doesn't include the char you split on</param>
         /// <param name="onInclude">a func on where to split the string, and includes the char you split on into the next string</param>
         /// <returns>yields all string-parts where you split</returns>
-        public static IEnumerable<string> Split(this string? @this, Func<char, bool>? onExclude = null, Func<char, bool>? onInclude = null)
+        public static IEnumerable<string> Split(this string? @this, Func<char, bool>? onExclude = null,
+            Func<char, bool>? onInclude = null)
         {
             if (@this is null || string.IsNullOrWhiteSpace(@this))
                 yield break;
@@ -505,7 +511,7 @@ namespace IronSphere.Extensions
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
-            
+
             if (string.IsNullOrWhiteSpace(@this))
                 return @this;
 
@@ -526,7 +532,7 @@ namespace IronSphere.Extensions
         {
             if (@this is null)
                 throw new ArgumentNullException(nameof(@this));
-            
+
             if (string.IsNullOrEmpty(@this))
                 return @this;
 
