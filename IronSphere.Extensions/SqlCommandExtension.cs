@@ -74,7 +74,22 @@ namespace IronSphere.Extensions
                 return @this;
 
             foreach (KeyValuePair<string, object> pair in parameters)
-                @this.Parameters.AddWithValue($"@{pair.Key}", pair.Value);
+                @this.Parameters.AddWithValue(pair.Key[0] is '@' ? pair.Key : $"@{pair.Key}", pair.Value);
+
+            return @this;
+        }
+        
+        
+        public static Microsoft.Data.SqlClient.SqlCommand SetParameters(this Microsoft.Data.SqlClient.SqlCommand @this, IDictionary<string, object>? parameters)
+        {
+            if (@this is null)
+                throw new ArgumentNullException(nameof(@this));
+
+            if (parameters == null)
+                return @this;
+
+            foreach (KeyValuePair<string, object> pair in parameters) 
+                @this.Parameters.AddWithValue(pair.Key[0] is '@' ? pair.Key : $"@{pair.Key}", pair.Value);
 
             return @this;
         }
