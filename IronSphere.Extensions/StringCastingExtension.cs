@@ -12,6 +12,8 @@ public static class StringCastingExtension
 
         return @this is "1";
     }
+        
+    public static bool ToBool(this string @this, Func<string, bool> function) => function(@this);
 
     public static byte? ToByte(this string @this) => byte.TryParse(@this, out byte temp) ? temp : null;
     public static char? ToChar(this string @this) => char.TryParse(@this, out char temp) ? temp : null;
