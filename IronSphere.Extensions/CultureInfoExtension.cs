@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace IronSphere.Extensions
+namespace IronSphere.Extensions;
+
+/// <summary>
+/// This class provides extension methods for <see cref="CultureInfo"/>
+/// </summary>
+public static class CultureInfoExtension
 {
     /// <summary>
-    /// This class provides extension methods for <see cref="CultureInfo"/>
+    /// Returns all months in the language of the cultures language.
     /// </summary>
-    public static class CultureInfoExtension
+    /// <param name="culture">actual culture</param>
+    /// <returns>all months in the language of the cultures language</returns>
+    public static IEnumerable<(int, string)> GetMonthsOfCulture(this CultureInfo? culture)
     {
-        /// <summary>
-        /// Returns all months in the language of the cultures language.
-        /// </summary>
-        /// <param name="culture">actual culture</param>
-        /// <returns>all months in the language of the cultures language</returns>
-        public static IEnumerable<(int, string)> GetMonthsOfCulture(this CultureInfo? culture)
-        {
-            if (culture is null)
-                throw new ArgumentNullException(nameof(culture));
+        if (culture is null)
+            throw new ArgumentNullException(nameof(culture));
 
-            return Enumerable.Range(1, 12).Select(x => (x, culture.DateTimeFormat.GetMonthName(x)));
-        }
+        return Enumerable.Range(1, 12).Select(x => (x, culture.DateTimeFormat.GetMonthName(x)));
     }
 }

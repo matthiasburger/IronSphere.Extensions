@@ -1,19 +1,38 @@
 ﻿using System;
 
-namespace IronSphere.Extensions
+namespace IronSphere.Extensions;
+
+/// <summary>
+/// This class provides extension-methods for changing types
+/// </summary>
+public static class ChangeTypeExtension
 {
     /// <summary>
-    /// This class provides extension-methods for changing types
+    /// converts any object to type of T
     /// </summary>
-    public static class ChangeTypeExtension
+    /// <typeparam name="T">the target type</typeparam>
+    /// <param name="this">the actual value</param>
+    /// <returns>the converted object</returns>
+    public static T? To<T>(this object? @this)
     {
-        /// <summary>
-        /// converts any object to type of T
-        /// </summary>
-        /// <typeparam name="T">the target type</typeparam>
-        /// <param name="this">the actual value</param>
-        /// <returns>the converted object</returns>
-        public static T? To<T>(this object? @this)
+        Type? nullableUnderlyingType = Nullable.GetUnderlyingType(typeof(T));
+
+        if (nullableUnderlyingType != null && @this is null)
+            return default;
+
+        return (T)Convert.ChangeType(@this, nullableUnderlyingType ?? typeof(T));
+    }
+
+    /// <summary>
+    /// converts any object to type of T
+    /// </summary>
+    /// <typeparam name="T">the target type</typeparam>
+    /// <param name="this">the actual value</param>
+    /// <param name="default">the default-value if conversion threw an exception</param>
+    /// <returns>the converted object</returns>
+    public static T? ToOrDefault<T>(this object? @this, T? @default = default)
+    {
+        try
         {
             Type? nullableUnderlyingType = Nullable.GetUnderlyingType(typeof(T));
 
@@ -22,62 +41,42 @@ namespace IronSphere.Extensions
 
             return (T)Convert.ChangeType(@this, nullableUnderlyingType ?? typeof(T));
         }
-
-        /// <summary>
-        /// converts any object to type of T
-        /// </summary>
-        /// <typeparam name="T">the target type</typeparam>
-        /// <param name="this">the actual value</param>
-        /// <param name="default">the default-value if conversion threw an exception</param>
-        /// <returns>the converted object</returns>
-        public static T? ToOrDefault<T>(this object? @this, T? @default = default)
+        catch (Exception e) when (e is FormatException or InvalidCastException)
         {
-            try
-            {
-                Type? nullableUnderlyingType = Nullable.GetUnderlyingType(typeof(T));
-
-                if (nullableUnderlyingType != null && @this is null)
-                    return default;
-
-                return (T)Convert.ChangeType(@this, nullableUnderlyingType ?? typeof(T));
-            }
-            catch (Exception e) when (e is FormatException or InvalidCastException)
-            {
-                return @default;
-            }
+            return @default;
         }
+    }
 
-        /// <summary>
-        /// converts any object to type of T
-        /// </summary>
-        /// <typeparam name="T">the target type</typeparam>
-        /// <param name="this">the actual value</param>
-        /// <returns>the converted object or null if conversion threw an exception</returns>
-        public static T? ToOrNull<T>(this object @this) where T : struct
+    /// <summary>
+    /// converts any object to type of T
+    /// </summary>
+    /// <typeparam name="T">the target type</typeparam>
+    /// <param name="this">the actual value</param>
+    /// <returns>the converted object or null if conversion threw an exception</returns>
+    public static T? ToOrNull<T>(this object @this) where T : struct
+    {
+        try
         {
-            try
-            {
-                return (T)Convert.ChangeType(@this, typeof(T));
-            }
-            catch (Exception e) when (e is FormatException or InvalidCastException)
-            {
-                return null;
-            }
+            return (T)Convert.ChangeType(@this, typeof(T));
         }
-
-        public static bool Is<T>(this object item) where T : class
+        catch (Exception e) when (e is FormatException or InvalidCastException)
         {
-            return item is T;
+            return null;
         }
+    }
 
-        public static bool IsNot<T>(this object item) where T : class
-        {
-            return item is not T;
-        }
+    public static bool Is<T>(this object item) where T : class
+    {
+        return item is T;
+    }
 
-        public static T? As<T>(this object item) where T : class
-        {
-            return item as T;
-        }
+    public static bool IsNot<T>(this object item) where T : class
+    {
+        return item is not T;
+    }
+
+    public static T? As<T>(this object item) where T : class
+    {
+        return item as T;
     }
 }
