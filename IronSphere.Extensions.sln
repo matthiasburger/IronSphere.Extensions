@@ -7,12 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronSphere.Extensions", "Ir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronSphere.Extensions.Test", "IronSphere.Extensions.Test\IronSphere.Extensions.Test.csproj", "{B85DA28F-FE28-4616-8D45-FBAB2FE749BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronSphere.Extensions.AspNetCore", "IronSphere.Extensions.AspNetCore\IronSphere.Extensions.AspNetCore.csproj", "{17490CB6-B613-4F27-9C7F-A104083FFAAA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoneyBumble.Tools.Documentation", "..\..\..\..\..\Wasp\HoneyBumble\HoneyBumble.Tools.Documentation\HoneyBumble.Tools.Documentation.csproj", "{0CF223BD-3973-462E-BA50-80D5A35AD746}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronSphere.Extensions.Web", "IronSphere.Extensions.Web\IronSphere.Extensions.Web.csproj", "{6F336E08-C136-40FD-8019-CD5B67F9526F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,18 +21,6 @@ Global
 		{B85DA28F-FE28-4616-8D45-FBAB2FE749BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B85DA28F-FE28-4616-8D45-FBAB2FE749BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B85DA28F-FE28-4616-8D45-FBAB2FE749BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17490CB6-B613-4F27-9C7F-A104083FFAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17490CB6-B613-4F27-9C7F-A104083FFAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17490CB6-B613-4F27-9C7F-A104083FFAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17490CB6-B613-4F27-9C7F-A104083FFAAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CF223BD-3973-462E-BA50-80D5A35AD746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CF223BD-3973-462E-BA50-80D5A35AD746}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CF223BD-3973-462E-BA50-80D5A35AD746}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CF223BD-3973-462E-BA50-80D5A35AD746}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F336E08-C136-40FD-8019-CD5B67F9526F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F336E08-C136-40FD-8019-CD5B67F9526F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F336E08-C136-40FD-8019-CD5B67F9526F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F336E08-C136-40FD-8019-CD5B67F9526F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
