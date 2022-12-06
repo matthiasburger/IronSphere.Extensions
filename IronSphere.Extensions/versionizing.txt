@@ -1,6 +1,0 @@
-﻿
-
-20.9.0
-
-* New:
-  * TimeSpan.Round
