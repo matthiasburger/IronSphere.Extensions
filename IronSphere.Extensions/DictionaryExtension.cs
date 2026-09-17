@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+
+#if NETSTANDARD2_1
 using System.Linq;
+#endif
 
 namespace IronSphere.Extensions;
 
@@ -20,12 +23,12 @@ public static class DictionaryExtension
     /// <param name="fallback">the fallback-value, if the key doesn't exist</param>
     /// <returns>The found value or the fallback if the key doesn't exist.</returns>
     public static TValue? GetValue<TKey, TValue>(this Dictionary<TKey, TValue> @this, TKey key,
-        TValue? fallback = default)
+        TValue? fallback = default) where TKey : notnull
     {
         if (@this is null)
             throw new ArgumentNullException(nameof(@this));
 
-        return @this.ContainsKey(key) ? @this[key] : fallback;
+        return @this.TryGetValue(key, out TValue? v) ? v : fallback;
     }
 
     /// <summary>
@@ -46,8 +49,12 @@ public static class DictionaryExtension
         Type? underlyingType;
         if ((underlyingType = Nullable.GetUnderlyingType(typeToConvert)) != null)
             typeToConvert = underlyingType;
-
-        return @this.AllKeys.Contains(key) ? (TValue)Convert.ChangeType(@this[key], typeToConvert) : fallback;
+        string?[] keys = @this.AllKeys;
+#if NETSTANDARD2_1
+        return keys.Contains(key, StringComparer.OrdinalIgnoreCase) ? (TValue)Convert.ChangeType(@this[key], typeToConvert)! : fallback;
+#else
+        return keys.Contains(key) ? (TValue)Convert.ChangeType(@this[key], typeToConvert)! : fallback;
+#endif
     }
 
     /// <summary>

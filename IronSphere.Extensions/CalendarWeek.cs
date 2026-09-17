@@ -145,7 +145,7 @@ public struct CalendarWeek
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         return obj is CalendarWeek toCompare && Week == toCompare.Week && Year == toCompare.Year;
     }

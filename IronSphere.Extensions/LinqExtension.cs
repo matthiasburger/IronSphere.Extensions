@@ -164,7 +164,7 @@ public static class LinqExtensions
     /// <param name="source">The sequence to remove duplicate elements from.</param>
     /// <param name="groupingSelector">The property on which duplicated elements shall be removed.</param>
     /// <returns>An IEnumerable{TSource} that contains distinct elements from the source sequence.</returns>
-    public static IEnumerable<TSource> LexDistinctBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> groupingSelector)
+    public static IEnumerable<TSource?> LexDistinctBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> groupingSelector)
     {
         if (source == null)
             throw new ArgumentNullException(nameof(source));

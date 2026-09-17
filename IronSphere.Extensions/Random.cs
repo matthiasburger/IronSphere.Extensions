@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 
 namespace IronSphere.Extensions;
 
@@ -14,14 +13,6 @@ internal static class Random
     /// <param name="min"></param>
     /// <param name="max"></param>
     /// <returns></returns>
-    internal static int NextInt(int min, int max)
-    {
-        using RNGCryptoServiceProvider cryptoServiceProvider = new();
-        byte[] buffer = new byte[4];
-
-        cryptoServiceProvider.GetBytes(buffer);
-        int result = BitConverter.ToInt32(buffer, 0);
-
-        return new System.Random(result).Next(min, max);
-    }
+    internal static int NextInt(int min, int max) 
+        => RandomNumberGenerator.GetInt32(min, max+1);
 }

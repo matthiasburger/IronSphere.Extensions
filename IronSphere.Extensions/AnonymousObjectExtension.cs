@@ -33,7 +33,7 @@ public static class AnonymousObjectExtension
         Dictionary<string, T> dictionary = new();
         foreach (PropertyInfo property in source.GetType().GetProperties())
         {
-            object value = property.GetValue(source);
+            object? value = property.GetValue(source);
             if (value is T value1)
                 dictionary.Add(property.Name, value1);
 

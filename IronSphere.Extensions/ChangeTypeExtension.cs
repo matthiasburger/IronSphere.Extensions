@@ -20,7 +20,7 @@ public static class ChangeTypeExtension
         if (nullableUnderlyingType != null && @this is null)
             return default;
 
-        return (T)Convert.ChangeType(@this, nullableUnderlyingType ?? typeof(T));
+        return (T)Convert.ChangeType(@this, nullableUnderlyingType ?? typeof(T))!;
     }
 
     /// <summary>
@@ -39,7 +39,7 @@ public static class ChangeTypeExtension
             if (nullableUnderlyingType != null && @this is null)
                 return default;
 
-            return (T)Convert.ChangeType(@this, nullableUnderlyingType ?? typeof(T));
+            return (T)Convert.ChangeType(@this, nullableUnderlyingType ?? typeof(T))!;
         }
         catch (Exception e) when (e is FormatException or InvalidCastException)
         {
