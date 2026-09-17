@@ -1643,10 +1643,10 @@
         </member>
         <member name="T:IronSphere.Extensions.SqlCommandExtensions">
             <summary>
-            This class provides extension methods for <see cref="T:System.Data.SqlClient.SqlCommand"/>
+            This class provides extension methods for <see cref="T:Microsoft.Data.SqlClient.SqlCommand"/>
             </summary>
         </member>
-        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandWithParameters(System.Data.SqlClient.SqlCommand,System.String,System.Object)">
+        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandWithParameters(Microsoft.Data.SqlClient.SqlCommand,System.String,System.Object)">
              <summary>
              Sets the SqlCommands command-text and adds parameters
              </summary>
@@ -1661,7 +1661,7 @@
              </example>
              <returns>The modified DbCommand</returns>
         </member>
-        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandWithParameters(System.Data.SqlClient.SqlCommand,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetCommandWithParameters(Microsoft.Data.SqlClient.SqlCommand,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
              <summary>
              Sets the SqlCommands command-text and adds parameters
              </summary>
@@ -1679,6 +1679,15 @@
              ]]>
              </example>
              <returns>The modified DbCommand</returns>
+        </member>
+        <member name="M:IronSphere.Extensions.SqlCommandExtensions.SetParameters(Microsoft.Data.SqlClient.SqlCommand,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="this"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="T:IronSphere.Extensions.StreamExtension">
             <summary>

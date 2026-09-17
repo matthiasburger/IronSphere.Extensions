@@ -40,7 +40,7 @@ public static class StringExtension
     /// <param name="this">The actual string to test.</param>
     /// <returns>true if the value parameter is null or an empty string (""); otherwise, false.</returns>
     [MustUseReturnValue]
-    public static bool IsNullOrEmpty(this string? @this) => string.IsNullOrEmpty(@this);
+    public static bool IsNullOrEmpty([NotNullWhen(false)] this string? @this) => string.IsNullOrEmpty(@this);
 
     /// <summary>
     /// Indicates whether a specified string is null, empty, or consists only of white-space characters.
@@ -48,7 +48,7 @@ public static class StringExtension
     /// <param name="this">The string to test.</param>
     /// <returns>true if the value parameter is null or Empty, or if value consists exclusively of white-space characters.</returns>
     [MustUseReturnValue]
-    public static bool IsNullOrWhiteSpace(this string? @this) => string.IsNullOrWhiteSpace(@this);
+    public static bool IsNullOrWhiteSpace([NotNullWhen(false)] this string? @this) => string.IsNullOrWhiteSpace(@this);
 
     [MustUseReturnValue]
     public static string ValueIfNullOrEmpty(this string? @this, string defaultValue) =>
@@ -57,7 +57,9 @@ public static class StringExtension
     [MustUseReturnValue]
     public static string ValueIfNullOrWhiteSpace(this string? @this, string defaultValue) =>
         @this is null || string.IsNullOrWhiteSpace(@this) ? defaultValue : @this;
-
+    
+    public static string? NullIfEmpty(this string? @this) => string.IsNullOrEmpty(@this) ? null : @this;
+    
     /// <summary>
     /// Concatenates the elements of a specified array or the members of a collection, using the specified separator between each element or member.
     /// </summary>
@@ -417,7 +419,7 @@ public static class StringExtension
 
         int end = string.IsNullOrEmpty(endText) 
             ? @this.Length 
-            : @this.IndexOf(endText!, start, stringComparison);
+            : @this.IndexOf(endText, start, stringComparison);
         if (end < 0) 
             return null;
 
