@@ -16,10 +16,11 @@
     <NeutralLanguage></NeutralLanguage>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <AssemblyVersion>21.12.0.0</AssemblyVersion>
-    <PackageVersion>21.12.0.0</PackageVersion>
+    <PackageVersion>26.9.0.0</PackageVersion>
     <AssemblyOriginatorKeyFile>ironsphere_extensions.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <Nullable>enable</Nullable>
+    <PackageReleaseNotes>update that System.Data.SqlClient is not used anymore</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
@@ -27,10 +28,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.0.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2026.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.3" />
+    <PackageReference Include="System.ValueTuple" Version="4.6.2" />
   </ItemGroup>
   
 </Project>

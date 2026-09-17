@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Reflection;
 
 namespace IronSphere.Extensions;
@@ -78,9 +78,16 @@ public static class SqlCommandExtensions
 
         return @this;
     }
-        
-        
-    public static Microsoft.Data.SqlClient.SqlCommand SetParameters(this Microsoft.Data.SqlClient.SqlCommand @this, IDictionary<string, object>? parameters)
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="this"></param>
+    /// <param name="parameters"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentNullException"></exception>
+    public static SqlCommand SetParameters(this SqlCommand @this, IDictionary<string, object>? parameters)
     {
         if (@this is null)
             throw new ArgumentNullException(nameof(@this));
